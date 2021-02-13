@@ -1,0 +1,26 @@
+intNum1 = 1
+intNum2 = 0
+intSum = 0
+
+Cls
+
+For i = 1 To Text1.Text
+    intNum2 = intNum1
+    intNum1 = intSum
+    intSum = intNum1 + intNum2
+    Print intSum
+Next
+End Sub
+
+num1 	num2	sum
+1	0	0 =init value 
+0	1	1 =1st loop
+1	0	1 =2nd loop
+1	1	2 =3rd loop
+2	1	3 =4th loop
+3	2	5 =5th loop
+5	3	8 =6th loop
+8	5	13=7th loop	
+13	8	21=8th loop
+21	13	34=9th loop
+34	21	55=10th loop	

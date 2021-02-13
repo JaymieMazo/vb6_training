@@ -1,0 +1,56 @@
+Private Sub cmdOk_Click()
+Dim DTGettime As Date
+DTGettime = TimeValue(Now)
+
+
+If optEnglish = True Then
+    If DTGettime >= CDate("12:00:00 am") And DTGettime <= CDate("11:59:59 am") Then
+    MsgBox "Good morning", vbInformation, "Greetings"
+    ElseIf DTGettime >= CDate("12:00:00 pm") And DTGettime <= CDate("05:59:59 pm") Then
+    MsgBox "Good Afternoon", vbInformation, "Greetings"
+    ElseIf DTGettime >= CDate("6:00:00 pm") And lblGetTime <= CDate("11:59:59 pm") Then
+    MsgBox "Good evening", vbInformation, "Greetings"
+    End If
+   
+    
+ElseIf optJapanese = True Then
+    If DTGettime >= CDate("12:00:00 am") And DTGettime <= CDate("11:59:59 am") Then
+    MsgBox "Ohayo Gozaimasu", vbInformation, "Greetings"
+    ElseIf DTGettime >= CDate("12:00:00 pm") And DTGettime <= CDate("05:59:59 pm") Then
+    MsgBox "Konnichiwa", vbInformation, "Greetings"
+    ElseIf DTGettime >= CDate("6:00:00 pm") And lblGetTime <= CDate("11:59:59 pm") Then
+    MsgBox "Konbanwa", vbInformation, "Greetings"
+    End If
+ 
+ElseIf optFilipino = True Then
+    If DTGettime >= CDate("12:00:00 am") And DTGettime <= CDate("11:59:59 am") Then
+    MsgBox "Magandang Umaga", vbInformation, "Greetings"
+    ElseIf DTGettime >= CDate("12:00:00 pm") And DTGettime <= CDate("05:59:59 pm") Then
+    MsgBox "Magandang Hapon", vbInformation, "Greetings"
+    ElseIf DTGettime >= CDate("6:00:00 pm") And lblGetTime <= CDate("11:59:59 pm") Then
+    MsgBox "Magandang Gabi", vbInformation, "Greetings"
+    End If
+ 
+End If
+End Sub
+
+
+Private Sub optEnglish_Click()
+    optEnglish.BackColor = &HFFFF80
+    optJapanese.BackColor = &H80000004
+    optFilipino.BackColor = &H80000004
+End Sub
+
+Private Sub optFilipino_Click()
+    optEnglish.BackColor = &H80000004
+    optJapanese.BackColor = &H80000004
+    optFilipino.BackColor = &HFFFF80
+End Sub
+
+Private Sub optJapanese_Click()
+    optEnglish.BackColor = &H80000004
+    optJapanese.BackColor = &HFFFF80
+    optFilipino.BackColor = &H80000004
+End Sub
+
+

@@ -1,0 +1,30 @@
+Option Explicit
+Dim StartTime   As Variant
+Dim EndTime     As Variant
+Dim ElapsedTime As Variant
+
+---------------------------------
+Private Sub cmdEnd_Click()
+EndTime = Now
+ElapsedTime = EndTime - StartTime
+lblEnd.Caption = Format(EndTime, "hh:mm:ss")
+lblElapsed.Caption = Format(ElapsedTime, "hh:mm:ss")
+
+End Sub
+
+-----------------------------------
+
+Private Sub cmdExit_Click()
+End
+End Sub
+
+
+-------------------------------------
+Private Sub cmdStart_Click()
+StartTime = Now
+lblStart.Caption = Format(StartTime, "hh:mm:ss")
+lblEnd.Caption = ""
+lblElapsed.Caption = ""
+End Sub
+
+

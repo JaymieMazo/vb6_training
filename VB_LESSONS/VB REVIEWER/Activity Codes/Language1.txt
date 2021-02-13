@@ -1,0 +1,71 @@
+Option Explicit
+'Hold the language and greetings
+Dim GreetingLanguage As String
+Dim TitleGreeting  As String
+
+Private Sub cmdOk_Click()
+
+'CheckTime
+MsgBox Time, vbInformation, "Check Time"
+
+If optEnglish.Value = True Then
+    TitleGreeting = "English"
+    
+ElseIf optJapanese.Value = True Then
+    TitleGreeting = "Japanese"
+    
+ElseIf optFilipino.Value = True Then
+    TitleGreeting = "Filipino"
+    
+End If
+
+Call MsgboxGreetings
+
+End Sub
+
+Sub MsgboxGreetings()
+
+If CDate(Time) >= CDate("6:00:00 PM") And CDate(Time) <= CDate("11:59:59 PM") Then
+
+    If (TitleGreeting = "English") Then
+        GreetingLanguage = "Good Evening"
+        
+    ElseIf (TitleGreeting = "Japanese") Then
+        GreetingLanguage = "Konbanwa"
+        
+    ElseIf (TitleGreeting = "Filipino") Then
+        GreetingLanguage = "Magandang Gabi"
+        
+    End If
+
+ElseIf CDate(Time) >= CDate("00:00:00 AM") And CDate(Time) <= CDate("11:59:59 AM") Then
+ 
+    If (TitleGreeting = "English") Then
+        GreetingLanguage = "Good Morning"
+        
+    ElseIf (TitleGreeting = "Japanese") Then
+        GreetingLanguage = "Ohayo Gozaimasu"
+        
+    ElseIf (TitleGreeting = "Filipino") Then
+        GreetingLanguage = "Magandang Umaga"
+        
+    End If
+    
+ElseIf CDate(Time) >= CDate("12:00:00 PM") And CDate(Time) <= CDate("5:59:59 PM") Then
+
+    If (TitleGreeting = "English") Then
+        GreetingLanguage = "Good Afternoon"
+        
+    ElseIf (TitleGreeting = "Japanese") Then
+        GreetingLanguage = "Konnichiwa"
+        
+    ElseIf (TitleGreeting = "Filipino") Then
+        GreetingLanguage = "Magandang Hapon"
+        
+    End If
+    
+End If
+    'Output the message
+    MsgBox GreetingLanguage, vbInformation, TitleGreeting
+    
+End Sub

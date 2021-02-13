@@ -1,0 +1,132 @@
+Option Explicit
+
+Dim ZodiacBirthYear As String
+Dim ZodiacBirthMonth As String
+Dim ZodiacBirthday As String
+
+Dim TodaysDay As String
+Dim TodaysDate As String
+Dim TodaysMonth As String
+Dim TodaysYear As String
+
+
+
+Private Sub Form_Load()
+dtBirthdate.Value = Date
+End Sub
+
+
+Private Sub cmdOk_Click()
+
+'Declare todays information
+TodaysDate = Format(Now, "mm/dd")
+TodaysYear = Format(Now, "yyyy")
+TodaysMonth = Format(Now, "mm")
+TodaysDay = Format(Now, "dd")
+
+'Declare ZodiacBirthday information
+'ZodiacBirth = Format(dtBirthdate.Value, "mm/dd")
+ZodiacBirthYear = Format(dtBirthdate.Value, "yyyy")
+ZodiacBirthMonth = Format(dtBirthdate.Value, "mm")
+ZodiacBirthday = Format(dtBirthdate.Value, "dd")
+
+'Change 'Months' to  'Month'
+If (Months(Format(dtBirthdate.Value, "mm/dd")) = 1 Or Months(Format(dtBirthdate.Value, "mm/dd")) = 0) Then
+    MsgBox "You're zodiac sign is " & CheckZodiacSign(Format(dtBirthdate.Value, "mm/dd")) & " and your age is " & Age(Format(dtBirthdate.Value, "mm/dd")) & " and " & Months(Format(dtBirthdate.Value, "mm/dd")) & " month ", vbInformation, "Information"
+Else
+    MsgBox "You're zodiac sign is " & CheckZodiacSign(Format(dtBirthdate.Value, "mm/dd")) & " and your age is " & Age(Format(dtBirthdate.Value, "mm/dd")) & " and " & Months(Format(dtBirthdate.Value, "mm/dd")) & " months ", vbInformation, "Information"
+End If
+End Sub
+
+Private Function CheckZodiacSign(ZodiacBirth As String)
+
+If (ZodiacBirth >= "01/20" And ZodiacBirth <= "02/18") Then
+    CheckZodiacSign = "Aquarius "
+
+ElseIf (ZodiacBirth >= "02/19" And ZodiacBirth <= "03/19") Then
+    CheckZodiacSign = "Pieces"
+
+ElseIf (ZodiacBirth >= "03/20" And ZodiacBirth <= "04/19") Then
+    CheckZodiacSign = "Aries"
+
+ElseIf (ZodiacBirth >= "04/20" And ZodiacBirth <= "05/19") Then
+    CheckZodiacSign = "Taurus"
+
+ElseIf (ZodiacBirth >= "05/20" And ZodiacBirth <= "06/20") Then
+    CheckZodiacSign = "Gemini"
+
+ElseIf (ZodiacBirth >= "06/21" And ZodiacBirth <= "07/21") Then
+    CheckZodiacSign = "Cancer"
+
+ElseIf (ZodiacBirth >= "07/22" And ZodiacBirth <= "08/22") Then
+    CheckZodiacSign = "Leo"
+
+ElseIf (ZodiacBirth >= "08/23" And ZodiacBirth <= "09/21") Then
+    CheckZodiacSign = "Virgo"
+
+ElseIf (ZodiacBirth >= "09/22" And ZodiacBirth <= "10/22") Then
+    CheckZodiacSign = "Libra"
+
+ElseIf (ZodiacBirth >= "10/23" And ZodiacBirth <= "11/21") Then
+    CheckZodiacSign = "Scorpio"
+
+ElseIf (ZodiacBirth >= "11/22" And ZodiacBirth <= "12/20") Then
+    CheckZodiacSign = "Sagitarrius"
+
+ElseIf (ZodiacBirth >= "12/21" And ZodiacBirth >= "01/19") Then
+    CheckZodiacSign = "Capricorn"
+
+End If
+
+
+End Function
+
+Private Function Age(ZodiacBirth As String)
+          Age = Val(TodaysYear) - Val(ZodiacBirthYear)
+          
+          If (dtBirthdate.Value > Date) Then
+            Age = 0
+    
+          Else
+                If (ZodiacBirth > TodaysDate) Then
+            
+                        'Check the age
+                         If Age = 0 Then
+    
+                         Else
+                            Age = (Val(TodaysYear) - Val(ZodiacBirthYear)) - 1
+            
+                         End If
+        
+                End If
+          
+          End If
+End Function
+  
+Private Function Months(ZodiacBirth As String)
+    
+    If (dtBirthdate.Value > Date) Then
+         Months = 0
+    
+    Else
+         'Tapos na ZodiacBirthday
+        If (ZodiacBirth <= TodaysDate) Then
+         Months = Val(TodaysMonth) - Val(ZodiacBirthMonth)
+         
+         'Hindi pa ZodiacBirthday
+        ElseIf (ZodiacBirth > TodaysDate) Then
+        'Minus the remaining months before your birthday on the total months
+         Months = 12 - (Val(ZodiacBirthMonth) - Val(TodaysMonth))
+        
+        End If
+    
+            'Check the exact day of the date to identify the exact months
+                 If (ZodiacBirthday > TodaysDay) Then
+                     Months = Months - 1
+                 Else
+       
+                 End If
+
+    End If
+    
+End Function

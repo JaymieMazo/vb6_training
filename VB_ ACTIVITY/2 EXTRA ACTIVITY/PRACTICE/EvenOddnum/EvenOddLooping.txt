@@ -1,0 +1,27 @@
+ODD init : 
+intNum1 = 1
+intNum2 = 2
+
+PRINT NUM1		1
+NUM1=NUM1 +NUM2		3
+sum   num1  num2
+1   = 1   	Print NUM1
+3   = 1  +  2	1st loop
+5   = 3  +  2	2nd loop
+7   = 5  +  2	3rd loop
+9   = 7  +  2	4th loop
+11  = 9  +  2	5th loop
+
+
+EVEN init: 
+intNum1 = 0
+intNum2 = 2
+
+
+sum   num1  num2
+0   = 0    	Print Num1
+2   = 1  +  2	1st loop
+4   = 3  +  2	2nd loop
+6   = 5  +  2	3rd loop
+8   = 7  +  2	4th loop
+10  = 9  +  2	5th loop

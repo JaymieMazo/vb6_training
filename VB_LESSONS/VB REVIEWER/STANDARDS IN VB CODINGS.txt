@@ -1,0 +1,48 @@
+STANDARDS IN VB CODINGS:
+
+textbox 	txt
+command button	cmd
+label		lbl
+combobox	cmb
+checkbox	chk
+optionbox	opt
+time		tim
+image		img
+frame		frm
+line 		ln
+shapoe 		shp
+datapicker 	dt
+listbox		lst
+
+
+
+
+correct
+dim intNum1 as Integer
+dim intNum2 as Integer
+Dim strFullName as String
+
+
+not correct
+strFullName, strFirstName, strMiddleName as String
+
+
+If condition Then
+	If condition then
+	
+	elseif condition then
+
+
+	else
+	
+
+	end if
+Else if   cond. then
+	
+
+
+else
+
+
+
+End if 	

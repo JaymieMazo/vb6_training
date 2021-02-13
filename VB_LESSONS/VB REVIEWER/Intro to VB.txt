@@ -1,0 +1,81 @@
+VB 04/17/78
+STANDARD
+-level
+-
+
+ADV: MAINTAIN THE LEVEL
+
+
+GUI		-design / background, combination of your applications fields
+FORM DESIGNER	-design of form
+picture box = pic of id
+
+PROGRAMMING 	-DESIGNING SET OF INSTRUCTION TO INSTRUCT THE COMPUTER TO CARRY OUT CERTAIN
+		JOBS THAT ARE VERY MUCH FASTER THAN HUMAN BEINGS CAN DO.
+
+MACHINE LANGUAGE-EARLIEST PROGRAMMING LANGUAGE
+		USES BINARY CODE (0 & 1) TO COMMUNICATE WITH COMPUTER.
+
+SCIENTIST	-INVENT HIGH-LEVEL PROGRAMMING LANGUAGE EX: JAVA, C, C++, C#, VB
+
+
+VISUAL BASIC	-3rd gen. prog. language 
+		-1991 (1st released by Microsoft)
+		-evolved from earlier DOS 'BASIC'Beginner's All purpose Symbolic Instruction Code
+		-user friendly prog. lang. designed for beginnerss, and can develop GUI window apps.
+		-Different software companies produced different version of BASIC,such as 
+			1 Microsoft QBASIC,
+			2 QUICKBASIC, 
+			3 GWBASIC ,
+			4 IBM BASICA
+		-In BASIC, programming is done in a text-only environment and the program is executed sequentially.
+		 In VISUAL BASIC, programming is done in a graphical environment. 
+		-EXE means executable program
+		-object Form are Activate, Click, DblClick (which means Double-Click) , DragDrop, keyPress and etc
+		-VB COMPONENTS:
+		1.MENU  BAR
+			-display command required to build application
+			-main menu have sub meny items
+			-Toolbar in menu provide quick access to the commonly used command and button to carry out action
+			-FORM WINDOW-central to developing VB app. It is where you draw your application
+			
+		2.TOOL BAR
+		3.PROJECT EXPLORER-display all lists of forms and modules making up your application
+		4.PROPERTIES WIINDOW-used to establish initial property values for obj.alphabetic & chategorized
+		5.FORM LAYOUT WINDOW-shows where your form will be displayed relative to monitors screen.
+		6.TOOLBOX-that consists of all the controls essential for developing a VB Application
+			-selection menu for controls used in your application
+			-Controls are tools such as text box, command button, label, combo box, picture box, image box, timer 
+			and other objects that can be dragged and drawn on a form to perform certain tasks according to the 
+			events associated with them.
+			1.pointer-way to move and resize control form
+			2.PictureBox-display icon/bitmap/metafiles or display text and act as visual cionatiner
+			3.label-display text that user cannot modify or interact with
+			4.TextBox-display message and enter text
+			5.Frame-visual and functional container for controls
+			6.command button-carry out specified action when user chooses it 
+			7.CheckBox-display true /false or Yes/ no option
+			8.OptionButton-allows user to select one option only even it display multiple choices
+			9.ComboBox-conatins textbox and listbox. allows user to select items from dropdown listbox or type in selection text box.
+			10.ListBox-display list of items from which user can select one
+			11.scrollbar-allows user to select a value within specified range of values
+			12.Timer-executes timer events at spcecified intervals of time
+			13.DriveListBox-display valid disk drives and allow user to select one of them
+			14.DirListBox-allows user to select directories an dpaths, w/c are displayed
+			15.FileListBox-display set of files from w/c user can select the desired one
+			16.Shape-to add shape()rectangle, squeare,circle) to a form
+			17.Line-to draw straight line to the form
+			18.Image-to display images such as icons, bitmaps, metafiles. But less capabilities than picture
+			19.Data-connect to existing database and display info from it.
+			20.Object-link or embed obj. , display and manipulate data from other windows.	
+		7.FORM DESIGNER
+		8.OBJECT BROWSER
+
+
+Setting Properties at a run time
+
+
+Creating Your First Application 
+1 launch Microsoft Visual Basic
+2 double click on form1, the source code window for form1 as shown
+--- The top of the source code window consists of a list of objects and their associated events or procedures

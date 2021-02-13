@@ -1,0 +1,62 @@
+InStr Function
+Returns the position of the first occurrence of one string within another.
+Syntax
+
+InStr([start, ]string1, string2[, compare])
+
+The InStr function syntax has these arguments:
+
+start Optional. 
+Numeric expression that sets the starting position for each search. If
+omitted, search begins at the first character position. If start contains Null, an error
+occurs. 
+The start argument is required if compare is specified.
+
+
+string1 Required. String expression being searched.
+
+
+string2 Required. String expression searched for.
+
+compare Optional. Numeric value indicating the kind of comparison to use when evaluating
+substrings. See Settings section for values. If omitted, a binary comparison is
+performed.
+
+
+
+InStrRev Function
+Returns the position of an occurrence of one string within another, from the end of string.
+
+Syntax
+InStrRev(string1, string2[, start[, compare]])
+
+
+The InStrRev function syntax has these parts:
+
+string1 Required. String expression being searched.
+
+string2 Required. String expression being searched for.
+start Optional. Numeric expression that sets the starting position for each search. If omitted, -
+1 is used, which means that the search begins at the last character position. If start
+contains Null, an error occurs.
+
+compare Optional. Numeric value indicating the kind of comparison to use when evaluating
+substrings. If omitted, a binary comparison is performed. See Settings section for
+values.
+
+
+
+Right Function
+Returns a specified number of characters from the right side of a string.
+
+
+Syntax
+Right(string, length)
+The Right function syntax has these arguments:
+Part Description
+
+string String expression from which the rightmost characters are returned. If string
+contains Null, Null is returned.
+
+length Numeric expression indicating how many characters to return. If 0, a zero-length
+string is returned. If greater

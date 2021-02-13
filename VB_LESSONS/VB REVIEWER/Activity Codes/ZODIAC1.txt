@@ -1,0 +1,397 @@
+
+Private Sub cmdOk_Click()
+'DATEVALUE TODAY!
+Dim intAge As Integer
+Dim intMonth As Integer
+Dim BDYear As Date
+Dim BDMonth As Date
+Dim BDDay As Date
+
+'SELECTED DATE/ DATEPICKER
+Dim SD As Date
+Dim SDY As Date
+Dim SDM As Date
+Dim SDD As Date
+
+SD = Now
+SD = Format(SelectDate, "MM/DD")
+SDY = Now
+SDY = Format(SelectDate, "YYYY")
+SDM = Now
+SDM = Format(SelectDate, "MM")
+SDD = Now
+SDD = Format(SelectDate, "DD")
+'------------------
+BDDay = DateValue(Now)
+BDDay = Format(BDDay, "DD")
+BDYear = DateValue(Now)
+BDYear = Format(BDYear, "YYYY")
+BDMonth = DateValue(Now)
+BDMonth = Format(BDMonth, "MM")
+
+
+If SD >= "01/20" And SD <= "02/18" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SD
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : AQUARIUS and your Age is " & intAge & " and " & intMonth & " months")
+        
+ElseIf SD >= "02/19" And SD <= "03/19" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SD
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : PIECES and your Age is " & intAge & " and " & intMonth & " months")
+
+ElseIf SD >= "03/20" And SD <= "04/19" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SD
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : ARIES and your Age is " & intAge & " and " & intMonth & " months")
+    
+ElseIf SD >= "04/20" And SD <= "05/19" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SD
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : TAURUS and your Age is " & intAge & " and " & intMonth & " months")
+
+ElseIf SD >= "05/20" And SD <= "06/20" Then
+     If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SDY
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : GEMINI and your Age is " & intAge & " and " & intMonth & " months")
+
+ElseIf SD >= "06/21" And SD <= "07/21" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SDY
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : CANCER and your Age is " & intAge & " and " & intMonth & " months")
+
+ElseIf SD >= "07/22" And SD <= "08/22" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SDY
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : LEO and your Age is " & intAge & " and " & intMonth & " months")
+
+ElseIf SD >= "08/23" And SD <= "09/21" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SDY
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : VIRGO and your Age is " & intAge & " and " & intMonth & " months")
+
+ElseIf SD >= "09/22" And SD <= "10/22" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        'intAge = BDYear - SDY
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : LIBRA and your Age is " & intAge & " and " & intMonth & " months")
+
+ElseIf SD >= "10/21" And SD <= "11/21" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+                intAge = (BDYear - 1) - SDY
+            ElseIf SDM > BDMonth And SDY < BDYear Then
+                intAge = (BDYear - 1) - SDY
+            End If
+        
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : SCORPIO and your Age is " & intAge & " and " & intMonth & " months")
+    
+ElseIf SD >= "11/22" And SD <= "12/20" Then
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            End If
+        'intAge = BDYear - SDY
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : SAGITARRIUS and your Age is " & intAge & " and " & intMonth & " months")
+
+
+Else
+    If SDM > BDMonth Then
+            If BDMonth < SDM Then
+                intMonth = (BDMonth + 12) - SDM
+            End If
+        'intAge = BDYear - SDY
+        
+    ElseIf BDDay > SDD Then
+             If BDDay > SDD And BDMonth = SDM Then
+                intMonth = 11
+             ElseIf SDM < BDMonth And BDDay > SDD Then
+             intMonth = BDMonth - SDM
+             intAge = BDYear - SDY
+             End If
+        intAge = BDYear - SDY
+        
+    ElseIf SDM < BDMonth And SDD > BDDay Then
+        intMonth = 0
+        intAge = BDYear - SDY
+        
+    Else
+        intAge = BDYear - SDY
+        intMonth = BDMonth - SDM
+    End If
+    MsgBox ("Your zodiac sign is : CAPRICORN and your Age is " & intAge & " and " & intMonth & " months")
+
+
+End If
+
+End Sub
+
+Private Sub Timer1_Timer()
+
+Label2.Caption = Label2.Caption - 1
+
+If Label2.Caption = 20 Then
+Line1.BorderColor = &HC0&
+
+ElseIf Label2.Caption = 15 Then
+Line2.BorderColor = &HC0&
+Line1.BorderColor = &H80000006
+
+ElseIf Label2.Caption = 10 Then
+Line2.BorderColor = &H80000006
+Line3.BorderColor = &HC0&
+
+ElseIf Label2.Caption = 5 Then
+Line4.BorderColor = &HC0&
+Line3.BorderColor = &H80000006
+
+ElseIf Label2.Caption = 0 Then
+Label2.Caption = 21
+Line4.BorderColor = &H80000006
+
+End If
+
+End Sub

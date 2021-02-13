@@ -1,0 +1,63 @@
+dim i as intger
+dim bRice as boolean
+dim bdish as boolean
+DIM DBTOTAL AS DOUBLE
+dim dblamount as double
+DIM STRAMOUNT AS STRING
+
+
+if txtname.text= "" the msgbox "Please enter name" : Exit Sub
+txtorder="Name: " & crlf & crlf & txtname.text 
+
+for i=0 to chkrice.count-1
+
+if chkrice(i).value=1 then
+dblamount=right (chkdishes (i), instr (1, strreverse (chkdishes (0).caption), "P"))
+dbltotal=dbltotal + cdbl(replace(dblamount, "P",  "" ))
+brice=true
+txtxtoorder.tex= txtorder & chkrice (i).caption & vbcrlf
+end if
+
+next
+
+
+
+for i=0 to chkdishes.count-1
+
+if chkrice(i).value=1 then
+dblamount=right (chkdishes (i), instr (1, strreverse (chkdishes (0).caption), "P"))
+dbltotal=dbltotal + cdbl(replace(dblamount, "P",  "" ))
+brice=true
+
+end if
+
+next
+
+if brice.value=f and bdishes.value=false then
+
+
+msgbox "Please select rice or dishes"
+
+
+
+txtorder=txtorder & vbcrlf  & "-------------------"
+
+END IF 
+
+
+
+instr(1, "abcde", "e")
+=5
+
+
+instr (1, chkdishes(i).caption, "P")=17
+
+if 2 p in string
+
+
+instr (1, strreverse(chkdishes(i).caption)=7
+=00.12 P
+
+
+
+right (chkdishes (i), instr (1, strreverse (chkdishes (i).caption), "P"))

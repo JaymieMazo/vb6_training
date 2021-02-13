@@ -1,0 +1,15 @@
+Private Sub txtInputNumber_KeyPress(KeyAscii As Integer)
+
+If (KeyAscii = VBRUN.vbKey0 Or KeyAscii = VBRUN.vbKey1 Or KeyAscii = VBRUN.vbKey2 Or _
+KeyAscii = VBRUN.vbKey3 Or KeyAscii = VBRUN.vbKey4 Or KeyAscii = VBRUN.vbKey5 Or _
+KeyAscii = VBRUN.vbKey6 Or KeyAscii = VBRUN.vbKey7 Or KeyAscii = VBRUN.vbKey8 Or KeyAscii = VBRUN.vbKey9 _
+Or KeyAscii = VBRUN.vbKeyBack Or KeyAscii = VBRUN.vbKeyExecute Or KeyAscii = VBRUN.vbKeyTab) Then
+
+     txtInputNumber.Locked = False
+Else
+     txtInputNumber.Locked = True
+End If
+
+
+End Sub
+

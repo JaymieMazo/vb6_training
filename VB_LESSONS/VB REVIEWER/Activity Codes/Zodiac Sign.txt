@@ -1,0 +1,89 @@
+
+
+Private Sub Cmdok_Click()
+Dim intDate As Integer
+Dim intmonth As Integer
+Dim month As Integer
+Dim age As Integer
+
+intDate = Int(Format(dtBday.Value, "MMDD"))
+intmonth = Int(Format(dtBday.Value, "MM"))
+age = Format(Date, "YYYY") - Format(dtBday, "YYYY")
+
+If Format(Date, "MM") >= Format(dtBday, "MM") Then
+    
+    month = Format(Date, "MM") - Format(dtBday, "MM")
+Else
+    age = age - 1
+    month = (Format(Date, "MM") + 12) - Format(dtBday, "MM")
+End If
+
+    If Format(Date, "DD") < Format(dtBday, "DD") Then
+        If month = 0 Then
+            month = 11
+            age = age - 1
+        Else
+            month = month - 1
+        End If
+    End If
+    
+'AQUARIUS
+
+If intDate > "119" And intDate <= "218" Then
+
+  MsgBox "Your Zodiac Sign is AQUARIUS.  " & age & " years old " & month & " months old"
+        
+'PISCES
+ElseIf intDate >= "219" And intDate <= "319" Then
+        MsgBox "Your Zodiac Sign is  PISCES.  " & age & " years old " & month & " months old"
+
+
+'ARIES
+ElseIf intDate >= "320" And intDate <= "419" Then
+
+        
+        MsgBox "Your Zodiac Sign is  ARIES.  " & age & " years old " & month & " months old"
+
+'TAURUS
+ElseIf intDate >= "420" And intDate <= "519" Then
+
+    MsgBox "Your Zodiac Sign is  TAURUS.  " & age & " years old " & month & " months old"
+    
+'GEMINI
+ElseIf intDate >= "520" And intDate <= "620" Then
+ 
+    MsgBox "Your Zodiac Sign is  GEMINI.  " & age & " years old " & month & " months old"
+   
+'CANCER
+ElseIf intDate >= "621" And intDate <= "721" Then
+ MsgBox "Your Zodiac Sign is CANCER.  " & age & " years old " & month & " months old"
+ 
+
+
+ElseIf intDate >= "720" And intDate <= "822" Then
+ MsgBox "Your Zodiac Sign is LEO.  " & age & " years old " & month & " months old"
+ 
+
+
+ElseIf intDate >= "823" And intDate <= "921" Then
+ MsgBox "Your Zodiac Sign is VIRGO.  " & age & " years old " & month & " months old"
+ 
+
+ElseIf intDate >= "922" And intDate <= "1022" Then
+ MsgBox "Your Zodiac Sign is LIBRA.  " & age & " years old " & month & " months old"
+ 
+
+ElseIf intDate >= "1023" And intDate <= "1121" Then
+ MsgBox "Your Zodiac Sign is SCORPIO.  " & age & " years old " & month & " months old"
+ 
+
+ElseIf intDate >= "1122" And intDate <= "1220" Then
+ MsgBox "Your Zodiac Sign is SAGITARRIUS.  " & age & " years old " & month & " months old"
+ 
+
+ElseIf intDate >= "1221" Or intDate < "120" Then
+ MsgBox "Your Zodiac Sign is CAPRICORN.  " & age & " years old " & month & " months old"
+End If
+
+End Sub
+

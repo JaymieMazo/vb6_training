@@ -1,0 +1,9 @@
+Dim intNum As Integer
+
+Private Sub cmdOk_Click()
+
+For intNum = 1 To Len(txtinput.Text)
+txtoutput.Text = Mid(txtinput.Text, intNum, 1) & txtoutput.Text
+Next
+
+End Sub
