@@ -1,0 +1,46 @@
+
+1. go to run
+	then type:  "inetcpl.cpl"
+2. Click on Connection Tab
+
+3.Set the lan Settings
+
+4. Set the address to 10.11.1.10
+    Set the port to 526
+
+5. go to run
+	then type: "services.msc"
+
+6. the services window will appear.
+
+7. in the table find the "Windows Update"
+	then double click it.
+
+8. the Windows Update Properties will appear.
+
+9. Click the Button "Stop"
+
+10. go to C:\Windows
+	then Rename the "Software Distribution" folder to "Software Distribution_"
+11. go to run
+	then type: "services.msc"
+
+12. the services window will appear.
+
+13. in the table find the "Windows Update"
+	then double click it.
+
+14. the Windows Update Properties will appear.
+
+15. Click the Button "Start"
+
+16. then Install the "dotNetFx40_Full_x86_x64"
+
+17. the installation window will appear.
+
+18. check the CheckBox.
+	then Click "Install" Button.
+
+19. Ibalik mo yung dati from step no. 4
+
+20. Done.
