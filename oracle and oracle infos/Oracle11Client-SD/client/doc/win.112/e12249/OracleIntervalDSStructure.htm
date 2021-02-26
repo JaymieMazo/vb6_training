@@ -1,0 +1,3068 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:36Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleDecimalStructure.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleIntervalYMStructure.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleIntervalDS Structure</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleDecimalStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleIntervalYMStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="i1006455" name="i1006455"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1"><a id="sthref4690" name="sthref4690"></a>OracleIntervalDS Structure</h1>
+<p>The <code>OracleIntervalDS</code> structure represents the Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> data type to be stored in or retrieved from a database. Each <code>OracleIntervalDS</code> stores a period of time in term of days, hours, minutes, seconds, and fractional seconds.</p>
+<a id="sthref4691" name="sthref4691"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.ValueType</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;Oracle.DataAccess.Types.OracleIntervalDS</code></p>
+<a id="sthref4692" name="sthref4692"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// ADO.NET 2.0: C# 
+public struct OracleIntervalDS : IComparable, INullable, IXmlSerializable
+</pre>
+<a id="sthref4693" name="sthref4693"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref4694" name="sthref4694"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+ 
+class OracleIntervalDSSample
+{
+  static void Main()
+  {
+    OracleIntervalDS iDSMax = OracleIntervalDS.MaxValue;
+    double totalDays = iDSMax.TotalDays;
+ 
+    totalDays -= 1;
+    OracleIntervalDS iDSMax_1 = new OracleIntervalDS(totalDays);
+    
+    // Calculate the difference 
+    OracleIntervalDS iDSDiff = iDSMax - iDSMax_1;
+    
+    // Prints "iDSDiff.ToString() = +000000000 23:59:59.999999999"
+    Console.WriteLine("iDSDiff.ToString() = " + iDSDiff.ToString());
+  }
+}
+</pre>
+<a id="sthref4695" name="sthref4695"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Types</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+<li>
+<p><a href="#i1006971">OracleIntervalDS Constructors</a></p>
+</li>
+<li>
+<p><a href="#i1302017">OracleIntervalDS Static Fields</a></p>
+</li>
+<li>
+<p><a href="#i1007404">OracleIntervalDS Static Methods</a></p>
+</li>
+<li>
+<p><a href="#i1007786">OracleIntervalDS Static Operators</a></p>
+</li>
+<li>
+<p><a href="#i1008275">OracleIntervalDS Type Conversions</a></p>
+</li>
+<li>
+<p><a href="#i1008434">OracleIntervalDS Properties</a></p>
+</li>
+<li>
+<p><a href="#i1008822">OracleIntervalDS Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="i1006532" name="i1006532"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Members<a id="sthref4696" name="sthref4696"></a></h2>
+<p><code>OracleIntervalDS</code> members are listed in the following tables:</p>
+<a id="sthref4697" name="sthref4697"></a>
+<p class="subhead1">OracleIntervalDS Constructors</p>
+<p><code>OracleIntervalDS</code> constructors are listed in <a href="#g1308608">Table 14-48</a></p>
+<div class="tblruleformal"><a id="sthref4698" name="sthref4698"></a><a id="g1308608" name="g1308608"></a>
+<p class="titleintable">Table 14-48 OracleIntervalDS Constructors</p>
+<table class="RuleFormal" title="OracleIntervalDS Constructors" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t253">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t253">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t253" headers="r1c1-t253">
+<p><a href="#i1006971">OracleIntervalDS Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t253 r1c2-t253">
+<p>Instantiates a new instance of <code>OracleIntervalDS</code> structure (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4699" name="sthref4699"></a>
+<p class="subhead1">OracleIntervalDS Static Fields</p>
+<p>The <code>OracleIntervalDS</code> static fields are listed in <a href="#g1308618">Table 14-49</a>.</p>
+<div class="tblruleformal"><a id="sthref4700" name="sthref4700"></a><a id="g1308618" name="g1308618"></a>
+<p class="titleintable">Table 14-49 OracleIntervalDS Static Fields</p>
+<table class="RuleFormal" title="OracleIntervalDS Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t254">Field</th>
+<th align="left" valign="bottom" id="r1c2-t254">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t254" headers="r1c1-t254">
+<p><a href="#i1007294">MaxValue</a></p>
+</td>
+<td align="left" headers="r2c1-t254 r1c2-t254">
+<p>Represents the maximum valid time interval for an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t254" headers="r1c1-t254">
+<p><a href="#i1007325">MinValue</a></p>
+</td>
+<td align="left" headers="r3c1-t254 r1c2-t254">
+<p>Represents the minimum valid time interval for an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t254" headers="r1c1-t254">
+<p><a href="#i1007356">Null</a></p>
+</td>
+<td align="left" headers="r4c1-t254 r1c2-t254">
+<p>Represents a null value that can be assigned to an <code>OracleIntervalDS</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t254" headers="r1c1-t254">
+<p><a href="#i1007380">Zero</a></p>
+</td>
+<td align="left" headers="r5c1-t254 r1c2-t254">
+<p>Represents a zero value for an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4701" name="sthref4701"></a>
+<p class="subhead1">OracleIntervalDS Static Methods</p>
+<p>The <code>OracleIntervalDS</code> static methods are listed in <a href="#g1308637">Table 14-50</a>.</p>
+<div class="tblruleformal"><a id="sthref4702" name="sthref4702"></a><a id="g1308637" name="g1308637"></a>
+<p class="titleintable">Table 14-50 OracleIntervalDS Static Methods</p>
+<table class="RuleFormal" title="OracleIntervalDS Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t255">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t255">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t255" headers="r1c1-t255">
+<p><a href="#i1007499">Equals</a></p>
+</td>
+<td align="left" headers="r2c1-t255 r1c2-t255">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t255" headers="r1c1-t255">
+<p><a href="#i1007534">GreaterThan</a></p>
+</td>
+<td align="left" headers="r3c1-t255 r1c2-t255">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t255" headers="r1c1-t255">
+<p><a href="#i1007569">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r4c1-t255 r1c2-t255">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t255" headers="r1c1-t255">
+<p><a href="#i1007605">LessThan</a></p>
+</td>
+<td align="left" headers="r5c1-t255 r1c2-t255">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t255" headers="r1c1-t255">
+<p><a href="#i1007640">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r6c1-t255 r1c2-t255">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t255" headers="r1c1-t255">
+<p><a href="#i1007675">NotEquals</a></p>
+</td>
+<td align="left" headers="r7c1-t255 r1c2-t255">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t255" headers="r1c1-t255">
+<p><a href="#i1007710">Parse</a></p>
+</td>
+<td align="left" headers="r8c1-t255 r1c2-t255">
+<p>Returns an <code>OracleIntervalDS</code> structure and sets its value for time interval using a string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t255" headers="r1c1-t255">
+<p><a href="#CJABAABI">SetPrecision</a></p>
+</td>
+<td align="left" headers="r9c1-t255 r1c2-t255">
+<p>Returns a new instance of an <code>OracleIntervalDS</code> with the specified day precision and fractional second precision</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4703" name="sthref4703"></a>
+<p class="subhead1">OracleIntervalDS Static Operators</p>
+<p>The <code>OracleIntervalDS</code> static operators are listed in <a href="#g1308668">Table 14-51</a>.</p>
+<div class="tblruleformal"><a id="sthref4704" name="sthref4704"></a><a id="g1308668" name="g1308668"></a>
+<p class="titleintable">Table 14-51 OracleIntervalDS Static Operators</p>
+<table class="RuleFormal" title="OracleIntervalDS Static Operators " summary="Rows are static operators. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t256">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t256">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t256" headers="r1c1-t256">
+<p><a href="#i1007902">operator +</a></p>
+</td>
+<td align="left" headers="r2c1-t256 r1c2-t256">
+<p>Adds two <code>OracleIntervalDS</code> values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t256" headers="r1c1-t256">
+<p><a href="#i1007935">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t256 r1c2-t256">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t256" headers="r1c1-t256">
+<p><a href="#i1007970">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t256 r1c2-t256">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t256" headers="r1c1-t256">
+<p><a href="#i1008005">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t256 r1c2-t256">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t256" headers="r1c1-t256">
+<p><a href="#i1008040">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t256 r1c2-t256">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t256" headers="r1c1-t256">
+<p><a href="#i1008075">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t256 r1c2-t256">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t256" headers="r1c1-t256">
+<p><a href="#i1008110">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t256 r1c2-t256">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t256" headers="r1c1-t256">
+<p><a href="#i1008145">operator -</a></p>
+</td>
+<td align="left" headers="r9c1-t256 r1c2-t256">
+<p>Subtracts one <code>OracleIntervalDS</code> value from another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t256" headers="r1c1-t256">
+<p><a href="#i1008178">operator -</a></p>
+</td>
+<td align="left" headers="r10c1-t256 r1c2-t256">
+<p>Negates an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t256" headers="r1c1-t256">
+<p><a href="#i1008209">operator *</a></p>
+</td>
+<td align="left" headers="r11c1-t256 r1c2-t256">
+<p>Multiplies an <code>OracleIntervalDS</code> value by a number</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t256" headers="r1c1-t256">
+<p><a href="#i1008242">operator /</a></p>
+</td>
+<td align="left" headers="r12c1-t256 r1c2-t256">
+<p>Divides an <code>OracleIntervalDS</code> value by a number</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4705" name="sthref4705"></a>
+<p class="subhead1">OracleIntervalDS Type Conversions</p>
+<p>The <code>OracleIntervalDS</code> type conversions are listed in <a href="#g1308708">Table 14-52</a>.</p>
+<div class="tblruleformal"><a id="sthref4706" name="sthref4706"></a><a id="g1308708" name="g1308708"></a>
+<p class="titleintable">Table 14-52 OracleIntervalDS Type Conversions</p>
+<table class="RuleFormal" title="OracleIntervalDS Type Conversions " summary="Rows are type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="47%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t257">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t257">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t257" headers="r1c1-t257">
+<p><a href="#i1008335">explicit operator TimeSpan</a></p>
+</td>
+<td align="left" headers="r2c1-t257 r1c2-t257">
+<p>Converts an <code>OracleIntervalDS</code> structure to a <code>TimeSpan</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t257" headers="r1c1-t257">
+<p><a href="#i1008367">explicit operator OracleIntervalDS</a></p>
+</td>
+<td align="left" headers="r3c1-t257 r1c2-t257">
+<p>Converts a string to an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t257" headers="r1c1-t257">
+<p><a href="#i1008403">implicit operator OracleIntervalDS</a></p>
+</td>
+<td align="left" headers="r4c1-t257 r1c2-t257">
+<p>Converts a <code>TimeSpan</code> structure to an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4707" name="sthref4707"></a>
+<p class="subhead1">OracleIntervalDS Properties</p>
+<p>The <code>OracleIntervalDS</code> properties are listed in <a href="#g1308724">Table 14-53</a>.</p>
+<div class="tblruleformal"><a id="sthref4708" name="sthref4708"></a><a id="g1308724" name="g1308724"></a>
+<p class="titleintable">Table 14-53 OracleIntervalDS Properties</p>
+<table class="RuleFormal" title="OracleIntervalDS Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t258">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t258">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t258" headers="r1c1-t258">
+<p><a href="#i1008543">BinData</a></p>
+</td>
+<td align="left" headers="r2c1-t258 r1c2-t258">
+<p>Returns an array of bytes that represents the Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> in Oracle internal format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t258" headers="r1c1-t258">
+<p><a href="#i1008572">Days</a></p>
+</td>
+<td align="left" headers="r3c1-t258 r1c2-t258">
+<p>Gets the days component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t258" headers="r1c1-t258">
+<p><a href="#i1008600">Hours</a></p>
+</td>
+<td align="left" headers="r4c1-t258 r1c2-t258">
+<p>Gets the hours component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t258" headers="r1c1-t258">
+<p><a href="#i1008628">IsNull</a></p>
+</td>
+<td align="left" headers="r5c1-t258 r1c2-t258">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t258" headers="r1c1-t258">
+<p><a href="#i1008654">Milliseconds</a></p>
+</td>
+<td align="left" headers="r6c1-t258 r1c2-t258">
+<p>Gets the milliseconds component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t258" headers="r1c1-t258">
+<p><a href="#i1008682">Minutes</a></p>
+</td>
+<td align="left" headers="r7c1-t258 r1c2-t258">
+<p>Gets the minutes component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t258" headers="r1c1-t258">
+<p><a href="#i1008710">Nanoseconds</a></p>
+</td>
+<td align="left" headers="r8c1-t258 r1c2-t258">
+<p>Gets the nanoseconds component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t258" headers="r1c1-t258">
+<p><a href="#i1008738">Seconds</a></p>
+</td>
+<td align="left" headers="r9c1-t258 r1c2-t258">
+<p>Gets the seconds component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t258" headers="r1c1-t258">
+<p><a href="#i1008766">TotalDays</a></p>
+</td>
+<td align="left" headers="r10c1-t258 r1c2-t258">
+<p>Returns the total number, in days, that represent the time period in the <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t258" headers="r1c1-t258">
+<p><a href="#i1008794">Value</a></p>
+</td>
+<td align="left" headers="r11c1-t258 r1c2-t258">
+<p>Specifies the time interval that is stored in the <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4709" name="sthref4709"></a>
+<p class="subhead1">OracleIntervalDS Methods</p>
+<p>The <code>OracleIntervalDS</code> methods are listed in <a href="#g1308761">Table 14-54</a>.</p>
+<div class="tblruleformal"><a id="sthref4710" name="sthref4710"></a><a id="g1308761" name="g1308761"></a>
+<p class="titleintable">Table 14-54 OracleIntervalDS Methods</p>
+<table class="RuleFormal" title="OracleIntervalDS Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t259">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t259">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t259" headers="r1c1-t259">
+<p><a href="#i1008893">CompareTo</a></p>
+</td>
+<td align="left" headers="r2c1-t259 r1c2-t259">
+<p>Compares the current <code>OracleIntervalDS</code> instance to an object, and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t259" headers="r1c1-t259">
+<p><a href="#i1008934">Equals</a></p>
+</td>
+<td align="left" headers="r3c1-t259 r1c2-t259">
+<p>Determines whether or not the specified <code>object</code> has the same time interval as the current instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t259" headers="r1c1-t259">
+<p><a href="#i1008967">GetHashCode</a></p>
+</td>
+<td align="left" headers="r4c1-t259 r1c2-t259">
+<p>Returns a hash code for the <code>OracleIntervalDS</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t259" headers="r1c1-t259">
+<p>GetType</p>
+</td>
+<td align="left" headers="r5c1-t259 r1c2-t259">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t259" headers="r1c1-t259">
+<p><a href="#i1008992">ToString</a></p>
+</td>
+<td align="left" headers="r6c1-t259 r1c2-t259">
+<p>Converts the current <code>OracleIntervalDS</code> structure to a string</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+</ul>
+</div>
+<a id="i1006971" name="i1006971"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Constructors<a id="sthref4711" name="sthref4711"></a></h2>
+<p><code>OracleIntervalDS</code> constructors create a new instance of the <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4712" name="sthref4712"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1007024">OracleIntervalDS(TimeSpan)</a></p>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using a <code>TimeSpan</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1007051">OracleIntervalDS(string)</a></p>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using a string that indicates a period of time.</p>
+</li>
+<li>
+<p><a href="#i1007085">OracleIntervalDS(double)</a></p>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using the total number of days.</p>
+</li>
+<li>
+<p><a href="#CJAEIHFG">OracleIntervalDS(int, int, int, int, double)</a></p>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using the supplied days, hours, minutes, seconds and milliseconds.</p>
+</li>
+<li>
+<p><a href="#i1007156">OracleIntervalDS(int, int, int, int, int)</a></p>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using the supplied days, hours, minutes, seconds, and nanoseconds.</p>
+</li>
+<li>
+<p><a href="#CJADBFAJ">OracleIntervalDS(byte[ ])</a></p>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value to the provided byte array, which is in an internal Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> format.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007024" name="i1007024"></a>
+<h3 class="refsect3">OracleIntervalDS(TimeSpan)</h3>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using a <code>TimeSpan</code> structure.</p>
+<a id="sthref4713" name="sthref4713"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalDS(TimeSpan <span class="italic">ts</span>); 
+</pre>
+<a id="sthref4714" name="sthref4714"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">ts</span></code></p>
+<p>A <code>TimeSpan</code> structure.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007051" name="i1007051"></a>
+<h3 class="refsect3">OracleIntervalDS(string)</h3>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using a string that indicates a period of time.</p>
+<a id="sthref4715" name="sthref4715"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalDS(string <span class="italic">intervalStr</span>); 
+</pre>
+<a id="sthref4716" name="sthref4716"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">intervalStr</span></code></p>
+<p>A string representing the Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code>.</p>
+</li>
+</ul>
+<a id="sthref4717" name="sthref4717"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is not in the valid format or has an invalid value.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is null.</p>
+<a id="sthref4718" name="sthref4718"></a>
+<p class="subhead2">Remarks</p>
+<p>The value specified in the supplied <code><span class="codeinlineitalic">intervalStr</span></code> must be in Day HH:MI:SSxFF format.</p>
+<a id="sthref4719" name="sthref4719"></a>
+<p class="subhead2">Example</p>
+<p>"1 2:3:4.99" means 1 day, 2 hours, 3 minutes, 4 seconds, and 990 milliseconds or 1 day, 2 hours, 3 minutes, 4 seconds, and 990000000 nanoseconds.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007085" name="i1007085"></a>
+<h3 class="refsect3">OracleIntervalDS(double)</h3>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using the total number of days.</p>
+<a id="sthref4720" name="sthref4720"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalDS(double <span class="italic">totalDays</span>);
+</pre>
+<a id="sthref4721" name="sthref4721"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">totalDays</span></code></p>
+<p>The supplied total number of days for a time interval. Range of days is -1000,000,000 &lt; <code><span class="codeinlineitalic">totalDays</span></code> &lt; 1000,000,000.</p>
+</li>
+</ul>
+<a id="sthref4722" name="sthref4722"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleIntervalDS</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CJAEIHFG" name="CJAEIHFG"></a>
+<h3 class="refsect3">OracleIntervalDS(int, int, int, int, double)</h3>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using the supplied days, hours, minutes, seconds, and milliseconds.</p>
+<a id="sthref4723" name="sthref4723"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalDS (int <span class="italic">days</span>, int <span class="italic">hours</span>, int <span class="italic">minutes</span>, int <span class="italic">seconds</span>,
+   double <span class="italic">milliSeconds</span>); 
+</pre>
+<a id="sthref4724" name="sthref4724"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">days</span></code></p>
+<p>The days provided. Range of day is (-999,999,999 to 999,999,999).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">hours</span></code></p>
+<p>The hours provided. Range of hour is (-23 to 23).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">minutes</span></code></p>
+<p>The minutes provided. Range of minute is (-59 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">seconds</span></code></p>
+<p>The seconds provided. Range of second is (-59 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">milliSeconds</span></code></p>
+<p>The milliseconds provided. Range of millisecond is (- 999.999999 to 999.999999).</p>
+</li>
+</ul>
+<a id="sthref4725" name="sthref4725"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleIntervalDS</code>.</p>
+<a id="sthref4726" name="sthref4726"></a>
+<p class="subhead2">Remarks</p>
+<p>The sign of all the arguments must be the same.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007156" name="i1007156"></a>
+<h3 class="refsect3">OracleIntervalDS(int, int, int, int, int)</h3>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value using the supplied days, hours, minutes, seconds, and nanoseconds.</p>
+<a id="sthref4727" name="sthref4727"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalDS (int <span class="italic">days</span>, int <span class="italic">hours</span>, int <span class="italic">minutes</span>, int <span class="italic">seconds</span>,
+   int <span class="italic">nanoseconds</span>); 
+</pre>
+<a id="sthref4728" name="sthref4728"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">days</span></code></p>
+<p>The days provided. Range of day is (-999,999,999 to 999,999,999).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">hours</span></code></p>
+<p>The hours provided. Range of hour is (-23 to 23).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">minutes</span></code></p>
+<p>The minutes provided. Range of minute is (-59 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">seconds</span></code></p>
+<p>The seconds provided. Range of second is (-59 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">nanoseconds</span></code></p>
+<p>The nanoseconds provided. Range of nanosecond is (-999,999,999 to 999,999,999)</p>
+</li>
+</ul>
+<a id="sthref4729" name="sthref4729"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleIntervalDS</code>.</p>
+<a id="sthref4730" name="sthref4730"></a>
+<p class="subhead2">Remarks</p>
+<p>The sign of all the arguments must be the same.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CJADBFAJ" name="CJADBFAJ"></a>
+<h3 class="refsect3">OracleIntervalDS(byte[ ])</h3>
+<p>This constructor creates a new instance of the <code>OracleIntervalDS</code> structure and sets its value to the provided byte array, which is in an internal Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> format.</p>
+<a id="sthref4731" name="sthref4731"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalDS (byte[ ] <span class="italic">bytes</span>);
+</pre>
+<a id="sthref4732" name="sthref4732"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">bytes</span></code></p>
+<p>A byte array that is in an internal Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> format.</p>
+</li>
+</ul>
+<a id="sthref4733" name="sthref4733"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - <code>bytes</code> is not in internal Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> format, or <code>bytes</code> is not a valid Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code>.</p>
+<p><code>ArgumentNullException</code> - <code><span class="codeinlineitalic">bytes</span></code> is null.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1302017" name="i1302017"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Static Fields</h2>
+<p>The <code>OracleIntervalDS</code> static fields are listed in <a href="#g1308815">Table 14-55</a>.</p>
+<div class="tblruleformal"><a id="sthref4734" name="sthref4734"></a><a id="g1308815" name="g1308815"></a>
+<p class="titleintable">Table 14-55 OracleIntervalDS Static Fields</p>
+<table class="RuleFormal" title="OracleIntervalDS Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="21%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t268">Field</th>
+<th align="left" valign="bottom" id="r1c2-t268">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t268" headers="r1c1-t268">
+<p><a href="#i1007294">MaxValue</a></p>
+</td>
+<td align="left" headers="r2c1-t268 r1c2-t268">
+<p>Represents the maximum valid time interval for an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t268" headers="r1c1-t268">
+<p><a href="#i1007325">MinValue</a></p>
+</td>
+<td align="left" headers="r3c1-t268 r1c2-t268">
+<p>Represents the minimum valid time interval for an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t268" headers="r1c1-t268">
+<p><a href="#i1007356">Null</a></p>
+</td>
+<td align="left" headers="r4c1-t268 r1c2-t268">
+<p>Represents a null value that can be assigned to an <code>OracleIntervalDS</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t268" headers="r1c1-t268">
+<p><a href="#i1007380">Zero</a></p>
+</td>
+<td align="left" headers="r5c1-t268 r1c2-t268">
+<p>Represents a zero value for an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007294" name="i1007294"></a>
+<h3 class="refsect3">MaxValue</h3>
+<p>This static field represents the maximum value for an <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4735" name="sthref4735"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalDS MaxValue;
+</pre>
+<a id="sthref4736" name="sthref4736"></a>
+<p class="subhead2">Remarks</p>
+<p>Maximum values:</p>
+<ul>
+<li>
+<p>Day: 999999999</p>
+</li>
+<li>
+<p>hour: 23</p>
+</li>
+<li>
+<p>minute is 59</p>
+</li>
+<li>
+<p>second: 59</p>
+</li>
+<li>
+<p>nanosecond: 999999999</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007325" name="i1007325"></a>
+<h3 class="refsect3">MinValue</h3>
+<p>This static field represents the minimum value for an <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4737" name="sthref4737"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalDS MinValue;
+</pre>
+<a id="sthref4738" name="sthref4738"></a>
+<p class="subhead2">Remarks</p>
+<p>Minimum values:</p>
+<ul>
+<li>
+<p>Day: -999999999</p>
+</li>
+<li>
+<p>hour: -23</p>
+</li>
+<li>
+<p>minute: -59</p>
+</li>
+<li>
+<p>second: -59</p>
+</li>
+<li>
+<p>nanosecond: -999999999</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007356" name="i1007356"></a>
+<h3 class="refsect3">Null</h3>
+<p>This static field represents a null value that can be assigned to an <code>OracleIntervalDS</code> instance.</p>
+<a id="sthref4739" name="sthref4739"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalDS Null;
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007380" name="i1007380"></a>
+<h3 class="refsect3">Zero</h3>
+<p>This static field represents a zero value for an <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4740" name="sthref4740"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalDS Zero;
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007404" name="i1007404"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Static Methods<a id="sthref4741" name="sthref4741"></a></h2>
+<p>The <code>OracleIntervalDS</code> static methods are listed in <a href="#g1307771">Table 14-56</a>.</p>
+<div class="tblruleformal"><a id="sthref4742" name="sthref4742"></a><a id="g1307771" name="g1307771"></a>
+<p class="titleintable">Table 14-56 OracleIntervalDS Static Methods</p>
+<table class="RuleFormal" title="OracleIntervalDS Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t274">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t274">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t274" headers="r1c1-t274">
+<p><a href="#i1007499">Equals</a></p>
+</td>
+<td align="left" headers="r2c1-t274 r1c2-t274">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t274" headers="r1c1-t274">
+<p><a href="#i1007534">GreaterThan</a></p>
+</td>
+<td align="left" headers="r3c1-t274 r1c2-t274">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t274" headers="r1c1-t274">
+<p><a href="#i1007569">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r4c1-t274 r1c2-t274">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t274" headers="r1c1-t274">
+<p><a href="#i1007605">LessThan</a></p>
+</td>
+<td align="left" headers="r5c1-t274 r1c2-t274">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t274" headers="r1c1-t274">
+<p><a href="#i1007640">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r6c1-t274 r1c2-t274">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t274" headers="r1c1-t274">
+<p><a href="#i1007675">NotEquals</a></p>
+</td>
+<td align="left" headers="r7c1-t274 r1c2-t274">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t274" headers="r1c1-t274">
+<p><a href="#i1007710">Parse</a></p>
+</td>
+<td align="left" headers="r8c1-t274 r1c2-t274">
+<p>Returns an <code>OracleIntervalDS</code> structure and sets its value for time interval using a string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t274" headers="r1c1-t274">
+<p><a href="#CJABAABI">SetPrecision</a></p>
+</td>
+<td align="left" headers="r9c1-t274 r1c2-t274">
+<p>Returns a new instance of an <code>OracleIntervalDS</code> with the specified day precision and fractional second precision</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007499" name="i1007499"></a>
+<h3 class="refsect3">Equals</h3>
+<p>This static method determines whether or not two <code>OracleIntervalDS</code> values are equal.</p>
+<a id="sthref4743" name="sthref4743"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool Equals(OracleIntervalDS <span class="italic">val1</span>, OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4744" name="sthref4744"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4745" name="sthref4745"></a>
+<p class="subhead2">Return Value</p>
+<p>If the two <code>OracleIntervalDS</code> structures represent the same time interval, returns <code>true</code>; otherwise, returns <code>false</code>.</p>
+<a id="sthref4746" name="sthref4746"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007534" name="i1007534"></a>
+<h3 class="refsect3">GreaterThan</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalDS</code> values is greater than the second.</p>
+<a id="sthref4747" name="sthref4747"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThan(OracleIntervalDS <span class="italic">val1</span>, OracleIntervalDS 
+<span class="italic">   val2</span>);
+</pre>
+<a id="sthref4748" name="sthref4748"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4749" name="sthref4749"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalDS</code> values is greater than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4750" name="sthref4750"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007569" name="i1007569"></a>
+<h3 class="refsect3">GreaterThanOrEqual</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalDS</code> values is greater than or equal to the second.</p>
+<a id="sthref4751" name="sthref4751"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThanOrEqual(OracleIntervalDS <span class="italic">val1</span>, 
+  OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4752" name="sthref4752"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4753" name="sthref4753"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalDS</code> values is greater than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4754" name="sthref4754"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007605" name="i1007605"></a>
+<h3 class="refsect3">LessThan</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalDS</code> values is less than the second.</p>
+<a id="sthref4755" name="sthref4755"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThan(OracleIntervalDS <span class="italic">val1</span>, OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4756" name="sthref4756"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4757" name="sthref4757"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalDS</code> values is less than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4758" name="sthref4758"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007640" name="i1007640"></a>
+<h3 class="refsect3">LessThanOrEqual</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalDS</code> values is less than or equal to the second.</p>
+<a id="sthref4759" name="sthref4759"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThanOrEqual(OracleIntervalDS <span class="italic">val1</span>, OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4760" name="sthref4760"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4761" name="sthref4761"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalDS</code> values is less than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4762" name="sthref4762"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007675" name="i1007675"></a>
+<h3 class="refsect3">NotEquals</h3>
+<p>This static method determines whether or not two <code>OracleIntervalDS</code> values are not equal.</p>
+<a id="sthref4763" name="sthref4763"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool NotEquals(OracleIntervalDS <span class="italic">val1</span>, OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4764" name="sthref4764"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4765" name="sthref4765"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleIntervalDS</code> values are not equal; otherwise, returns <code>false</code>.</p>
+<a id="sthref4766" name="sthref4766"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007710" name="i1007710"></a>
+<h3 class="refsect3">Parse</h3>
+<p>This static method returns an <code>OracleIntervalDS</code> instance and sets its value for time interval using a string.</p>
+<a id="sthref4767" name="sthref4767"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalDS Parse(string <span class="italic">intervalStr</span>);
+</pre>
+<a id="sthref4768" name="sthref4768"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">intervalStr</span></code></p>
+<p>A string representing the Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code>.</p>
+</li>
+</ul>
+<a id="sthref4769" name="sthref4769"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns an <code>OracleIntervalDS</code> instance representing the time interval from the supplied string.</p>
+<a id="sthref4770" name="sthref4770"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is not in the valid format or <code><span class="codeinlineitalic">intervalStr</span></code> has an invalid value.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is null.</p>
+<a id="sthref4771" name="sthref4771"></a>
+<p class="subhead2">Remarks</p>
+<p>The value specified in <code><span class="codeinlineitalic">intervalStr</span></code> must be in Day HH:MI:SSxFF format.</p>
+<a id="sthref4772" name="sthref4772"></a>
+<p class="subhead2">Example</p>
+<p>"<code>1</code> <code>2:3:4.99</code>" means 1 day, 2 hours, 3 minutes, 4 seconds, and 990 milliseconds or 1 day, 2 hours, 3 minutes, 4 seconds, and 990000000 nanoseconds.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CJABAABI" name="CJABAABI"></a>
+<h3 class="refsect3">SetPrecision</h3>
+<p>This static method returns a new instance of an <code>OracleIntervalDS</code> with the specified day precision and fractional second precision.</p>
+<a id="sthref4773" name="sthref4773"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalDS SetPrecision(OracleIntervalDS <span class="italic">value1</span>,
+    int <span class="italic">dayPrecision</span>, int <span class="italic">fracSecPrecision)</span>;
+</pre>
+<a id="sthref4774" name="sthref4774"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleIntervalDS</code> structure.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">dayPrecision</span></code></p>
+<p>The day precision provided. Range of day precision is (0 to 9).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">fracSecPrecision</span></code></p>
+<p>The fractional second precision provided. Range of fractional second precision is (0 to 9).</p>
+</li>
+</ul>
+<a id="sthref4775" name="sthref4775"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> instance.</p>
+<a id="sthref4776" name="sthref4776"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - An argument value is out of the specified range.</p>
+<a id="sthref4777" name="sthref4777"></a>
+<p class="subhead2">Remarks</p>
+<p>Depending on the value specified in the supplied <code><span class="codeinlineitalic">dayPrecision</span></code>, 0 or more leading zeros are displayed in the string returned by <code>ToString()</code>.</p>
+<p>The value specified in the supplied <code><span class="codeinlineitalic">fracSecPrecision</span></code> is used to perform a rounding off operation on the supplied <code>OracleIntervalDS</code> value. Depending on this value, <code>0</code> or more trailing zeros are displayed in the string returned by <code>ToString()</code>.</p>
+<a id="sthref4778" name="sthref4778"></a>
+<p class="subhead2">Example</p>
+<p>The <code>OracleIntervalDS</code> with a value of "<code>1</code> <code>2:3:4.99</code>" results in the string "<code>001</code> <code>2:3:4.99000</code>" when <code>SetPrecision()</code> is called, with the day precision set to <code>3</code> and fractional second precision set to <code>5</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007786" name="i1007786"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Static Operators<a id="sthref4779" name="sthref4779"></a></h2>
+<p>The <code>OracleIntervalDS</code> static operators are listed in <a href="#g1308927">Table 14-57</a>.</p>
+<div class="tblruleformal"><a id="sthref4780" name="sthref4780"></a><a id="g1308927" name="g1308927"></a>
+<p class="titleintable">Table 14-57 OracleIntervalDS Static Operators</p>
+<table class="RuleFormal" title="OracleIntervalDS Static Operators " summary="Rows are static operators. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t284">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t284">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t284" headers="r1c1-t284">
+<p><a href="#i1007902">operator +</a></p>
+</td>
+<td align="left" headers="r2c1-t284 r1c2-t284">
+<p>Adds two <code>OracleIntervalDS</code> values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t284" headers="r1c1-t284">
+<p><a href="#i1007935">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t284 r1c2-t284">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t284" headers="r1c1-t284">
+<p><a href="#i1007970">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t284 r1c2-t284">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t284" headers="r1c1-t284">
+<p><a href="#i1008005">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t284 r1c2-t284">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t284" headers="r1c1-t284">
+<p><a href="#i1008040">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t284 r1c2-t284">
+<p>Determines whether or not two <code>OracleIntervalDS</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t284" headers="r1c1-t284">
+<p><a href="#i1008075">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t284 r1c2-t284">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t284" headers="r1c1-t284">
+<p><a href="#i1008110">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t284 r1c2-t284">
+<p>Determines whether or not one <code>OracleIntervalDS</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t284" headers="r1c1-t284">
+<p><a href="#i1008145">operator -</a></p>
+</td>
+<td align="left" headers="r9c1-t284 r1c2-t284">
+<p>Subtracts one <code>OracleIntervalDS</code> value from another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t284" headers="r1c1-t284">
+<p><a href="#i1008178">operator -</a></p>
+</td>
+<td align="left" headers="r10c1-t284 r1c2-t284">
+<p>Negates an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t284" headers="r1c1-t284">
+<p><a href="#i1008209">operator *</a></p>
+</td>
+<td align="left" headers="r11c1-t284 r1c2-t284">
+<p>Multiplies an <code>OracleIntervalDS</code> value by a number</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t284" headers="r1c1-t284">
+<p><a href="#i1008242">operator /</a></p>
+</td>
+<td align="left" headers="r12c1-t284 r1c2-t284">
+<p>Divides an <code>OracleIntervalDS</code> value by a number</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007902" name="i1007902"></a>
+<h3 class="refsect3">operator +</h3>
+<p>This static operator adds two <code>OracleIntervalDS</code> values.</p>
+<a id="sthref4781" name="sthref4781"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalDS operator + (OracleIntervalDS <span class="italic">val1</span>,
+   OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4782" name="sthref4782"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4783" name="sthref4783"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS.</code></p>
+<a id="sthref4784" name="sthref4784"></a>
+<p class="subhead2">Remarks</p>
+<p>If either argument has a null value, the returned <code>OracleIntervalDS</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007935" name="i1007935"></a>
+<h3 class="refsect3">operator ==</h3>
+<p>This static operator determines if two <code>OracleIntervalDS</code> values are equal.</p>
+<a id="sthref4785" name="sthref4785"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator == (OracleIntervalDS <span class="italic">val1</span>,
+    OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4786" name="sthref4786"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4787" name="sthref4787"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the two <code>OracleIntervalDS</code> values are the same; otherwise returns <code>false</code>.</p>
+<a id="sthref4788" name="sthref4788"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1007970" name="i1007970"></a>
+<h3 class="refsect3">operator &gt;</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalDS</code> values is greater than the second.</p>
+<a id="sthref4789" name="sthref4789"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt; (OracleIntervalDS <span class="italic">val1</span>,
+   OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4790" name="sthref4790"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4791" name="sthref4791"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if one <code>OracleIntervalDS</code> value is greater than another; otherwise, returns <code>false</code>.</p>
+<a id="sthref4792" name="sthref4792"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008005" name="i1008005"></a>
+<h3 class="refsect3">operator &gt;=</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalDS</code> values is greater than or equal to the second.</p>
+<a id="sthref4793" name="sthref4793"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt;= (OracleIntervalDS <span class="italic">val1</span>, 
+  OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4794" name="sthref4794"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4795" name="sthref4795"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalDS</code> values is greater than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4796" name="sthref4796"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008040" name="i1008040"></a>
+<h3 class="refsect3">operator !=</h3>
+<p>This static operator determines if the two <code>OracleIntervalDS</code> values are not equal.</p>
+<a id="sthref4797" name="sthref4797"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator != (OracleIntervalDS <span class="italic">val1</span>, 
+  OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4798" name="sthref4798"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4799" name="sthref4799"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the two <code>OracleIntervalDS</code> values are not equal; otherwise, returns <code>false</code>.</p>
+<a id="sthref4800" name="sthref4800"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008075" name="i1008075"></a>
+<h3 class="refsect3">operator &lt;</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalDS</code> values is less than the second.</p>
+<a id="sthref4801" name="sthref4801"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt; (OracleIntervalDS <span class="italic">val1</span>, 
+  OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4802" name="sthref4802"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4803" name="sthref4803"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalDS</code> values is less than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4804" name="sthref4804"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008110" name="i1008110"></a>
+<h3 class="refsect3">operator &lt;=</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalDS</code> values is less than or equal to the second.</p>
+<a id="sthref4805" name="sthref4805"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt;= (OracleIntervalDS <span class="italic">val1</span>, 
+   OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4806" name="sthref4806"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4807" name="sthref4807"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalDS</code> values is less than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4808" name="sthref4808"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008145" name="i1008145"></a>
+<h3 class="refsect3">operator -</h3>
+<p>This static operator subtracts one <code>OracleIntervalDS</code> structure from another.</p>
+<a id="sthref4809" name="sthref4809"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalDS operator - (OracleIntervalDS <span class="italic">val1</span>,
+   OracleIntervalDS <span class="italic">val2</span>);
+</pre>
+<a id="sthref4810" name="sthref4810"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4811" name="sthref4811"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4812" name="sthref4812"></a>
+<p class="subhead2">Remarks</p>
+<p>If either argument has a null value, the returned <code>OracleIntervalDS</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008178" name="i1008178"></a>
+<h3 class="refsect3">operator -</h3>
+<p>This static operator negates the supplied <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4813" name="sthref4813"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalDS operator - (OracleIntervalDS <span class="italic">val</span>);
+</pre>
+<a id="sthref4814" name="sthref4814"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val</span></code></p>
+<p>An <code>OracleIntervalDS</code>.</p>
+</li>
+</ul>
+<a id="sthref4815" name="sthref4815"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4816" name="sthref4816"></a>
+<p class="subhead2">Remarks</p>
+<p>If the supplied <code>OracleIntervalDS</code> structure has a null value, the returned <code>OracleIntervalDS</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008209" name="i1008209"></a>
+<h3 class="refsect3">operator *</h3>
+<p>This static operator multiplies an <code>OracleIntervalDS</code> value by a number.</p>
+<a id="sthref4817" name="sthref4817"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalDS operator * (OracleIntervalDS <span class="italic">val1</span>, 
+   int multiplier);
+</pre>
+<a id="sthref4818" name="sthref4818"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">multiplier</span></code></p>
+<p>A multiplier.</p>
+</li>
+</ul>
+<a id="sthref4819" name="sthref4819"></a>
+<p class="subhead2">Return Value</p>
+<p>A new <code>OracleIntervalDS</code> instance.</p>
+<a id="sthref4820" name="sthref4820"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code>OracleIntervalDS</code> structure has a null value, the returned <code>OracleIntervalDS</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008242" name="i1008242"></a>
+<h3 class="refsect3">operator /</h3>
+<p>This static operator divides an <code>OracleIntervalDS</code> value by a number.</p>
+<a id="sthref4821" name="sthref4821"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalDS operator / (OracleIntervalDS <span class="italic">val1</span>, 
+   int <span class="italic">divisor</span>);
+</pre>
+<a id="sthref4822" name="sthref4822"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalDS</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">divisor</span></code></p>
+<p>A divisor.</p>
+</li>
+</ul>
+<a id="sthref4823" name="sthref4823"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4824" name="sthref4824"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code>OracleIntervalDS</code> structure has a null value, the returned <code>OracleIntervalDS</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008275" name="i1008275"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Type Conversions<a id="sthref4825" name="sthref4825"></a></h2>
+<p>The <code>OracleIntervalDS</code> type conversions are listed in <a href="#g1309015">Table 14-58</a>.</p>
+<div class="tblruleformal"><a id="sthref4826" name="sthref4826"></a><a id="g1309015" name="g1309015"></a>
+<p class="titleintable">Table 14-58 OracleIntervalDS Type Conversions</p>
+<table class="RuleFormal" title="OracleIntervalDS Type Conversions " summary="Rows are type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="48%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t297">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t297">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t297" headers="r1c1-t297">
+<p><a href="#i1008335">explicit operator TimeSpan</a></p>
+</td>
+<td align="left" headers="r2c1-t297 r1c2-t297">
+<p>Converts an <code>OracleIntervalDS</code> structure to a <code>TimeSpan</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t297" headers="r1c1-t297">
+<p><a href="#i1008367">explicit operator OracleIntervalDS</a></p>
+</td>
+<td align="left" headers="r3c1-t297 r1c2-t297">
+<p>Converts a string to an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t297" headers="r1c1-t297">
+<p><a href="#i1008403">implicit operator OracleIntervalDS</a></p>
+</td>
+<td align="left" headers="r4c1-t297 r1c2-t297">
+<p>Converts a <code>TimeSpan</code> structure to an <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008335" name="i1008335"></a>
+<h3 class="refsect3">explicit operator TimeSpan</h3>
+<p>This type conversion operator converts an <code>OracleIntervalDS</code> structure to a <code>TimeSpan</code> structure.</p>
+<a id="sthref4827" name="sthref4827"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator TimeSpan(OracleIntervalDS <span class="italic">val</span>);
+</pre>
+<a id="sthref4828" name="sthref4828"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val</span></code></p>
+<p>An <code>OracleIntervalDS</code> instance.</p>
+</li>
+</ul>
+<a id="sthref4829" name="sthref4829"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>TimeSpan</code> structure.</p>
+<a id="sthref4830" name="sthref4830"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The <code>OracleIntervalDS</code> structure has a null value.</p>
+<a id="sthref4831" name="sthref4831"></a>
+<p class="subhead2">Remarks</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008367" name="i1008367"></a>
+<h3 class="refsect3">explicit operator OracleIntervalDS</h3>
+<p>This type conversion operator converts a string to an <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4832" name="sthref4832"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator OracleIntervalDS (string <span class="italic">intervalStr</span>);
+</pre>
+<a id="sthref4833" name="sthref4833"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">intervalStr</span></code></p>
+<p>A string representation of an Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code>.</p>
+</li>
+</ul>
+<a id="sthref4834" name="sthref4834"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4835" name="sthref4835"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The supplied <code><span class="codeinlineitalic">intervalStr</span></code> parameter is not in the correct format or has an invalid value.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is null.</p>
+<a id="sthref4836" name="sthref4836"></a>
+<p class="subhead2">Remarks</p>
+<p>The returned <code>OracleIntervalDS</code> structure contains the same time interval represented by the supplied <code><span class="codeinlineitalic">intervalStr</span></code>. The value specified in the supplied <code><span class="codeinlineitalic">intervalStr</span></code> must be in Day HH:MI:SSxFF format.</p>
+<a id="sthref4837" name="sthref4837"></a>
+<p class="subhead2">Example</p>
+<p><code>"1 2:3:4.99"</code> means 1 day, 2 hours, 3 minutes 4 seconds and 990 milliseconds or 1 day, 2 hours, 3 minutes 4 seconds and 990000000 nanoseconds.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008403" name="i1008403"></a>
+<h3 class="refsect3">implicit operator OracleIntervalDS</h3>
+<p>This type conversion operator converts a <code>TimeSpan</code> structure to an <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4838" name="sthref4838"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static implicit operator OracleIntervalDS(TimeSpan <span class="italic">val</span>);
+</pre>
+<a id="sthref4839" name="sthref4839"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val</span></code></p>
+<p>A <code>TimeSpan</code> instance.</p>
+</li>
+</ul>
+<a id="sthref4840" name="sthref4840"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4841" name="sthref4841"></a>
+<p class="subhead2">Remarks</p>
+<p>The returned <code>OracleIntervalDS</code> structure contains the same days, hours, seconds, and milliseconds as the supplied <code>TimeSpan</code> <code>val</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008434" name="i1008434"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Properties<a id="sthref4842" name="sthref4842"></a></h2>
+<p>The <code>OracleIntervalDS</code> properties are listed in <a href="#g1308854">Table 14-59</a>.</p>
+<div class="tblruleformal"><a id="sthref4843" name="sthref4843"></a><a id="g1308854" name="g1308854"></a>
+<p class="titleintable">Table 14-59 OracleIntervalDS Properties</p>
+<table class="RuleFormal" title="OracleIntervalDS Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="23%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t302">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t302">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t302" headers="r1c1-t302">
+<p><a href="#i1008543">BinData</a></p>
+</td>
+<td align="left" headers="r2c1-t302 r1c2-t302">
+<p>Returns an array of bytes that represents the Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> in Oracle internal format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t302" headers="r1c1-t302">
+<p><a href="#i1008572">Days</a></p>
+</td>
+<td align="left" headers="r3c1-t302 r1c2-t302">
+<p>Gets the days component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t302" headers="r1c1-t302">
+<p><a href="#i1008600">Hours</a></p>
+</td>
+<td align="left" headers="r4c1-t302 r1c2-t302">
+<p>Gets the hours component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t302" headers="r1c1-t302">
+<p><a href="#i1008628">IsNull</a></p>
+</td>
+<td align="left" headers="r5c1-t302 r1c2-t302">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t302" headers="r1c1-t302">
+<p><a href="#i1008654">Milliseconds</a></p>
+</td>
+<td align="left" headers="r6c1-t302 r1c2-t302">
+<p>Gets the milliseconds component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t302" headers="r1c1-t302">
+<p><a href="#i1008682">Minutes</a></p>
+</td>
+<td align="left" headers="r7c1-t302 r1c2-t302">
+<p>Gets the minutes component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t302" headers="r1c1-t302">
+<p><a href="#i1008710">Nanoseconds</a></p>
+</td>
+<td align="left" headers="r8c1-t302 r1c2-t302">
+<p>Gets the nanoseconds component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t302" headers="r1c1-t302">
+<p><a href="#i1008738">Seconds</a></p>
+</td>
+<td align="left" headers="r9c1-t302 r1c2-t302">
+<p>Gets the seconds component of an <code>OracleIntervalDS</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t302" headers="r1c1-t302">
+<p><a href="#i1008766">TotalDays</a></p>
+</td>
+<td align="left" headers="r10c1-t302 r1c2-t302">
+<p>Returns the total number, in days, that represent the time period in the <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t302" headers="r1c1-t302">
+<p><a href="#i1008794">Value</a></p>
+</td>
+<td align="left" headers="r11c1-t302 r1c2-t302">
+<p>Specifies the time interval that is stored in the <code>OracleIntervalDS</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008543" name="i1008543"></a>
+<h3 class="refsect3">BinData</h3>
+<p>This property returns an array of bytes that represents the Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> in Oracle internal format.</p>
+<a id="sthref4844" name="sthref4844"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public byte[] BinData {get;}
+</pre>
+<a id="sthref4845" name="sthref4845"></a>
+<p class="subhead2">Property Value</p>
+<p>A byte array that represents an Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> in Oracle internal format.</p>
+<a id="sthref4846" name="sthref4846"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<a id="sthref4847" name="sthref4847"></a>
+<p class="subhead2">Remarks</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008572" name="i1008572"></a>
+<h3 class="refsect3">Days</h3>
+<p>This property gets the days component of an <code>OracleIntervalDS</code>.</p>
+<a id="sthref4848" name="sthref4848"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Days {get;}
+</pre>
+<a id="sthref4849" name="sthref4849"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code> representing the days component.</p>
+<a id="sthref4850" name="sthref4850"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008600" name="i1008600"></a>
+<h3 class="refsect3">Hours</h3>
+<p>This property gets the hours component of an <code>OracleIntervalDS.</code></p>
+<a id="sthref4851" name="sthref4851"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Hours {get;}
+</pre>
+<a id="sthref4852" name="sthref4852"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code> representing the hours component.</p>
+<a id="sthref4853" name="sthref4853"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008628" name="i1008628"></a>
+<h3 class="refsect3">IsNull</h3>
+<p>This property indicates whether or not the current instance has a null value.</p>
+<a id="sthref4854" name="sthref4854"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsNull {get;}
+</pre>
+<a id="sthref4855" name="sthref4855"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code> if the current instance has a null value; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008654" name="i1008654"></a>
+<h3 class="refsect3">Milliseconds</h3>
+<p>This property gets the milliseconds component of an <code>OracleIntervalDS.</code></p>
+<a id="sthref4856" name="sthref4856"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public double Milliseconds {get;}
+</pre>
+<a id="sthref4857" name="sthref4857"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>double</code> that represents milliseconds component.</p>
+<a id="sthref4858" name="sthref4858"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008682" name="i1008682"></a>
+<h3 class="refsect3">Minutes</h3>
+<p>This property gets the minutes component of an <code>OracleIntervalDS.</code></p>
+<a id="sthref4859" name="sthref4859"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Minutes {get;}
+</pre>
+<a id="sthref4860" name="sthref4860"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>int</code> that represents minutes component.</p>
+<a id="sthref4861" name="sthref4861"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008710" name="i1008710"></a>
+<h3 class="refsect3">Nanoseconds</h3>
+<p>This property gets the nanoseconds component of an <code>OracleIntervalDS</code>.</p>
+<a id="sthref4862" name="sthref4862"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Nanoseconds {get;}
+</pre>
+<a id="sthref4863" name="sthref4863"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code> that represents nanoseconds component.</p>
+<a id="sthref4864" name="sthref4864"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008738" name="i1008738"></a>
+<h3 class="refsect3">Seconds</h3>
+<p>This property gets the seconds component of an <code>OracleIntervalDS.</code></p>
+<a id="sthref4865" name="sthref4865"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Seconds {get;}
+</pre>
+<a id="sthref4866" name="sthref4866"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code> that represents seconds component.</p>
+<a id="sthref4867" name="sthref4867"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008766" name="i1008766"></a>
+<h3 class="refsect3">TotalDays</h3>
+<p>This property returns the total number, in days, that represent the time period in the <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4868" name="sthref4868"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public double TotalDays {get;}
+</pre>
+<a id="sthref4869" name="sthref4869"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>double</code> that represents the total number of days.</p>
+<a id="sthref4870" name="sthref4870"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008794" name="i1008794"></a>
+<h3 class="refsect3">Value</h3>
+<p>This property specifies the time interval that is stored in the <code>OracleIntervalDS</code> structure.</p>
+<a id="sthref4871" name="sthref4871"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public TimeSpan Value {get;}
+</pre>
+<a id="sthref4872" name="sthref4872"></a>
+<p class="subhead2">Property Value</p>
+<p>A time interval.</p>
+<a id="sthref4873" name="sthref4873"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008822" name="i1008822"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalDS Methods<a id="sthref4874" name="sthref4874"></a></h2>
+<p>The <code>OracleIntervalDS</code> methods are listed in <a href="#g1309095">Table 14-60</a>.</p>
+<div class="tblruleformal"><a id="sthref4875" name="sthref4875"></a><a id="g1309095" name="g1309095"></a>
+<p class="titleintable">Table 14-60 OracleIntervalDS Methods</p>
+<table class="RuleFormal" title="OracleIntervalDS Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t314">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t314">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t314" headers="r1c1-t314">
+<p><a href="#i1008893">CompareTo</a></p>
+</td>
+<td align="left" headers="r2c1-t314 r1c2-t314">
+<p>Compares the current <code>OracleIntervalDS</code> instance to an object, and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t314" headers="r1c1-t314">
+<p><a href="#i1008934">Equals</a></p>
+</td>
+<td align="left" headers="r3c1-t314 r1c2-t314">
+<p>Determines whether or not the specified <code>object</code> has the same time interval as the current instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t314" headers="r1c1-t314">
+<p><a href="#i1008967">GetHashCode</a></p>
+</td>
+<td align="left" headers="r4c1-t314 r1c2-t314">
+<p>Returns a hash code for the <code>OracleIntervalDS</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t314" headers="r1c1-t314">
+<p>GetType</p>
+</td>
+<td align="left" headers="r5c1-t314 r1c2-t314">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t314" headers="r1c1-t314">
+<p><a href="#i1008992">ToString</a></p>
+</td>
+<td align="left" headers="r6c1-t314 r1c2-t314">
+<p>Converts the current <code>OracleIntervalDS</code> structure to a string</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008893" name="i1008893"></a>
+<h3 class="refsect3">CompareTo</h3>
+<p>This method compares the current <code>OracleIntervalDS</code> instance to an object, and returns an integer that represents their relative values.</p>
+<a id="sthref4876" name="sthref4876"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int CompareTo(object <span class="italic">obj</span>);
+</pre>
+<a id="sthref4877" name="sthref4877"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The object being compared to.</p>
+</li>
+</ul>
+<a id="sthref4878" name="sthref4878"></a>
+<p class="subhead2">Return Value</p>
+<p>The method returns:</p>
+<ul>
+<li>
+<p>Less than zero: if the current <code>OracleIntervalDS</code> represents a shorter time interval than <code><span class="codeinlineitalic">obj</span></code>.</p>
+</li>
+<li>
+<p>Zero: if the current <code>OracleIntervalDS</code> and <code><span class="codeinlineitalic">obj</span></code> represent the same time interval.</p>
+</li>
+<li>
+<p>Greater than zero: if the current <code>OracleIntervalDS</code> represents a longer time interval than <code><span class="codeinlineitalic">obj</span></code>.</p>
+</li>
+</ul>
+<a id="sthref4879" name="sthref4879"></a>
+<p class="subhead2">Implements</p>
+<p><code>IComparable</code></p>
+<a id="sthref4880" name="sthref4880"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">obj</span></code> parameter is not of type <code>OracleIntervalDS</code>.</p>
+<a id="sthref4881" name="sthref4881"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>The comparison must be between <code>OracleIntervalDS</code>s. For example, comparing an <code>OracleIntervalDS</code> instance with an <code>OracleBinary</code> instance is not allowed. When an <code>OracleIntervalDS</code> is compared with a different type, an <code>ArgumentException</code> is thrown.</p>
+</li>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008934" name="i1008934"></a>
+<h3 class="refsect3">Equals</h3>
+<p>This method determines whether or not the specified <code>object</code> has the same time interval as the current instance.</p>
+<a id="sthref4882" name="sthref4882"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool Equals(object <span class="italic">obj</span>);
+</pre>
+<a id="sthref4883" name="sthref4883"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The specified object.</p>
+</li>
+</ul>
+<a id="sthref4884" name="sthref4884"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if <code><span class="codeinlineitalic">obj</span></code> is of type <code>OracleIntervalDS</code> and has the same time interval as the current instance; otherwise, returns <code>false</code>.</p>
+<a id="sthref4885" name="sthref4885"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalDS</code> that has a value compares greater than an <code>OracleIntervalDS</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalDS</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008967" name="i1008967"></a>
+<h3 class="refsect3">GetHashCode</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method returns a hash code for the <code>OracleIntervalDS</code> instance.</p>
+<a id="sthref4886" name="sthref4886"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int GetHashCode();
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1008992" name="i1008992"></a>
+<h3 class="refsect3">ToString</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method converts the current <code>OracleIntervalDS</code> structure to a string.</p>
+<a id="sthref4887" name="sthref4887"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string ToString();
+</pre>
+<a id="sthref4888" name="sthref4888"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns a <code>string</code>.</p>
+<a id="sthref4889" name="sthref4889"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current instance has a null value, the returned string contains "null".</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1006455">OracleIntervalDS Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006532">OracleIntervalDS Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleDecimalStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleIntervalYMStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

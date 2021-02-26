@@ -1,0 +1,2767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:37Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleIntervalDSStructure.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleStringStructure.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleIntervalYM Structure</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleIntervalDSStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleStringStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="i1009021" name="i1009021"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1"><a id="sthref4890" name="sthref4890"></a>OracleIntervalYM Structure</h1>
+<p>The <code>OracleIntervalYM</code> structure represents the Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> data type to be stored in or retrieved from a database. Each <code>OracleIntervalYM</code> stores a period of time in years and months.</p>
+<a id="sthref4891" name="sthref4891"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.ValueType</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;Oracle.DataAccess.Types.OracleIntervalYM</code></p>
+<a id="sthref4892" name="sthref4892"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public struct OracleIntervalYM : IComparable
+</pre>
+<a id="sthref4893" name="sthref4893"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref4894" name="sthref4894"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+ 
+class OracleIntervalYMSample
+{
+  static void Main()
+  {
+    OracleIntervalYM iYMMax = OracleIntervalYM.MaxValue;
+    double totalYears = iYMMax.TotalYears;
+ 
+    totalYears -= 1;
+    OracleIntervalYM iYMMax_1 = new OracleIntervalYM(totalYears);
+    
+    // Calculate the difference
+    OracleIntervalYM iYMDiff = iYMMax - iYMMax_1;
+    
+    // Prints "iYMDiff.ToString() = +000000001-00"
+    Console.WriteLine("iYMDiff.ToString() = " + iYMDiff.ToString());
+  }
+}
+</pre>
+<a id="sthref4895" name="sthref4895"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Types</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+<li>
+<p><a href="#i1009509">OracleIntervalYM Constructors</a></p>
+</li>
+<li>
+<p><a href="#i1009717">OracleIntervalYM Static Fields</a></p>
+</li>
+<li>
+<p><a href="#i1009884">OracleIntervalYM Static Methods</a></p>
+</li>
+<li>
+<p><a href="#i1010262">OracleIntervalYM Static Operators</a></p>
+</li>
+<li>
+<p><a href="#i1010751">OracleIntervalYM Type Conversions</a></p>
+</li>
+<li>
+<p><a href="#i1010907">OracleIntervalYM Properties</a></p>
+</li>
+<li>
+<p><a href="#i1011154">OracleIntervalYM Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009097" name="i1009097"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Members<a id="sthref4896" name="sthref4896"></a></h2>
+<p><code>OracleIntervalYM</code> members are listed in the following tables:</p>
+<a id="sthref4897" name="sthref4897"></a>
+<p class="subhead1">OracleIntervalYM Constructors</p>
+<p><code>OracleIntervalYM</code> constructors are listed in <a href="#g1309141">Table 14-61</a></p>
+<div class="tblruleformal"><a id="sthref4898" name="sthref4898"></a><a id="g1309141" name="g1309141"></a>
+<p class="titleintable">Table 14-61 OracleIntervalYM Constructors</p>
+<table class="RuleFormal" title="OracleIntervalYM Constructors" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t321">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t321">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t321" headers="r1c1-t321">
+<p><a href="#i1009509">OracleIntervalYM Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t321 r1c2-t321">
+<p>Instantiates a new instance of <code>OracleIntervalYM</code> structure (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4899" name="sthref4899"></a>
+<p class="subhead1">OracleIntervalYM Static Fields</p>
+<p>The <code>OracleIntervalYM</code> static fields are listed in <a href="#g1309151">Table 14-62</a>.</p>
+<div class="tblruleformal"><a id="sthref4900" name="sthref4900"></a><a id="g1309151" name="g1309151"></a>
+<p class="titleintable">Table 14-62 OracleIntervalYM Static Fields</p>
+<table class="RuleFormal" title="OracleIntervalYM Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t322">Field</th>
+<th align="left" valign="bottom" id="r1c2-t322">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t322" headers="r1c1-t322">
+<p><a href="#i1009784">MaxValue</a></p>
+</td>
+<td align="left" headers="r2c1-t322 r1c2-t322">
+<p>Represents the maximum value for an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t322" headers="r1c1-t322">
+<p><a href="#i1009810">MinValue</a></p>
+</td>
+<td align="left" headers="r3c1-t322 r1c2-t322">
+<p>Represents the minimum value for an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t322" headers="r1c1-t322">
+<p><a href="#i1009836">Null</a></p>
+</td>
+<td align="left" headers="r4c1-t322 r1c2-t322">
+<p>Represents a null value that can be assigned to an <code>OracleIntervalYM</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t322" headers="r1c1-t322">
+<p><a href="#i1009860">Zero</a></p>
+</td>
+<td align="left" headers="r5c1-t322 r1c2-t322">
+<p>Represents a zero value for an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4901" name="sthref4901"></a>
+<p class="subhead1">OracleIntervalYM Static Methods</p>
+<p>The <code>OracleIntervalYM</code> static methods are listed in <a href="#g1309170">Table 14-63</a>.</p>
+<div class="tblruleformal"><a id="sthref4902" name="sthref4902"></a><a id="g1309170" name="g1309170"></a>
+<p class="titleintable">Table 14-63 OracleIntervalYM Static Methods</p>
+<table class="RuleFormal" title="OracleIntervalYM Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t323">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t323">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t323" headers="r1c1-t323">
+<p><a href="#CJAFGEJF">Equals</a></p>
+</td>
+<td align="left" headers="r2c1-t323 r1c2-t323">
+<p>Determines whether or not two <code>OracleIntervalYM</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t323" headers="r1c1-t323">
+<p><a href="#i1010014">GreaterThan</a></p>
+</td>
+<td align="left" headers="r3c1-t323 r1c2-t323">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t323" headers="r1c1-t323">
+<p><a href="#i1010049">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r4c1-t323 r1c2-t323">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t323" headers="r1c1-t323">
+<p><a href="#i1010084">LessThan</a></p>
+</td>
+<td align="left" headers="r5c1-t323 r1c2-t323">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t323" headers="r1c1-t323">
+<p><a href="#i1010119">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r6c1-t323 r1c2-t323">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t323" headers="r1c1-t323">
+<p><a href="#i1010154">NotEquals</a></p>
+</td>
+<td align="left" headers="r7c1-t323 r1c2-t323">
+<p>Determines whether two <code>OracleIntervalYM</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t323" headers="r1c1-t323">
+<p><a href="#i1010189">Parse</a></p>
+</td>
+<td align="left" headers="r8c1-t323 r1c2-t323">
+<p>Returns an <code>OracleIntervalYM</code> structure and sets its value for time interval using a string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t323" headers="r1c1-t323">
+<p><a href="#i1010225">SetPrecision</a></p>
+</td>
+<td align="left" headers="r9c1-t323 r1c2-t323">
+<p>Returns a new instance of an <code>OracleIntervalYM</code> with the specified year precision.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4903" name="sthref4903"></a>
+<p class="subhead1">OracleIntervalYM Static Operators</p>
+<p>The <code>OracleIntervalYM</code> static operators are listed in <a href="#g1309201">Table 14-64</a>.</p>
+<div class="tblruleformal"><a id="sthref4904" name="sthref4904"></a><a id="g1309201" name="g1309201"></a>
+<p class="titleintable">Table 14-64 OracleIntervalYM Static Operators</p>
+<table class="RuleFormal" title="OracleIntervalYM Static Operators " summary="Rows are static operators. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t324">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t324">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t324" headers="r1c1-t324">
+<p><a href="#i1010378">operator +</a></p>
+</td>
+<td align="left" headers="r2c1-t324 r1c2-t324">
+<p>Adds two <code>OracleIntervalYM</code> values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t324" headers="r1c1-t324">
+<p><a href="#i1010411">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t324 r1c2-t324">
+<p>Determines whether or not two <code>OracleIntervalYM</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t324" headers="r1c1-t324">
+<p><a href="#i1010446">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t324 r1c2-t324">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t324" headers="r1c1-t324">
+<p><a href="#i1010481">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t324 r1c2-t324">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t324" headers="r1c1-t324">
+<p><a href="#i1010516">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t324 r1c2-t324">
+<p>Determines whether two <code>OracleIntervalYM</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t324" headers="r1c1-t324">
+<p><a href="#i1010551">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t324 r1c2-t324">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t324" headers="r1c1-t324">
+<p><a href="#CJAJIIFB">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t324 r1c2-t324">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t324" headers="r1c1-t324">
+<p><a href="#i1010621">operator -</a></p>
+</td>
+<td align="left" headers="r9c1-t324 r1c2-t324">
+<p>Subtracts one <code>OracleIntervalYM</code> value from another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t324" headers="r1c1-t324">
+<p><a href="#i1010654">operator -</a></p>
+</td>
+<td align="left" headers="r10c1-t324 r1c2-t324">
+<p>Negates an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t324" headers="r1c1-t324">
+<p><a href="#i1010685">operator *</a></p>
+</td>
+<td align="left" headers="r11c1-t324 r1c2-t324">
+<p>Multiplies an <code>OracleIntervalYM</code> value by a number</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t324" headers="r1c1-t324">
+<p><a href="#i1010718">operator /</a></p>
+</td>
+<td align="left" headers="r12c1-t324 r1c2-t324">
+<p>Divides an <code>OracleIntervalYM</code> value by a number</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4905" name="sthref4905"></a>
+<p class="subhead1">OracleIntervalYM Type Conversions</p>
+<p>The <code>OracleIntervalYM</code> conversions are listed in <a href="#g1309241">Table 14-65</a>.</p>
+<div class="tblruleformal"><a id="sthref4906" name="sthref4906"></a><a id="g1309241" name="g1309241"></a>
+<p class="titleintable">Table 14-65 OracleIntervalYM Type Conversions</p>
+<table class="RuleFormal" title="OracleIntervalYM Type Conversions " summary="Rows are type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t325">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t325">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t325" headers="r1c1-t325">
+<p><a href="#i1010811">explicit operator long</a></p>
+</td>
+<td align="left" headers="r2c1-t325 r1c2-t325">
+<p>Converts an <code>OracleIntervalYM</code> structure to a number</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t325" headers="r1c1-t325">
+<p><a href="#i1010842">explicit operator OracleIntervalYM</a></p>
+</td>
+<td align="left" headers="r3c1-t325 r1c2-t325">
+<p>Converts a string to an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t325" headers="r1c1-t325">
+<p><a href="#i1010876">implicit operator OracleIntervalYM</a></p>
+</td>
+<td align="left" headers="r4c1-t325 r1c2-t325">
+<p>Converts the number of months to an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4907" name="sthref4907"></a>
+<p class="subhead1">OracleIntervalYM Properties</p>
+<p>The <code>OracleIntervalYM</code> properties are listed in <a href="#g1309257">Table 14-66</a>.</p>
+<div class="tblruleformal"><a id="sthref4908" name="sthref4908"></a><a id="g1309257" name="g1309257"></a>
+<p class="titleintable">Table 14-66 OracleIntervalYM Properties</p>
+<table class="RuleFormal" title="OracleIntervalYM Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t326">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t326">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t326" headers="r1c1-t326">
+<p><a href="#i1010988">BinData</a></p>
+</td>
+<td align="left" headers="r2c1-t326 r1c2-t326">
+<p>Returns an array of bytes that represents the Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> in an Oracle internal format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t326" headers="r1c1-t326">
+<p><a href="#i1011016">IsNull</a></p>
+</td>
+<td align="left" headers="r3c1-t326 r1c2-t326">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t326" headers="r1c1-t326">
+<p><a href="#i1011042">Months</a></p>
+</td>
+<td align="left" headers="r4c1-t326 r1c2-t326">
+<p>Gets the months component of an <code>OracleIntervalYM</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t326" headers="r1c1-t326">
+<p><a href="#i1011070">TotalYears</a></p>
+</td>
+<td align="left" headers="r5c1-t326 r1c2-t326">
+<p>Returns the total number, in years, that represents the period of time in the current <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t326" headers="r1c1-t326">
+<p><a href="#i1011098">Value</a></p>
+</td>
+<td align="left" headers="r6c1-t326 r1c2-t326">
+<p>Specifies the total number of months that is stored in the <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t326" headers="r1c1-t326">
+<p><a href="#i1011126">Years</a></p>
+</td>
+<td align="left" headers="r7c1-t326 r1c2-t326">
+<p>Gets the years component of an <code>OracleIntervalYM</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref4909" name="sthref4909"></a>
+<p class="subhead1">OracleIntervalYM Methods</p>
+<p>The <code>OracleIntervalYM</code> methods are listed in <a href="#g1309282">Table 14-67</a>.</p>
+<div class="tblruleformal"><a id="sthref4910" name="sthref4910"></a><a id="g1309282" name="g1309282"></a>
+<p class="titleintable">Table 14-67 OracleIntervalYM Methods</p>
+<table class="RuleFormal" title="OracleIntervalYM Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t327">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t327">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t327" headers="r1c1-t327">
+<p><a href="#i1011225">CompareTo</a></p>
+</td>
+<td align="left" headers="r2c1-t327 r1c2-t327">
+<p>Compares the current <code>OracleIntervalYM</code> instance to the supplied object, and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t327" headers="r1c1-t327">
+<p><a href="#i1011266">Equals</a></p>
+</td>
+<td align="left" headers="r3c1-t327 r1c2-t327">
+<p>Determines whether or not the specified <code>object</code> has the same time interval as the current instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t327" headers="r1c1-t327">
+<p><a href="#i1011300">GetHashCode</a></p>
+</td>
+<td align="left" headers="r4c1-t327 r1c2-t327">
+<p>Returns a hash code for the <code>OracleIntervalYM</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t327" headers="r1c1-t327">
+<p>GetType</p>
+</td>
+<td align="left" headers="r5c1-t327 r1c2-t327">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t327" headers="r1c1-t327">
+<p><a href="#i1011327">ToString</a></p>
+</td>
+<td align="left" headers="r6c1-t327 r1c2-t327">
+<p>Converts the current <code>OracleIntervalYM</code> structure to a string</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009509" name="i1009509"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Constructors<a id="sthref4911" name="sthref4911"></a></h2>
+<p>The <code>OracleIntervalYM</code> constructors creates a new instance of the <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref4912" name="sthref4912"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1009557">OracleIntervalYM(long)</a></p>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure using the supplied total number of months for a period of time.</p>
+</li>
+<li>
+<p><a href="#i1009586">OracleIntervalYM(string)</a></p>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value using the supplied string.</p>
+</li>
+<li>
+<p><a href="#i1009620">OracleIntervalYM(double)</a></p>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value using the total number of years.</p>
+</li>
+<li>
+<p><a href="#i1009650">OracleIntervalYM(int, int)</a></p>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value using years and months.</p>
+</li>
+<li>
+<p><a href="#i1009684">OracleIntervalYM(byte[ ])</a></p>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value to the provided byte array, which is in an internal Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> format.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009557" name="i1009557"></a>
+<h3 class="refsect3">OracleIntervalYM(long)</h3>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure using the supplied total number of months for a period of time.</p>
+<a id="sthref4913" name="sthref4913"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalYM (long <span class="italic">totalMonths</span>); 
+</pre>
+<a id="sthref4914" name="sthref4914"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">totalMonths</span></code></p>
+<p>The number of total months for a time interval. Range is -12,000,000,000 &lt; <code><span class="codeinlineitalic">totalMonths</span></code> &lt; 12,000,000,000.</p>
+</li>
+</ul>
+<a id="sthref4915" name="sthref4915"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">totalMonths</span></code> parameter is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009586" name="i1009586"></a>
+<h3 class="refsect3">OracleIntervalYM(string)</h3>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value using the supplied string.</p>
+<a id="sthref4916" name="sthref4916"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalYM (string <span class="italic">intervalStr</span>); 
+</pre>
+<a id="sthref4917" name="sthref4917"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">intervalStr</span></code></p>
+<p>A string representing the Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code>.</p>
+</li>
+</ul>
+<a id="sthref4918" name="sthref4918"></a>
+<p class="subhead2">Remarks</p>
+<p>The value specified in the supplied <code><span class="codeinlineitalic">intervalStr</span></code> must be in Year-Month format.</p>
+<a id="sthref4919" name="sthref4919"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is not in the valid format or <code><span class="codeinlineitalic">intervalStr</span></code> has an invalid value.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is null.</p>
+<a id="sthref4920" name="sthref4920"></a>
+<p class="subhead2">Example</p>
+<p>"1-2" means 1 year and 2 months.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009620" name="i1009620"></a>
+<h3 class="refsect3">OracleIntervalYM(double)</h3>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value using the total number of years.</p>
+<a id="sthref4921" name="sthref4921"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalYM (double <span class="italic">totalYears</span>);
+</pre>
+<a id="sthref4922" name="sthref4922"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">totalYears</span></code></p>
+<p>Number of total years. Range is -1,000,000,000 &lt; <code><span class="codeinlineitalic">totalYears</span></code> &gt; 1,000,000,000.</p>
+</li>
+</ul>
+<a id="sthref4923" name="sthref4923"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">totalYears</span></code> parameter is out of the specified range.</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">totalYears</span></code> parameter cannot be used to construct a valid <code>OracleIntervalYM</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009650" name="i1009650"></a>
+<h3 class="refsect3">OracleIntervalYM(int, int)</h3>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value using years and months.</p>
+<a id="sthref4924" name="sthref4924"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalYM (int <span class="italic">years</span>, int <span class="italic">months</span>); 
+</pre>
+<a id="sthref4925" name="sthref4925"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">years</span></code></p>
+<p>Number of years. Range of year is (-999,999,999 to 999,999,999).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">months</span></code></p>
+<p>Number of months. Range of month is (-11 to 11).</p>
+</li>
+</ul>
+<a id="sthref4926" name="sthref4926"></a>
+<p class="subhead2">Remarks</p>
+<p>The sign of all the arguments must be the same.</p>
+<a id="sthref4927" name="sthref4927"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleIntervalYM</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009684" name="i1009684"></a>
+<h3 class="refsect3">OracleIntervalYM(byte[ ])</h3>
+<p>This method creates a new instance of the <code>OracleIntervalYM</code> structure and sets its value to the provided byte array, which is in an internal Oracle <code>INTERVAL</code> <code>DAY</code> <code>TO</code> <code>SECOND</code> format.</p>
+<a id="sthref4928" name="sthref4928"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalYM (byte[] <span class="italic">bytes</span>); 
+</pre>
+<a id="sthref4929" name="sthref4929"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">bytes</span></code></p>
+<p>A byte array that is in an internal Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> format.</p>
+</li>
+</ul>
+<a id="sthref4930" name="sthref4930"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The supplied byte array is not in an internal Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> format or the supplied byte array has an invalid value.</p>
+<p><code>ArgumentNullException</code> - <code><span class="codeinlineitalic">bytes</span></code> is null.</p>
+<a id="sthref4931" name="sthref4931"></a>
+<p class="subhead2">Remarks</p>
+<p>The supplied byte array must be in an internal Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> format.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009717" name="i1009717"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Static Fields <a id="sthref4932" name="sthref4932"></a></h2>
+<p>The <code>OracleIntervalYM</code> static fields are listed in <a href="#g1309332">Table 14-68</a>.</p>
+<div class="tblruleformal"><a id="sthref4933" name="sthref4933"></a><a id="g1309332" name="g1309332"></a>
+<p class="titleintable">Table 14-68 OracleIntervalYM Static Fields</p>
+<table class="RuleFormal" title="OracleIntervalYM Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="18%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t335">Field</th>
+<th align="left" valign="bottom" id="r1c2-t335">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t335" headers="r1c1-t335">
+<p><a href="#i1009784">MaxValue</a></p>
+</td>
+<td align="left" headers="r2c1-t335 r1c2-t335">
+<p>Represents the maximum value for an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t335" headers="r1c1-t335">
+<p><a href="#i1009810">MinValue</a></p>
+</td>
+<td align="left" headers="r3c1-t335 r1c2-t335">
+<p>Represents the minimum value for an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t335" headers="r1c1-t335">
+<p><a href="#i1009836">Null</a></p>
+</td>
+<td align="left" headers="r4c1-t335 r1c2-t335">
+<p>Represents a null value that can be assigned to an <code>OracleIntervalYM</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t335" headers="r1c1-t335">
+<p><a href="#i1009860">Zero</a></p>
+</td>
+<td align="left" headers="r5c1-t335 r1c2-t335">
+<p>Represents a zero value for an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009784" name="i1009784"></a>
+<h3 class="refsect3">MaxValue</h3>
+<p>This static field represents the maximum value for an <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref4934" name="sthref4934"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalYM MaxValue;
+</pre>
+<a id="sthref4935" name="sthref4935"></a>
+<p class="subhead2">Remarks</p>
+<p>Year is 999999999 and Month is 11.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009810" name="i1009810"></a>
+<h3 class="refsect3">MinValue</h3>
+<p>This static field represents the minimum value for an <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref4936" name="sthref4936"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalYM MinValue;
+</pre>
+<a id="sthref4937" name="sthref4937"></a>
+<p class="subhead2">Remarks</p>
+<p>Year is -999999999 and Month is -11.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009836" name="i1009836"></a>
+<h3 class="refsect3">Null</h3>
+<p>This static field represents a null value that can be assigned to an <code>OracleIntervalYM</code> instance.</p>
+<a id="sthref4938" name="sthref4938"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalYM Null;
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009860" name="i1009860"></a>
+<h3 class="refsect3">Zero</h3>
+<p>This static field represents a zero value for an <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref4939" name="sthref4939"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleIntervalDS Zero;
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1009884" name="i1009884"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Static Methods<a id="sthref4940" name="sthref4940"></a></h2>
+<p>The <code>OracleIntervalYM</code> static methods are listed in <a href="#g1309371">Table 14-69</a>.</p>
+<div class="tblruleformal"><a id="sthref4941" name="sthref4941"></a><a id="g1309371" name="g1309371"></a>
+<p class="titleintable">Table 14-69 OracleIntervalYM Static Methods</p>
+<table class="RuleFormal" title="OracleIntervalYM Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t341">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t341">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t341" headers="r1c1-t341">
+<p><a href="#CJAFGEJF">Equals</a></p>
+</td>
+<td align="left" headers="r2c1-t341 r1c2-t341">
+<p>Determines whether or not two <code>OracleIntervalYM</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t341" headers="r1c1-t341">
+<p><a href="#i1010014">GreaterThan</a></p>
+</td>
+<td align="left" headers="r3c1-t341 r1c2-t341">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t341" headers="r1c1-t341">
+<p><a href="#i1010049">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r4c1-t341 r1c2-t341">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t341" headers="r1c1-t341">
+<p><a href="#i1010084">LessThan</a></p>
+</td>
+<td align="left" headers="r5c1-t341 r1c2-t341">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t341" headers="r1c1-t341">
+<p><a href="#i1010119">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r6c1-t341 r1c2-t341">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t341" headers="r1c1-t341">
+<p><a href="#i1010154">NotEquals</a></p>
+</td>
+<td align="left" headers="r7c1-t341 r1c2-t341">
+<p>Determines whether two <code>OracleIntervalYM</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t341" headers="r1c1-t341">
+<p><a href="#i1010189">Parse</a></p>
+</td>
+<td align="left" headers="r8c1-t341 r1c2-t341">
+<p>Returns an <code>OracleIntervalYM</code> structure and sets its value for time interval using a string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t341" headers="r1c1-t341">
+<p><a href="#i1010225">SetPrecision</a></p>
+</td>
+<td align="left" headers="r9c1-t341 r1c2-t341">
+<p>Returns a new instance of an <code>OracleIntervalYM</code> with the specified year precision.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CJAFGEJF" name="CJAFGEJF"></a>
+<h3 class="refsect3">Equals</h3>
+<p>This static method determines whether or not two <code>OracleIntervalYM</code> values are equal.</p>
+<a id="sthref4942" name="sthref4942"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool Equals(OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4943" name="sthref4943"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+</li>
+</ul>
+<a id="sthref4944" name="sthref4944"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleIntervalYM</code> values represent the same time interval, otherwise, returns <code>false</code>.</p>
+<a id="sthref4945" name="sthref4945"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010014" name="i1010014"></a>
+<h3 class="refsect3">GreaterThan</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalYM</code> values is greater than the second.</p>
+<a id="sthref4946" name="sthref4946"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThan(OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4947" name="sthref4947"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4948" name="sthref4948"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalYM</code> values is greater than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4949" name="sthref4949"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010049" name="i1010049"></a>
+<h3 class="refsect3">GreaterThanOrEqual</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalYM</code> values is greater than or equal to the second.</p>
+<a id="sthref4950" name="sthref4950"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThanOrEqual(OracleIntervalYM <span class="italic">val1</span>, 
+    OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4951" name="sthref4951"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4952" name="sthref4952"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalYM</code> values is greater than or equal to the second; otherwise returns <code>false</code>.</p>
+<a id="sthref4953" name="sthref4953"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010084" name="i1010084"></a>
+<h3 class="refsect3">LessThan</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalYM</code> values is less than the second.</p>
+<a id="sthref4954" name="sthref4954"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThan(OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4955" name="sthref4955"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4956" name="sthref4956"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalYM</code> values is less than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref4957" name="sthref4957"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010119" name="i1010119"></a>
+<h3 class="refsect3">LessThanOrEqual</h3>
+<p>This static method determines whether or not the first of two <code>OracleIntervalYM</code> values is less than or equal to the second.</p>
+<a id="sthref4958" name="sthref4958"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThanOrEqual(OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4959" name="sthref4959"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4960" name="sthref4960"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalYM</code> values is less than or equal to the second. Returns <code>false</code> otherwise.</p>
+<a id="sthref4961" name="sthref4961"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010154" name="i1010154"></a>
+<h3 class="refsect3">NotEquals</h3>
+<p>This static method determines whether two <code>OracleIntervalYM</code> values are not equal.</p>
+<a id="sthref4962" name="sthref4962"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool NotEquals(OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4963" name="sthref4963"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4964" name="sthref4964"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleIntervalYM</code> values are not equal. Returns <code>false</code> otherwise.</p>
+<a id="sthref4965" name="sthref4965"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010189" name="i1010189"></a>
+<h3 class="refsect3">Parse</h3>
+<p>This static method returns an <code>OracleIntervalYM</code> structure and sets its value for time interval using a string.</p>
+<a id="sthref4966" name="sthref4966"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalYM Parse (string <span class="italic">intervalStr</span>);
+</pre>
+<a id="sthref4967" name="sthref4967"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">intervalStr</span></code></p>
+<p>A string representing the Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code>.</p>
+</li>
+</ul>
+<a id="sthref4968" name="sthref4968"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns an <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref4969" name="sthref4969"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is not in the valid format or <code><span class="codeinlineitalic">intervalStr</span></code> has an invalid value.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is null.</p>
+<a id="sthref4970" name="sthref4970"></a>
+<p class="subhead2">Remarks</p>
+<p>The value specified in the supplied <code><span class="codeinlineitalic">intervalStr</span></code> must be in the Year-Month format.</p>
+<a id="sthref4971" name="sthref4971"></a>
+<p class="subhead2">Example</p>
+<p>"1-2" means 1 year and 2 months.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010225" name="i1010225"></a>
+<h3 class="refsect3">SetPrecision</h3>
+<p>This static method returns a new instance of an <code>OracleIntervalYM</code> with the specified year precision.</p>
+<a id="sthref4972" name="sthref4972"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalYM SetPrecision(OracleIntervalYM <span class="italic">value1</span>,
+   int <span class="italic">yearPrecision</span>);
+</pre>
+<a id="sthref4973" name="sthref4973"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">yearPrecision</span></code></p>
+<p>The year precision provided. Range of year precision is (0 to 9).</p>
+</li>
+</ul>
+<a id="sthref4974" name="sthref4974"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> instance.</p>
+<a id="sthref4975" name="sthref4975"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - <code><span class="codeinlineitalic">yearPrecision</span></code> is out of the specified range.</p>
+<a id="sthref4976" name="sthref4976"></a>
+<p class="subhead2">Remarks</p>
+<p>Depending on the value specified in the supplied <code>yearPrecision</code>, <code>0</code> or more leading zeros are displayed in the string returned by <code>ToString()</code>.</p>
+<a id="sthref4977" name="sthref4977"></a>
+<p class="subhead2">Example</p>
+<p>An <code>OracleIntervalYM</code> with a value of "<code>1-2</code>" results in the string "<code>001-2</code>" when <code>SetPrecision()</code> is called with the year precision set to <code>3</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010262" name="i1010262"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Static Operators<a id="sthref4978" name="sthref4978"></a></h2>
+<p>The <code>OracleIntervalYM</code> static operators are listed in <a href="#g1309438">Table 14-70</a>.</p>
+<div class="tblruleformal"><a id="sthref4979" name="sthref4979"></a><a id="g1309438" name="g1309438"></a>
+<p class="titleintable">Table 14-70 OracleIntervalYM Static Operators</p>
+<table class="RuleFormal" title="OracleIntervalYM Static Operators " summary="Rows are static operators.. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t351">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t351">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t351" headers="r1c1-t351">
+<p><a href="#i1010378">operator +</a></p>
+</td>
+<td align="left" headers="r2c1-t351 r1c2-t351">
+<p>Adds two <code>OracleIntervalYM</code> values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t351" headers="r1c1-t351">
+<p><a href="#i1010411">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t351 r1c2-t351">
+<p>Determines whether or not two <code>OracleIntervalYM</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t351" headers="r1c1-t351">
+<p><a href="#i1010446">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t351 r1c2-t351">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t351" headers="r1c1-t351">
+<p><a href="#i1010481">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t351 r1c2-t351">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is greater than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t351" headers="r1c1-t351">
+<p><a href="#i1010516">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t351 r1c2-t351">
+<p>Determines whether two <code>OracleIntervalYM</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t351" headers="r1c1-t351">
+<p><a href="#i1010551">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t351 r1c2-t351">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t351" headers="r1c1-t351">
+<p><a href="#CJAJIIFB">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t351 r1c2-t351">
+<p>Determines whether or not one <code>OracleIntervalYM</code> value is less than or equal to another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t351" headers="r1c1-t351">
+<p><a href="#i1010621">operator -</a></p>
+</td>
+<td align="left" headers="r9c1-t351 r1c2-t351">
+<p>Subtracts one <code>OracleIntervalYM</code> value from another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t351" headers="r1c1-t351">
+<p><a href="#i1010654">operator -</a></p>
+</td>
+<td align="left" headers="r10c1-t351 r1c2-t351">
+<p>Negates an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t351" headers="r1c1-t351">
+<p><a href="#i1010685">operator *</a></p>
+</td>
+<td align="left" headers="r11c1-t351 r1c2-t351">
+<p>Multiplies an <code>OracleIntervalYM</code> value by a number</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t351" headers="r1c1-t351">
+<p><a href="#i1010718">operator /</a></p>
+</td>
+<td align="left" headers="r12c1-t351 r1c2-t351">
+<p>Divides an <code>OracleIntervalYM</code> value by a number</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010378" name="i1010378"></a>
+<h3 class="refsect3">operator +</h3>
+<p>This static operator adds two <code>OracleIntervalYM</code> values.</p>
+<a id="sthref4980" name="sthref4980"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalYM operator + (OracleIntervalYM <span class="italic">val1</span>, 
+    OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4981" name="sthref4981"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4982" name="sthref4982"></a>
+<p class="subhead2">Return Value</p>
+<p><code>OracleIntervalYM</code></p>
+<a id="sthref4983" name="sthref4983"></a>
+<p class="subhead2">Remarks</p>
+<p>If either argument has a null value, the returned <code>OracleIntervalYM</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010411" name="i1010411"></a>
+<h3 class="refsect3">operator ==</h3>
+<p>This static operator determines if two <code>OracleIntervalYM</code> values are equal.</p>
+<a id="sthref4984" name="sthref4984"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator == (OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4985" name="sthref4985"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4986" name="sthref4986"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if they are equal; otherwise returns <code>false</code>.</p>
+<a id="sthref4987" name="sthref4987"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010446" name="i1010446"></a>
+<h3 class="refsect3">operator &gt;</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalYM</code> values is greater than the second.</p>
+<a id="sthref4988" name="sthref4988"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt; (OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4989" name="sthref4989"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4990" name="sthref4990"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if one <code>OracleIntervalYM</code> value is greater than another; otherwise, returns <code>false</code>.</p>
+<a id="sthref4991" name="sthref4991"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010481" name="i1010481"></a>
+<h3 class="refsect3">operator &gt;=</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalYM</code> values is greater than or equal to the second.</p>
+<a id="sthref4992" name="sthref4992"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt;= (OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref4993" name="sthref4993"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4994" name="sthref4994"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if one <code>OracleIntervalYM</code> value is greater than or equal to another; otherwise, returns <code>false</code>.</p>
+<a id="sthref4995" name="sthref4995"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010516" name="i1010516"></a>
+<h3 class="refsect3">operator !=</h3>
+<p>This static operator determines whether two <code>OracleIntervalYM</code> values are not equal.</p>
+<a id="sthref4996" name="sthref4996"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator != (OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>)
+</pre>
+<a id="sthref4997" name="sthref4997"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref4998" name="sthref4998"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleIntervalYM</code> values are not equal; otherwise, returns <code>false</code>.</p>
+<a id="sthref4999" name="sthref4999"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010551" name="i1010551"></a>
+<h3 class="refsect3">operator &lt;</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalYM</code> values is less than the second.</p>
+<a id="sthref5000" name="sthref5000"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt; (OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref5001" name="sthref5001"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref5002" name="sthref5002"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalYM</code> values is less than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5003" name="sthref5003"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CJAJIIFB" name="CJAJIIFB"></a>
+<h3 class="refsect3">operator &lt;=</h3>
+<p>This static operator determines if the first of two <code>OracleIntervalYM</code> values is less than or equal to the second.</p>
+<a id="sthref5004" name="sthref5004"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt;= (OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref5005" name="sthref5005"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref5006" name="sthref5006"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleIntervalYM</code> values is less than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5007" name="sthref5007"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010621" name="i1010621"></a>
+<h3 class="refsect3">operator -</h3>
+<p>This static operator subtracts one <code>OracleIntervalYM</code> structure from another.</p>
+<a id="sthref5008" name="sthref5008"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalYM operator - (OracleIntervalYM <span class="italic">val1</span>, OracleIntervalYM <span class="italic">val2</span>);
+</pre>
+<a id="sthref5009" name="sthref5009"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">val2</span></code></p>
+<p>The second <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref5010" name="sthref5010"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5011" name="sthref5011"></a>
+<p class="subhead2">Remarks</p>
+<p>If either argument has a null value, the returned <code>OracleIntervalYM</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010654" name="i1010654"></a>
+<h3 class="refsect3">operator -</h3>
+<p>This static operator negates an <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5012" name="sthref5012"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalYM operator - (OracleIntervalYM <span class="italic">val</span>);
+</pre>
+<a id="sthref5013" name="sthref5013"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val</span></code></p>
+<p>An <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref5014" name="sthref5014"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5015" name="sthref5015"></a>
+<p class="subhead2">Remarks</p>
+<p>If the supplied <code>OracleIntervalYM</code> structure has a null value, the returned <code>OracleIntervalYM</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010685" name="i1010685"></a>
+<h3 class="refsect3">operator *</h3>
+<p>This static operator multiplies an <code>OracleIntervalYM</code> value by a number.</p>
+<a id="sthref5016" name="sthref5016"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalYM operator * (OracleIntervalYM <span class="italic">val1</span>, int <span class="italic">multiplier</span>);
+</pre>
+<a id="sthref5017" name="sthref5017"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">multiplier</span></code></p>
+<p>A multiplier.</p>
+</li>
+</ul>
+<a id="sthref5018" name="sthref5018"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5019" name="sthref5019"></a>
+<p class="subhead2">Remarks</p>
+<p>If the supplied <code>OracleIntervalYM</code> structure has a null value, the returned <code>OracleIntervalYM</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010718" name="i1010718"></a>
+<h3 class="refsect3">operator /</h3>
+<p>This static operator divides an <code>OracleIntervalYM</code> value by a number.</p>
+<a id="sthref5020" name="sthref5020"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleIntervalYM operator / (OracleIntervalYM <span class="italic">val1</span>, int divisor);
+</pre>
+<a id="sthref5021" name="sthref5021"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val1</span></code></p>
+<p>The first <code>OracleIntervalYM</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">divisor</span></code></p>
+<p>A divisor.</p>
+</li>
+</ul>
+<a id="sthref5022" name="sthref5022"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5023" name="sthref5023"></a>
+<p class="subhead2">Remarks</p>
+<p>If the supplied <code>OracleIntervalYM</code> structure has a null value, the returned <code>OracleIntervalYM</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010751" name="i1010751"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Type Conversions<a id="sthref5024" name="sthref5024"></a></h2>
+<p>The <code>OracleIntervalYM</code> conversions are listed in <a href="#g1309526">Table 14-71</a>.</p>
+<div class="tblruleformal"><a id="sthref5025" name="sthref5025"></a><a id="g1309526" name="g1309526"></a>
+<p class="titleintable">Table 14-71 OracleIntervalYM Type Conversions</p>
+<table class="RuleFormal" title="OracleIntervalYM Type Conversions " summary="Rows are type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="50%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t364">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t364">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t364" headers="r1c1-t364">
+<p><a href="#i1010811">explicit operator long</a></p>
+</td>
+<td align="left" headers="r2c1-t364 r1c2-t364">
+<p>Converts an <code>OracleIntervalYM</code> structure to a number</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t364" headers="r1c1-t364">
+<p><a href="#i1010842">explicit operator OracleIntervalYM</a></p>
+</td>
+<td align="left" headers="r3c1-t364 r1c2-t364">
+<p>Converts a string to an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t364" headers="r1c1-t364">
+<p><a href="#i1010876">implicit operator OracleIntervalYM</a></p>
+</td>
+<td align="left" headers="r4c1-t364 r1c2-t364">
+<p>Converts the number of months to an <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010811" name="i1010811"></a>
+<h3 class="refsect3">explicit operator long</h3>
+<p>This type conversion operator converts an <code>OracleIntervalYM</code> to a number that represents the number of months in the time interval.</p>
+<a id="sthref5026" name="sthref5026"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator long (OracleIntervalYM <span class="italic">val</span>);
+</pre>
+<a id="sthref5027" name="sthref5027"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val</span></code></p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+</li>
+</ul>
+<a id="sthref5028" name="sthref5028"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>long</code> number in months.</p>
+<a id="sthref5029" name="sthref5029"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The <code>OracleIntervalYM</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010842" name="i1010842"></a>
+<h3 class="refsect3">explicit operator OracleIntervalYM</h3>
+<p>This type conversion operator converts the string <code><span class="codeinlineitalic">intervalStr</span></code> to an <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5030" name="sthref5030"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator OracleIntervalYM (string <span class="italic">intervalStr</span>);
+</pre>
+<a id="sthref5031" name="sthref5031"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">intervalStr</span></code></p>
+<p>A string representation of an Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code>.</p>
+</li>
+</ul>
+<a id="sthref5032" name="sthref5032"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5033" name="sthref5033"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The supplied <code><span class="codeinlineitalic">intervalStr</span></code> parameter is not in the correct format or has an invalid value.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">intervalStr</span></code> parameter is null.</p>
+<a id="sthref5034" name="sthref5034"></a>
+<p class="subhead2">Remarks</p>
+<p>The returned <code>OracleIntervalDS</code> structure contains the same time interval represented by the supplied <code><span class="codeinlineitalic">intervalStr</span></code>. The value specified in the supplied <code><span class="codeinlineitalic">intervalStr</span></code> must be in Year-Month format.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010876" name="i1010876"></a>
+<h3 class="refsect3">implicit operator OracleIntervalYM</h3>
+<p>This type conversion operator converts the total number of months as time interval to an <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5035" name="sthref5035"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static implicit operator OracleIntervalYM (long <span class="italic">months</span>);
+</pre>
+<a id="sthref5036" name="sthref5036"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">months</span></code></p>
+<p>The number of months to be converted. Range is (-999,999,999 * 12)-11 &lt;= <code><span class="codeinlineitalic">months</span></code> &lt;= (999,999,999 * 12)+11.</p>
+</li>
+</ul>
+<a id="sthref5037" name="sthref5037"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5038" name="sthref5038"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">months</span></code> parameter is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010907" name="i1010907"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Properties<a id="sthref5039" name="sthref5039"></a></h2>
+<p>The <code>OracleIntervalYM</code> properties are listed in <a href="#g1309558">Table 14-72</a>.</p>
+<div class="tblruleformal"><a id="sthref5040" name="sthref5040"></a><a id="g1309558" name="g1309558"></a>
+<p class="titleintable">Table 14-72 OracleIntervalYM Properties</p>
+<table class="RuleFormal" title="OracleIntervalYM Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="19%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t369">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t369">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t369" headers="r1c1-t369">
+<p><a href="#i1010988">BinData</a></p>
+</td>
+<td align="left" headers="r2c1-t369 r1c2-t369">
+<p>Returns an array of bytes that represents the Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> in an Oracle internal format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t369" headers="r1c1-t369">
+<p><a href="#i1011016">IsNull</a></p>
+</td>
+<td align="left" headers="r3c1-t369 r1c2-t369">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t369" headers="r1c1-t369">
+<p><a href="#i1011042">Months</a></p>
+</td>
+<td align="left" headers="r4c1-t369 r1c2-t369">
+<p>Gets the months component of an <code>OracleIntervalYM</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t369" headers="r1c1-t369">
+<p><a href="#i1011070">TotalYears</a></p>
+</td>
+<td align="left" headers="r5c1-t369 r1c2-t369">
+<p>Returns the total number, in years, that represents the period of time in the current <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t369" headers="r1c1-t369">
+<p><a href="#i1011098">Value</a></p>
+</td>
+<td align="left" headers="r6c1-t369 r1c2-t369">
+<p>Specifies the total number of months that is stored in the <code>OracleIntervalYM</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t369" headers="r1c1-t369">
+<p><a href="#i1011126">Years</a></p>
+</td>
+<td align="left" headers="r7c1-t369 r1c2-t369">
+<p>Gets the years component of an <code>OracleIntervalYM</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1010988" name="i1010988"></a>
+<h3 class="refsect3">BinData</h3>
+<p>This property returns an array of bytes that represents the Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> in Oracle internal format.</p>
+<a id="sthref5041" name="sthref5041"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public byte[] BinData {get;}
+</pre>
+<a id="sthref5042" name="sthref5042"></a>
+<p class="subhead2">Property Value</p>
+<p>A byte array that represents an Oracle <code>INTERVAL</code> <code>YEAR</code> <code>TO</code> <code>MONTH</code> in Oracle internal format.</p>
+<a id="sthref5043" name="sthref5043"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011016" name="i1011016"></a>
+<h3 class="refsect3">IsNull</h3>
+<p>This property indicates whether or not the value has a null value.</p>
+<a id="sthref5044" name="sthref5044"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsNull {get;}
+</pre>
+<a id="sthref5045" name="sthref5045"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code> if value has a null value; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011042" name="i1011042"></a>
+<h3 class="refsect3">Months</h3>
+<p>This property gets the months component of an <code>OracleIntervalYM.</code></p>
+<a id="sthref5046" name="sthref5046"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Months {get;}
+</pre>
+<a id="sthref5047" name="sthref5047"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code> representing the months component.</p>
+<a id="sthref5048" name="sthref5048"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011070" name="i1011070"></a>
+<h3 class="refsect3">TotalYears</h3>
+<p>This property returns the total number, in years, that represents the period of time in the current <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5049" name="sthref5049"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public double TotalYears {get;}
+</pre>
+<a id="sthref5050" name="sthref5050"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>double</code> representing the total number of years.</p>
+<a id="sthref5051" name="sthref5051"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011098" name="i1011098"></a>
+<h3 class="refsect3">Value</h3>
+<p>This property gets the total number of months that is stored in the <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5052" name="sthref5052"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public long Value {get;}
+</pre>
+<a id="sthref5053" name="sthref5053"></a>
+<p class="subhead2">Property Value</p>
+<p>The total number of months representing the time interval.</p>
+<a id="sthref5054" name="sthref5054"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011126" name="i1011126"></a>
+<h3 class="refsect3">Years</h3>
+<p>This property gets the years component of an <code>OracleIntervalYM</code>.</p>
+<a id="sthref5055" name="sthref5055"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Years {get;}
+</pre>
+<a id="sthref5056" name="sthref5056"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code> representing the years component.</p>
+<a id="sthref5057" name="sthref5057"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011154" name="i1011154"></a>
+<hr />
+<h2 class="refsect2">OracleIntervalYM Methods<a id="sthref5058" name="sthref5058"></a></h2>
+<p>The <code>OracleIntervalYM</code> methods are listed in <a href="#g1309611">Table 14-73</a>.</p>
+<div class="tblruleformal"><a id="sthref5059" name="sthref5059"></a><a id="g1309611" name="g1309611"></a>
+<p class="titleintable">Table 14-73 OracleIntervalYM Methods</p>
+<table class="RuleFormal" title="OracleIntervalYM Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t377">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t377">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t377" headers="r1c1-t377">
+<p><a href="#i1011225">CompareTo</a></p>
+</td>
+<td align="left" headers="r2c1-t377 r1c2-t377">
+<p>Compares the current <code>OracleIntervalYM</code> instance to the supplied object, and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t377" headers="r1c1-t377">
+<p><a href="#i1011266">Equals</a></p>
+</td>
+<td align="left" headers="r3c1-t377 r1c2-t377">
+<p>Determines whether or not the specified <code>object</code> has the same time interval as the current instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t377" headers="r1c1-t377">
+<p><a href="#i1011300">GetHashCode</a></p>
+</td>
+<td align="left" headers="r4c1-t377 r1c2-t377">
+<p>Returns a hash code for the <code>OracleIntervalYM</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t377" headers="r1c1-t377">
+<p>GetType</p>
+</td>
+<td align="left" headers="r5c1-t377 r1c2-t377">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t377" headers="r1c1-t377">
+<p><a href="#i1011327">ToString</a></p>
+</td>
+<td align="left" headers="r6c1-t377 r1c2-t377">
+<p>Converts the current <code>OracleIntervalYM</code> structure to a string</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011225" name="i1011225"></a>
+<h3 class="refsect3">CompareTo</h3>
+<p>This method compares the current <code>OracleIntervalYM</code> instance to the supplied object, and returns an integer that represents their relative values.</p>
+<a id="sthref5060" name="sthref5060"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int CompareTo(object <span class="italic">obj</span>);
+</pre>
+<a id="sthref5061" name="sthref5061"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The supplied object.</p>
+</li>
+</ul>
+<a id="sthref5062" name="sthref5062"></a>
+<p class="subhead2">Return Value</p>
+<p>The method returns a number:</p>
+<p>Less than zero: if the current <code>OracleIntervalYM</code> represents a shorter time interval than <code><span class="codeinlineitalic">obj.</span></code></p>
+<p>Zero: if the current <code>OracleIntervalYM</code> and <code><span class="codeinlineitalic">obj</span></code> represent the same time interval.</p>
+<p>Greater than zero: if the current <code>OracleIntervalYM</code> represents a longer time interval than <code><span class="codeinlineitalic">obj.</span></code></p>
+<a id="sthref5063" name="sthref5063"></a>
+<p class="subhead2">Implements</p>
+<p><code>IComparable</code></p>
+<a id="sthref5064" name="sthref5064"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">obj</span></code> parameter is not of type <code>OracleIntervalYM</code>.</p>
+<a id="sthref5065" name="sthref5065"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>The comparison must be between <code>OracleIntervalYM</code>s. For example, comparing an <code>OracleIntervalYM</code> instance with an <code>OracleBinary</code> instance is not allowed. When an <code>OracleIntervalYM</code> is compared with a different type, an <code>ArgumentException</code> is thrown.</p>
+</li>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011266" name="i1011266"></a>
+<h3 class="refsect3">Equals</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method determines whether or not the specified object has the same time interval as the current instance.</p>
+<a id="sthref5066" name="sthref5066"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool Equals(object <span class="italic">obj</span>);
+</pre>
+<a id="sthref5067" name="sthref5067"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The supplied object.</p>
+</li>
+</ul>
+<a id="sthref5068" name="sthref5068"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the specified object instance is of type <code>OracleIntervalYM</code> and has the same time interval; otherwise, returns <code>false</code>.</p>
+<a id="sthref5069" name="sthref5069"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleIntervalYM</code> that has a value compares greater than an <code>OracleIntervalYM</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleIntervalYM</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011300" name="i1011300"></a>
+<h3 class="refsect3">GetHashCode</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method returns a hash code for the <code>OracleIntervalYM</code> instance.</p>
+<a id="sthref5070" name="sthref5070"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int GetHashCode();
+</pre>
+<a id="sthref5071" name="sthref5071"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>int</code> representing a hash code.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011327" name="i1011327"></a>
+<h3 class="refsect3">ToString</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method converts the current <code>OracleIntervalYM</code> structure to a string.</p>
+<a id="sthref5072" name="sthref5072"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string ToString();
+</pre>
+<a id="sthref5073" name="sthref5073"></a>
+<p class="subhead2">Return Value</p>
+<p>A string that represents the current <code>OracleIntervalYM</code> structure.</p>
+<a id="sthref5074" name="sthref5074"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current instance has a null value, the returned string contain "null".</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1009021">OracleIntervalYM Structure</a></p>
+</li>
+<li>
+<p><a href="#i1009097">OracleIntervalYM Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleIntervalDSStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleStringStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

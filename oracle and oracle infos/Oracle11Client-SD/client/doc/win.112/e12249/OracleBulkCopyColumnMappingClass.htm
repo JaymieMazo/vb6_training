@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:43Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleBulkCopyClass.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleBulkCopyColumnMappingCollectionClass.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleBulkCopyColumnMapping Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleBulkCopyClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleBulkCopyColumnMappingCollectionClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CHDGGJGE" name="CHDGGJGE"></a>
+<hr />
+<div class="refsect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="refsect1"><a id="sthref6588" name="sthref6588"></a>OracleBulkCopyColumnMapping Class</h1>
+<p>The <code>OracleBulkCopyColumnMapping</code> class defines the mapping between a column in the data source and a column in the destination database table.</p>
+<a id="sthref6589" name="sthref6589"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.OracleBulkCopyColumnMapping</code></p>
+<a id="sthref6590" name="sthref6590"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public sealed class OracleBulkCopyColumnMapping
+</pre>
+<a id="sthref6591" name="sthref6591"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref6592" name="sthref6592"></a>
+<p class="subhead2">Remarks</p>
+<p>Column mappings define the mapping between data source and the target table.</p>
+<p>It is not necessary to specify column mappings for all the columns in the data source. If a <code>ColumnMapping</code> is not specified, then, by default, columns are mapped based on the ordinal position. This succeeds only if the source and destination table schema match. If there is a mismatch, an <code>InvalidOperationException</code> is thrown.</p>
+<p>All the mappings in a mapping collection must be by name or ordinal position.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle Data Provider for .NET makes one or more round-trips to the database to determine the column name if the mapping is specified by ordinal position. To avoid this performance overhead, specify the mapping by column name.</div>
+<a id="sthref6593" name="sthref6593"></a>
+<p class="subhead2">Example</p>
+<p>// C#</p>
+<a id="sthref6594" name="sthref6594"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Client</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+<li>
+<p><a href="#CHDIHDJI">OracleBulkCopyColumnMapping Constructors</a></p>
+</li>
+<li>
+<p><a href="#BIHEDCJA">OracleBulkCopyColumnMapping Properties</a></p>
+</li>
+</ul>
+</div>
+<a id="BIHBCBJF" name="BIHBCBJF"></a>
+<hr />
+<h2 class="refsect2"><a id="sthref6595" name="sthref6595"></a>OracleBulkCopyColumnMapping Members</h2>
+<p><code>OracleBulkCopyColumnMapping</code> members are listed in the following tables.</p>
+<a id="sthref6596" name="sthref6596"></a>
+<p class="subhead2">OracleBulkCopyColumnMapping Constructors</p>
+<p>The <code>OracleBulkCopyColumnMapping</code> constructors are listed in <a href="#BIHHGEJI">Table 17-8</a>.</p>
+<div class="tblruleformal"><a id="sthref6597" name="sthref6597"></a><a id="BIHHGEJI" name="BIHHGEJI"></a>
+<p class="titleintable">Table 17-8 OracleBulkCopyColumnMapping Constructors</p>
+<table class="RuleFormal" title="OracleBulkCopyColumnMapping Constructors" summary="Rows are methods, first column is the name, second column is the description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t38">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t38">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t38" headers="r1c1-t38">
+<p><a href="#CHDIHDJI">OracleBulkCopyColumnMapping Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t38 r1c2-t38">
+<p>Instantiates new instances of the <code>OracleBulkCopyColumnMapping</code> class</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref6598" name="sthref6598"></a>
+<p class="subhead2">OracleBulkCopyColumnMapping Properties</p>
+<p>The <code>OracleBulkCopyColumnMapping</code> properties are listed in <a href="#BIHIFDFB">Table 17-9</a>.</p>
+<div class="tblruleformal"><a id="sthref6599" name="sthref6599"></a><a id="BIHIFDFB" name="BIHIFDFB"></a>
+<p class="titleintable">Table 17-9 OracleBulkCopyColumnMapping Properties</p>
+<table class="RuleFormal" title="OracleBulkCopyColumnMapping Properties" summary="Rows are methods, first column is the name, second column is the description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t39">Property</th>
+<th align="left" valign="bottom" id="r1c2-t39">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t39" headers="r1c1-t39">
+<p><a href="#CHDECHBH">DestinationColumn</a></p>
+</td>
+<td align="left" headers="r2c1-t39 r1c2-t39">
+<p>Specifies the column name of the destination table that is being mapped</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t39" headers="r1c1-t39">
+<p><a href="#CHDFAEGH">DestinationOrdinal</a></p>
+</td>
+<td align="left" headers="r3c1-t39 r1c2-t39">
+<p>Specifies the column ordinal value of the destination table that is being mapped</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t39" headers="r1c1-t39">
+<p><a href="#CHDGJIBD">SourceColumn</a></p>
+</td>
+<td align="left" headers="r4c1-t39 r1c2-t39">
+<p>Specifies the column name of the data source that is being mapped</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t39" headers="r1c1-t39">
+<p><a href="#CHDHDIJC">SourceOrdinal</a></p>
+</td>
+<td align="left" headers="r5c1-t39 r1c2-t39">
+<p>Specifies the column ordinal value of the data source that is being mapped</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDIHDJI" name="CHDIHDJI"></a>
+<hr />
+<h2 class="refsect2"><a id="sthref6600" name="sthref6600"></a>OracleBulkCopyColumnMapping Constructors</h2>
+<p><code>OracleBulkCopyColumnMapping</code> constructors instantiates new instances of the <code>OracleBulkCopyColumnMapping</code> class.</p>
+<a id="sthref6601" name="sthref6601"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#BIGIJFIJ">OracleBulkCopyColumnMapping()</a></p>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class</p>
+</li>
+<li>
+<p><a href="#BIGIFGGJ">OracleBulkCopyColumnMapping(int, int)</a></p>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source column ordinal and destination column ordinal.</p>
+</li>
+<li>
+<p><a href="#BIGDCIJA">OracleBulkCopyColumnMapping(int, string)</a></p>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source column ordinal and destination column name.</p>
+</li>
+<li>
+<p><a href="#BIGBDJDA">OracleBulkCopyColumnMapping(string, int)</a></p>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source column name and destination column ordinal.</p>
+</li>
+<li>
+<p><a href="#BIGGJFAJ">OracleBulkCopyColumnMapping(string, string)</a></p>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source column name and destination column name.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BIGIJFIJ" name="BIGIJFIJ"></a>
+<h3 class="refsect3">OracleBulkCopyColumnMapping()</h3>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class.</p>
+<a id="sthref6602" name="sthref6602"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleBulkCopyColumnMapping();
+</pre>
+<a id="sthref6603" name="sthref6603"></a>
+<p class="subhead2">Remarks</p>
+<p>Applications that use this constructor must define the source for the mapping using the <code>SourceColumn</code> or <code>SourceOrdinal</code> property, and must define the destination for the mapping using the <code>DestinationColumn</code> or <code>DestinationOrdinal</code> property.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BIGIFGGJ" name="BIGIFGGJ"></a>
+<h3 class="refsect3">OracleBulkCopyColumnMapping(int, int)</h3>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source and destination column ordinal positions.</p>
+<a id="sthref6604" name="sthref6604"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleBulkCopyColumnMapping(int <span class="italic">sourceColumnOrdinal</span>, 
+   int <span class="italic">destinationOrdinal</span>);
+</pre>
+<a id="sthref6605" name="sthref6605"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">sourceColumnOrdinal</span></code></p>
+<p>The ordinal position of the source column within the data source.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">destinationOrdinal</span></code></p>
+<p>The ordinal position of the destination column within the destination table.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BIGDCIJA" name="BIGDCIJA"></a>
+<h3 class="refsect3">OracleBulkCopyColumnMapping(int, string)</h3>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source column ordinal and destination column name.</p>
+<a id="sthref6606" name="sthref6606"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleBulkCopyColumnMapping(int <span class="italic">sourceColumnOrdinal</span>, 
+   string <span class="italic">destinationColumn</span>);
+</pre>
+<a id="sthref6607" name="sthref6607"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">sourceColumnOrdinal</span></code></p>
+<p>The ordinal position of the source column within the data source.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">destinationColumn</span></code></p>
+<p>The name of the destination column within the destination table.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BIGBDJDA" name="BIGBDJDA"></a>
+<h3 class="refsect3">OracleBulkCopyColumnMapping(string, int)</h3>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source column name and destination column ordinal.</p>
+<a id="sthref6608" name="sthref6608"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleBulkCopyColumnMapping(string <span class="italic">sourceColumn</span>, int <span class="italic">destinationOrdinal</span>);
+</pre>
+<a id="sthref6609" name="sthref6609"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">sourceColumn</span></code></p>
+<p>The name of the source column within the data source.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">destinationOrdinal</span></code></p>
+<p>The ordinal position of the destination column within the destination table.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BIGGJFAJ" name="BIGGJFAJ"></a>
+<h3 class="refsect3">OracleBulkCopyColumnMapping(string, string)</h3>
+<p>This constructor instantiates a new instance of the <code>OracleBulkCopyColumnMapping</code> class using the provided source and destination column names.</p>
+<a id="sthref6610" name="sthref6610"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleBulkCopyColumnMapping(string <span class="italic">sourceColumn</span>, string <span class="italic">destinationColumn</span>);
+</pre>
+<a id="sthref6611" name="sthref6611"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">sourceColumn</span></code></p>
+<p>The name of the source column within the data source.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">destinationColumn</span></code></p>
+<p>The name of the destination column within the destination table.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BIHEDCJA" name="BIHEDCJA"></a>
+<hr />
+<h2 class="refsect2"><a id="sthref6612" name="sthref6612"></a>OracleBulkCopyColumnMapping Properties</h2>
+<p>The <code>OracleBulkCopyColumnMapping</code> properties are listed in <a href="#CHDDJFDD">Table 17-10</a>.</p>
+<div class="tblruleformal"><a id="sthref6613" name="sthref6613"></a><a id="CHDDJFDD" name="CHDDJFDD"></a>
+<p class="titleintable">Table 17-10 OracleBulkCopyColumnMapping Properties</p>
+<table class="RuleFormal" title="OracleBulkCopyColumnMapping Properties" summary="Rows are methods, first column is the name, second column is the description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t47">Property</th>
+<th align="left" valign="bottom" id="r1c2-t47">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t47" headers="r1c1-t47">
+<p><a href="#CHDECHBH">DestinationColumn</a></p>
+</td>
+<td align="left" headers="r2c1-t47 r1c2-t47">
+<p>Specifies the column name of the destination table that is being mapped</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t47" headers="r1c1-t47">
+<p><a href="#CHDFAEGH">DestinationOrdinal</a></p>
+</td>
+<td align="left" headers="r3c1-t47 r1c2-t47">
+<p>Specifies the column ordinal value of the destination table that is being mapped</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t47" headers="r1c1-t47">
+<p><a href="#CHDGJIBD">SourceColumn</a></p>
+</td>
+<td align="left" headers="r4c1-t47 r1c2-t47">
+<p>Specifies the column name of the data source that is being mapped</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t47" headers="r1c1-t47">
+<p><a href="#CHDHDIJC">SourceOrdinal</a></p>
+</td>
+<td align="left" headers="r5c1-t47 r1c2-t47">
+<p>Specifies the column ordinal value of the data source that is being mapped</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDECHBH" name="CHDECHBH"></a>
+<h3 class="refsect3">DestinationColumn</h3>
+<p>This property specifies the column name of the destination table that is being mapped.</p>
+<a id="sthref6614" name="sthref6614"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public string DestinationColumn {get; set;}
+</pre>
+<a id="sthref6615" name="sthref6615"></a>
+<p class="subhead2">Property Value</p>
+<p>A string value that represents the destination column name of the mapping.</p>
+<a id="sthref6616" name="sthref6616"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>DestinationColumn</code> and <code>DestinationOrdinal</code> properties are mutually exclusive. The last value set takes precedence.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDFAEGH" name="CHDFAEGH"></a>
+<h3 class="refsect3">DestinationOrdinal</h3>
+<p>This property specifies the column ordinal value of the destination table that is being mapped.</p>
+<a id="sthref6617" name="sthref6617"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int DestinationOrdinal {get; set;}
+</pre>
+<a id="sthref6618" name="sthref6618"></a>
+<p class="subhead2">Property Value</p>
+<p>An integer value that represents the destination column ordinal of the mapping.</p>
+<a id="sthref6619" name="sthref6619"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>IndexOutOfRangeException</code> - The destination ordinal is invalid.</p>
+<a id="sthref6620" name="sthref6620"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>DestinationOrdinal</code> and <code>DestinationColumn</code> properties are mutually exclusive. The last value set takes precedence.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGJIBD" name="CHDGJIBD"></a>
+<h3 class="refsect3">SourceColumn</h3>
+<p>This property specifies the column name of the data source that is being mapped.</p>
+<a id="sthref6621" name="sthref6621"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public string SourceColumn {get; set;}
+</pre>
+<a id="sthref6622" name="sthref6622"></a>
+<p class="subhead2">Property Value</p>
+<p>A string value that represents the source column name of the mapping.</p>
+<a id="sthref6623" name="sthref6623"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>SourceColumn</code> and <code>SourceOrdinal</code> properties are mutually exclusive. The last value set takes precedence.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDHDIJC" name="CHDHDIJC"></a>
+<h3 class="refsect3">SourceOrdinal</h3>
+<p>This property specifies the column ordinal value of the data source that is being mapped.</p>
+<a id="sthref6624" name="sthref6624"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int SourceOrdinal {get; set;}
+</pre>
+<a id="sthref6625" name="sthref6625"></a>
+<p class="subhead2">Property Value</p>
+<p>An integer value that represents the source column ordinal of the mapping.</p>
+<a id="sthref6626" name="sthref6626"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>IndexOutOfRangeException</code> - The source ordinal is invalid.</p>
+<a id="sthref6627" name="sthref6627"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>SourceOrdinal</code> and <code>SourceColumn</code> properties are mutually exclusive. The last value set takes precedence.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGJGE">OracleBulkCopyColumnMapping Class</a></p>
+</li>
+<li>
+<p><a href="#BIHBCBJF">OracleBulkCopyColumnMapping Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleBulkCopyClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleBulkCopyColumnMappingCollectionClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

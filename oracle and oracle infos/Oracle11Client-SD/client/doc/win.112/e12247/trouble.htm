@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-21T17:30:14Z" />
+<meta name="doctitle" content="Oracle&reg; Services for Microsoft Transaction Server Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12247-01" />
+<meta name="docid" content="NTMTS" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="perftune.htm" title="Previous" type="text/html" />
+<link rel="Next" href="glossary.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12247.pdf" title="PDF version" type="application/pdf" />
+<title>Troubleshooting Oracle Microsoft Transaction Server</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Services for Microsoft Transaction Server Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12247-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="perftune.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="glossary.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12247.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CACJCBBD" name="CACJCBBD"></a><a id="NTMTS007" name="NTMTS007"></a>
+<h1 class="chapter"><span class="secnum">6</span> Troubleshooting Oracle Microsoft Transaction Server</h1>
+<p>This chapter provides information on troubleshooting Oracle Microsoft Transaction Server.</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i1006204">Tracking Oracle Services for Microsoft Transaction Server Performance</a></p>
+</li>
+<li>
+<p><a href="#BABCGBHI">Correcting Oracle Net Changes that Impact Connection Pooling</a></p>
+</li>
+<li>
+<p><a href="#CACGCBIA">Designing an Application that Uses Multiple Databases</a></p>
+</li>
+<li>
+<p><a href="#CACFJJDB">Working with Different Types of Connection Pooling</a></p>
+</li>
+<li>
+<p><a href="#CACBCCEC">Working with In-Doubt Transactions</a></p>
+</li>
+<li>
+<p><a href="#i1006464">Dropping the Microsoft Transaction Server Administrative User Account</a></p>
+</li>
+</ul>
+<a id="i1006204" name="i1006204"></a><a id="NTMTS254" name="NTMTS254"></a>
+<div class="sect1">
+<h2 class="sect1">Tracking Oracle Services for Microsoft Transaction Server Performance<a id="sthref289" name="sthref289"></a><a id="sthref290" name="sthref290"></a><a id="sthref291" name="sthref291"></a><a id="sthref292" name="sthref292"></a><a id="sthref293" name="sthref293"></a><a id="sthref294" name="sthref294"></a><a id="sthref295" name="sthref295"></a></h2>
+<p>Trace files record information about Oracle Services for Microsoft Transaction Server performance. This information includes:</p>
+<ul>
+<li>
+<p>Any errors</p>
+</li>
+<li>
+<p>Enlistment requests and outcomes</p>
+</li>
+<li>
+<p>Prepare, commit, and terminate requests and their outcomes</p>
+</li>
+</ul>
+<p>Registry parameters handle tracing within <code>oramts.dll</code>, which performs the following tasks:</p>
+<ul>
+<li>
+<p>It implements the API for integrating the Oracle Database with Microsoft Transaction Server.</p>
+</li>
+<li>
+<p>It works as a resource dispenser to provide pooled <a href="glossary.htm#i996790">Oracle Call Interface (OCI)</a> connections.</p>
+</li>
+<li>
+<p>It enables clients with nonpooled OCI connections to enlist in transactions started by <a href="glossary.htm#i996748">Microsoft Distributed Transaction Coordinator (MS DTC)</a>.</p>
+</li>
+<li>
+<p>It communicates with Oracle Services for Microsoft Transaction Server to enlist the Oracle Database in transactions started by MS DTC.</p>
+</li>
+</ul>
+<p>The MTS-based COM components can acquire connections to both dedicated and shared Oracle servers of a database. The components can then attempt to perform distributed updates, using data manipulation language, on another database using pre-existing database links between these databases. While the distributed updates from shared servers succeed, those from dedicated servers fail.</p>
+<p>Registry parameters that handle tracing are automatically set in <code>\\</code><code><span class="codeinlineitalic">HKEY_LOCAL_MACHINE</span></code><code>\SOFTWARE\ORACLE\</code><code><span class="codeinlineitalic">HOMEID</span></code> during the installation of Oracle Services for Microsoft Transaction Server.</p>
+<p>Restart all applications using Oracle Services for Microsoft Transaction Server. Further, if you have modified parameters related to the tracing of the <code>OracleMTSRecoveryService</code>, restart the Windows service.</p>
+<p><a href="#g1007015">Table 6-1</a> shows the range of <code>ORAMTS_CP_TRACE_LEVEL</code> trace values.</p>
+<div class="tblformal"><a id="NTMTS255" name="NTMTS255"></a><a id="sthref296" name="sthref296"></a><a id="g1007015" name="g1007015"></a>
+<p class="titleintable">Table 6-1 ORAMTS_CP_TRACE_LEVEL Trace Registry Parameter Values</p>
+<table class="Formal" title="ORAMTS_CP_TRACE_LEVEL Trace Registry Parameter Values" summary="This table lists the trace registry parameter values. Column 1 lists the level. Column 2 contains the description of the value of the parameter." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="8%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">Level</th>
+<th align="left" valign="bottom" id="r1c2-t2">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p>0</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>Disables tracing. If the registry parameter is not set in the registry or as an environment variable, then tracing is disabled. This is equivalent to setting the level to <code>0</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p>1</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>Traces errors only</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p>2</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>Traces important events in addition to errors</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p>3</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>This level is not supported; if you set this parameter to <code>3</code>, level 2 tracing is enabled.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p>4</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>Traces function entry/exit, important events, and errors</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t2" headers="r1c1-t2">
+<p>5</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c2-t2">
+<p>Traces reference counting function and constructor/destructor entry/exit</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The <a href="glossary.htm#i996808">Oracle MTS Recovery Service</a> also generates trace file output in the <code><span class="codeinlineitalic">ORACLE_BASE</span></code><code>\</code><code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\</code><code>oramts</code><code>\</code><code>trace</code> directory.<a id="sthref297" name="sthref297"></a><a id="sthref298" name="sthref298"></a></div>
+</div>
+<!-- class="sect1" -->
+<a id="BABCGBHI" name="BABCGBHI"></a><a id="NTMTS257" name="NTMTS257"></a>
+<div class="sect1">
+<h2 class="sect1">Correcting Oracle Net Changes that Impact Connection Pooling<a id="sthref299" name="sthref299"></a><a id="sthref300" name="sthref300"></a><a id="sthref301" name="sthref301"></a><a id="sthref302" name="sthref302"></a><a id="sthref303" name="sthref303"></a></h2>
+<p>The connection pool provided by the OraMTS layer, <code>oramts.dll</code>, uses a connection's <a href="glossary.htm#i996775">net service name</a> to identify pooled connections for an application. If changes are made to the net service name, and pooled connections are available, the application using the connection pool must be stopped and restarted. These changes can include altering the host or the database system identifier (SID) for the net service name in the <code>tnsnames.ora</code> file.</p>
+<p>These changes ensure that all currently pooled connections corresponding to the old net service name are destroyed and any new pooled connections use the changes made to the net service name. This includes any application hosting <a href="glossary.htm#i996763">Microsoft Transaction Server</a> components.</p>
+<p>To empty connection pools, perform the following:</p>
+<ul>
+<li>
+<p>If the application is an <span class="italic">out-of-process</span> Microsoft Transaction Server component (<span class="italic">server package</span>), run the following application:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; mtxstop
+</pre>
+<p>This empties the connection pools.</p>
+</li>
+<li>
+<p>If the application is an <span class="italic">in-process</span> Microsoft Transaction Server component (<span class="italic">library package</span>), terminate the application. This also empties the connection pool.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CACGCBIA" name="CACGCBIA"></a><a id="NTMTS258" name="NTMTS258"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Designing an Application that Uses Multiple Databases</h2>
+<p>Oracle clients can establish connections to a database in two ways:</p>
+<ul>
+<li>
+<p>Typical Oracle clients establish connections to a database using a dedicated server configuration. In a dedicated server configuration, one client corresponds to one Oracle server process.</p>
+</li>
+<li>
+<p>For scalability under heavy loads, Oracle clients have the option of using a shared server configuration. In a shared server configuration, a single Oracle server process can be shared by more than one client connection.</p>
+</li>
+</ul>
+<p>Microsoft Transaction Server communicates with the database through distributed transactions. In a dedicated server configuration, you cannot use distributed updates (<a href="glossary.htm#i996738">data manipulation language</a> statements across database links) from other databases. However, if the original connection to the database is established using shared server configurations, the distributed updates from other databases succeed.</p>
+<p>To use data manipulation language statements in shared server configurations, set the following parameter in the <a id="sthref304" name="sthref304"></a><a id="sthref305" name="sthref305"></a><a id="sthref306" name="sthref306"></a><code>tnsnames.ora</code> file:</p>
+<pre xml:space="preserve" class="oac_no_warn">SERVER=dedicated
+</pre>
+<p>This forces the Oracle Net listener to provide a dedicated connection. <a href="#CACFFFCE">Figure 6-1</a> shows this process.</p>
+<div class="figure"><a id="CACFFFCE" name="CACFFFCE"></a><a id="NTMTS259" name="NTMTS259"></a>
+<p class="titleinfigure">Figure 6-1 Distributed DML Statements from MTS Applications</p>
+<img width="383" height="461" src="img/ntmts012.gif" alt="Description of Figure 6-1 follows" title="Description of Figure 6-1 follows" longdesc="img_text/ntmts012.htm" /><br />
+<a id="sthref307" name="sthref307" href="img_text/ntmts012.htm">Description of "Figure 6-1 Distributed DML Statements from MTS Applications"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NETAG" href="http://www.oracle.com/pls/db102/lookup?id=NETAG"><span class="italic">Oracle Net Services Administrator's Guide</span></a></div>
+</div>
+<!-- class="sect1" -->
+<a id="CACFJJDB" name="CACFJJDB"></a><a id="NTMTS260" name="NTMTS260"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Working with Different Types of Connection Pooling</h2>
+<a id="NTMTS261" name="NTMTS261"></a><a id="sthref308" name="sthref308"></a>
+<p><span class="subhead3">Oracle Net Connection Pooling&nbsp;</span> Oracle Net connection pooling is a server-side feature that is implemented only if the Oracle Database is configured for shared server support. Oracle Net connection pooling enables you to minimize the number of physical network connections to a shared server. This is achieved by sharing a dispatcher's set of connections among multiple client processes.</p>
+<a id="NTMTS262" name="NTMTS262"></a><a id="sthref309" name="sthref309"></a>
+<p><span class="subhead3">Microsoft Transaction Server Connection Pooling&nbsp;</span>Microsoft Transaction Server provides a resource pooling infrastructure that enables certain resources to be pooled, such as memory and database connections.</p>
+<a id="NTMTS263" name="NTMTS263"></a><a id="sthref310" name="sthref310"></a>
+<p><span class="subhead3">OCI Connection Pooling&nbsp;</span>OCI connection pooling layer works with MTS resource pooling to provide pooled Oracle client/server sessions. The OCI connection pooling layer also caches Oracle Net connections to reduce client/server session setup time.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CACBCCEC" name="CACBCCEC"></a><a id="NTMTS264" name="NTMTS264"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Working with In-Doubt Transactions</h2>
+<p>Oracle uses distributed transactions in the following configurations:</p>
+<ul>
+<li>
+<p>Distributed database configurations, such as distributed updates using database links</p>
+</li>
+<li>
+<p>External transaction managers, such as Tuxedo and MS DTC, for coordinating transaction outcome</p>
+</li>
+</ul>
+<p>The <a id="sthref311" name="sthref311"></a>two-phase commit protocol completes these transactions. During phase one, the transaction manager (TM) requests the various resource managers involved in the TM's transaction to prepare the underlying distributed transactions. In phase two, the TM determines whether it commits or terminates the transaction, and requests the resource managers to commit or terminate the underlying transaction. If a resource manager fails to receive the phase two notification, the underlying distributed transaction becomes in-doubt.</p>
+<p>To integrate Oracle with Microsoft Transaction Server, <a id="sthref312" name="sthref312"></a>distributed transactions are used in the database. Distributed transactions correspond to transactions coordinated by the MS DTC. A distributed transaction can become in-doubt when the transaction cannot commit or terminate (phase two of the two-phase commit). This occurs when the Microsoft Transaction Server application server process, database, or network fails.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="recovery.htm#CBADHGHH">Chapter 3, "Managing Recovery Scenarios"</a></div>
+</div>
+<!-- class="sect1" -->
+<a id="i1006464" name="i1006464"></a><a id="NTMTS265" name="NTMTS265"></a>
+<div class="sect1">
+<h2 class="sect1">Dropping the Microsoft Transaction Server Administrative User Account<a id="sthref313" name="sthref313"></a><a id="sthref314" name="sthref314"></a></h2>
+<p>The Microsoft Transaction Server administrative user account is created by running the <code>oramtsadmin.sql</code> script. If you later change the database with which Microsoft Transaction Server is coordinating transactions, you can drop the administrative user account schema from the previous database.</p>
+<p>To drop the Microsoft Transaction Server administrative user account:</p>
+<ol>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">c:\&gt; sqlplus /NOLOG
+</pre></li>
+<li>
+<p>Connect to the database as <code>SYSDBA</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSDBA
+</pre></li>
+<li>
+<p>Enter the following command to drop administrative user account schema:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; DROP USER <span class="italic">mtsadmin_username</span> CASCADE;
+</pre>
+<p>where <code><span class="codeinlineitalic">mtsadmin_username</span></code> is the Microsoft Transaction Server administrative user account (default is <code>mtssys</code>).</p>
+</li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+See <a href="recovery.htm#CBADHGHH">Chapter 3, "Managing Recovery Scenarios"</a> for information on creating the Microsoft Transaction Server administrative user account for the new database</div>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="perftune.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="glossary.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

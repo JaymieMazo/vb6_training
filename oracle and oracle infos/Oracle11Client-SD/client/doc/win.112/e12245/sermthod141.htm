@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-21T17:54:57Z" />
+<meta name="doctitle" content="Oracle&reg; Objects for OLE Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12245-01" />
+<meta name="docid" content="OOFOL" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="sermthod140.htm" title="Previous" type="text/html" />
+<link rel="Next" href="sermthod142.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12245.pdf" title="PDF version" type="application/pdf" />
+<title>OpenDatabase Method</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Objects for OLE Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12245-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="sermthod140.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="sermthod142.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12245.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CIHCBJHD" name="CIHCBJHD"></a><a id="OOFOL609" name="OOFOL609"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1">OpenDatabase Method</h1>
+<a id="sthref1442" name="sthref1442"></a>
+<p class="titleinrefsubsect">Applies To</p>
+<p><a href="serobjch023.htm#BABFCBJH">OraSession Object</a></p>
+<p><a href="serobjch022.htm#BABDDGCH">OraServer Object</a></p>
+<a id="sthref1443" name="sthref1443"></a>
+<p class="titleinrefsubsect">Description</p>
+<p>Establishes a user session to the database. It creates a new <code>OraDatabase</code> object using the given database name, connection string, and specified options.</p>
+<a id="sthref1444" name="sthref1444"></a>
+<p class="titleinrefsubsect">Usage</p>
+<pre xml:space="preserve" class="oac_no_warn">Set oradatabase = orasession.OpenDatabase(<span class="italic">database_name</span>,<span class="italic">connect_string</span>, <span class="italic">options</span>) Set oradatabase = oraserver.OpenDatabase(<span class="italic">connect_string</span>, <span class="italic">options</span>)
+</pre>
+<a id="sthref1445" name="sthref1445"></a>
+<p class="titleinrefsubsect">Arguments</p>
+<p>The arguments for the method are:</p>
+<div class="inftblinformal">
+<table class="Informal" title="OpenDatabase method parameter list" summary="rows are arguments, column 1 is name, column 2 description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t178">Arguments</th>
+<th align="left" valign="bottom" id="r1c2-t178">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t178" headers="r1c1-t178"><code><span class="codeinlineitalic">database_name</span></code></td>
+<td align="left" headers="r2c1-t178 r1c2-t178">The Oracle Network specifier used when connecting the data control to a database.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t178" headers="r1c1-t178"><code><span class="codeinlineitalic">connect_string</span></code></td>
+<td align="left" headers="r3c1-t178 r1c2-t178">The user name and password to be used when connecting to an Oracle database.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t178" headers="r1c1-t178"><code><span class="codeinlineitalic">options</span></code></td>
+<td align="left" headers="r4c1-t178 r1c2-t178">A bit flag word used to set the optional modes of the database. If <code><span class="codeinlineitalic">options</span></code> = <code>0</code>, the default mode settings apply. The following table shows the possible modes, which can be combined by adding their respective values.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<a id="BHBGBCEE" name="BHBGBCEE"></a><a id="OOFOL610" name="OOFOL610"></a>
+<p class="subhead2">Constants</p>
+<p>The following table lists constants and values for the options flag.</p>
+<div class="inftblinformal">
+<table class="Informal" title="OpenDatabase Method constants" summary="rows are arguments, column 1 is name, column 2 description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="33%" />
+<col width="14%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t179">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t179">Value</th>
+<th align="left" valign="bottom" id="r1c3-t179">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t179" headers="r1c1-t179"><code>ORADB_DEFAULT</code></td>
+<td align="left" headers="r2c1-t179 r1c2-t179"><code>&amp;H0&amp;</code></td>
+<td align="left" headers="r2c1-t179 r1c3-t179">Visual Basic Mode (Default):
+<p>Field (column) values not explicitly set are set to <code>Null</code> when using the <code>AddNew</code> or <code>Edit</code> method. The <code>Null</code> values override any database column defaults. Wait on row locks when using <code>Edit</code> (<code>"SELECT...FOR UPDATE")</code>.</p>
+<p>Nonblocking SQL functionality is not enabled.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t179" headers="r1c1-t179"><code>ORADB_ORAMODE</code></td>
+<td align="left" headers="r3c1-t179 r1c2-t179"><code>&amp;H1&amp;</code></td>
+<td align="left" headers="r3c1-t179 r1c3-t179">Oracle Mode:
+<p>Lets Oracle Database set the default field (column) values when using the <code>AddNew</code> method. The Oracle default column values are fetched again from database immediately after an insert or add operation.</p>
+<p><span class="bold">Note:</span> If you use triggers, fetch the data again using the full Oracle Mode.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t179" headers="r1c1-t179"><code>ORADB_NOWAIT</code></td>
+<td align="left" headers="r4c1-t179 r1c2-t179"><code>&amp;H2&amp;</code></td>
+<td align="left" headers="r4c1-t179 r1c3-t179">Lock No-Wait Mode:
+<p>Does not wait on row locks. When you use the <code>Edit</code> method to update a row that is locked by another user or process, Lock No-Wait mode results in an immediate return of an error code.</p>
+<p><span class="bold">Note:</span> This option only applies to the <code>OraDynaset</code> object. It has no effect on <code>OraSQLStmt</code> objects or <code>ExecuteSQL</code> calls. It only raises an error in the case of a locked row.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t179" headers="r1c1-t179"><code>ORADB_NO_REFETCH</code></td>
+<td align="left" headers="r5c1-t179 r1c2-t179"><code>&amp;H4&amp;</code></td>
+<td align="left" headers="r5c1-t179 r1c3-t179">Oracle Mode (No Refetch):
+<p>Performs like the Oracle Mode, but does not refetch data to the local cache. This boosts performance.</p>
+<p><span class="bold">Note:</span> Use the No Refetch mode only when you intend to insert rows without editing them, because database column defaults cause inconsistencies between database data and the local cache. Attempting to edit after inserting in this mode causes a <code>Data</code> <code>has</code> <code>been</code> <code>modified</code> (<code>4119</code>) error.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t179" headers="r1c1-t179"><code>ORADB_NONBLK</code></td>
+<td align="left" headers="r6c1-t179 r1c2-t179"><code>&amp;H8&amp;</code></td>
+<td align="left" headers="r6c1-t179 r1c3-t179">Nonblocking Mode:
+<p>Turns on Nonblocking mode on SQL statement execution. Nonblocking mode affects the SQL statements processed using the <code>ExecuteSQL</code>, <code>CreateDynaset</code>, or <code>CreateSQL</code> methods.</p>
+<p><span class="bold">Note:</span> This feature has been deprecated.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t179" headers="r1c1-t179"><code>ORADB_ENLIST_IN_MTS</code></td>
+<td align="left" headers="r7c1-t179 r1c2-t179"><code>&amp;H10&amp;</code></td>
+<td align="left" headers="r7c1-t179 r1c3-t179">Enlist in MTS Mode:
+<p>Determine whether the <code>OraDatabase</code> object enlists in the Microsoft Transaction Server (MTS) mode.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t179" headers="r1c1-t179"><code>ORADB_ENLIST_FOR_ CALLLBACK</code></td>
+<td align="left" headers="r8c1-t179 r1c2-t179"><code>&amp;H20&amp;</code></td>
+<td align="left" headers="r8c1-t179 r1c3-t179">Enlist For Callbacks Mode:
+<p>Turn on the event notification. This mode has to be enabled to receive Failover Notifications.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>These values can be found in the <code>oraconst.txt</code> file. For creating a valid database alias, see the <a class="olink NETAG" href="http://www.oracle.com/pls/db102/lookup?id=NETAG"><span class="italic">Oracle Net Services Administrator's Guide</span></a>.</p>
+<p>Examples of valid <code>connect_string</code> arguments include:</p>
+<ul>
+<li>
+<p><code>"scott/tiger"</code></p>
+</li>
+<li>
+<p><code>"system/manager"</code></p>
+</li>
+<li>
+<p><code>"/"</code></p>
+</li>
+</ul>
+<a id="sthref1446" name="sthref1446"></a>
+<p class="titleinrefsubsect">Remarks</p>
+<p>An <code>OraConnection</code> object is created automatically and appears within the <code>OraConnections</code> collection of the session. Opening a database has the effect of opening a connection but does not perform any SQL actions.</p>
+<p>One possible connection error that could be returned is:</p>
+<pre xml:space="preserve" class="oac_no_warn">ORA-28001 "the password has expired"
+</pre>
+<p>The user can change the password using the <code>ChangePassword</code> method.</p>
+<a id="sthref1447" name="sthref1447"></a>
+<p class="titleinrefsubsect">Examples</p>
+<p>This example demonstrates how to programmatically create a dynaset and all of the underlying objects. Copy and paste this code into the definition section of a form with text boxes named <code>txtEmpNo</code> and <code>txtEName</code>. Then, press <span class="bold">F5</span>.</p>
+<pre xml:space="preserve" class="oac_no_warn">Sub Form_Load ()
+ 
+ 'Declare variables
+ Dim OraSession As OraSession 
+ Dim OraDatabase As OraDatabase 
+ Dim OraDynaset As OraDynaset 
+ 
+ 'Create the OraSession Object.
+ Set OraSession = CreateObject("OracleInProcServer.XOraSession")
+ 
+ 'Create the OraDatabase Object by opening a connection to Oracle.
+ Set OraDatabase = OraSession.OpenDatabase("ExampleDb", "scott/tiger", 0&amp;)
+ 
+ 'Create the OraDynaset Object.
+ Set OraDynaset = OraDatabase.CreateDynaset("select empno, ename from emp", 0&amp;)
+ 
+ 'Display the first record.
+ txtEmpNo = OraDynaset.Fields("empno").value
+ txtEName = OraDynaset.Fields("ename").value
+ 
+End Sub
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="basfeat.htm#BGBEDECE">"Microsoft Transaction Server Support"</a></p>
+</li>
+<li>
+<p><a href="sermthod028.htm#CIHBJFCG">ChangePassword (OraServer) Method</a></p>
+</li>
+<li>
+<p><a href="advfeat.htm#CIHGBCIA">"Application Failover Notifications"</a></p>
+</li>
+<li>
+<p><a href="sermthod009.htm#CIHDHFJF">AddNew Method</a></p>
+</li>
+<li>
+<p><a href="sermthod080.htm#CIHICBII">Edit Method</a></p>
+</li>
+<li>
+<p><a href="sermthod086.htm#CIHEEIEC">ExecuteSQL Method</a></p>
+</li>
+<li>
+<p><a href="sermthod029.htm#CIHIFEBI">ChangePassword (OraSession) Method</a></p>
+</li>
+<li>
+<p><a href="serobjch009.htm#BABGFCIG">OraConnection Object</a></p>
+</li>
+<li>
+<p><a href="serobjch028.htm#BABHDGDI">OraConnections Collection</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="sermthod140.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="sermthod142.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1994, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

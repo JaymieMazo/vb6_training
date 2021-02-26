@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:25Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleClobClass.htm" title="Previous" type="text/html" />
+<link rel="Next" href="oratypes.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleRefCursor Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleClobClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="oratypes.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="i1033071" name="i1033071"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1"><a id="sthref3934" name="sthref3934"></a>OracleRefCursor Class</h1>
+<p>An <code>OracleRefCursor</code> object represents an Oracle <code>REF</code> <code>CURSOR</code>.</p>
+<a id="sthref3935" name="sthref3935"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.MarshalRefByObject</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;Oracle.DataAccess.Types.OracleRefCursor</code></p>
+<a id="sthref3936" name="sthref3936"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public sealed class OracleRefCursor : MarshalByRefObject, IDisposable, INullable
+</pre>
+<a id="sthref3937" name="sthref3937"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref3938" name="sthref3938"></a>
+<p class="subhead2">Remarks</p>
+<p>To minimize the number of open server cursors, <code>OracleRefReader</code> objects should be explicitly disposed.</p>
+<a id="sthref3939" name="sthref3939"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// Database Setup
+/*
+connect scott/tiger@oracle 
+CREATE OR REPLACE FUNCTION MyFunc(refcur_out OUT SYS_REFCURSOR) 
+  RETURN SYS_REFCURSOR IS refcur_ret SYS_REFCURSOR;
+BEGIN
+  OPEN refcur_ret FOR SELECT * FROM EMP;
+  OPEN refcur_out FOR SELECT * FROM DEPT;
+  RETURN refcur_ret;
+END MyFunc;
+/
+*/
+ 
+// C#
+ 
+using System;
+using System.Data;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class OracleRefCursorSample
+{
+  static void Main()
+  {
+    // Example demonstrates how to use REF CURSORs returned from 
+    // PL/SQL Stored Procedures or Functions
+    // Create the PL/SQL Function MyFunc as defined previously
+    
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+      
+    // Create an OracleCommand
+    OracleCommand cmd = new OracleCommand("MyFunc", con);
+    cmd.CommandType = CommandType.StoredProcedure;
+      
+    // Bind the parameters
+    // p1 is the RETURN REF CURSOR bound to SELECT * FROM EMP;
+    OracleParameter p1 = 
+      cmd.Parameters.Add("refcur_ret", OracleDbType.RefCursor);
+    p1.Direction = ParameterDirection.ReturnValue;
+      
+    // p2 is the OUT REF CURSOR bound to SELECT * FROM DEPT
+    OracleParameter p2 = 
+      cmd.Parameters.Add("refcur_out", OracleDbType.RefCursor);
+    p2.Direction = ParameterDirection.Output;
+      
+    // Execute the command
+    cmd.ExecuteNonQuery();
+ 
+    // Construct an OracleDataReader from the REF CURSOR
+    OracleDataReader reader1 = ((OracleRefCursor)p1.Value).GetDataReader();
+ 
+    // Prints "reader1.GetName(0) = EMPNO"
+    Console.WriteLine("reader1.GetName(0) = " + reader1.GetName(0));
+ 
+    // Construct an OracleDataReader from the REF CURSOR
+    OracleDataReader reader2 = ((OracleRefCursor)p2.Value).GetDataReader();
+    
+    // Prints "reader2.GetName(0) = DEPTNO"
+    Console.WriteLine("reader2.GetName(0) = " + reader2.GetName(0));
+ 
+    reader1.Close();
+    reader1.Dispose();
+ 
+    reader2.Close();
+    reader2.Dispose();
+ 
+    p1.Dispose();
+    p2.Dispose();
+ 
+    cmd.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<a id="sthref3940" name="sthref3940"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Types</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+<li>
+<p><a href="#i1033267">OracleRefCursor Static Methods</a></p>
+</li>
+<li>
+<p><a href="#i1033310">OracleRefCursor Properties</a></p>
+</li>
+<li>
+<p><a href="#i1033387">OracleRefCursor Instance Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="i1033149" name="i1033149"></a>
+<hr />
+<h2 class="refsect2">OracleRefCursor Members<a id="sthref3941" name="sthref3941"></a></h2>
+<p><code>OracleRefCursor</code> members are listed in the following tables.</p>
+<a id="sthref3942" name="sthref3942"></a>
+<p class="subhead1">OracleRefCursor Static Methods</p>
+<p><code>OracleRefCursor</code> static methods are listed in <a href="#g1314345">Table 13-28</a>.</p>
+<div class="tblruleformal"><a id="sthref3943" name="sthref3943"></a><a id="g1314345" name="g1314345"></a>
+<p class="titleintable">Table 13-28 OracleRefCursor Static Methods</p>
+<table class="RuleFormal" title="OracleRefCursor Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t172">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t172">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t172" headers="r1c1-t172">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t172 r1c2-t172">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref3944" name="sthref3944"></a>
+<p class="subhead1">OracleRefCursor Properties</p>
+<p><code>OracleRefCursor</code> properties are listed in <a href="#g1314355">Table 13-29</a>.</p>
+<div class="tblruleformal"><a id="sthref3945" name="sthref3945"></a><a id="g1314355" name="g1314355"></a>
+<p class="titleintable">Table 13-29 OracleRefCursor Properties</p>
+<table class="RuleFormal" title="OracleRefCursor Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t173">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t173">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t173" headers="r1c1-t173">
+<p><a href="#i1033356">Connection</a></p>
+</td>
+<td align="left" headers="r2c1-t173 r1c2-t173">
+<p>A reference to the <code>OracleConnection</code> used to fetch the <code>REF</code> <code>CURSOR</code> data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t173" headers="r1c1-t173">
+<p><a href="#BCFHBFAH">FetchSize</a></p>
+</td>
+<td align="left" headers="r3c1-t173 r1c2-t173">
+<p>Specifies the size that the <code>OracleDataReader</code> internal cache needs to store result set data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t173" headers="r1c1-t173">
+<p><a href="#BCFJBAEH">RowSize</a></p>
+</td>
+<td align="left" headers="r4c1-t173 r1c2-t173">
+<p>Specifies the amount of memory the <code>OracleRefcursor</code> internal cache needs to store one row of data</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref3946" name="sthref3946"></a>
+<p class="subhead1">OracleRefCursor Instance Methods</p>
+<p><code>OracleRefCursor</code> instance methods are listed in <a href="#g1314365">Table 13-30</a>.</p>
+<div class="tblruleformal"><a id="sthref3947" name="sthref3947"></a><a id="g1314365" name="g1314365"></a>
+<p class="titleintable">Table 13-30 OracleRefCursor Instance Methods</p>
+<table class="RuleFormal" title="OracleRefCursor Instance Methods " summary="Rows are instance methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t174">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t174">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t174" headers="r1c1-t174">
+<p><a href="#i1033456">Dispose</a></p>
+</td>
+<td align="left" headers="r2c1-t174 r1c2-t174">
+<p>Disposes the resources allocated by the <code>OracleRefCursor</code> object</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t174" headers="r1c1-t174">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r3c1-t174 r1c2-t174">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t174" headers="r1c1-t174">
+<p><a href="#i1033485">GetDataReader</a></p>
+</td>
+<td align="left" headers="r4c1-t174 r1c2-t174">
+<p>Returns an <code>OracleDataReader</code> object for the <code>REF</code> <code>CURSOR</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t174" headers="r1c1-t174">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r5c1-t174 r1c2-t174">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t174" headers="r1c1-t174">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r6c1-t174 r1c2-t174">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t174" headers="r1c1-t174">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r7c1-t174 r1c2-t174">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+</ul>
+</div>
+<a id="i1033267" name="i1033267"></a>
+<hr />
+<h2 class="refsect2">OracleRefCursor Static Methods<a id="sthref3948" name="sthref3948"></a></h2>
+<p><code>OracleRefCursor</code> static methods are listed in <a href="#g1314394">Table 13-31</a>.</p>
+<div class="tblruleformal"><a id="sthref3949" name="sthref3949"></a><a id="g1314394" name="g1314394"></a>
+<p class="titleintable">Table 13-31 OracleRefCursor Static Methods</p>
+<table class="RuleFormal" title="OracleRefCursor Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="29%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t176">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t176">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t176" headers="r1c1-t176">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t176 r1c2-t176">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1033310" name="i1033310"></a>
+<hr />
+<h2 class="refsect2">OracleRefCursor Properties<a id="sthref3950" name="sthref3950"></a></h2>
+<p><code>OracleRefCursor</code> properties are listed in <a href="#g1314408">Table 13-32</a>.</p>
+<div class="tblruleformal"><a id="sthref3951" name="sthref3951"></a><a id="g1314408" name="g1314408"></a>
+<p class="titleintable">Table 13-32 OracleRefCursor Properties</p>
+<table class="RuleFormal" title="OracleRefCursor Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="23%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t178">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t178">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t178" headers="r1c1-t178">
+<p><a href="#i1033356">Connection</a></p>
+</td>
+<td align="left" headers="r2c1-t178 r1c2-t178">
+<p>A reference to the <code>OracleConnection</code> used to fetch the <code>REF</code> <code>CURSOR</code> data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t178" headers="r1c1-t178">
+<p><a href="#BCFHBFAH">FetchSize</a></p>
+</td>
+<td align="left" headers="r3c1-t178 r1c2-t178">
+<p>Specifies the size that the <code>OracleDataReader</code> internal cache needs to store result set data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t178" headers="r1c1-t178">
+<p><a href="#BCFJBAEH">RowSize</a></p>
+</td>
+<td align="left" headers="r4c1-t178 r1c2-t178">
+<p>Specifies the amount of memory the <code>OracleRefcursor</code> internal cache needs to store one row of data</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1033356" name="i1033356"></a>
+<h3 class="refsect3">Connection</h3>
+<p>This property refers to the <code>OracleConnection</code> used to fetch the <code>REF</code> <code>CURSOR</code> data.</p>
+<a id="sthref3952" name="sthref3952"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleConnection Connection {get;}
+</pre>
+<a id="sthref3953" name="sthref3953"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>OracleConnection.</code></p>
+<a id="sthref3954" name="sthref3954"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<a id="sthref3955" name="sthref3955"></a>
+<p class="subhead2">Remarks</p>
+<p>This property is bound to a <code>REF</code> <code>CURSOR</code> once it is set. After the <code>OracleRefCursor</code> object is created by the constructor, this property is initially <code>null</code>. An <code>OracleRefCursor</code> object can be bound to a <code>REF</code> <code>CURSOR</code> after a command execution.</p>
+<p>If the connection is closed or returned to the connection pool, the <code>OracleRefCursor</code> is placed in an uninitialized state and no operation can be carried out from it. However, the uninitialized <code>OracleRefCursor</code> can be reassigned to another <code>REF</code> <code>CURSOR</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BCFHBFAH" name="BCFHBFAH"></a>
+<h3 class="refsect3">FetchSize</h3>
+<p>This property specifies the size that the <code>OracleDataReader</code> internal cache needs to store result set data.</p>
+<a id="sthref3956" name="sthref3956"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public long FetchSize {get; set;}
+</pre>
+<a id="sthref3957" name="sthref3957"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>long</code> that specifies the size (in bytes) of the <code>OracleRefCursor</code> internal cache.</p>
+<a id="sthref3958" name="sthref3958"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code>FetchSize</code> value specified is invalid.</p>
+<a id="sthref3959" name="sthref3959"></a>
+<p class="subhead2">Remarks</p>
+<p>Default = <code>131072</code>.</p>
+<p>The <code>FetchSize</code> property value is inherited by the <code>OracleCommand</code> that created the <code>OracleRefCursor</code> object. The <code>FetchSize</code> property on the <code>OracleDataReader</code> object determines the amount of data the <code>OracleRefCursor</code> fetches into its internal cache for each database round-trip.</p>
+<p>This property is useful if the <code>OracleRefCursor</code> is explicitly used to fill the <code>DataSet</code> or <code>DataTable</code> through the <code>OracleDataAdapter</code>, because it can provide control on how the data of the <code>REF</code> <code>CURSOR</code> is fetched.</p>
+<p>If an <code>OracleDataReader</code> object is created from the <code>OracleRefCursor</code>, the resulting <code>OracleDataReader</code> object inherits the <code>FetchSize</code> value of the <code>OracleDataReader</code> object. However, the inherited value can be overridden, if it is set before the first invocation of the <code>OracleDataReader</code> <code>Read</code> method for the given result set, by setting the <code>OracleDataReader</code> <code>FetchSize</code> property.</p>
+<p>The <code>RowSize</code> and <code>FetchSize</code> properties handle UDT and <code>XMLType</code> data differently than other scalar data types. Because only a reference to the UDT and <code>XMLType</code> data is stored in the ODP.NET's internal cache, the <code>RowSize</code> property accounts for only the memory needed for the reference (which is very small) and not the actual size of the UDT and <code>XMLType</code> data. Thus, applications can inadvertently fetch a large number of UDT or <code>XMLType</code> instances from the database in a single database round-trip. This is because the actual size of UDT and <code>XMLType</code> data does not count against the <code>FetchSize,</code> and it would require numerous UDT and <code>XMLType</code> references to fill up the default cache size of 131072 bytes. Therefore, when fetching UDT or <code>XMLType</code> data, the <code>FetchSize</code> property must be appropriately configured to control the number of UDT and <code>XMLType</code> instances that are to be fetched, rather than the amount of the actual UDT and <code>XMLType</code> data to be fetched.</p>
+<p>NOTE: For LOB and <code>LONG</code> data types, only the sizes specified in the <code>InitialLOBFetchSize</code> and <code>InitialLONGFetchSize</code> properties are accounted for by the <code>RowSize</code> property in addition to the metadata and reference information that is maintained by the cache for each LOB in the select list.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BCFJBAEH" name="BCFJBAEH"></a>
+<h3 class="refsect3">RowSize</h3>
+<p>This property specifies the amount of memory the <code>OracleRefcursor</code> internal cache needs to store one row of data.</p>
+<a id="sthref3960" name="sthref3960"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public long RowSize {get;}
+</pre>
+<a id="sthref3961" name="sthref3961"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>long</code> that indicates the amount of memory (in bytes) that an <code>OracleRefcursor</code> needs to store one row of data for the executed query.</p>
+<a id="sthref3962" name="sthref3962"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>RowSize</code> property is set to a nonzero value when the <code>OracleRefcursor</code> object is created. This property can be used at design time or dynamically during run time, to set the <code>FetchSize</code>, based on number of rows. For example, to enable the <code>OracleRefcursor</code> to fetch <code><span class="codeinlineitalic">N</span></code> rows for each database round-trip, the <code>OracleRefcursor</code> <code>FetchSize</code> property can be set dynamically to <code>RowSize</code> <code>*</code> <code><span class="codeinlineitalic">N</span></code>. Note that for the <code>FetchSize</code> to take effect appropriately, it must be set before the it is used to fill the <code>DataSet</code>/<code>DataTable</code> using <code>OracleDataAdapter</code>.</p>
+<p>If an <code>OracleDataReader</code> is obtained from the <code>OracleRefCursor</code> through the <code>GetDataReader</code> method, the resulting <code>OracleDataReader</code> will have its <code>FetchSize</code> property set to the <code>FetchSize</code> value of the <code>OracleRefCursor</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1033387" name="i1033387"></a>
+<hr />
+<h2 class="refsect2">OracleRefCursor Instance Methods<a id="sthref3963" name="sthref3963"></a></h2>
+<p><code>OracleRefCursor</code> instance methods are listed in <a href="#g1314426">Table 13-33</a>.</p>
+<div class="tblruleformal"><a id="sthref3964" name="sthref3964"></a><a id="g1314426" name="g1314426"></a>
+<p class="titleintable">Table 13-33 OracleRefCursor Instance Methods</p>
+<table class="RuleFormal" title="OracleRefCursor Instance Methods " summary="Rows are instance methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="23%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t183">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t183">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t183" headers="r1c1-t183">
+<p><a href="#i1033456">Dispose</a></p>
+</td>
+<td align="left" headers="r2c1-t183 r1c2-t183">
+<p>Disposes the resources allocated by the <code>OracleRefCursor</code> object</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t183" headers="r1c1-t183">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r3c1-t183 r1c2-t183">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t183" headers="r1c1-t183">
+<p><a href="#i1033485">GetDataReader</a></p>
+</td>
+<td align="left" headers="r4c1-t183 r1c2-t183">
+<p>Returns an <code>OracleDataReader</code> object for the <code>REF</code> <code>CURSOR</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t183" headers="r1c1-t183">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r5c1-t183 r1c2-t183">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t183" headers="r1c1-t183">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r6c1-t183 r1c2-t183">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t183" headers="r1c1-t183">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r7c1-t183 r1c2-t183">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1033456" name="i1033456"></a>
+<h3 class="refsect3">Dispose</h3>
+<p>This instance method disposes of the resources allocated by the <code>OracleRefCursor</code> object.</p>
+<a id="sthref3965" name="sthref3965"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public void Dispose();
+</pre>
+<a id="sthref3966" name="sthref3966"></a>
+<p class="subhead2">Implements</p>
+<p><code>IDisposable</code></p>
+<a id="sthref3967" name="sthref3967"></a>
+<p class="subhead2">Remarks</p>
+<p>The object cannot be reused after being disposed.</p>
+<p>Once <code>Dispose()</code> is called, the object of <code>OracleRefCursor</code> is in an uninitialized state. Although some properties can still be accessed, their values may not be accountable. Since resources are freed, method calls can lead to exceptions.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1033485" name="i1033485"></a>
+<h3 class="refsect3">GetDataReader</h3>
+<p>This instance method returns an <code>OracleDataReader</code> object for the <code>REF</code> <code>CURSOR</code>.</p>
+<a id="sthref3968" name="sthref3968"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleDataReader GetDataReader();
+</pre>
+<a id="sthref3969" name="sthref3969"></a>
+<p class="subhead2">Return Value</p>
+<p><code>OracleDataReader</code></p>
+<a id="sthref3970" name="sthref3970"></a>
+<p class="subhead2">Remarks</p>
+<p>Using the <code>OracleDataReader</code>, rows can be fetched from the <code>REF</code> <code>CURSOR</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1033071">OracleRefCursor Class</a></p>
+</li>
+<li>
+<p><a href="#i1033149">OracleRefCursor Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleClobClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="oratypes.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

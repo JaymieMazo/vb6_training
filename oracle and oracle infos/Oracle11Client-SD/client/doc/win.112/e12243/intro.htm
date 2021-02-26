@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-12T16:48:59Z" />
+<meta name="doctitle" content="Oracle&reg; Provider for OLE DB Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12243-01" />
+<meta name="docid" content="OLEDB" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="whatsnew.htm" title="Previous" type="text/html" />
+<link rel="Next" href="using.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12243.pdf" title="PDF version" type="application/pdf" />
+<title>Introduction to Oracle Provider for OLE DB</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Provider for OLE DB Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12243-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="whatsnew.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="using.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12243.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g1005165" name="g1005165"></a><a id="OLEDB002" name="OLEDB002"></a><a id="i1000873" name="i1000873"></a>
+<h1 class="chapter"><span class="secnum">1</span> Introduction to Oracle Provider for OLE DB</h1>
+<p>This chapter introduces Oracle Provider for OLE DB (OraOLEDB).</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i1000527">Overview of OLE DB</a></p>
+</li>
+<li>
+<p><a href="#i1003451">Overview of OraOLEDB</a></p>
+</li>
+<li>
+<p><a href="#i1001323">System Requirements</a></p>
+</li>
+<li>
+<p><a href="#i1004001">OraOLEDB Installation</a></p>
+</li>
+<li>
+<p><a href="#i1004071">Component Certifications</a></p>
+</li>
+</ul>
+<a id="i1000527" name="i1000527"></a><a id="OLEDB116" name="OLEDB116"></a>
+<div class="sect1">
+<h2 class="sect1">Overview of OLE DB</h2>
+<p>OLE DB is an open standard data access methodology which utilizes a set of <a href="glossary.htm#i432026"><span class="xrefglossterm">Component Object Model (COM)</span></a> interfaces for accessing and manipulating different types of data. These interfaces are available from various database providers.</p>
+<a id="i1001276" name="i1001276"></a><a id="OLEDB117" name="OLEDB117"></a>
+<div class="sect2">
+<h3 class="sect2">OLE DB Design</h3>
+<p>The design of <span class="bold"><a id="sthref9" name="sthref9"></a><a id="sthref10" name="sthref10"></a></span>OLE DB centers around the concept of a <a href="glossary.htm#i432027"><span class="xrefglossterm">consumer</span></a> and a <a href="glossary.htm#i432028"><span class="xrefglossterm">provider</span></a>. <a href="#CEGCEIFD">Figure 1-1</a> is an illustration of the OLE DB system. The consumer represents the traditional client. The provider places data into a tabular format and returns it to the consumer.</p>
+<div class="figure"><a id="CEGCEIFD" name="CEGCEIFD"></a><a id="OLEDB118" name="OLEDB118"></a>
+<p class="titleinfigure">Figure 1-1 OLE DB Flow</p>
+<img width="600" height="304" src="img/oop81002.gif" alt="Description of Figure 1-1 follows" title="Description of Figure 1-1 follows" longdesc="img_text/oop81002.htm" /><br />
+<a id="sthref11" name="sthref11" href="img_text/oop81002.htm">Description of "Figure 1-1 OLE DB Flow"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<a id="OLEDB119" name="OLEDB119"></a>
+<p class="subhead2">OLE DB Data Providers</p>
+<p><span class="bold"><a id="sthref12" name="sthref12"></a><a id="sthref13" name="sthref13"></a></span>OLE DB data providers are a set of <span class="bold">COM</span> components that transfer data from a data source to a <span class="bold">consumer</span>. An OLE DB Provider places that data in a tabular format in response to calls from a consumer. Providers can be simple or complex. A <span class="bold">provider</span> may return a table, it may allow the consumer to determine the format of that table, and it may perform operations on the data.</p>
+<p>Each provider implements a standard set of COM interfaces to handle requests from the consumer. A provider may implement optional COM interfaces to provide additional functionality.</p>
+<p>With the standard interfaces, any OLE DB consumer can access data from any provider. Because of COM components, consumers can access them in any programming language that supports COM, such as C++, Visual Basic, and Java.</p>
+<a id="OLEDB120" name="OLEDB120"></a>
+<p class="subhead2">OLE DB Data Consumers</p>
+<p><span class="bold"><a id="sthref14" name="sthref14"></a><a id="sthref15" name="sthref15"></a></span>The OLE DB data consumer is any application or tool that utilizes OLE DB interfaces of a provider to access a broad range of data.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1003451" name="i1003451"></a><a id="OLEDB121" name="OLEDB121"></a>
+<div class="sect1">
+<h2 class="sect1">Overview of OraOLEDB</h2>
+<p>Oracle Provider for OLE DB (OraOLEDB) is an OLE DB data provider that offers high performance and efficient access to Oracle data by OLE DB consumers.</p>
+<p>In general, this developer's guide assumes that you are using OraOLEDB through OLE DB or ADO.</p>
+<p>For sample code, the latest patches, and other technical information on the Oracle Provider for OLE DB, go to</p>
+<pre xml:space="preserve" class="oac_no_warn"><a href="http://otn.oracle.com/tech/windows/ole_db">http://otn.oracle.com/tech/windows/ole_db</a>
+</pre>
+<p>With the advent of the .NET framework, support has been provided for using the OLEDB.NET Data Provider with OraOLEDB. With the proper connection attribute setting, an OLEDB.NET Data Provider can utilize OraOLEDB to access Oracle Database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="using.htm#i1017293">"OLEDB.NET Data Provider Compatibility"</a> for further information on support for OLEDB.NET Data Provider</div>
+</div>
+<!-- class="sect1" -->
+<a id="i1001323" name="i1001323"></a><a id="OLEDB122" name="OLEDB122"></a>
+<div class="sect1">
+<h2 class="sect1">System Requirements</h2>
+<p><a id="sthref16" name="sthref16"></a><a id="sthref17" name="sthref17"></a>The following items are required on a system to use Oracle Provider for OLE DB:</p>
+<ul>
+<li>
+<p>Windows Operating System:</p>
+<ul>
+<li>
+<p>32-bit: Windows 7 (Professional, Enterprise, and Ultimate Editions), Windows Vista (Business, Enterprise, and Ultimate Editions), Windows Server 2008 (Standard, Enterprise, Datacenter, Web, and Foundation Editions), Windows Server 2003 R2 (all editions), Windows Server 2003 (all editions), or Windows XP Professional Edition.</p>
+<p>Oracle supports 32-bit Oracle Provider for OLE DB on x86, AMD64, and Intel EM64T processors on these operating systems.</p>
+</li>
+<li>
+<p>x64: Windows 7 x64 (Professional, Enterprise, and Ultimate Editions), Windows Vista x64 (Business, Enterprise, and Ultimate Editions), Windows Server 2008 R2 x64 (Standard, Enterprise, Datacenter, Web, and Foundation Editions), Windows Server 2008 x64 (Standard, Enterprise, Datacenter, Web, and Foundation Editions), Windows Server 2003 x64 (all editions), Windows Server 2003 R2 x64 (all editions), or Windows XP x64.</p>
+<p>Oracle supports 32-bit Oracle Provider for OLE DB and 64-bit Oracle Provider for OLE DB for Windows x64 on these operating systems.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Access to an Oracle Database (Oracle 9.2 or later)</p>
+</li>
+<li>
+<p>Oracle Client and Oracle Net Services (included with Oracle Provider for OLE DB installation).</p>
+</li>
+<li>
+<p>Redistributable files provided with Microsoft Data Access Components <a id="sthref18" name="sthref18"></a><a id="sthref19" name="sthref19"></a>(MDAC) 2.1 or higher are required by the provider. These files are available at the <a id="sthref20" name="sthref20"></a>Microsoft Web site:</p>
+<pre xml:space="preserve" class="oac_no_warn"><a href="http://msdn.microsoft.com/en-us/data/aa937730.aspx">http://msdn.microsoft.com/en-us/data/aa937730.aspx</a> 
+</pre></li>
+<li>
+<p><a id="sthref21" name="sthref21"></a>Oracle Services for Microsoft Transaction Server release 11.2 or higher. This is required for consumers using Microsoft Transaction Server (MTS) or COM+.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="i1004001" name="i1004001"></a><a id="OLEDB123" name="OLEDB123"></a>
+<div class="sect1">
+<h2 class="sect1">OraOLEDB Installation<a id="sthref22" name="sthref22"></a></h2>
+<p>Oracle Provider for OLE DB is included as part of your Oracle installation. It contains the features and demos that illustrate how to use this product to solve real-world problems.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+The <a class="olink NTDBI" href="http://www.oracle.com/pls/db102/lookup?id=NTDBI"><span class="italic">Oracle Database Installation Guide for Windows</span></a> for installation instructions</div>
+<p><a id="sthref23" name="sthref23"></a><a id="sthref24" name="sthref24"></a><a id="sthref25" name="sthref25"></a>During the installation process, the files listed in <a href="#i1002884">Table 1-1</a> are installed on the system. Some files have <code><span class="codeinlineitalic">ver</span></code> in their name to indicate the release version.</p>
+<div class="tblformalwide"><a id="OLEDB124" name="OLEDB124"></a><a id="sthref26" name="sthref26"></a><a id="CHDFIEFF" name="CHDFIEFF"></a>
+<p class="titleintable">Table 1-1 <a id="i1002884" name="i1002884"></a><span class="bolditalic">Oracle Provider for OLE DB Files</span></p>
+<table class="FormalWide" title="Oracle Provider for OLE DB Files" summary="rows are OraOLEDB files; first column is name; second column is description; third column is location" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<col width="35%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">File</th>
+<th align="left" valign="bottom" id="r1c2-t4">Description</th>
+<th align="left" valign="bottom" id="r1c3-t4">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDB</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>Oracle Provider for OLE DB</p>
+</td>
+<td align="left" headers="r2c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDBrfc</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>Oracle rowset file cache manager</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDBrmc</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>Oracle rowset memory cache manager</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDBrst</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">
+<p>Oracle rowset</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDBgmr</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</td>
+<td align="left" headers="r6c1-t4 r1c2-t4">
+<p>Oracle ODBC SQL parser</p>
+</td>
+<td align="left" headers="r6c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDB</code><code><span class="codeinlineitalic">lang</span></code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+<p>where <code><span class="codeinlineitalic">lang</span></code> is the required language</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c2-t4">
+<p>Language-specific resource DLL</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDBpus</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</td>
+<td align="left" headers="r8c1-t4 r1c2-t4">
+<p>Property descriptions</p>
+</td>
+<td align="left" headers="r8c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDButl</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</td>
+<td align="left" headers="r9c1-t4 r1c2-t4">
+<p>OraOLEDB utility DLL</p>
+</td>
+<td align="left" headers="r9c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDB</code><code><span class="codeinlineitalic">ver</span></code><code>.tlb</code></p>
+</td>
+<td align="left" headers="r10c1-t4 r1c2-t4">
+<p>OraOLEDB type library</p>
+</td>
+<td align="left" headers="r10c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\bin</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDB.h</code></p>
+</td>
+<td align="left" headers="r11c1-t4 r1c2-t4">
+<p>OraOLEDB header file</p>
+</td>
+<td align="left" headers="r11c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\oledb\include</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDB</code><code><span class="codeinlineitalic">ver</span></code><code>.lib</code></p>
+</td>
+<td align="left" headers="r12c1-t4 r1c2-t4">
+<p>OraOLEDB library file</p>
+</td>
+<td align="left" headers="r12c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\oledb\lib</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t4" headers="r1c1-t4">
+<p><code>OraOLEDB</code><code><span class="codeinlineitalic">lang</span></code><code>.msb</code></p>
+<p>where <code><span class="codeinlineitalic">lang</span></code> is the required language</p>
+</td>
+<td align="left" headers="r13c1-t4 r1c2-t4">
+<p>Language-specific message file</p>
+</td>
+<td align="left" headers="r13c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\oledb\mesg</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t4" headers="r1c1-t4">
+<p>readme and documentation files</p>
+</td>
+<td align="left" headers="r14c1-t4 r1c2-t4">
+<p>Release notes and online documentation</p>
+</td>
+<td align="left" headers="r14c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME\</span></code><code>oledb\directory</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t4" headers="r1c1-t4">
+<p>sample files</p>
+</td>
+<td align="left" headers="r15c1-t4 r1c2-t4">
+<p>Sample code</p>
+</td>
+<td align="left" headers="r15c1-t4 r1c3-t4">
+<p><code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\oledb\samples</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwide" --></div>
+<!-- class="sect1" -->
+<a id="i1004071" name="i1004071"></a><a id="OLEDB125" name="OLEDB125"></a>
+<div class="sect1">
+<h2 class="sect1">Component Certifications<a id="sthref27" name="sthref27"></a><a id="sthref28" name="sthref28"></a><a id="sthref29" name="sthref29"></a></h2>
+<p>Oracle provides support information for components on various platforms, lists compatible client and database versions, and identifies patches and workaround information.</p>
+<p>Find the latest certification information at My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>):</p>
+<pre xml:space="preserve" class="oac_no_warn"><a href="http://metalink.oracle.com/">http://metalink.oracle.com/</a>
+</pre>
+<p>You must register online before using My Oracle Support. After logging into My Oracle Support, select <span class="bold">Product Lifecycle</span> from the left column. From the Products Lifecycle page, click <span class="bold">Certifications</span>. Other Product Lifecycle options include Product Availability, Desupport Notices, and Alerts.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="whatsnew.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="using.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1999, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

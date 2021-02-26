@@ -1,0 +1,2878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:24Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleBFileClass.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleClobClass.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleBlob Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleBFileClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleClobClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="i1028457" name="i1028457"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1"><a id="sthref3602" name="sthref3602"></a>OracleBlob Class</h1>
+<p>An <code>OracleBlob</code> object is an object that has a reference to <code>BLOB</code> data. It provides methods for performing operations on <code>BLOB</code>s.</p>
+<a id="sthref3603" name="sthref3603"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.MarshalByRefObject</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;System.IO.Stream</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle.DataAccess.Types.OracleBlob</code></p>
+<a id="sthref3604" name="sthref3604"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public sealed class OracleBlob : Stream, ICloneable, INullable
+</pre>
+<a id="sthref3605" name="sthref3605"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref3606" name="sthref3606"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class OracleBlobSample
+{
+  static void Main()
+  {
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+ 
+    OracleBlob blob = new OracleBlob(con);
+      
+    // Write 4 bytes from writeBuffer, starting at buffer offset 0
+    byte[] writeBuffer = new byte[4] {1, 2, 3, 4};
+    blob.Write(writeBuffer, 0, 4);    
+ 
+    // Append first 2 bytes from writeBuffer {1, 2} to the oracleBlob
+    blob.Append(writeBuffer, 0, 2);
+ 
+    // Prints "blob.Length  = 6"
+    Console.WriteLine("blob.Length  = " + blob.Length);
+ 
+    // Reset the Position for the Read
+    blob.Position = 0;
+ 
+    // Read 6 bytes into readBuffer, starting at buffer offset 0
+    byte[] readBuffer = new byte[6];       
+    int bytesRead = blob.Read(readBuffer, 0, 6);
+    
+    // Prints "bytesRead    = 6"
+    Console.WriteLine("bytesRead    = " + bytesRead);    
+ 
+    // Prints "readBuffer   = 123412"
+    Console.Write("readBuffer   = ");
+    for(int index = 0; index &lt;  readBuffer.Length; index++)
+    {
+      Console.Write(readBuffer[index]);
+    }
+    Console.WriteLine();
+        
+    // Search for the 2nd occurrence of a byte pattern '12'
+    // starting from byte offset 0 in the OracleBlob
+    byte[] pattern = new byte[2] {1, 2};
+    long posFound = blob.Search(pattern, 0, 2);
+ 
+    // Prints "posFound     = 5" 
+    Console.WriteLine("posFound     = " + posFound);
+ 
+    // Erase 4 bytes of data starting at byte offset 1
+    // Sets bytes to zero
+    blob.Erase(1, 4);
+ 
+    byte[] erasedBuffer = blob.Value;    
+ 
+    //Prints "erasedBuffer = 100002"
+    Console.Write("erasedBuffer = ");
+    for(int index = 0; index &lt; erasedBuffer.Length; index++)
+    {
+      Console.Write(erasedBuffer[index]);
+    }
+    Console.WriteLine();
+ 
+    blob.Close();
+    blob.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<a id="sthref3607" name="sthref3607"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Types</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+<li>
+<p><a href="#i1028912">OracleBlob Constructors</a></p>
+</li>
+<li>
+<p><a href="#i1029014">OracleBlob Static Fields</a></p>
+</li>
+<li>
+<p><a href="#i1029086">OracleBlob Static Methods</a></p>
+</li>
+<li>
+<p><a href="#i1029130">OracleBlob Instance Properties</a></p>
+</li>
+<li>
+<p><a href="#i1029539">OracleBlob Instance Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="i1028539" name="i1028539"></a>
+<hr />
+<h2 class="refsect2">OracleBlob Members<a id="sthref3608" name="sthref3608"></a></h2>
+<p><code>OracleBlob</code> members are listed in the following tables.</p>
+<a id="sthref3609" name="sthref3609"></a>
+<p class="subhead1">OracleBlob Constructors</p>
+<p><code>OracleBlob</code> constructors are listed in <a href="#g1313327">Table 13-10</a>.</p>
+<div class="tblruleformal"><a id="sthref3610" name="sthref3610"></a><a id="g1313327" name="g1313327"></a>
+<p class="titleintable">Table 13-10 OracleBlob Constructors</p>
+<table class="RuleFormal" title="OracleBlob Constructors " summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="43%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t54">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t54">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t54" headers="r1c1-t54">
+<p><a href="#i1028912">OracleBlob Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t54 r1c2-t54">
+<p>Creates an instance of the <code>OracleBlob</code> class (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref3611" name="sthref3611"></a>
+<p class="subhead1">OracleBlob Static Fields</p>
+<p><code>OracleBlob</code> static fields are listed in <a href="#g1313337">Table 13-11</a>.</p>
+<div class="tblruleformal"><a id="sthref3612" name="sthref3612"></a><a id="g1313337" name="g1313337"></a>
+<p class="titleintable">Table 13-11 OracleBlob Static Fields</p>
+<table class="RuleFormal" title="OracleBlob Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t55">Field</th>
+<th align="left" valign="bottom" id="r1c2-t55">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t55" headers="r1c1-t55">
+<p><a href="#i1029060">MaxSize</a></p>
+</td>
+<td align="left" headers="r2c1-t55 r1c2-t55">
+<p>Holds the maximum number of bytes a <code>BLOB</code> can hold, which is 4,294,967,295 (2^32 - 1) bytes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t55" headers="r1c1-t55">
+<p><a href="#BCFCFDGF">Null</a></p>
+</td>
+<td align="left" headers="r3c1-t55 r1c2-t55">
+<p>Represents a null value that can be assigned to the value of an <code>OracleBlob</code> instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref3613" name="sthref3613"></a>
+<p class="subhead1">OracleBlob Static Methods</p>
+<p><code>OracleBlob</code> static methods are listed in <a href="#g1313347">Table 13-12</a>.</p>
+<div class="tblruleformal"><a id="sthref3614" name="sthref3614"></a><a id="g1313347" name="g1313347"></a>
+<p class="titleintable">Table 13-12 OracleBlob Static Methods</p>
+<table class="RuleFormal" title="OracleBlob Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t56">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t56">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t56" headers="r1c1-t56">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t56 r1c2-t56">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref3615" name="sthref3615"></a>
+<p class="subhead1">OracleBlob Instance Properties</p>
+<p><code>OracleBlob</code> instance properties are listed in <a href="#g1313357">Table 13-13</a>.</p>
+<div class="tblruleformal"><a id="sthref3616" name="sthref3616"></a><a id="g1313357" name="g1313357"></a>
+<p class="titleintable">Table 13-13 OracleBlob Instance Properties</p>
+<table class="RuleFormal" title="OracleBlob Instance Properties " summary="Rows are instance properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t57">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t57">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t57" headers="r1c1-t57">
+<p><a href="#i1029246">CanRead</a></p>
+</td>
+<td align="left" headers="r2c1-t57 r1c2-t57">
+<p>Indicates whether or not the LOB stream can be read</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t57" headers="r1c1-t57">
+<p><a href="#i1029273">CanSeek</a></p>
+</td>
+<td align="left" headers="r3c1-t57 r1c2-t57">
+<p>Indicates whether or not forward and backward seek operations be performed</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t57" headers="r1c1-t57">
+<p><a href="#i1029300">CanWrite</a></p>
+</td>
+<td align="left" headers="r4c1-t57 r1c2-t57">
+<p>Indicates whether or not the LOB object supports writing</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t57" headers="r1c1-t57">
+<p><a href="#i1029327">Connection</a></p>
+</td>
+<td align="left" headers="r5c1-t57 r1c2-t57">
+<p>Indicates the <code>OracleConnection</code> that is used to retrieve and write <code>BLOB</code> data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t57" headers="r1c1-t57">
+<p><a href="#i1029355">IsEmpty</a></p>
+</td>
+<td align="left" headers="r6c1-t57 r1c2-t57">
+<p>Indicates whether the <code>BLOB</code> is empty or not</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t57" headers="r1c1-t57">
+<p><a href="#i1029366">IsInChunkWriteMode</a></p>
+</td>
+<td align="left" headers="r7c1-t57 r1c2-t57">
+<p>Indicates whether or not the <code>BLOB</code> has been opened to defer index updates</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t57" headers="r1c1-t57">
+<p><a href="#BCFHIBFE">IsNull</a></p>
+</td>
+<td align="left" headers="r8c1-t57 r1c2-t57">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t57" headers="r1c1-t57">
+<p><a href="#i1301328">IsTemporary</a></p>
+</td>
+<td align="left" headers="r9c1-t57 r1c2-t57">
+<p>Indicates whether or not the current instance is bound to a temporary <code>BLOB</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t57" headers="r1c1-t57">
+<p><a href="#i1029418">Length</a></p>
+</td>
+<td align="left" headers="r10c1-t57 r1c2-t57">
+<p>Indicates the size of the <code>BLOB</code> data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t57" headers="r1c1-t57">
+<p><a href="#i1029448">OptimumChunkSize</a></p>
+</td>
+<td align="left" headers="r11c1-t57 r1c2-t57">
+<p>Indicates the optimal data buffer length (or multiples thereof) that read and write operations should use to improve performance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t57" headers="r1c1-t57">
+<p><a href="#i1029476">Position</a></p>
+</td>
+<td align="left" headers="r12c1-t57 r1c2-t57">
+<p>Indicates the current read or write position in the LOB stream</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t57" headers="r1c1-t57">
+<p><a href="#i1029507">Value</a></p>
+</td>
+<td align="left" headers="r13c1-t57 r1c2-t57">
+<p>Returns the data, starting from the first byte in <code>BLOB</code>, as a byte array</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref3617" name="sthref3617"></a>
+<p class="subhead1">OracleBlob Instance Methods</p>
+<p><code>OracleBlob</code> instance methods are listed in <a href="#g1313397">Table 13-14</a>.</p>
+<div class="tblruleformal"><a id="sthref3618" name="sthref3618"></a><a id="g1313397" name="g1313397"></a>
+<p class="titleintable">Table 13-14 OracleBlob Instance Methods</p>
+<table class="RuleFormal" title="OracleBlob Instance Methods " summary="Rows are instance methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t58">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t58">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t58" headers="r1c1-t58">
+<p><a href="#i1029742">Append</a></p>
+</td>
+<td align="left" headers="r2c1-t58 r1c2-t58">
+<p>Appends the supplied data to the current <code>OracleBlob</code> instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t58" headers="r1c1-t58">
+<p><a href="#i1029848">BeginChunkWrite</a></p>
+</td>
+<td align="left" headers="r3c1-t58 r1c2-t58">
+<p>Opens the <code>BLOB</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t58" headers="r1c1-t58">
+<p><code>BeginRead</code></p>
+</td>
+<td align="left" headers="r4c1-t58 r1c2-t58">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t58" headers="r1c1-t58">
+<p><code>BeginWrite</code></p>
+</td>
+<td align="left" headers="r5c1-t58 r1c2-t58">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t58" headers="r1c1-t58">
+<p><a href="#i1029878">Clone</a></p>
+</td>
+<td align="left" headers="r6c1-t58 r1c2-t58">
+<p>Creates a copy of an <code>OracleBlob</code> object</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t58" headers="r1c1-t58">
+<p><a href="#i1029917">Close</a></p>
+</td>
+<td align="left" headers="r7c1-t58 r1c2-t58">
+<p>Closes the current stream and releases any resources associated with it</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t58" headers="r1c1-t58">
+<p><a href="#i1029942">Compare</a></p>
+</td>
+<td align="left" headers="r8c1-t58 r1c2-t58">
+<p>Compares data referenced by the current instance and that of the supplied object</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t58" headers="r1c1-t58">
+<p><a href="#BCFDEJHA">CopyTo</a></p>
+</td>
+<td align="left" headers="r9c1-t58 r1c2-t58">
+<p>Copies from the current <code>OracleBlob</code> instance to an <code>OracleBlob</code> object (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t58" headers="r1c1-t58">
+<p><code>CreateObjRef</code></p>
+</td>
+<td align="left" headers="r10c1-t58 r1c2-t58">
+<p>Inherited from <code>System.MarshalByRefObject</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t58" headers="r1c1-t58">
+<p><a href="#i1030156">Dispose</a></p>
+</td>
+<td align="left" headers="r11c1-t58 r1c2-t58">
+<p>Releases resources allocated by this <code>object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t58" headers="r1c1-t58">
+<p><a href="#i1030185">EndChunkWrite</a></p>
+</td>
+<td align="left" headers="r12c1-t58 r1c2-t58">
+<p>Closes the <code>BLOB</code> referenced by the current <code>OracleBlob</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t58" headers="r1c1-t58">
+<p><code>EndRead</code></p>
+</td>
+<td align="left" headers="r13c1-t58 r1c2-t58">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t58" headers="r1c1-t58">
+<p><code>EndWrite</code></p>
+</td>
+<td align="left" headers="r14c1-t58 r1c2-t58">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t58" headers="r1c1-t58">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r15c1-t58 r1c2-t58">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t58" headers="r1c1-t58">
+<p><a href="#BCFGADGC">Erase</a></p>
+</td>
+<td align="left" headers="r16c1-t58 r1c2-t58">
+<p>Erases data (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t58" headers="r1c1-t58">
+<p><code>Flush</code></p>
+</td>
+<td align="left" headers="r17c1-t58 r1c2-t58">
+<p><span class="italic">Not supported</span></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t58" headers="r1c1-t58">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r18c1-t58 r1c2-t58">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t58" headers="r1c1-t58">
+<p><code>GetLifetimeService</code></p>
+</td>
+<td align="left" headers="r19c1-t58 r1c2-t58">
+<p>Inherited from <code>System.MarshalByRefObject</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t58" headers="r1c1-t58">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r20c1-t58 r1c2-t58">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t58" headers="r1c1-t58">
+<p><code>InitializedLifetimeService</code></p>
+</td>
+<td align="left" headers="r21c1-t58 r1c2-t58">
+<p>Inherited from <code>System.MarshalByRefObject</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t58" headers="r1c1-t58">
+<p><a href="#i1030311">IsEqual</a></p>
+</td>
+<td align="left" headers="r22c1-t58 r1c2-t58">
+<p>Compares the LOB data referenced by the two <code>OracleBlob</code>s</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t58" headers="r1c1-t58">
+<p><a href="#i1030346">Read</a></p>
+</td>
+<td align="left" headers="r23c1-t58 r1c2-t58">
+<p>Reads a specified amount of bytes from the ODP.NET LOB Type instance and populates the <code>buffer</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t58" headers="r1c1-t58">
+<p><code>ReadByte</code></p>
+</td>
+<td align="left" headers="r24c1-t58 r1c2-t58">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t58" headers="r1c1-t58">
+<p><a href="#i1030403">Search</a></p>
+</td>
+<td align="left" headers="r25c1-t58 r1c2-t58">
+<p>Searches for a binary pattern in the current instance of an <code>OracleBlob</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r26c1-t58" headers="r1c1-t58">
+<p><a href="#i1030456">Seek</a></p>
+</td>
+<td align="left" headers="r26c1-t58 r1c2-t58">
+<p>Sets the position in the current LOB stream</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r27c1-t58" headers="r1c1-t58">
+<p><a href="#i1030498">SetLength</a></p>
+</td>
+<td align="left" headers="r27c1-t58 r1c2-t58">
+<p>Trims or truncates the <code>BLOB</code> value to the specified length</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r28c1-t58" headers="r1c1-t58">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r28c1-t58 r1c2-t58">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r29c1-t58" headers="r1c1-t58">
+<p><a href="#i1030530">Write</a></p>
+</td>
+<td align="left" headers="r29c1-t58 r1c2-t58">
+<p>Writes the supplied buffer into the <code>OracleBlob</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r30c1-t58" headers="r1c1-t58">
+<p><code>WriteByte</code></p>
+</td>
+<td align="left" headers="r30c1-t58 r1c2-t58">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1028912" name="i1028912"></a>
+<hr />
+<h2 class="refsect2">OracleBlob Constructors<a id="sthref3619" name="sthref3619"></a></h2>
+<p><code>OracleBlob</code> constructors are listed in <a href="#g1313327">Table 13-10</a>.</p>
+<a id="sthref3620" name="sthref3620"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1028948">OracleBlob(OracleConnection)</a></p>
+<p>This constructor creates an instance of the <code>OracleBlob</code> class bound to a temporary <code>BLOB</code> with an <code>OracleConnection</code> object.</p>
+</li>
+<li>
+<p><a href="#i1028980">OracleBlob(OracleConnection, bool)</a></p>
+<p>This constructor creates an instance of the <code>OracleBlob</code> class bound to a temporary <code>BLOB</code> with an <code>OracleConnection</code> object and a boolean value for caching.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1028948" name="i1028948"></a>
+<h3 class="refsect3">OracleBlob(OracleConnection)</h3>
+<p>This constructor creates an instance of the <code>OracleBlob</code> class bound to a temporary <code>BLOB</code> with an <code>OracleConnection</code> object.</p>
+<a id="sthref3621" name="sthref3621"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleBlob(OracleConnection <span class="italic">con</span>);
+</pre>
+<a id="sthref3622" name="sthref3622"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">con</span></code></p>
+<p>The <code>OracleConnection</code> object.</p>
+</li>
+</ul>
+<a id="sthref3623" name="sthref3623"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not opened.</p>
+<a id="sthref3624" name="sthref3624"></a>
+<p class="subhead2">Remarks</p>
+<p>The connection must be opened explicitly by the application. <code>OracleBlob</code> does not open the connection implicitly.</p>
+<p>The temporary <code>BLOB</code> utilizes the provided connection to store <code>BLOB</code> data. Caching is not turned on by this constructor.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1028980" name="i1028980"></a>
+<h3 class="refsect3">OracleBlob(OracleConnection, bool)</h3>
+<p>This constructor creates an instance of the <code>OracleBlob</code> class bound to a temporary <code>BLOB</code> with an <code>OracleConnection</code> object and a boolean value for caching.</p>
+<a id="sthref3625" name="sthref3625"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleBlob(OracleConnection <span class="italic">con</span>, bool <span class="italic">bCaching</span>);
+</pre>
+<a id="sthref3626" name="sthref3626"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">con</span></code></p>
+<p>The <code>OracleConnection</code> object.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">bCaching</span></code></p>
+<p>A flag for enabling or disabling server-side caching.</p>
+</li>
+</ul>
+<a id="sthref3627" name="sthref3627"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not opened.</p>
+<a id="sthref3628" name="sthref3628"></a>
+<p class="subhead2">Remarks</p>
+<p>The connection must be opened explicitly by the application. <code>OracleBlob</code> does not open the connection implicitly.</p>
+<p>The temporary <code>BLOB</code> uses the provided connection to store <code>BLOB</code> data. The <code><span class="codeinlineitalic">bCaching</span></code> input parameter determines whether or not server-side caching is used.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029014" name="i1029014"></a>
+<hr />
+<h2 class="refsect2">OracleBlob Static Fields<a id="sthref3629" name="sthref3629"></a></h2>
+<p><code>OracleBlob</code> static fields are listed in <a href="#g1313507">Table 13-15</a>.</p>
+<div class="tblruleformal"><a id="sthref3630" name="sthref3630"></a><a id="g1313507" name="g1313507"></a>
+<p class="titleintable">Table 13-15 OracleBlob Static Fields</p>
+<table class="RuleFormal" title="OracleBlob Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="19%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t63">Field</th>
+<th align="left" valign="bottom" id="r1c2-t63">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t63" headers="r1c1-t63">
+<p><a href="#i1029060">MaxSize</a></p>
+</td>
+<td align="left" headers="r2c1-t63 r1c2-t63">
+<p>Holds the maximum number of bytes a <code>BLOB</code> can hold, which is 4,294,967,295 (2^32 - 1) bytes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t63" headers="r1c1-t63">
+<p><a href="#BCFCFDGF">Null</a></p>
+</td>
+<td align="left" headers="r3c1-t63 r1c2-t63">
+<p>Represents a null value that can be assigned to the value of an <code>OracleBlob</code> instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029060" name="i1029060"></a>
+<h3 class="refsect3">MaxSize</h3>
+<p>The <code>MaxSize</code> field holds the maximum number of bytes a <code>BLOB</code> can hold, which is 4,294,967,295 (2^32 - 1) bytes.</p>
+<a id="sthref3631" name="sthref3631"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly Int64 MaxSize = 4294967295;
+</pre>
+<a id="sthref3632" name="sthref3632"></a>
+<p class="subhead2">Remarks</p>
+<p>This field can be useful in code that checks whether or not the operation exceeds the maximum length allowed.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BCFCFDGF" name="BCFCFDGF"></a>
+<h3 class="refsect3">Null</h3>
+<p>This static field represents a null value that can be assigned to the value of an <code>OracleBlob</code> instance.</p>
+<a id="sthref3633" name="sthref3633"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleBlob Null;
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029086" name="i1029086"></a>
+<hr />
+<h2 class="refsect2">OracleBlob Static Methods<a id="sthref3634" name="sthref3634"></a></h2>
+<p><code>OracleBlob</code> static methods are listed in <a href="#g1313525">Table 13-16</a>.</p>
+<div class="tblruleformal"><a id="sthref3635" name="sthref3635"></a><a id="g1313525" name="g1313525"></a>
+<p class="titleintable">Table 13-16 OracleBlob Static Methods</p>
+<table class="RuleFormal" title="OracleBlob Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t67">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t67">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t67" headers="r1c1-t67">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t67 r1c2-t67">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029130" name="i1029130"></a>
+<hr />
+<h2 class="refsect2">OracleBlob Instance Properties<a id="sthref3636" name="sthref3636"></a></h2>
+<p><code>OracleBlob</code> instance properties are listed in <a href="#g1313539">Table 13-17</a>.</p>
+<div class="tblruleformal"><a id="sthref3637" name="sthref3637"></a><a id="g1313539" name="g1313539"></a>
+<p class="titleintable">Table 13-17 OracleBlob Instance Properties</p>
+<table class="RuleFormal" title="OracleBlob Instance Properties " summary="Rows are instance properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="28%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t69">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t69">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t69" headers="r1c1-t69">
+<p><a href="#i1029246">CanRead</a></p>
+</td>
+<td align="left" headers="r2c1-t69 r1c2-t69">
+<p>Indicates whether or not the LOB stream can be read</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t69" headers="r1c1-t69">
+<p><a href="#i1029273">CanSeek</a></p>
+</td>
+<td align="left" headers="r3c1-t69 r1c2-t69">
+<p>Indicates whether or not forward and backward seek operations be performed</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t69" headers="r1c1-t69">
+<p><a href="#i1029300">CanWrite</a></p>
+</td>
+<td align="left" headers="r4c1-t69 r1c2-t69">
+<p>Indicates whether or not the LOB object supports writing</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t69" headers="r1c1-t69">
+<p><a href="#i1029327">Connection</a></p>
+</td>
+<td align="left" headers="r5c1-t69 r1c2-t69">
+<p>Indicates the <code>OracleConnection</code> that is used to retrieve and write <code>BLOB</code> data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t69" headers="r1c1-t69">
+<p><a href="#i1029355">IsEmpty</a></p>
+</td>
+<td align="left" headers="r6c1-t69 r1c2-t69">
+<p>Indicates whether the <code>BLOB</code> is empty or not</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t69" headers="r1c1-t69">
+<p><a href="#i1029366">IsInChunkWriteMode</a></p>
+</td>
+<td align="left" headers="r7c1-t69 r1c2-t69">
+<p>Indicates whether or not the <code>BLOB</code> has been opened to defer index updates</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t69" headers="r1c1-t69">
+<p><a href="#BCFHIBFE">IsNull</a></p>
+</td>
+<td align="left" headers="r8c1-t69 r1c2-t69">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t69" headers="r1c1-t69">
+<p><a href="#i1301328">IsTemporary</a></p>
+</td>
+<td align="left" headers="r9c1-t69 r1c2-t69">
+<p>Indicates whether or not the current instance is bound to a temporary <code>BLOB</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t69" headers="r1c1-t69">
+<p><a href="#i1029418">Length</a></p>
+</td>
+<td align="left" headers="r10c1-t69 r1c2-t69">
+<p>Indicates the size of the <code>BLOB</code> data</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t69" headers="r1c1-t69">
+<p><a href="#i1029448">OptimumChunkSize</a></p>
+</td>
+<td align="left" headers="r11c1-t69 r1c2-t69">
+<p>Indicates the optimal data buffer length (or multiples thereof) that read and write operations should use to improve performance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t69" headers="r1c1-t69">
+<p><a href="#i1029476">Position</a></p>
+</td>
+<td align="left" headers="r12c1-t69 r1c2-t69">
+<p>Indicates the current read or write position in the LOB stream</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t69" headers="r1c1-t69">
+<p><a href="#i1029507">Value</a></p>
+</td>
+<td align="left" headers="r13c1-t69 r1c2-t69">
+<p>Returns the data, starting from the first byte in <code>BLOB</code>, as a byte array</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029246" name="i1029246"></a>
+<h3 class="refsect3">CanRead</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance property indicates whether or not the LOB stream can be read.</p>
+<a id="sthref3638" name="sthref3638"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool CanRead{get;}
+</pre>
+<a id="sthref3639" name="sthref3639"></a>
+<p class="subhead2">Property Value</p>
+<p>If the LOB stream can be read, returns <code>true</code>; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029273" name="i1029273"></a>
+<h3 class="refsect3">CanSeek</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance property indicates whether or not forward and backward seek operations can be performed.</p>
+<a id="sthref3640" name="sthref3640"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool CanSeek{get;}
+</pre>
+<a id="sthref3641" name="sthref3641"></a>
+<p class="subhead2">Property Value</p>
+<p>If forward and backward seek operations can be performed, returns <code>true</code>; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029300" name="i1029300"></a>
+<h3 class="refsect3">CanWrite</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance property indicates whether or not the LOB object supports writing.</p>
+<a id="sthref3642" name="sthref3642"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool CanWrite{get;}
+</pre>
+<a id="sthref3643" name="sthref3643"></a>
+<p class="subhead2">Property Value</p>
+<p>If the LOB stream can be written, returns <code>true</code>; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029327" name="i1029327"></a>
+<h3 class="refsect3">Connection</h3>
+<p>This instance property indicates the <code>OracleConnection</code> that is used to retrieve and write <code>BLOB</code> data.</p>
+<a id="sthref3644" name="sthref3644"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleConnection Connection {get;}
+</pre>
+<a id="sthref3645" name="sthref3645"></a>
+<p class="subhead2">Property Value</p>
+<p>An object of <code>OracleConnection</code>.</p>
+<a id="sthref3646" name="sthref3646"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029355" name="i1029355"></a>
+<h3 class="refsect3">IsEmpty</h3>
+<p>This instance property indicates whether the <code>BLOB</code> is empty or not.</p>
+<a id="sthref3647" name="sthref3647"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsEmpty {get;}
+</pre>
+<a id="sthref3648" name="sthref3648"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>bool</code> that indicates whether or not the <code>BLOB</code> is empty.</p>
+<a id="sthref3649" name="sthref3649"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029366" name="i1029366"></a>
+<h3 class="refsect3">IsInChunkWriteMode</h3>
+<p>This instance property indicates whether or not the <code>BLOB</code> has been opened to defer index updates.</p>
+<a id="sthref3650" name="sthref3650"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsInChunkWriteMode{get;}
+</pre>
+<a id="sthref3651" name="sthref3651"></a>
+<p class="subhead2">Property Value</p>
+<p>If the <code>BLOB</code> has been opened, returns <code>true</code>; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BCFHIBFE" name="BCFHIBFE"></a>
+<h3 class="refsect3">IsNull</h3>
+<p>This property indicates whether or not the current instance has a null value.</p>
+<a id="sthref3652" name="sthref3652"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsNull{get;}
+</pre>
+<a id="sthref3653" name="sthref3653"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code> if the current instance has a null value; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1301328" name="i1301328"></a>
+<h3 class="refsect3">IsTemporary</h3>
+<p>This instance property indicates whether or not the current instance is bound to a temporary <code>BLOB</code>.</p>
+<a id="sthref3654" name="sthref3654"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsTemporary {get;}
+</pre>
+<a id="sthref3655" name="sthref3655"></a>
+<p class="subhead2">Property Value</p>
+<p><code>bool</code></p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029418" name="i1029418"></a>
+<h3 class="refsect3">Length</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance property indicates the size of the <code>BLOB</code> data in bytes.</p>
+<a id="sthref3656" name="sthref3656"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override Int64 Length {get;}
+</pre>
+<a id="sthref3657" name="sthref3657"></a>
+<p class="subhead2">Property Value</p>
+<p>A number indicating the size of the <code>BLOB</code> data in bytes.</p>
+<a id="sthref3658" name="sthref3658"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029448" name="i1029448"></a>
+<h3 class="refsect3">OptimumChunkSize</h3>
+<p>This instance property indicates the optimal data buffer length (or multiples thereof) that read and write operations should use to improve performance.</p>
+<a id="sthref3659" name="sthref3659"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int OptimumChunkSize{get;}
+</pre>
+<a id="sthref3660" name="sthref3660"></a>
+<p class="subhead2">Property Value</p>
+<p>A number representing the minimum bytes to retrieve or send.</p>
+<a id="sthref3661" name="sthref3661"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029476" name="i1029476"></a>
+<h3 class="refsect3">Position</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance property indicates the current read or write position in the LOB stream.</p>
+<a id="sthref3662" name="sthref3662"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override Int64 Position{get; set;}
+</pre>
+<a id="sthref3663" name="sthref3663"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>Int64</code> that indicates the read or write position.</p>
+<a id="sthref3664" name="sthref3664"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code>Position</code> is less than <code>0</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029507" name="i1029507"></a>
+<h3 class="refsect3">Value</h3>
+<p>This instance property returns the data, starting from the first byte in the <code>BLOB</code>, as a byte array.</p>
+<a id="sthref3665" name="sthref3665"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Byte[] Value{get;}
+</pre>
+<a id="sthref3666" name="sthref3666"></a>
+<p class="subhead2">Property Value</p>
+<p>A byte array.</p>
+<a id="sthref3667" name="sthref3667"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code>Value</code> is less than <code>0</code>.</p>
+<a id="sthref3668" name="sthref3668"></a>
+<p class="subhead2">Remarks</p>
+<p>The value of <code>Position</code> is not used or changed by using this property. 2 GB is the maximum byte array length that can be returned by this property.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029539" name="i1029539"></a>
+<hr />
+<h2 class="refsect2">OracleBlob Instance Methods<a id="sthref3669" name="sthref3669"></a></h2>
+<p><code>OracleBlob</code> instance methods are listed in <a href="#g1313623">Table 13-18</a>.</p>
+<div class="tblruleformal"><a id="sthref3670" name="sthref3670"></a><a id="g1313623" name="g1313623"></a>
+<p class="titleintable">Table 13-18 OracleBlob Instance Methods</p>
+<table class="RuleFormal" title="OracleBlob Instance Methods " summary="Rows are instance methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t83">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t83">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t83" headers="r1c1-t83">
+<p><a href="#i1029742">Append</a></p>
+</td>
+<td align="left" headers="r2c1-t83 r1c2-t83">
+<p>Appends the supplied data to the current <code>OracleBlob</code> instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t83" headers="r1c1-t83">
+<p><a href="#i1029848">BeginChunkWrite</a></p>
+</td>
+<td align="left" headers="r3c1-t83 r1c2-t83">
+<p>Opens the <code>BLOB</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t83" headers="r1c1-t83">
+<p><code>BeginRead</code></p>
+</td>
+<td align="left" headers="r4c1-t83 r1c2-t83">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t83" headers="r1c1-t83">
+<p><code>BeginWrite</code></p>
+</td>
+<td align="left" headers="r5c1-t83 r1c2-t83">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t83" headers="r1c1-t83">
+<p><a href="#i1029878">Clone</a></p>
+</td>
+<td align="left" headers="r6c1-t83 r1c2-t83">
+<p>Creates a copy of an <code>OracleBlob</code> object</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t83" headers="r1c1-t83">
+<p><a href="#i1029917">Close</a></p>
+</td>
+<td align="left" headers="r7c1-t83 r1c2-t83">
+<p>Closes the current stream and releases any resources associated with it</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t83" headers="r1c1-t83">
+<p><a href="#i1029942">Compare</a></p>
+</td>
+<td align="left" headers="r8c1-t83 r1c2-t83">
+<p>Compares data referenced by the current instance and that of the supplied object</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t83" headers="r1c1-t83">
+<p><a href="#BCFDEJHA">CopyTo</a></p>
+</td>
+<td align="left" headers="r9c1-t83 r1c2-t83">
+<p>Copies from the current <code>OracleBlob</code> instance to an <code>OracleBlob</code> object (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t83" headers="r1c1-t83">
+<p><code>CreateObjRef</code></p>
+</td>
+<td align="left" headers="r10c1-t83 r1c2-t83">
+<p>Inherited from <code>System.MarshalByRefObject</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t83" headers="r1c1-t83">
+<p><a href="#i1030156">Dispose</a></p>
+</td>
+<td align="left" headers="r11c1-t83 r1c2-t83">
+<p>Releases resources allocated by this <code>object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t83" headers="r1c1-t83">
+<p><a href="#i1030185">EndChunkWrite</a></p>
+</td>
+<td align="left" headers="r12c1-t83 r1c2-t83">
+<p>Closes the <code>BLOB</code> referenced by the current <code>OracleBlob</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t83" headers="r1c1-t83">
+<p><code>EndRead</code></p>
+</td>
+<td align="left" headers="r13c1-t83 r1c2-t83">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t83" headers="r1c1-t83">
+<p><code>EndWrite</code></p>
+</td>
+<td align="left" headers="r14c1-t83 r1c2-t83">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t83" headers="r1c1-t83">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r15c1-t83 r1c2-t83">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t83" headers="r1c1-t83">
+<p><a href="#BCFGADGC">Erase</a></p>
+</td>
+<td align="left" headers="r16c1-t83 r1c2-t83">
+<p>Erases data (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t83" headers="r1c1-t83">
+<p><code>Flush</code></p>
+</td>
+<td align="left" headers="r17c1-t83 r1c2-t83">
+<p><span class="italic">Not supported</span></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t83" headers="r1c1-t83">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r18c1-t83 r1c2-t83">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t83" headers="r1c1-t83">
+<p><code>GetLifetimeService</code></p>
+</td>
+<td align="left" headers="r19c1-t83 r1c2-t83">
+<p>Inherited from <code>System.MarshalByRefObject</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t83" headers="r1c1-t83">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r20c1-t83 r1c2-t83">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t83" headers="r1c1-t83">
+<p><code>InitializedLifetimeService</code></p>
+</td>
+<td align="left" headers="r21c1-t83 r1c2-t83">
+<p>Inherited from <code>System.MarshalByRefObject</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t83" headers="r1c1-t83">
+<p><a href="#i1030311">IsEqual</a></p>
+</td>
+<td align="left" headers="r22c1-t83 r1c2-t83">
+<p>Compares the LOB data referenced by the two <code>OracleBlob</code>s</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t83" headers="r1c1-t83">
+<p><a href="#i1030346">Read</a></p>
+</td>
+<td align="left" headers="r23c1-t83 r1c2-t83">
+<p>Reads a specified amount of bytes from the ODP.NET LOB Type instance and populates the <code>buffer</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t83" headers="r1c1-t83">
+<p><code>ReadByte</code></p>
+</td>
+<td align="left" headers="r24c1-t83 r1c2-t83">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t83" headers="r1c1-t83">
+<p><a href="#i1030403">Search</a></p>
+</td>
+<td align="left" headers="r25c1-t83 r1c2-t83">
+<p>Searches for a binary pattern in the current instance of an <code>OracleBlob</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r26c1-t83" headers="r1c1-t83">
+<p><a href="#i1030456">Seek</a></p>
+</td>
+<td align="left" headers="r26c1-t83 r1c2-t83">
+<p>Sets the position in the current LOB stream</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r27c1-t83" headers="r1c1-t83">
+<p><a href="#i1030498">SetLength</a></p>
+</td>
+<td align="left" headers="r27c1-t83 r1c2-t83">
+<p>Trims or truncates the <code>BLOB</code> value to the specified length</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r28c1-t83" headers="r1c1-t83">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r28c1-t83 r1c2-t83">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r29c1-t83" headers="r1c1-t83">
+<p><a href="#i1030530">Write</a></p>
+</td>
+<td align="left" headers="r29c1-t83 r1c2-t83">
+<p>Writes the supplied buffer into the <code>OracleBlob</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r30c1-t83" headers="r1c1-t83">
+<p><code>WriteByte</code></p>
+</td>
+<td align="left" headers="r30c1-t83 r1c2-t83">
+<p>Inherited from <code>System.IO.Stream</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029742" name="i1029742"></a>
+<h3 class="refsect3">Append</h3>
+<p><code>Append</code> appends the supplied data to the end of the current <code>OracleBlob</code> instance.</p>
+<a id="sthref3671" name="sthref3671"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1029774">Append(OracleBlob)</a></p>
+<p>This instance method appends the <code>BLOB</code> data referenced by the provided <code>OracleBlob</code> object to the current <code>OracleBlob</code> instance.</p>
+</li>
+<li>
+<p><a href="#i1029807">Append(byte[ ], int, int)</a></p>
+<p>This instance method appends data from the supplied byte array buffer to the end of the current <code>OracleBlob</code> instance.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029774" name="i1029774"></a>
+<h3 class="refsect3">Append(OracleBlob)</h3>
+<p>This instance method appends the <code>BLOB</code> data referenced by the provided <code>OracleBlob</code> object to the current <code>OracleBlob</code> instance.</p>
+<a id="sthref3672" name="sthref3672"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public void Append(OracleBlob <span class="italic">obj</span>);
+</pre>
+<a id="sthref3673" name="sthref3673"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>An object of <code>OracleBlob</code>.</p>
+</li>
+</ul>
+<a id="sthref3674" name="sthref3674"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The parameter has a different connection than the object, <code>OracleConnection</code> is not opened, or <code>OracleConnection</code> has been reopened.</p>
+<a id="sthref3675" name="sthref3675"></a>
+<p class="subhead2">Remarks</p>
+<p>No character set conversions are made.</p>
+<p>The provided object and the current instance must be using the same connection; that is, the same <code>OracleConnection</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029807" name="i1029807"></a>
+<h3 class="refsect3">Append(byte[ ], int, int)</h3>
+<p>This instance method appends data from the supplied byte array buffer to the end of the current <code>OracleBlob</code> instance.</p>
+<a id="sthref3676" name="sthref3676"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public void Append(byte[] <span class="italic">buffer</span>, int <span class="italic">offset</span>, int <span class="italic">count</span>);
+</pre>
+<a id="sthref3677" name="sthref3677"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">buffer</span></code></p>
+<p>An array of bytes.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">offset</span></code></p>
+<p>The zero-based byte offset in the buffer from which data is read.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">count</span></code></p>
+<p>The number of bytes to be appended.</p>
+</li>
+</ul>
+<a id="sthref3678" name="sthref3678"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<a id="sthref3679" name="sthref3679"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class AppendSample
+{
+  static void Main()
+  {
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+ 
+    OracleBlob blob = new OracleBlob(con);
+      
+    // Append 2 bytes {4, 5} to the OracleBlob
+    byte[] buffer = new byte[3] {4, 5, 6};
+    blob.Append(buffer, 0, 2);
+ 
+    byte[] appendBuffer = blob.Value;
+ 
+    // Prints "appendBuffer = 45"
+    Console.Write("appendBuffer = ");
+    for(int index = 0; index &lt; appendBuffer.Length; index++)
+    {
+      Console.Write(appendBuffer[index]);
+    }
+    Console.WriteLine();
+ 
+    blob.Close();
+    blob.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029848" name="i1029848"></a>
+<h3 class="refsect3">BeginChunkWrite</h3>
+<p>This instance method opens the <code>BLOB</code>.</p>
+<a id="sthref3680" name="sthref3680"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public void BeginChunkWrite();
+</pre>
+<a id="sthref3681" name="sthref3681"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<a id="sthref3682" name="sthref3682"></a>
+<p class="subhead2">Remarks</p>
+<p><code>BeginChunkWrite</code> does not need to be called before manipulating the BLOB data. This is provided for performance reasons.</p>
+<p>After this method is called, write operations do not cause the domain or function-based index on the column to be updated. Index updates occur only once after <code>EndChunkWrite</code> is called.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029878" name="i1029878"></a>
+<h3 class="refsect3">Clone</h3>
+<p>This instance method creates a copy of an <code>OracleBlob</code> object.</p>
+<a id="sthref3683" name="sthref3683"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public object Clone();
+</pre>
+<a id="sthref3684" name="sthref3684"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleBlob</code> object.</p>
+<a id="sthref3685" name="sthref3685"></a>
+<p class="subhead2">Implements</p>
+<p><code>ICloneable</code></p>
+<a id="sthref3686" name="sthref3686"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<a id="sthref3687" name="sthref3687"></a>
+<p class="subhead2">Remarks</p>
+<p>The cloned object has the same property values as that of the object being cloned.</p>
+<a id="sthref3688" name="sthref3688"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class CloneSample
+{
+  static void Main()
+  {
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+ 
+    OracleBlob blob1 = new OracleBlob(con);
+ 
+    // Prints "blob1.Position = 0"
+    Console.WriteLine("blob1.Position = " + blob1.Position);
+    
+    // Set the Position before calling Clone()
+    blob1.Position = 1;
+ 
+    // Clone the OracleBlob
+    OracleBlob blob2 = (OracleBlob)blob1.Clone();
+    
+    // Prints "blob2.Position = 1"
+    Console.WriteLine("blob2.Position = " + blob2.Position);
+ 
+    blob1.Close();
+    blob1.Dispose();
+ 
+    blob2.Close();
+    blob2.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029917" name="i1029917"></a>
+<h3 class="refsect3">Close</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance method closes the current stream and releases any resources associated with it.</p>
+<a id="sthref3689" name="sthref3689"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void Close();
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1029942" name="i1029942"></a>
+<h3 class="refsect3">Compare</h3>
+<p>This instance method compares data referenced by the current instance and that of the supplied object.</p>
+<a id="sthref3690" name="sthref3690"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Compare(Int64 <span class="italic">src_offset</span>, OracleBlob <span class="italic">obj</span>, Int64 <span class="italic">dst_offset</span>,
+   Int64 <span class="italic">amount</span>);
+</pre>
+<a id="sthref3691" name="sthref3691"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">src_offset</span></code></p>
+<p>The comparison starting point (in bytes) for the current instance.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The provided <code>OracleBlob</code> object.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">dst_offset</span></code></p>
+<p>The comparison starting point (in bytes) for the provided <code>OracleBlob</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">amount</span></code></p>
+<p>The number of bytes to compare.</p>
+</li>
+</ul>
+<a id="sthref3692" name="sthref3692"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns a value that is:</p>
+<ul>
+<li>
+<p>Less than zero: if the data referenced by the current instance is less than that of the supplied instance</p>
+</li>
+<li>
+<p>Zero: if both objects reference the same data</p>
+</li>
+<li>
+<p>Greater than zero: if the data referenced by the current instance is greater than that of the supplied instance</p>
+</li>
+</ul>
+<a id="sthref3693" name="sthref3693"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The parameter has a different connection than the object, <code>OracleConnection</code> is not opened, or <code>OracleConnection</code> has been reopened.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">src_offset</span></code>, the <code><span class="codeinlineitalic">dst_offset</span></code>, or the <code><span class="codeinlineitalic">amount</span></code> parameter is less than <code>0</code>.</p>
+<a id="sthref3694" name="sthref3694"></a>
+<p class="subhead2">Remarks</p>
+<p>The provided object and the current instance must be using the same connection, that is, the same <code>OracleConnection</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BCFDEJHA" name="BCFDEJHA"></a>
+<h3 class="refsect3">CopyTo</h3>
+<p><code>CopyTo</code> copies data from the current instance to the provided <code>OracleBlob</code> object.</p>
+<a id="sthref3695" name="sthref3695"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1030024">CopyTo(OracleBlob)</a></p>
+<p>This instance method copies data from the current instance to the provided <code>OracleBlob</code> object.</p>
+</li>
+<li>
+<p><a href="#i1030060">CopyTo(OracleBlob, Int64)</a></p>
+<p>This instance method copies data from the current <code>OracleBlob</code> instance to the provided <code>OracleBlob</code> object with the specified destination offset.</p>
+</li>
+<li>
+<p><a href="#i1030101">CopyTo(Int64, OracleBlob, Int64, Int64)</a></p>
+<p>This instance method copies data from the current <code>OracleBlob</code> instance to the provided <code>OracleBlob</code> object with the specified source offset, destination offset, and character amounts.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030024" name="i1030024"></a>
+<h3 class="refsect3">CopyTo(OracleBlob)</h3>
+<p>This instance method copies data from the current instance to the provided <code>OracleBlob</code> object.</p>
+<a id="sthref3696" name="sthref3696"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Int64 CopyTo(OracleBlob <span class="italic">obj</span>);
+</pre>
+<a id="sthref3697" name="sthref3697"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The <code>OracleBlob</code> object to which the data is copied.</p>
+</li>
+</ul>
+<a id="sthref3698" name="sthref3698"></a>
+<p class="subhead2">Return Value</p>
+<p>The return value is the amount copied.</p>
+<a id="sthref3699" name="sthref3699"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - This exception is thrown if any of the following conditions exist:</p>
+<ul>
+<li>
+<p>The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+</li>
+<li>
+<p>The LOB object parameter has a different connection than the object.</p>
+</li>
+</ul>
+<a id="sthref3700" name="sthref3700"></a>
+<p class="subhead2">Remarks</p>
+<p>The provided object and the current instance must be using the same connection; that is, the same <code>OracleConnection</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030060" name="i1030060"></a>
+<h3 class="refsect3">CopyTo(OracleBlob, Int64)</h3>
+<p>This instance method copies data from the current <code>OracleBlob</code> instance to the provided <code>OracleBlob</code> object with the specified destination offset.</p>
+<a id="sthref3701" name="sthref3701"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Int64 CopyTo(OracleBlob <span class="italic">obj</span>, Int64 <span class="italic">dst_offset</span>);
+</pre>
+<a id="sthref3702" name="sthref3702"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The <code>OracleBlob</code> object to which the data is copied.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">dst_offset</span></code></p>
+<p>The offset (in bytes) at which the <code>OracleBlob</code> object is copied.</p>
+</li>
+</ul>
+<a id="sthref3703" name="sthref3703"></a>
+<p class="subhead2">Return Value</p>
+<p>The return value is the amount copied.</p>
+<a id="sthref3704" name="sthref3704"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">dst_offset</span></code> is less than <code>0</code>.</p>
+<p><code>InvalidOperationException</code> - This exception is thrown if any of the following conditions exist:</p>
+<ul>
+<li>
+<p>The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+</li>
+<li>
+<p>The LOB object parameter has a different connection than the object.</p>
+</li>
+</ul>
+<a id="sthref3705" name="sthref3705"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code><span class="codeinlineitalic">dst_offset</span></code> is beyond the end of the <code>OracleBlob</code> data, spaces are written into the <code>OracleBlob</code> until the <code><span class="codeinlineitalic">dst_offset</span></code> is met.</p>
+<p>The offsets are <code>0</code>-based. No character conversion is performed by this operation.</p>
+<p>The provided object and the current instance must be using the same connection; that is, the same <code>OracleConnection</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030101" name="i1030101"></a>
+<h3 class="refsect3">CopyTo(Int64, OracleBlob, Int64, Int64)</h3>
+<p>This instance method copies data from the current <code>OracleBlob</code> instance to the provided <code>OracleBlob</code> object with the specified source offset, destination offset, and character amounts.</p>
+<a id="sthref3706" name="sthref3706"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Int64 CopyTo(Int64 <span class="italic">src_offset</span>,OracleBlob <span class="italic">obj</span>,Int64 <span class="italic">dst_offset</span>,
+   Int64 <span class="italic">amount</span>);
+</pre>
+<a id="sthref3707" name="sthref3707"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">src_offset</span></code></p>
+<p>The offset (in bytes) in the current instance, from which the data is read.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The <code>OracleBlob</code> object to which the data is copied.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">dst_offset</span></code></p>
+<p>The offset (in bytes) at which the <code>OracleBlob</code> object is copied.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">amount</span></code></p>
+<p>The amount of data to be copied.</p>
+</li>
+</ul>
+<a id="sthref3708" name="sthref3708"></a>
+<p class="subhead2">Return Value</p>
+<p>The return value is the amount copied.</p>
+<a id="sthref3709" name="sthref3709"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The parameter has a different connection than the object, <code>OracleConnection</code> is not opened, or <code>OracleConnection</code> has been reopened.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">src_offset</span></code>, the <code><span class="codeinlineitalic">dst_offset</span></code>, or the <code><span class="codeinlineitalic">amount</span></code> parameter is less than <code>0</code>.</p>
+<a id="sthref3710" name="sthref3710"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code><span class="codeinlineitalic">dst_offset</span></code> is beyond the end of the <code>OracleBlob</code> data, spaces are written into the <code>OracleBlob</code> until the <code><span class="codeinlineitalic">dst_offset</span></code> is met.</p>
+<p>The offsets are <code>0</code>-based. No character conversion is performed by this operation.</p>
+<p>The provided object and the current instance must be using the same connection; that is, the same <code>OracleConnection</code> object.</p>
+<a id="sthref3711" name="sthref3711"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class CopyToSample
+{
+  static void Main()
+  {
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+ 
+    OracleBlob blob1 = new OracleBlob(con);
+    OracleBlob blob2 = new OracleBlob(con);
+ 
+    // Write 4 bytes, starting at buffer offset 0
+    byte[] buffer = new byte[4] {1, 2, 3, 4};    
+    blob1.Write(buffer, 0, 4);
+ 
+    // Copy 2 bytes from byte 0 of blob1 to byte 1 of blob2
+    blob1.CopyTo(0, blob2, 1, 2);
+ 
+    byte[] copyBuffer = blob2.Value;    
+ 
+    //Prints "Value = 012"
+    Console.Write("Value = ");
+    for(int index = 0; index &lt; copyBuffer.Length; index++)
+    {
+      Console.Write(copyBuffer[index]);
+    }
+    Console.WriteLine();
+    
+    blob1.Close();
+    blob1.Dispose();
+ 
+    blob2.Close();
+    blob2.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030156" name="i1030156"></a>
+<h3 class="refsect3">Dispose</h3>
+<p>This instance method releases resources allocated by this object.</p>
+<a id="sthref3712" name="sthref3712"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public void Dispose();
+</pre>
+<a id="sthref3713" name="sthref3713"></a>
+<p class="subhead2">Implements</p>
+<p><code>IDisposable</code></p>
+<a id="sthref3714" name="sthref3714"></a>
+<p class="subhead2">Remarks</p>
+<p>Once <code>Dispose()</code> is called, the object of <code>OracleBlob</code> is in an uninitialized state.</p>
+<p>Although some properties can still be accessed, their values may not be accountable. Since resources are freed, method calls may lead to exceptions. The object cannot be reused after being disposed.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030185" name="i1030185"></a>
+<h3 class="refsect3">EndChunkWrite</h3>
+<p>This instance method closes the <code>BLOB</code> referenced by the current <code>OracleBlob</code> instance.</p>
+<a id="sthref3715" name="sthref3715"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public void EndChunkWrite();
+</pre>
+<a id="sthref3716" name="sthref3716"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<a id="sthref3717" name="sthref3717"></a>
+<p class="subhead2">Remarks</p>
+<p>Index updates occur immediately if there is write operation(s) deferred by the <code>BeginChunkWrite</code> method.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BCFGADGC" name="BCFGADGC"></a>
+<h3 class="refsect3">Erase</h3>
+<p><code>Erase</code> erases a portion or all data.</p>
+<a id="sthref3718" name="sthref3718"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1030246">Erase()</a></p>
+<p>This instance method erases all data.</p>
+</li>
+<li>
+<p><a href="#i1030274">Erase(Int64, Int64)</a></p>
+<p>This instance method erases a specified portion of data.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030246" name="i1030246"></a>
+<h3 class="refsect3">Erase()</h3>
+<p>This instance method erases all data.</p>
+<a id="sthref3719" name="sthref3719"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Int64 Erase();
+</pre>
+<a id="sthref3720" name="sthref3720"></a>
+<p class="subhead2">Return Value</p>
+<p>The number of bytes erased.</p>
+<a id="sthref3721" name="sthref3721"></a>
+<p class="subhead2">Remarks</p>
+<p><code>Erase()</code> replaces all data with zero-byte fillers.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030274" name="i1030274"></a>
+<h3 class="refsect3">Erase(Int64, Int64)</h3>
+<p>This instance method erases a specified portion of data.</p>
+<a id="sthref3722" name="sthref3722"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Int64 Erase(Int64 <span class="italic">offset, </span>Int64 <span class="italic">amount</span>);
+</pre>
+<a id="sthref3723" name="sthref3723"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">offset</span></code></p>
+<p>The offset from which to erase.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">amount</span></code></p>
+<p>The quantity (in bytes) to erase.</p>
+</li>
+</ul>
+<a id="sthref3724" name="sthref3724"></a>
+<p class="subhead2">Return Value</p>
+<p>The number of bytes erased.</p>
+<a id="sthref3725" name="sthref3725"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">offset</span></code> or <code><span class="codeinlineitalic">amount</span></code> parameter is less than <code>0</code>.</p>
+<a id="sthref3726" name="sthref3726"></a>
+<p class="subhead2">Remarks</p>
+<p>Replaces the specified <code><span class="codeinlineitalic">amount</span></code> of data with zero-byte fillers.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030311" name="i1030311"></a>
+<h3 class="refsect3">IsEqual</h3>
+<p>This instance method compares the LOB data referenced by the two <code>OracleBlob</code>s.</p>
+<a id="sthref3727" name="sthref3727"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsEqual(OracleBlob <span class="italic">obj</span>);
+</pre>
+<a id="sthref3728" name="sthref3728"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>An <code>OracleBlob</code> object.</p>
+</li>
+</ul>
+<a id="sthref3729" name="sthref3729"></a>
+<p class="subhead2">Return Value</p>
+<p>If the current <code>OracleBlob</code> and the provided <code>OracleBlob</code> refer to the same LOB, returns <code>true</code>. Returns <code>false</code> otherwise.</p>
+<a id="sthref3730" name="sthref3730"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<a id="sthref3731" name="sthref3731"></a>
+<p class="subhead2">Remarks</p>
+<p>Note that this method can return <code>true</code> even if the two <code>OracleBlob</code> objects return <code>false</code> for == or <code>Equals()</code> because two different <code>OracleBlob</code> instances can refer to the same LOB.</p>
+<p>The provided object and the current instance must be using the same connection, that is, the same <code>OracleConnection</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BCFCEIII" name="BCFCEIII"></a><a id="i1030346" name="i1030346"></a>
+<h3 class="refsect3">Read</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance method reads a specified amount of bytes from the ODP.NET LOB instance and populates the <code>buffer</code>.</p>
+<a id="sthref3732" name="sthref3732"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int Read(byte[ ] <span class="italic">buffer</span>, int <span class="italic">offset</span>, int <span class="italic">count</span>);
+</pre>
+<a id="sthref3733" name="sthref3733"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">buffer</span></code></p>
+<p>The byte array buffer to be populated.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">offset</span></code></p>
+<p>The starting offset (in bytes) at which the buffer is populated.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">count</span></code></p>
+<p>The amount of bytes to read.</p>
+</li>
+</ul>
+<a id="sthref3734" name="sthref3734"></a>
+<p class="subhead2">Return Value</p>
+<p>The return value indicates the number of bytes read from the LOB.</p>
+<a id="sthref3735" name="sthref3735"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<p><code>ArgumentOutOfRangeException</code> - This exception is thrown if any of the following conditions exist:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> or the <code><span class="codeinlineitalic">count</span></code> parameter is less than <code>0</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> is greater than or equal to the <code><span class="codeinlineitalic">buffer</span></code>.<code>Length</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> and the <code><span class="codeinlineitalic">count</span></code> together are greater than the <code><span class="codeinlineitalic">buffer</span></code>.<code>Length</code>.</p>
+</li>
+</ul>
+<a id="sthref3736" name="sthref3736"></a>
+<p class="subhead2">Remarks</p>
+<p>The LOB data is read starting from the position specified by the <code>Position</code> property.</p>
+<a id="sthref3737" name="sthref3737"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class ReadSample
+{
+  static void Main()
+  {
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+ 
+    OracleBlob blob = new OracleBlob(con);
+      
+    // Write 3 bytes, starting at buffer offset 1
+    byte[] writeBuffer = new byte[4] {1, 2, 3, 4};
+    blob.Write(writeBuffer, 1, 3);
+ 
+    // Reset the Position for Read
+    blob.Position = 1;
+ 
+    // Read 2 bytes into buffer starting at buffer offset 1
+    byte[] readBuffer = new byte[4];    
+    int bytesRead = blob.Read(readBuffer, 1, 2);
+ 
+    // Prints "bytesRead  = 2"
+    Console.WriteLine("bytesRead  = " + bytesRead);    
+ 
+    // Prints "readBuffer = 0340"
+    Console.Write("readBuffer = ");
+    for(int index = 0; index &lt;  readBuffer.Length; index++)
+    {
+      Console.Write(readBuffer[index]);
+    }
+    Console.WriteLine();
+ 
+    blob.Close();
+    blob.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030403" name="i1030403"></a>
+<h3 class="refsect3">Search</h3>
+<p>This instance method searches for a binary pattern in the current instance of an <code>OracleBlob</code>.</p>
+<a id="sthref3738" name="sthref3738"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Int64 Search(byte[] <span class="italic">val</span>, int64 <span class="italic">offset</span>, int64 <span class="italic">nth</span>);
+</pre>
+<a id="sthref3739" name="sthref3739"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">val</span></code></p>
+<p>The binary pattern being searched for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">offset</span></code></p>
+<p>The <code>0</code>-based offset (in bytes) starting from which the <code>OracleBlob</code> is searched.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">nth</span></code></p>
+<p>The specific occurrence (1-based) of the match for which the absolute offset (in bytes) is returned.</p>
+</li>
+</ul>
+<a id="sthref3740" name="sthref3740"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns the absolute <code><span class="codeinlineitalic">offset</span></code> of the start of the matched pattern (in bytes) for the <code><span class="codeinlineitalic">nth</span></code> occurrence of the match. Otherwise, <code>0</code> is returned.</p>
+<a id="sthref3741" name="sthref3741"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<p><code>ArgumentOutOfRangeException</code> - This exception is thrown if any of the following conditions exist:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> is less than <code>0</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">nth</span></code> is less than or equal to <code>0</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">val</span></code>.<code>Length</code> is greater than <code>16383</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">nth</span></code> is greater than or equal to <code>OracleBlob.MaxSize</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> is greater than or equal to <code>OracleBlob.MaxSize</code>.</p>
+</li>
+</ul>
+<a id="sthref3742" name="sthref3742"></a>
+<p class="subhead2">Remarks</p>
+<p>The limit of the search pattern is 16383 bytes.</p>
+<a id="sthref3743" name="sthref3743"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class SearchSample
+{
+  static void Main()
+  {
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+ 
+    OracleBlob blob = new OracleBlob(con);
+      
+    // Write 7 bytes, starting at buffer offset 0
+    byte[] buffer = new byte[7] {1, 2, 3, 4, 1, 2, 3};
+    blob.Write(buffer, 0, 7);
+      
+    // Search for the 2nd occurrence of a byte pattern '23'
+    // starting at offset 1 in the OracleBlob
+    byte[] pattern = new byte[2] {2 ,3};
+    long posFound = blob.Search(pattern, 1, 2);
+ 
+    // Prints "posFound = 6" 
+    Console.WriteLine("posFound = " + posFound);
+ 
+    blob.Close();
+    blob.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030456" name="i1030456"></a>
+<h3 class="refsect3">Seek</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance method sets the position on the current LOB stream.</p>
+<a id="sthref3744" name="sthref3744"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override Int64 Seek(Int64 <span class="italic">offset</span>, SeekOrigin <span class="italic">origin</span>);
+</pre>
+<a id="sthref3745" name="sthref3745"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">offset</span></code></p>
+<p>A byte offset relative to origin.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">origin</span></code></p>
+<p>A value of type <code>System.IO.SeekOrigin</code> indicating the reference point used to obtain the new position.</p>
+</li>
+</ul>
+<a id="sthref3746" name="sthref3746"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>Int64</code> for the position.</p>
+<a id="sthref3747" name="sthref3747"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<a id="sthref3748" name="sthref3748"></a>
+<p class="subhead2">Remarks</p>
+<p>If <code><span class="codeinlineitalic">offset</span></code> is negative, the new position precedes the position specified by <code><span class="codeinlineitalic">origin</span></code> by the number of bytes specified by <code>offset</code>.</p>
+<p>If <code><span class="codeinlineitalic">offset</span></code> is zero, the new position is the position specified by <code><span class="codeinlineitalic">origin</span></code>.</p>
+<p>If <code><span class="codeinlineitalic">offset</span></code> is positive, the new position follows the position specified by <code><span class="codeinlineitalic">origin</span></code> by the number of bytes specified by <code><span class="codeinlineitalic">offset</span></code>.</p>
+<p><code>SeekOrigin.Begin</code> specifies the beginning of a stream.</p>
+<p><code>SeekOrigin.Current</code> specifies the current position within a stream.</p>
+<p><code>SeekOrigin.End</code> specifies the end of a stream.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030498" name="i1030498"></a>
+<h3 class="refsect3">SetLength</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance method trims or truncates the <code>BLOB</code> value to the specified length (in bytes).</p>
+<a id="sthref3749" name="sthref3749"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void SetLength(Int64 <span class="italic">newlen</span>);
+</pre>
+<a id="sthref3750" name="sthref3750"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">newlen</span></code></p>
+<p>The desired length of the current stream in bytes.</p>
+</li>
+</ul>
+<a id="sthref3751" name="sthref3751"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">newlen</span></code> parameter is less than <code>0</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1030530" name="i1030530"></a>
+<h3 class="refsect3">Write</h3>
+<p>Overrides <code>Stream</code></p>
+<p>This instance method writes the supplied buffer into the <code>OracleBlob</code>.</p>
+<a id="sthref3752" name="sthref3752"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void Write(byte[ ] <span class="italic">buffer</span>, int <span class="italic">offset</span>, int <span class="italic">count</span>);
+</pre>
+<a id="sthref3753" name="sthref3753"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">buffer</span></code></p>
+<p>The byte array <code>buffer</code> that provides the data.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">offset</span></code></p>
+<p>The <code>0</code>-based offset (in bytes) from which the <code>buffer</code> is read.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">count</span></code></p>
+<p>The amount of data (in bytes) that is to be written into the <code>OracleBlob</code>.</p>
+</li>
+</ul>
+<a id="sthref3754" name="sthref3754"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ObjectDisposedException</code> - The object is already disposed.</p>
+<p><code>InvalidOperationException</code> - The <code>OracleConnection</code> is not open or has been closed during the lifetime of the object.</p>
+<p><code>ArgumentOutOfRangeException</code> - This exception is thrown if any of the following conditions exist:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> or the <code><span class="codeinlineitalic">count</span></code> is less than <code>0</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> is greater than or equal to the <code><span class="codeinlineitalic">buffer</span></code>.<code>Length</code>.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">offset</span></code> and the <code><span class="codeinlineitalic">count</span></code> together are greater than <code><span class="codeinlineitalic">buffer</span></code>.<code>Length</code>.</p>
+</li>
+</ul>
+<a id="sthref3755" name="sthref3755"></a>
+<p class="subhead2">Remarks</p>
+<p>Destination <code><span class="codeinlineitalic">offset</span></code> in the <code>OracleBlob</code> can be specified by the <code>Position</code> property.</p>
+<a id="sthref3756" name="sthref3756"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class WriteSample
+{
+  static void Main()
+  {
+    string constr = "User Id=scott;Password=tiger;Data Source=oracle";
+    OracleConnection con = new OracleConnection(constr);
+    con.Open();
+ 
+    OracleBlob blob = new OracleBlob(con);
+    
+    // Set the Position for the Write
+    blob.Position = 0;  
+ 
+    // Begin ChunkWrite to improve performance
+    // Index updates occur only once after EndChunkWrite
+    blob.BeginChunkWrite();
+          
+    // Write to the OracleBlob in 5 chunks of 2 bytes each
+    byte[] b = new byte[2] {1, 2};
+    for(int index = 0; index &lt; 5; index++)
+    {
+      blob.Write(b, 0, b.Length);
+    }
+    blob.EndChunkWrite();
+ 
+    byte[] chunkBuffer = blob.Value;
+ 
+    // Prints "chunkBuffer = 1212121212"
+    Console.Write("chunkBuffer = ");
+    for(int index = 0; index &lt; chunkBuffer.Length; index++)
+    {
+      Console.Write(chunkBuffer[index]);
+    }
+    Console.WriteLine();
+ 
+    blob.Close();
+    blob.Dispose();
+ 
+    con.Close();
+    con.Dispose();
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1028457">OracleBlob Class</a></p>
+</li>
+<li>
+<p><a href="#i1028539">OracleBlob Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleBFileClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleClobClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

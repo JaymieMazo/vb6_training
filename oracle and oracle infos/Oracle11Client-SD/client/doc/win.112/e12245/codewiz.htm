@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-21T17:54:48Z" />
+<meta name="doctitle" content="Oracle&reg; Objects for OLE Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12245-01" />
+<meta name="docid" content="OOFOL" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="quicktour.htm" title="Previous" type="text/html" />
+<link rel="Next" href="apiintro.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12245.pdf" title="PDF version" type="application/pdf" />
+<title>Code Wizard for Stored Procedures</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Objects for OLE Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12245-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="quicktour.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="apiintro.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12245.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CHDJAGCH" name="CHDJAGCH"></a><a id="OOFOL0007" name="OOFOL0007"></a>
+<h1 class="chapter"><span class="secnum">7</span> Code Wizard for Stored Procedures<a id="sthref536" name="sthref536"></a><a id="sthref537" name="sthref537"></a><a id="sthref538" name="sthref538"></a></h1>
+<p>The Oracle Objects for OLE (OO4O) Code Wizard generates OO4O code that executes Oracle PL/SQL and Java stored procedures.</p>
+<p>The wizard generates code into individual Microsoft Visual Basic or Active Server Page and VBScript subroutines from existing Oracle stored procedures and packages. Additionally, the wizard can generate complete implementations of COM Automation objects in the form of VB class files. The generated COM Automation object methods act as client stubs for the execution of stored procedures contained in a given package. All the OO4O code necessary for input/output parameter binding and stored procedure execution is automatically generated.</p>
+<p>The wizard can be used as a command-line utility or as a Visual Basic add-in. The wizard automates the entire process of accessing stored procedures using COM interfaces, thereby significantly reducing development time and the likelihood of programming errors.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The Code Wizard requires Visual Basic 6.</div>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#BABDFAHC">Oracle Objects for OLE Code Wizard Components</a></p>
+</li>
+<li>
+<p><a href="#BABDHHHE">Data Types Supported by the OO4O Code Wizard</a></p>
+</li>
+<li>
+<p><a href="#BABGGAAD">Using the OO4O Code Wizard</a></p>
+</li>
+<li>
+<p><a href="#BABGIDGG">Code Wizard Examples</a></p>
+</li>
+</ul>
+<a id="BABDFAHC" name="BABDFAHC"></a><a id="OOFOL319" name="OOFOL319"></a>
+<div class="sect1">
+<h2 class="sect1">Oracle Objects for OLE Code Wizard Components<a id="sthref539" name="sthref539"></a><a id="sthref540" name="sthref540"></a></h2>
+<p>The OO4O Code Wizard includes the following components:</p>
+<ul>
+<li>
+<p>A command line utility, <code>OO4OCodeWiz.exe</code>, that converts PL/SQL and Java stored procedures to OO4O code.</p>
+</li>
+<li>
+<p>A Visual Basic Add-in wizard that guides you through a series of steps to generate OO4O code for PL/SQL and Java stored procedures. The wizard displays Oracle packages and stored procedures from a tree control so that the user can choose which items to generate code.</p>
+</li>
+</ul>
+<p>Both of these components allow users to convert entire stored procedure packages to OO4O code.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABDHHHE" name="BABDHHHE"></a><a id="OOFOL320" name="OOFOL320"></a>
+<div class="sect1">
+<h2 class="sect1">Data Types Supported by the OO4O Code Wizard<a id="sthref541" name="sthref541"></a><a id="sthref542" name="sthref542"></a></h2>
+<p>The code wizard supports all data types, except for PL/SQL tables. When a PL/SQL table is used, an <code>unsupportedType</code> key word is used instead, and the generated code does not compile.</p>
+<p>The output code may have to be modified for handling <code>Null</code> values. For example, when a VB variable is initialized to a parameter value, an <code>isNull()</code> check may have to be added if <code>Null</code> values are expected. <code>Null</code> values are correctly handled for VB variables of type <code>Variant</code> and <code>Object</code>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABGGAAD" name="BABGGAAD"></a><a id="OOFOL321" name="OOFOL321"></a>
+<div class="sect1">
+<h2 class="sect1">Using the OO4O Code Wizard<a id="sthref543" name="sthref543"></a><a id="sthref544" name="sthref544"></a><a id="sthref545" name="sthref545"></a><a id="sthref546" name="sthref546"></a></h2>
+<p>The OO4O Code Wizard can be used as a command line utility or as a Visual Basic Add-in.</p>
+<a id="OOFOL322" name="OOFOL322"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref547" name="sthref547"></a>
+<h3 class="sect2">OO4O Code Wizard Command-Line Utility</h3>
+<p>The <code>OO4OCodeWiz.exe</code> is a command-line utility that generates a Visual Basic class, a Visual Basic file, or an Active Server Page/VB Script file from existing PL/SQL or Java stored procedures, as well as packages, within an Oracle database. Call the utility in the following manner:</p>
+<pre xml:space="preserve" class="oac_no_warn">OO4OCodeWiz [-o output_file] <span class="italic">username</span>/<span class="codeinlineitalic">password</span>@<span class="codeinlineitalic">connect_string</span> package
+</pre>
+<div class="inftblinformal">
+<table class="Informal" title="Code Wizard Command Line parameter list" summary="rows list the variables and placeholders. column 1 lists the name, and column 2 lists what is specifies" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="33%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">Where</th>
+<th align="left" valign="bottom" id="r1c2-t3">Specifies the following</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3"><code><span class="codeinlineitalic">username</span></code></td>
+<td align="left" headers="r2c1-t3 r1c2-t3">User name to log in to the database</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3"><code><span class="codeinlineitalic">password</span></code></td>
+<td align="left" headers="r3c1-t3 r1c2-t3">Password for the user name</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3"><code><span class="codeinlineitalic">connect_string</span></code></td>
+<td align="left" headers="r4c1-t3 r1c2-t3">Database connection string</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t3" headers="r1c1-t3"><code><span class="codeinlineitalic">package</span></code></td>
+<td align="left" headers="r5c1-t3 r1c2-t3">Package name</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t3" headers="r1c1-t3"><code><span class="codeinlineitalic">stored_procedure</span></code></td>
+<td align="left" headers="r6c1-t3 r1c2-t3">Stored procedure name (optional)</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<a id="OOFOL323" name="OOFOL323"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">OO4OCodeWiz -o empfile.asp scott/tiger@<span class="italic">Exampledb</span> employee.example 
+</pre>
+<a id="OOFOL324" name="OOFOL324"></a>
+<p class="subhead2">Option</p>
+<div class="inftblinformal">
+<table class="Informal" title="Code Wizard Command Line Utility Option List" summary="rows list the option. Column 1 lists the name, and column 2 lists what it specifies." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">Option</th>
+<th align="left" valign="bottom" id="r1c2-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">-o</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">Specifies the output file name (optional)</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<a id="OOFOL325" name="OOFOL325"></a>
+<p class="subhead2">Files Generated</p>
+<p>The code wizard uses the information specified on the command line to determine which type of output file to generate.</p>
+<p>If a file name and one of the permitted file extensions are specified, then they are used. In the preceding example, an ASP file is generated in the <code>empfile.asp</code> output. The user can specify the following extensions:</p>
+<div class="inftblinformal">
+<table class="Informal" title="Code Wizard Files Generated List" summary="rows are extensions. column one is name, column two file generated" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="38%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Extension</th>
+<th align="left" valign="bottom" id="r1c2-t5">File Type Generated</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5"><code>.cls</code></td>
+<td align="left" headers="r2c1-t5 r1c2-t5">VB class file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5"><code>.bas</code></td>
+<td align="left" headers="r3c1-t5 r1c2-t5">VB file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5"><code>.asp</code></td>
+<td align="left" headers="r4c1-t5 r1c2-t5">ASP or VB script file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5"><code>.vbs</code></td>
+<td align="left" headers="r5c1-t5 r1c2-t5">ASP or VB script file</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>If no file extension is specified, the following rules indicate what type of file is generated, depending on other command-line specifications.</p>
+<ul>
+<li>
+<p>Package names without a stored procedure name generate a <code>.cls</code> file.</p>
+</li>
+<li>
+<p>Package names with procedure names generate a <code>.bas</code> file.</p>
+</li>
+</ul>
+<p><a href="#CIHEAFEI">Table 7-1</a> and <a href="#CIHCGBGC">Table 7-2</a> provide examples.</p>
+<div class="tblformal"><a id="OOFOL326" name="OOFOL326"></a><a id="sthref548" name="sthref548"></a><a id="CIHEAFEI" name="CIHEAFEI"></a>
+<p class="titleintable">Table 7-1 Package Name Without Stored Procedure Name</p>
+<table class="Formal" title="Package Name Without Stored Procedure Name" summary="rows are what is specified. column one is what filename if any is specified, column 2 is what the command generates, and column three is the type file" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="28%" />
+<col width="*" />
+<col width="25%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">File Specified</th>
+<th align="left" valign="bottom" id="r1c2-t6">Command</th>
+<th align="left" valign="bottom" id="r1c3-t6">File Type Generated</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p>File name with no file extension generates <code><span class="codeinlineitalic">filename.cls</span></code>.</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p><code>OO4OCodeWiz</code> <code>-o</code> <code>empfile</code> <code><span class="codeinlineitalic">scott/tiger@Exampledb</span></code> <code>employee</code></p>
+</td>
+<td align="left" headers="r2c1-t6 r1c3-t6">
+<p><code>empfile.cls</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p>No file name or extension: generates <code><span class="codeinlineitalic">packagename.cls</span></code>.</p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p><code>OO4OCodeWiz</code> <code>scott/tiger@Exampledb</code> <code><span class="codeinlineitalic">employee</span></code></p>
+</td>
+<td align="left" headers="r3c1-t6 r1c3-t6">
+<p><code><span class="codeinlineitalic">employee</span></code><code>.cls</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p>File name with file extension generates <code><span class="codeinlineitalic">filename.fileexten</span></code>.</p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p><code>OO4OCodeWiz</code> <code>-o</code> <code>empfile.asp</code> <code>scott/tiger@Exampledb</code> <code><span class="codeinlineitalic">employee</span></code></p>
+</td>
+<td align="left" headers="r4c1-t6 r1c3-t6">
+<p><code>empfile.asp</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="tblformal"><a id="OOFOL327" name="OOFOL327"></a><a id="sthref549" name="sthref549"></a><a id="CIHCGBGC" name="CIHCGBGC"></a>
+<p class="titleintable">Table 7-2 Package Name With Stored Procedure Name</p>
+<table class="Formal" title="Package Name With Stored Procedure Name" summary="rows are what is specified. column one is what filename if any is specified, column 2 is what the command generates, and column three is the type file" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="28%" />
+<col width="*" />
+<col width="25%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7">File Specified</th>
+<th align="left" valign="bottom" id="r1c2-t7">Command</th>
+<th align="left" valign="bottom" id="r1c3-t7">File Type Generated</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p>File name with no file extension generates <code><span class="codeinlineitalic">filename.bas</span></code>.</p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<p><code>OO4OCodeWiz</code> <code>-o</code> <code>empfile</code> <code>scott/tiger@Exampledb</code> <code><span class="codeinlineitalic">employee</span></code><code>.example</code></p>
+</td>
+<td align="left" headers="r2c1-t7 r1c3-t7">
+<p><code>empfile.bas</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p>No file name or extension: generates <code><span class="codeinlineitalic">packagename.bas</span></code>.</p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p><code>OO4OCodeWiz</code> <code>scott/tiger@Exampledb</code> <code><span class="codeinlineitalic">employee</span></code><code>.example</code></p>
+</td>
+<td align="left" headers="r3c1-t7 r1c3-t7">
+<p><code><span class="codeinlineitalic">employee</span></code><code>.bas</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t7" headers="r1c1-t7">
+<p>File name with file extension generates <code><span class="codeinlineitalic">filename.fileexten</span></code>.</p>
+</td>
+<td align="left" headers="r4c1-t7 r1c2-t7">
+<p><code>OO4OCodeWiz</code> <code>-o</code> <code>empfile.asp</code> <code>scott/tiger@Exampledb</code> <code><span class="codeinlineitalic">employee</span></code><code>.example</code></p>
+</td>
+<td align="left" headers="r4c1-t7 r1c3-t7">
+<p><code>empfile.asp</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="OOFOL328" name="OOFOL328"></a>
+<div class="sect2"><a id="sthref550" name="sthref550"></a>
+<h3 class="sect2">OO4O Code Wizard Visual Basic Wizard Add-in<a id="sthref551" name="sthref551"></a><a id="sthref552" name="sthref552"></a></h3>
+<ol>
+<li>
+<p>Launch the OO4O Code Wizard by selecting Oracle Code Wizard for Stored Procedures in the Add-Ins menu of Microsoft Visual Basic.</p>
+<p>The <span class="bold">Connect To Oracle Database</span> dialog box appears:</p>
+<img width="316" height="184" src="img/connect.gif" alt="the Connect dialog box" title="the Connect dialog box" longdesc="img_text/connect.htm" /><br />
+<a id="sthref553" name="sthref553" href="img_text/connect.htm">Description of the illustration connect.gif</a><br />
+<br /></li>
+<li>
+<p>Enter the user name and password to connect to the database. A connection string is required if the database is not installed on the user's local computer.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>The wizard displays the Oracle packages and stored procedures available to the user in a tree.</p>
+<img width="340" height="513" src="img/wizproc.gif" alt="OO4O Code Wizard for Stored Procedures dialog box" title="OO4O Code Wizard for Stored Procedures dialog box" longdesc="img_text/wizproc.htm" /><br />
+<a id="sthref554" name="sthref554" href="img_text/wizproc.htm">Description of the illustration wizproc.gif</a><br />
+<br /></li>
+<li>
+<p>Select one of the stored procedures or packages displayed.</p>
+</li>
+<li>
+<p>Enter an output file name or click the <span class="bold">Browse...</span> button to navigate to a different directory in which to place the file.</p>
+</li>
+<li>
+<p>Choose the file type from the <span class="bold">Component type</span> list. There are three choices: a VB class module (<code>*.cls</code>), a VB file (<code>*.bas</code>), or other. The <span class="bold">other</span> option generates a VB file (<code>*.bas</code>), but enables you to specify your own file extension.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>A dialog box appears indicating that a new OO4O file was created.</p>
+</li>
+<li>
+<p>Click <span class="bold">Yes</span> to create another file, or click <span class="bold">No</span> to return to Visual Basic.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABGIDGG" name="BABGIDGG"></a><a id="OOFOL329" name="OOFOL329"></a>
+<div class="sect1">
+<h2 class="sect1">Code Wizard Examples<a id="sthref555" name="sthref555"></a><a id="sthref556" name="sthref556"></a><a id="sthref557" name="sthref557"></a></h2>
+<p>The <code><span class="codeinlineitalic">ORACLE_BASE\\ORACLE_HOME</span></code><code>\oo4o\codewiz\samples</code> directory contains sample applications incorporating code generated by the wizard. The following examples show the generated VB code output from Oracle stored procedures using the OO4O code wizard:</p>
+<ul>
+<li>
+<p><a href="#BABJFGJA">Accessing a PL/SQL Stored Function with Visual Basic and Active Server Pages</a></p>
+</li>
+<li>
+<p><a href="#BABBCACH">Accessing a PL/SQL Stored Procedure Using the LOB Type with Visual Basic</a></p>
+</li>
+<li>
+<p><a href="#BABCJCIB">Accessing a PL/SQL Stored Procedure Using the VARRAY Type with Visual Basic</a></p>
+</li>
+<li>
+<p><a href="#BABJCACJ">Accessing a PL/SQL Stored Procedure Using the Oracle OBJECT Type with Visual Basic</a></p>
+</li>
+</ul>
+<a id="BABJFGJA" name="BABJFGJA"></a><a id="OOFOL330" name="OOFOL330"></a>
+<div class="sect2">
+<h3 class="sect2">Accessing a PL/SQL Stored Function with Visual Basic and Active Server Pages</h3>
+<p>This example shows a PL/SQL stored function, <code>GetEmpSal</code>, and then the Visual Basic (<code>*.cls</code>) file that the code wizard generates for it.</p>
+<pre xml:space="preserve" class="oac_no_warn">FUNCTION GetEmpSal (inEmpno IN NUMBER)
+RETURN NUMBER is 
+  outEmpsal NUMBER(7,2);
+BEGIN 
+  SELECT SAL into outEmpsal from EMP WHERE EMPNO = inEmpno;
+  RETURN (outEmpsal);
+END;
+</pre>
+<p>The generated code for the <code>GetEmpSal</code> stored function is:</p>
+<pre xml:space="preserve" class="oac_no_warn">Public Function GETEMPSAL(INEMPNO As Variant) As Variant 
+OraDatabase.Parameters.Add "INEMPNO", INEMPNO, ORAPARM_INPUT, 2 
+OraDatabase.Parameters.Add "result", 0, ORAPARM_OUTPUT 
+OraDatabase.Parameters("result").serverType = 2 
+OraDatabase.ExecuteSQL ("declare result Number; Begin :result := " &amp; _
+              "Employee.GETEMPSAL(:INEMPNO); end;")  
+ 
+OraDatabase.Parameters.Remove "INEMPNO" 
+GETEMPSAL = OraDatabase.Parameters("result").Value 
+OraDatabase.Parameters.Remove "result" 
+End Function 
+</pre>
+<p>In a VB class, <code>OraDatabase</code> appears as an attribute of the class. This attribute has to be set before any methods of the class can be invoked. For a VB file (<code>*.bas</code>), the generated code for the <code>GetEmpSal</code> stored function is the same as the VB class file, except for the function declaration:</p>
+<pre xml:space="preserve" class="oac_no_warn">Public Function GETEMPSAL(INEMPNO As Variant, ByRef OraDatabase As OraDatabase)
+... 
+ 
+End Function 
+</pre>
+<p>For an ASP file (<code>*.asp</code>), the function declaration also differs for the <code>GetEmpSal</code> stored function as follows, but the body of the code remains the same:</p>
+<pre xml:space="preserve" class="oac_no_warn">Public Function GETEMPSAL(INEMPNO, ByRef OraDatabase) 
+... 
+End Function 
+</pre></div>
+<!-- class="sect2" -->
+<a id="BABBCACH" name="BABBCACH"></a><a id="OOFOL331" name="OOFOL331"></a>
+<div class="sect2">
+<h3 class="sect2">Accessing a PL/SQL Stored Procedure Using the LOB Type with Visual Basic</h3>
+<p>The following example shows how a Visual Basic file accesses a PL/SQL stored procedure with LOBs:</p>
+<pre xml:space="preserve" class="oac_no_warn">PROCEDURE getchapter(chapno in NUMBER, chap out CLOB) is
+BEGIN 
+SELECT chapters into chap from mybook where chapterno = chapno
+   for update;
+END;
+</pre>
+<p>The following shows the generated Visual Basic code for the <code>GETCHAPTER</code> stored procedure:</p>
+<pre xml:space="preserve" class="oac_no_warn">Public Sub GETCHAPTER(CHAPNO As Variant, ByRef CHAP As OraCLOB) 
+OraDatabase.Parameters.Add "CHAPNO", CHAPNO, ORAPARM_INPUT, 2 
+OraDatabase.Parameters.Add "CHAP", Null, ORAPARM_OUTPUT, 112 
+OraDatabase.ExecuteSQL ("Begin MYBOOKPKG.GETCHAPTER(:CHAPNO,:CHAP); end;") 
+Set CHAP = OraDatabase.Parameters("CHAP").Value 
+OraDatabase.Parameters.Remove "CHAPNO" 
+OraDatabase.Parameters.Remove "CHAP" 
+End Sub 
+</pre></div>
+<!-- class="sect2" -->
+<a id="BABCJCIB" name="BABCJCIB"></a><a id="OOFOL332" name="OOFOL332"></a>
+<div class="sect2">
+<h3 class="sect2">Accessing a PL/SQL Stored Procedure Using the VARRAY Type with Visual Basic</h3>
+<p>The following example shows how a PL/SQL stored procedure uses the Oracle collection type <code>VARRAY</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">PROCEDURE getnames(deptid in NUMBER, name out ENAMELIST) is 
+BEGIN 
+    SELECT ENAMES into name from department where dept_id = deptid for update; 
+END;
+ 
+</pre>
+<p>The wizard generates the following Visual Basic code for this stored procedure:</p>
+<pre xml:space="preserve" class="oac_no_warn">Public Sub GETNAMES(DEPTID As Variant, ByRef NAME As OraCollection) 
+OraDatabase.Parameters.Add "DEPTID", DEPTID, ORAPARM_INPUT, 2 
+OraDatabase.Parameters.Add "NAME", Null, ORAPARM_OUTPUT, 247, "ENAMELIST" 
+OraDatabase.ExecuteSQL ("Begin DEPTPKG.GETNAMES(:DEPTID, :NAME); end;") 
+Set NAME = OraDatabase.Parameters("NAME").Value 
+OraDatabase.Parameters.Remove "DEPTID" 
+OraDatabase.Parameters.Remove "NAME" 
+End Sub 
+</pre></div>
+<!-- class="sect2" -->
+<a id="BABJCACJ" name="BABJCACJ"></a><a id="OOFOL333" name="OOFOL333"></a>
+<div class="sect2">
+<h3 class="sect2">Accessing a PL/SQL Stored Procedure Using the Oracle OBJECT Type with Visual Basic</h3>
+<p>The following example shows how a PL/SQL stored procedure uses the Oracle object type:</p>
+<pre xml:space="preserve" class="oac_no_warn">PROCEDURE getaddress(person_name in varchar2, person_address out address) is 
+BEGIN 
+     SELECT addr into person_address from person_table where name = 
+           person_name for update; 
+END; 
+</pre>
+<p>The wizard generates the following Visual Basic code for this stored procedure:</p>
+<pre xml:space="preserve" class="oac_no_warn">Public Sub GETADDRESS(PERSON_NAME As String, ByRef PERSON_ADDRESS As OraObject)
+OraDatabase.Parameters.Add "PERSON_NAME", PERSON_NAME, ORAPARM_INPUT, 1 
+OraDatabase.Parameters.Add "PERSON_ADDRESS", Null, ORAPARM_OUTPUT, _ 
+            108, "ADDRESS" 
+OraDatabase.ExecuteSQL ("Begin PERSONPKG.GETADDRESS(:PERSON_NAME," &amp; _  
+            ":PERSON_ADDRESS); end;") 
+Set PERSON_ADDRESS = OraDatabase.Parameters("PERSON_ADDRESS").Value 
+OraDatabase.Parameters.Remove "PERSON_NAME" 
+OraDatabase.Parameters.Remove "PERSON_ADDRESS" 
+End Sub 
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="quicktour.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="apiintro.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1994, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

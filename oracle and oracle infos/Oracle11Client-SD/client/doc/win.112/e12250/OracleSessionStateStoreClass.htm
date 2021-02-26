@@ -1,0 +1,1254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-17T21:18:53Z" />
+<meta name="doctitle" content="Oracle&reg; Providers for ASP.NET Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12250-01" />
+<meta name="docid" content="ASPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="OracleSessionStateStore.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleProfileProvider.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12250.pdf" title="PDF version" type="application/pdf" />
+<title>OracleSessionStateStore Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Providers for ASP.NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12250-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleSessionStateStore.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleProfileProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12250.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="BABIBEBA" name="BABIBEBA"></a>
+<hr />
+<div class="refsect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="refsect1">OracleSessionStateStore Class<a id="sthref362" name="sthref362"></a></h1>
+<p>The <code>OracleSessionStateStore</code> class allows ASP.NET applications to store session information in an Oracle database.</p>
+<a id="sthref363" name="sthref363"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.Configuration.Provider.ProviderBase</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;System.Web.SessionState.SessionStateStoreProviderBase</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle.Web.SessionState</code></p>
+<a id="sthref364" name="sthref364"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public class OracleSessionStateStore : SessionStateStoreProviderBase
+</pre>
+<a id="sthref365" name="sthref365"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance members are not guaranteed to be thread-safe.</p>
+<a id="sthref366" name="sthref366"></a>
+<p class="subhead2">Remarks</p>
+<p>This class allows ASP.NET applications to store and manage session state information in an Oracle database.Note that the session information that this provider manages is application session information, not database session information.</p>
+<p>Expired session data is periodically deleted from the database.</p>
+<a id="sthref367" name="sthref367"></a>
+<p class="subhead2">Example</p>
+<p>The following is a <code>web.config</code> example for an ASP.NET application that uses <code>OracleSessionStateStore</code> as the default provider with customized settings and an application-specific connection string:</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;?xml version="1.0"?&gt;
+&lt;configuration xmlns=
+  "http://schemas.microsoft.com/.NetConfiguration/v2.0"&gt;
+  &lt;connectionStrings&gt;
+    &lt;add name="my_sessionstate_app_con_string" connectionString=
+      "User Id=scott;Password=tiger;Data Source=Oracle"/&gt;
+  &lt;/connectionStrings&gt;
+  &lt;system.web&gt;
+    &lt;!-- Enable and customize OracleSessionStateProvider --&gt;
+    &lt;sessionState mode="Custom" customProvider="MyOracleSessionStateStore"&gt;
+      &lt;providers&gt;
+        &lt;add name="MyOracleSessionStateStore" 
+             type="Oracle.Web.SessionState.OracleSessionStateStore, 
+             Oracle.Web, Version=2.112.1.0, Culture=neutral, 
+             PublicKeyToken=89b483f429c47342" 
+             connectionStringName="my_sessionstate_app_con_string"/&gt;
+      &lt;/providers&gt;
+    &lt;/sessionState&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</pre>
+<a id="sthref368" name="sthref368"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.Web.SessionState</code></p>
+<p>Assembly: <code>Oracle.Web.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+<li>
+<p><a href="#BABFGIBI">OracleSessionStateStore Constructors</a></p>
+</li>
+<li>
+<p><a href="#BABJGFHC">OracleSessionStateStore Public Methods</a></p>
+</li>
+<li>
+<p><a href="#BABEBAIE">OracleSessionStateStore Public Properties</a></p>
+</li>
+</ul>
+</div>
+<a id="BABIJDFD" name="BABIJDFD"></a>
+<hr />
+<h2 class="refsect2">OracleSessionStateStore Members<a id="sthref369" name="sthref369"></a></h2>
+<p><code>OracleSessionStateStore</code> members are listed in the following tables.</p>
+<a id="sthref370" name="sthref370"></a>
+<p class="subhead2">OracleSessionStateStore Constructors</p>
+<p>The <code>OracleSessionStateStore</code> constructor is listed in <a href="#CACBGHEI">Table 5-1</a>.</p>
+<div class="tblruleformal"><a id="sthref371" name="sthref371"></a><a id="CACBGHEI" name="CACBGHEI"></a>
+<p class="titleintable">Table 5-1 OracleSessionStateStore Constructor</p>
+<table class="RuleFormal" title="OracleSessionStateStore Constructor" summary="rows are constructors. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><a href="#BABFGIBI">OracleSessionStateStore Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>Instantiates a new instance of the <code>OracleSessionStateStore</code> class</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref372" name="sthref372"></a>
+<p class="subhead2">OracleSessionStateStore Public Properties</p>
+<p><code>OracleSessionStateStore</code> public properties are listed in <a href="#BABJICGD">Table 5-2</a>.</p>
+<div class="tblruleformal"><a id="sthref373" name="sthref373"></a><a id="BABJICGD" name="BABJICGD"></a>
+<p class="titleintable">Table 5-2 OracleSessionStateStore Public Properties</p>
+<table class="RuleFormal" title="OracleSessionStateStore Public Properties" summary="rows are properties. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><a href="#BABJDBBA">CommandTimeout</a></p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Gets the number of seconds that the command is allowed to execute before it is terminated with an exception</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><code>Description</code></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p><code>Name</code></p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref374" name="sthref374"></a>
+<p class="subhead2">OracleSessionStateStore Public Methods</p>
+<p>The <code>OracleSessionStateStore</code> public methods are listed in <a href="#CACBBEAI">Table 5-3</a>.</p>
+<div class="tblruleformal"><a id="sthref375" name="sthref375"></a><a id="CACBBEAI" name="CACBBEAI"></a>
+<p class="titleintable">Table 5-3 OracleSessionStateStore Public Methods</p>
+<table class="RuleFormal" title="OracleSessionStateStore Public Methods" summary="rows are methods. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="32%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Public Methods</th>
+<th align="left" valign="bottom" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><a href="#BABJEHEI">CreateNewStoreData</a></p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>Creates a new <code>SessionStateStoreData</code> object for the current request</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p><a href="#BABJCGEJ">CreateUninitializedItem</a></p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p>Adds a new session state item to the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p><a href="#BABGABCJ">Dispose</a></p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p>Releases all the resources for this instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t6" headers="r1c1-t6">
+<p><a href="#BABGJDFA">EndRequest</a></p>
+</td>
+<td align="left" headers="r5c1-t6 r1c2-t6">
+<p>Allows the <code>OracleSessionStateStore</code> object to perform any cleanup that may be required for the current request</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t6" headers="r1c1-t6">
+<p><a href="#BABIJDJI">GetItem</a></p>
+</td>
+<td align="left" headers="r6c1-t6 r1c2-t6">
+<p>Returns a read-only session item from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t6" headers="r1c1-t6">
+<p><a href="#BABEGFDD">GetItemExclusive</a></p>
+</td>
+<td align="left" headers="r7c1-t6 r1c2-t6">
+<p>Locks and returns a session item from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t6" headers="r1c1-t6">
+<p><a href="#BABFCGED">Initialize</a></p>
+</td>
+<td align="left" headers="r8c1-t6 r1c2-t6">
+<p>Initializes the provider with the property values specified in the ASP.NET application configuration file</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t6" headers="r1c1-t6">
+<p><a href="#BABHCHIH">InitializeRequest</a></p>
+</td>
+<td align="left" headers="r9c1-t6 r1c2-t6">
+<p>Performs any per-request initializations that the <code>OracleSessionStateStore</code> provider requires</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t6" headers="r1c1-t6">
+<p><a href="#BABFJGID">ReleaseItemExclusive</a></p>
+</td>
+<td align="left" headers="r10c1-t6 r1c2-t6">
+<p>Releases the lock on a session item in the database, if multiple attempts to retrieve the session item fail</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t6" headers="r1c1-t6">
+<p><a href="#BABIFDGJ">RemoveItem</a></p>
+</td>
+<td align="left" headers="r11c1-t6 r1c2-t6">
+<p>Removes the specified session item from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t6" headers="r1c1-t6">
+<p><a href="#BABHJDHE">ResetItemTimeout</a></p>
+</td>
+<td align="left" headers="r12c1-t6 r1c2-t6">
+<p>Resets the expiration date and timeout for a session item in the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t6" headers="r1c1-t6">
+<p><a href="#BABJBCBI">SetAndReleaseItemExclusive</a></p>
+</td>
+<td align="left" headers="r13c1-t6 r1c2-t6">
+<p>Updates the session time information in the database with the specified session item and releases the lock</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t6" headers="r1c1-t6">
+<p><a href="#CACGIBFA">SetItemExpireCallback</a></p>
+</td>
+<td align="left" headers="r14c1-t6 r1c2-t6">
+<p>Returns a <code>false</code> value to indicate that callbacks for expired sessions are not supported</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+</ul>
+</div>
+<a id="BABFGIBI" name="BABFGIBI"></a>
+<hr />
+<h2 class="refsect2">OracleSessionStateStore Constructors<a id="sthref376" name="sthref376"></a></h2>
+<p>The <code>OracleSessionStateStore</code> constructor instantiates a new instance of the <code>OracleSessionStateStore</code> class.</p>
+<a id="sthref377" name="sthref377"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#BABHBGTY">OracleSessionStateStore()</a></p>
+<p>This constructor creates an instance of the <code>OracleSessionStateStore</code> class.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABHBGTY" name="BABHBGTY"></a>
+<h3 class="refsect3">OracleSessionStateStore()</h3>
+<p>This constructor instantiates a new instance of the <code>OracleSessionStateStore</code> class.</p>
+<a id="sthref378" name="sthref378"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleSessionStateStore();
+</pre>
+<a id="sthref379" name="sthref379"></a>
+<p class="subhead2">Remarks</p>
+<p>This constructor creates a new instance of the <code>OracleSessionStateStore</code> class.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABEBAIE" name="BABEBAIE"></a>
+<hr />
+<h2 class="refsect2">OracleSessionStateStore Public Properties<a id="sthref380" name="sthref380"></a></h2>
+<p>The <code>OracleSessionStateStore</code> public properties are listed in <a href="#BABCJBHC">Table 5-4</a>.</p>
+<div class="tblformal"><a id="sthref381" name="sthref381"></a><a id="BABCJBHC" name="BABCJBHC"></a>
+<p class="titleintable">Table 5-4 OracleSessionStateStore Public Properties</p>
+<table class="Formal" title="OracleSessionStateStore Public Properties" summary="rows are properties. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t10">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t10" headers="r1c1-t10">
+<p><a href="#BABJDBBA">CommandTimeout</a></p>
+</td>
+<td align="left" headers="r2c1-t10 r1c2-t10">
+<p>Gets the number of seconds that the command is allowed to execute before it is terminated with an exception</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t10" headers="r1c1-t10">
+<p><code>Description</code></p>
+</td>
+<td align="left" headers="r3c1-t10 r1c2-t10">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t10" headers="r1c1-t10">
+<p><code>Name</code></p>
+</td>
+<td align="left" headers="r4c1-t10 r1c2-t10">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABJDBBA" name="BABJDBBA"></a>
+<h3 class="refsect3">CommandTimeout</h3>
+<p>This property gets the number of seconds that the command is allowed to execute before it is terminated with an exception.</p>
+<a id="sthref382" name="sthref382"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int CommandTimeout {get;}
+ 
+</pre>
+<a id="sthref383" name="sthref383"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code>.</p>
+<a id="sthref384" name="sthref384"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a provider, ASP.NET developers can set an integer value for this property through the <code>web.config</code> file using the <code>commandTimeout</code> attribute.</p>
+<p>The default value is 30 seconds. The attribute name in the configuration file is case-sensitive.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABJGFHC" name="BABJGFHC"></a>
+<hr />
+<h2 class="refsect2">OracleSessionStateStore Public Methods<a id="sthref385" name="sthref385"></a></h2>
+<p>The <code>OracleSessionStateStore</code> public methods are listed in <a href="#BABDHGHF">Table 5-5</a>.</p>
+<div class="tblruleformal"><a id="sthref386" name="sthref386"></a><a id="BABDHGHF" name="BABDHGHF"></a>
+<p class="titleintable">Table 5-5 OracleSessionStateStore Public Methods</p>
+<table class="RuleFormal" title="OracleSessionStateStore Public Methods" summary="rows are methods. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t13">Public Methods</th>
+<th align="left" valign="bottom" id="r1c2-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t13" headers="r1c1-t13">
+<p><a href="#BABJEHEI">CreateNewStoreData</a></p>
+</td>
+<td align="left" headers="r2c1-t13 r1c2-t13">
+<p>Creates a new <code>SessionStateStoreData</code> object for the current request</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t13" headers="r1c1-t13">
+<p><a href="#BABJCGEJ">CreateUninitializedItem</a></p>
+</td>
+<td align="left" headers="r3c1-t13 r1c2-t13">
+<p>Adds a new session state item to the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t13" headers="r1c1-t13">
+<p><a href="#BABGABCJ">Dispose</a></p>
+</td>
+<td align="left" headers="r4c1-t13 r1c2-t13">
+<p>Releases all the resources for this instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t13" headers="r1c1-t13">
+<p><a href="#BABGJDFA">EndRequest</a></p>
+</td>
+<td align="left" headers="r5c1-t13 r1c2-t13">
+<p>Allows the <code>OracleSessionStateStore</code> object to perform any cleanup that may be required for the current request</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t13" headers="r1c1-t13">
+<p><a href="#BABIJDJI">GetItem</a></p>
+</td>
+<td align="left" headers="r6c1-t13 r1c2-t13">
+<p>Returns a read-only session item from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t13" headers="r1c1-t13">
+<p><a href="#BABEGFDD">GetItemExclusive</a></p>
+</td>
+<td align="left" headers="r7c1-t13 r1c2-t13">
+<p>Locks and returns a session item from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t13" headers="r1c1-t13">
+<p><a href="#BABFCGED">Initialize</a></p>
+</td>
+<td align="left" headers="r8c1-t13 r1c2-t13">
+<p>Initializes the provider with the property values specified in the ASP.NET application configuration file</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t13" headers="r1c1-t13">
+<p><a href="#BABHCHIH">InitializeRequest</a></p>
+</td>
+<td align="left" headers="r9c1-t13 r1c2-t13">
+<p>Performs any per-request initializations that the <code>OracleSessionStateStore</code> provider requires</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t13" headers="r1c1-t13">
+<p><a href="#BABFJGID">ReleaseItemExclusive</a></p>
+</td>
+<td align="left" headers="r10c1-t13 r1c2-t13">
+<p>Releases the lock on a session item in the database, if multiple attempts to retrieve the session item fail</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t13" headers="r1c1-t13">
+<p><a href="#BABIFDGJ">RemoveItem</a></p>
+</td>
+<td align="left" headers="r11c1-t13 r1c2-t13">
+<p>Removes the specified session item from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t13" headers="r1c1-t13">
+<p><a href="#BABHJDHE">ResetItemTimeout</a></p>
+</td>
+<td align="left" headers="r12c1-t13 r1c2-t13">
+<p>Resets the expiration date and timeout for a session item in the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t13" headers="r1c1-t13">
+<p><a href="#BABJBCBI">SetAndReleaseItemExclusive</a></p>
+</td>
+<td align="left" headers="r13c1-t13 r1c2-t13">
+<p>Updates the session time information in the database with the specified session item and releases the lock</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t13" headers="r1c1-t13">
+<p><a href="#CACGIBFA">SetItemExpireCallback</a></p>
+</td>
+<td align="left" headers="r14c1-t13 r1c2-t13">
+<p>Returns a <code>false</code> value to indicate that callbacks for expired sessions are not supported</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABJEHEI" name="BABJEHEI"></a>
+<h3 class="refsect3">CreateNewStoreData</h3>
+<p>This method creates a new <code>SessionStateStoreData</code> object for the current request.</p>
+<a id="sthref387" name="sthref387"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override SessionStateStoreData CreateNewStoreData(HttpContext <span class="italic">context</span>, 
+   int <span class="italic">timeout</span>);
+</pre>
+<a id="sthref388" name="sthref388"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">timeout</span></code></p>
+<p>The timeout value for the <code>SessionStateStoreData</code> object that is created.</p>
+</li>
+</ul>
+<a id="sthref389" name="sthref389"></a>
+<p class="subhead2">Return Value</p>
+<p>A new <code>SessionStateStoreData</code> object for the current request.</p>
+<a id="sthref390" name="sthref390"></a>
+<p class="subhead2">Remarks</p>
+<p>This method creates a new <code>SessionStateStoreData</code> object for the current request based on the <code>HttpContext</code> and timeout values. The <code>SessionStateModule</code> calls this method at the beginning of a request for an ASP.NET page, if the request does not contain a session ID or if the request contains a session ID for a session that is not found in the database. This method creates a new <code>SessionStateStoreData</code> object with an empty <code>ISessionStateItemCollection</code> object, an <code>HttpStaticObjectsCollection</code> collection, and the specified timeout value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABJCGEJ" name="BABJCGEJ"></a>
+<h3 class="refsect3">CreateUninitializedItem</h3>
+<p>This method adds a new session state item to the database.</p>
+<a id="sthref391" name="sthref391"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void CreateUninitializedItem(HttpContext <span class="italic">context</span>, string <span class="italic">id</span>,
+  int <span class="italic">timeout</span>);
+</pre>
+<a id="sthref392" name="sthref392"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">id</span></code></p>
+<p>The session ID for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">timeout</span></code></p>
+<p>The timeout value for the current request.</p>
+</li>
+</ul>
+<a id="sthref393" name="sthref393"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The input parameter is null.</p>
+<p><code>OracleException</code> - An Oracle-related error has occurred.</p>
+<a id="sthref394" name="sthref394"></a>
+<p class="subhead2">Remarks</p>
+<p>This method adds an uninitialized session state entry into the database and is called when the <code>cookieless</code> and <code>regenerateExpiredId</code> attributes are both set to <code>true</code>.</p>
+<p>After a new session ID is created, this method is called to store an uninitialized entry with this new session ID in the database. The browser is redirected to the URL containing the new session ID. The new session ID exists in the database, so there is no conflict with an expired session ID.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABGABCJ" name="BABGABCJ"></a>
+<h3 class="refsect3">Dispose</h3>
+<p>This method releases all the resources for this instance.</p>
+<a id="sthref395" name="sthref395"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void Dispose();
+</pre>
+<a id="sthref396" name="sthref396"></a>
+<p class="subhead2">Remarks</p>
+<p>This method releases all the resources for this instance when the application domain is closed.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABGJDFA" name="BABGJDFA"></a>
+<h3 class="refsect3">EndRequest</h3>
+<p>This method allows the <code>OracleSessionStateStore</code> object to perform any cleanup that may be required for the current request.</p>
+<a id="sthref397" name="sthref397"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void EndRequest(HttpContext <span class="italic">context</span>);
+</pre>
+<a id="sthref398" name="sthref398"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+</ul>
+<a id="sthref399" name="sthref399"></a>
+<p class="subhead2">Remarks</p>
+<p>This method is called by the <code>SessionStateModule</code> object at the end of a request.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABIJDJI" name="BABIJDJI"></a>
+<h3 class="refsect3">GetItem</h3>
+<p>This method returns a read-only session item from the database.</p>
+<a id="sthref400" name="sthref400"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override SessionStateStoreData GetItem(HttpContext <span class="italic">context</span>, string <span class="italic">id</span>, 
+   out bool <span class="italic">locked</span>, out TimeSpan <span class="italic">lockAge</span>, out Object <span class="italic">lockId</span>, 
+   out SessionStateActions <span class="italic">actions</span>);
+</pre>
+<a id="sthref401" name="sthref401"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">id</span></code></p>
+<p>The session ID for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">locked</span></code></p>
+<p>A Boolean value that is <code>true</code> if the session item is locked in the database; otherwise, it is <code>false</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">lockAge</span></code></p>
+<p>A a <code>TimeSpan</code> object that indicates the amount of time the session item has been locked in the database.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">lockId</span></code></p>
+<p>A lock identifier object.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">actions</span></code></p>
+<p>A <code>SessionStateActions</code> enumeration value that indicates whether or not the session is uninitialized and cookieless.</p>
+</li>
+</ul>
+<a id="sthref402" name="sthref402"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>SessionStateStoreData</code> object that contains session information from the database.</p>
+<a id="sthref403" name="sthref403"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The input parameter is null.</p>
+<p><code>OracleException</code> - An Oracle-related error has occurred.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - The session state information is invalid and might be corrupted.</p>
+<a id="sthref404" name="sthref404"></a>
+<p class="subhead2">Remarks</p>
+<p>This method returns a read-only <code>SessionStateStoreData</code> object from the database and updates the expiration date of the session item. This method is called by the session state service at the beginning of a request. It is called only if the <code>EnableSessionState</code> attribute in the page is set to <code>ReadOnly</code>.</p>
+<p>If no session data is found, then the <code><span class="codeinlineitalic">locked</span></code> out parameter is set to <code>false</code> and a null reference is returned. The session state service then calls the <code>CreateNewStoreData</code> method to create a new session item in the database.</p>
+<p>If the session data is locked in the database, then the <code><span class="codeinlineitalic">locked</span></code> out parameter is set to <code>true</code>, the <code><span class="codeinlineitalic">lockAge</span></code> parameter is set to the amount of time the session item has been locked in the database, the <code><span class="codeinlineitalic">lockId</span></code> parameter is set to the lock identifier and a null reference is returned. The session state service then keeps calling this method at half-second intervals. If the <code><span class="codeinlineitalic">lockAge</span></code> value exceeds the <code>HttpRuntimeSection.ExecutionTimeout</code> value, then the session state service calls the <code>ReleaseItemExclusive</code> method to release the lock. It then calls the <code>GetItem</code> method again.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABEGFDD" name="BABEGFDD"></a>
+<h3 class="refsect3">GetItemExclusive</h3>
+<p>This method locks a session item and returns it from the database.</p>
+<a id="sthref405" name="sthref405"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override SessionStateStoreData GetItemExclusive(HttpContext <span class="italic">context</span>, 
+   string <span class="italic">id</span>, out bool <span class="italic">locked</span>, out TimeSpan <span class="italic">lockAge</span>, out Object <span class="italic">lockId</span>, 
+   out SessionStateActions <span class="italic">actions</span>);
+</pre>
+<a id="sthref406" name="sthref406"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">id</span></code></p>
+<p>The session ID for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">locked</span></code></p>
+<p>A Boolean value that is <code>true</code> if the session item was successfully locked in the database; otherwise, it is <code>false</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">lockAge</span></code></p>
+<p>A <code>TimeSpan</code> object that indicates the amount of time the session item has been locked in the database.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">lockId</span></code></p>
+<p>A lock identifier object.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">actions</span></code></p>
+<p>A <code>SessionStateActions</code> enumeration value that indicates whether or not the session is uninitialized and cookieless.</p>
+</li>
+</ul>
+<a id="sthref407" name="sthref407"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>SessionStateStoreData</code> object that contains session information from the database.</p>
+<a id="sthref408" name="sthref408"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The input parameter is null.</p>
+<p><code>OracleException</code> - An Oracle-related error has occurred.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - The session state information is invalid and might be corrupted.</p>
+<a id="sthref409" name="sthref409"></a>
+<p class="subhead2">Remarks</p>
+<p>This method returns a <code>SessionStateStoreData</code> object from the database and updates the expiration date of the session item. This method is called only if the attribute in the page is set to the default value of true. The session item is retrieved only if no other requests are currently using it. The session item in the database is locked for the duration of the request.</p>
+<p>If no session data is found, the <code><span class="codeinlineitalic">locked</span></code> out parameter is set to <code>false</code> and a null reference is returned. The session state service then calls the <code>CreateNewStoreData</code> method to create a <code>newsession</code> item in the database.</p>
+<p>If the session data is locked in the database, then the <code><span class="codeinlineitalic">locked</span></code> parameter is set to <code>true</code>, the <code><span class="codeinlineitalic">lockAge</span></code> parameter is set to the amount of time the session item has been locked in the database, the <code><span class="codeinlineitalic">lockId</span></code> parameter is set to the lock identifier and a null reference is returned. The session state service then keeps calling this method at half-second intervals. If the <code><span class="codeinlineitalic">lockAge</span></code> value exceeds the <code>ExecutionTimeout</code> value, then the session state service calls the <code>ReleaseItemExclusive</code> method to release the lock. It then calls the <code>GetItemExclusive</code> method again.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABFCGED" name="BABFCGED"></a>
+<h3 class="refsect3">Initialize</h3>
+<p>This method initializes the provider with the property values specified in the ASP.NET application configuration file (<code>web.config</code>).</p>
+<a id="sthref410" name="sthref410"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void Initialize(string <span class="italic">name</span>, NameValueCollection <span class="italic">config</span>);
+</pre>
+<a id="sthref411" name="sthref411"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">name</span></code></p>
+<p>The name of the provider instance to initialize.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">config</span></code></p>
+<p>A <code>Systems.Collections.Specialized.NameValueCollection</code> object that contains the names and values of configuration options for the provider.</p>
+</li>
+</ul>
+<a id="sthref412" name="sthref412"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">config</span></code> parameter is null.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - The <code>connectionStringName</code> attribute is empty or does not exist in the configuration file, or an invalid attribute is found in the configuration file.</p>
+<a id="sthref413" name="sthref413"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>Initialize</code> method is not intended to be called directly by the application.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABHCHIH" name="BABHCHIH"></a>
+<h3 class="refsect3">InitializeRequest</h3>
+<p>This method performs any per-request initializations that the <code>OracleSessionStateStore</code> provider requires.</p>
+<a id="sthref414" name="sthref414"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void InitializeRequest(HttpContext <span class="italic">context</span>);
+</pre>
+<a id="sthref415" name="sthref415"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+</ul>
+<a id="sthref416" name="sthref416"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">context</span></code> parameter is null.</p>
+<a id="sthref417" name="sthref417"></a>
+<p class="subhead2">Remarks</p>
+<p>This method is called by the session state service before calling any other methods.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABFJGID" name="BABFJGID"></a>
+<h3 class="refsect3">ReleaseItemExclusive</h3>
+<p>This method forcibly releases the lock on a session item in the database, if multiple attempts to retrieve the session item fail.</p>
+<a id="sthref418" name="sthref418"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void ReleaseItemExclusive(HttpContext <span class="italic">context</span>, string <span class="italic">id</span>,
+    Object <span class="italic">lockId</span>);
+</pre>
+<a id="sthref419" name="sthref419"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">id</span></code></p>
+<p>The session ID for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">lockId</span></code></p>
+<p>The lock identifier for the current request.</p>
+</li>
+</ul>
+<a id="sthref420" name="sthref420"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The input parameter is null.</p>
+<p><code>OracleException</code> - An Oracle-related error has occurred.</p>
+<a id="sthref421" name="sthref421"></a>
+<p class="subhead2">Remarks</p>
+<p>This method is called by the session state service to release the lock on a session item in the database and update the expiration date. The <code>SessionStateModule</code> calls this method at the end of a request if the session values are unchanged or when the lock has exceeded the <code>HttpRuntimeSection.ExecutionTimeout</code> property value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABIFDGJ" name="BABIFDGJ"></a>
+<h3 class="refsect3">RemoveItem</h3>
+<p>This method removes the specified session item from the database.</p>
+<a id="sthref422" name="sthref422"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void RemoveItem(HttpContext <span class="italic">context</span>, string <span class="italic">id</span>, Object <span class="italic">lockId</span>,
+   SessionStateStoreData <span class="italic">item</span>);
+</pre>
+<a id="sthref423" name="sthref423"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">id</span></code></p>
+<p>The session ID for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">lockId</span></code></p>
+<p>The lock identifier for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">item</span></code></p>
+<p>The session item to remove from the database.</p>
+</li>
+</ul>
+<a id="sthref424" name="sthref424"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The input parameter is null.</p>
+<p><code>OracleException</code> - An Oracle-related error has occurred.</p>
+<a id="sthref425" name="sthref425"></a>
+<p class="subhead2">Remarks</p>
+<p>The session state service calls this method to remove the specified session item from the database. An application can call the <code>Session.Abandon</code> method to cancel a session.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABHJDHE" name="BABHJDHE"></a>
+<h3 class="refsect3">ResetItemTimeout</h3>
+<p>This method resets the expiration date and timeout for a session item in the database.</p>
+<a id="sthref426" name="sthref426"></a>
+<p class="subhead2"><span class="italic">Declaration</span></p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void ResetItemTimeout(HttpContext <span class="italic">context</span>, string <span class="italic">id</span>);
+</pre>
+<a id="sthref427" name="sthref427"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">id</span></code></p>
+<p>The session ID for the current request.</p>
+</li>
+</ul>
+<a id="sthref428" name="sthref428"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The input parameter is null.</p>
+<p><code>OracleException</code> - An Oracle-related error has occurred.</p>
+<a id="sthref429" name="sthref429"></a>
+<p class="subhead2">Remarks</p>
+<p>The session state service calls this method to reset the expiration date and timeout for a session item in the database, to the current date and time.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABJBCBI" name="BABJBCBI"></a>
+<h3 class="refsect3">SetAndReleaseItemExclusive</h3>
+<p>This method updates the session time information in the database with the specified session item, and releases the lock.</p>
+<a id="sthref430" name="sthref430"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void SetAndReleaseItemExclusive(HttpContext <span class="italic">context</span>, string <span class="italic">id</span>,
+   SessionStateStoreDataItem <span class="italic">item</span>, Object <span class="italic">lockId</span>, bool <span class="italic">newItem</span>);
+</pre>
+<a id="sthref431" name="sthref431"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">context</span></code></p>
+<p>The <code>HttpContext</code> object for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">id</span></code></p>
+<p>The session ID for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">item</span></code></p>
+<p>The session item containing new values to update the session item in the database with.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">LockId</span></code></p>
+<p>The lock identifier for the current request.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">newItem</span></code></p>
+<p>A Boolean value that indicates whether or not the session item is new in the database. A <code>false</code> value indicates an existing item.</p>
+</li>
+</ul>
+<a id="sthref432" name="sthref432"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The input parameter is null.</p>
+<p><code>OracleException</code> - An Oracle-related error has occurred.</p>
+<a id="sthref433" name="sthref433"></a>
+<p class="subhead2">Remarks</p>
+<p>If the session items have been modified, the session state service calls this method at the end of a request, to either create a new item or update an existing session item in the database with the provided session values. This method also updates the expiration time for the session item and releases the lock on the session data.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CACGIBFA" name="CACGIBFA"></a>
+<h3 class="refsect3">SetItemExpireCallback</h3>
+<p>This method returns a <code>false</code> value to indicate that callbacks for expired sessions are not supported.</p>
+<a id="sthref434" name="sthref434"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool SetItemExpireCallback(SessionStateItemExpireCallback 
+  <span class="italic">expireCallback</span>);
+</pre>
+<a id="sthref435" name="sthref435"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">expireCallback</span></code></p>
+<p>The delegate for the <code>Session_OnEnd</code> event defined in the <code>Global.asax</code> file.</p>
+</li>
+</ul>
+<a id="sthref436" name="sthref436"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>false</code> value.</p>
+<a id="sthref437" name="sthref437"></a>
+<p class="subhead2">Remarks</p>
+<p>This method always returns a <code>false</code> value to indicate that callbacks for expired sessions are not supported.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEBA">OracleSessionStateStore Class</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFD">OracleSessionStateStore Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleSessionStateStore.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleProfileProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2007, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-21T17:55:2Z" />
+<meta name="doctitle" content="Oracle&reg; Objects for OLE Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12245-01" />
+<meta name="docid" content="OOFOL" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="serprop106.htm" title="Previous" type="text/html" />
+<link rel="Next" href="serprop108.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12245.pdf" title="PDF version" type="application/pdf" />
+<title>RecordCount Property</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Objects for OLE Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12245-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="serprop106.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="serprop108.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12245.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CEGEFJDG" name="CEGEFJDG"></a><a id="OOFOL769" name="OOFOL769"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1">RecordCount Property</h1>
+<a id="sthref2154" name="sthref2154"></a>
+<p class="titleinrefsubsect">Applies To</p>
+<p><a href="serobjch011.htm#BABJBBAI">OraDynaset Object</a></p>
+<p><a href="serobjch024.htm#BABGAHBH">OraSQLStmt Object</a></p>
+<a id="sthref2155" name="sthref2155"></a>
+<p class="titleinrefsubsect">Description</p>
+<ul>
+<li>
+<p><code>OraDynaset</code></p>
+<p>Returns the total number of records in the dynaset.</p>
+</li>
+<li>
+<p><code>OraSQLStmt</code></p>
+<p>Returns the number of records processed in an insert, update, or delete statement, even when there is a failure executing the SQL statement.</p>
+</li>
+</ul>
+<p>Not available at design time and read-only at run time.</p>
+<a id="sthref2156" name="sthref2156"></a>
+<p class="titleinrefsubsect">Usage</p>
+<pre xml:space="preserve" class="oac_no_warn">record_count = oradynaset.RecordCountrecord_count = orasqlstmt.RecordCount
+</pre>
+<a id="sthref2157" name="sthref2157"></a>
+<p class="titleinrefsubsect">Data Type</p>
+<p><code>Long</code> <code>Integer</code></p>
+<a id="sthref2158" name="sthref2158"></a>
+<p class="titleinrefsubsect">Remarks</p>
+<p>Referencing this property requires that the entire result table be fetched immediately from an Oracle database to determine the count of records. Due to the potentially severe performance impact of this, the user should avoid using this property and instead execute an additional query using the <code>COUNT(*)</code> clause, and use the <code>SnapshotID</code> property to guarantee time consistency. For an example, see the <code>SnapShot</code> property.</p>
+<p>Referencing this property while using the <code>ORADYN_NOCACHE</code> option of the <code>CreateDynaset</code> method causes an implicit <code>MoveLast</code> operation and makes the current record the last record in the dynaset.</p>
+<a id="sthref2159" name="sthref2159"></a>
+<p class="titleinrefsubsect">Examples</p>
+<a id="OOFOL770" name="OOFOL770"></a>
+<p class="subhead2">RecordCount Example (OraDynaset)</p>
+<p>This example demonstrates the use of the <code>RecordCount</code> property to determine the number of records retrieved with a <code>SELECT</code> statement and <code>OraDynaset</code>. Copy and paste this code into the definition section of a form. Then, press <span class="bold">F5</span>.</p>
+<pre xml:space="preserve" class="oac_no_warn">Sub Form_Load ()
+ 
+ 'Declare variables as OLE Objects.
+ Dim OraSession As OraSession 
+ Dim OraDatabase As OraDatabase 
+ Dim OraDynaset As OraDynaset 
+ 
+ 'Create the OraSession Object.
+ Set OraSession = CreateObject("OracleInProcServer.XOraSession")
+ 
+ 'Create the OraDatabase Object by opening a connection to Oracle.
+ Set OraDatabase = OraSession.OpenDatabase("ExampleDb", "scott/tiger", 0&amp;)
+ 
+ 'Create the dynaset.
+ Set OraDynaset = OraDatabase.CreateDynaset("select * from emp", 0&amp;)
+ 
+ 'Display the number of records. Note that this causes
+ 'all records to be fetched to ensure an accurate count.
+ 
+ MsgBox OraDynaset.RecordCount &amp; " records retrieved."
+ 
+ 
+End Sub
+</pre>
+<pre xml:space="preserve" class="oac_no_warn"></pre>
+<a id="OOFOL771" name="OOFOL771"></a>
+<p class="subhead2">Record Count Example (OraSQLStmt)</p>
+<p>The following example shows the number of records inserted into the database after using an <code>INSERT</code> statement with <code>OraSQLStmt</code>.</p>
+<pre xml:space="preserve" class="oac_no_warn">Dim OraSession As OraSession 
+Dim OraDatabase As OraDatabase 
+Dim OraDynaset As OraDynaset 
+Dim OraSqlStmt As OraSQLStmt 
+Dim OraPArray1 As OraParamArray 
+Dim OraPArray2 As OraParamArray
+Dim I As Integer  
+  
+On Error GoTo ERR_array_sql 
+  
+'Test case for inserting/updating/deleting multiple rows using parameter arrays 
+'with SQL statements  
+Set OraSession = CreateObject("OracleInProcServer.XOraSession") 
+Set OraDatabase = OraSession.OpenDatabase("exampledb", "scott/tiger", 0&amp;) 
+ 
+'Create table  
+OraDatabase.ExecuteSQL ("create table part_nos(partno number, description" &amp; _ 
+                  "char(50), primary key(partno))")  
+ 
+OraDatabase.Parameters.AddTable "PARTNO", ORAPARM_INPUT, ORATYPE_NUMBER, 10, 22 
+OraDatabase.Parameters.AddTable "DESCRIPTION", ORAPARM_INPUT, ORATYPE_CHAR, _ 
+              10, 50 
+If OraDatabase.LastServerErr &lt;&gt; 0 Or OraDatabase.LastServerErrText &lt;&gt; "" Then
+  MsgBox "Error" 
+End If  
+ 
+Set OraPArray1 = OraDatabase.Parameters("PARTNO") 
+Set OraPArray2 = OraDatabase.Parameters("DESCRIPTION") 
+ 
+'Initialize arrays 
+For I = 0 To 9 
+  achar = "Description" + Str(I) 
+  OraPArray1.put_Value 1000 + I, I 
+  OraPArray2.put_Value achar, I 
+Next I  
+ 
+Set OraSqlStmt = OraDatabase.CreateSql("insert into" &amp; _  
+          "part_nos(partno, description) values(:PARTNO,:DESCRIPTION)", 0&amp;) 
+If OraDatabase.LastServerErr &lt;&gt; 0 Or OraDatabase.LastServerErrText &lt;&gt; "" Then  
+    MsgBox "Error" 
+End If 
+MsgBox "# of records inserted : " &amp; OraSqlStmt.RecordCount 
+  
+Exit Sub 
+ERR_array_sql: 
+ 
+    MsgBox Err.Description 
+ 
+ 
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serprop121.htm#CHDCIJJD">SnapShot Property</a></p>
+</li>
+<li>
+<p><a href="sermthod054.htm#CIHFHBEI">CreateDynaset Method</a></p>
+</li>
+<li>
+<p><a href="sermthod131.htm#CIHIHCBD">MoveFirst, MoveLast, MoveNext, and MovePrevious Methods</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="serprop106.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="serprop108.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1994, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

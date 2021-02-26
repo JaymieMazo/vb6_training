@@ -1,0 +1,2465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:38Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleIntervalYMStructure.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleTimeStampStructure.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleString Structure</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleIntervalYMStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleTimeStampStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="i1011356" name="i1011356"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1"><a id="sthref5075" name="sthref5075"></a>OracleString Structure</h1>
+<p>The <code>OracleString</code> structure represents a variable-length stream of characters to be stored in or retrieved from a database.</p>
+<a id="sthref5076" name="sthref5076"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.ValueType</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;Oracle.DataAccess.Types.OracleString</code></p>
+<a id="sthref5077" name="sthref5077"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// ADO.NET 2.0: C#
+public struct OracleString : IComparable, INullable, IXmlSerializable
+</pre>
+<a id="sthref5078" name="sthref5078"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref5079" name="sthref5079"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+ 
+class OracleStringSample
+{
+  static void Main()
+  {
+    // Initialize OracleString structs
+    OracleString string1 = new OracleString("AAA");
+    
+    // Display the string "AAA"
+    Console.WriteLine("{0} has length of {1}", string1, string1.Length);
+ 
+    // Contatenate characters to string1 until the length is 5 
+    while (string1.Length &lt; 5)
+      string1 = OracleString.Concat(string1,"a");
+      
+    // Display the string of "AAAaa"
+    Console.WriteLine("{0} has length of {1}", string1, string1.Length);
+  }
+}
+</pre>
+<a id="sthref5080" name="sthref5080"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Types</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+<li>
+<p><a href="#i1011802">OracleString Constructors</a></p>
+</li>
+<li>
+<p><a href="#i1012052">OracleString Static Fields</a></p>
+</li>
+<li>
+<p><a href="#i1012122">OracleString Static Methods</a></p>
+</li>
+<li>
+<p><a href="#i1012454">OracleString Static Operators</a></p>
+</li>
+<li>
+<p><a href="#i1012785">OracleString Type Conversions</a></p>
+</li>
+<li>
+<p><a href="#i1012898">OracleString Properties</a></p>
+</li>
+<li>
+<p><a href="#i1013093">OracleString Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011446" name="i1011446"></a>
+<hr />
+<h2 class="refsect2">OracleString Members<a id="sthref5081" name="sthref5081"></a></h2>
+<p><code>OracleString</code> members are listed in the following tables:</p>
+<a id="sthref5082" name="sthref5082"></a>
+<p class="subhead1">OracleString Constructors</p>
+<p><code>OracleString</code> constructors are listed in <a href="#g1309657">Table 14-74</a></p>
+<div class="tblruleformal"><a id="sthref5083" name="sthref5083"></a><a id="g1309657" name="g1309657"></a>
+<p class="titleintable">Table 14-74 OracleString Constructors</p>
+<table class="RuleFormal" title="OracleString Constructors" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t384">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t384">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t384" headers="r1c1-t384">
+<p><a href="#i1011802">OracleString Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t384 r1c2-t384">
+<p>Instantiates a new instance of <code>OracleString</code> structure (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5084" name="sthref5084"></a>
+<p class="subhead1">OracleString Static Fields</p>
+<p>The <code>OracleString</code> static fields are listed in <a href="#g1309667">Table 14-75</a>.</p>
+<div class="tblruleformal"><a id="sthref5085" name="sthref5085"></a><a id="g1309667" name="g1309667"></a>
+<p class="titleintable">Table 14-75 OracleString Static Fields</p>
+<table class="RuleFormal" title="OracleString Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t385">Field</th>
+<th align="left" valign="bottom" id="r1c2-t385">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t385" headers="r1c1-t385">
+<p><a href="#i1012098">Null</a></p>
+</td>
+<td align="left" headers="r2c1-t385 r1c2-t385">
+<p>Represents a null value that can be assigned to an instance of the <code>OracleString</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5086" name="sthref5086"></a>
+<p class="subhead1">OracleString Static Methods</p>
+<p>The <code>OracleString</code> static methods are listed in <a href="#g1309677">Table 14-76</a>.</p>
+<div class="tblruleformal"><a id="sthref5087" name="sthref5087"></a><a id="g1309677" name="g1309677"></a>
+<p class="titleintable">Table 14-76 OracleString Static Methods</p>
+<table class="RuleFormal" title="OracleString Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t386">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t386">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t386" headers="r1c1-t386">
+<p><a href="#i1012210">Concat</a></p>
+</td>
+<td align="left" headers="r2c1-t386 r1c2-t386">
+<p>Concatenates two <code>OracleString</code> instances and returns a new <code>OracleString</code> instance that represents the result</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t386" headers="r1c1-t386">
+<p><a href="#i1012243">Equals</a></p>
+</td>
+<td align="left" headers="r3c1-t386 r1c2-t386">
+<p>Determines if two <code>OracleString</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t386" headers="r1c1-t386">
+<p><a href="#i1012279">GreaterThan</a></p>
+</td>
+<td align="left" headers="r4c1-t386 r1c2-t386">
+<p>Determines whether or not the first of two <code>OracleString</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t386" headers="r1c1-t386">
+<p><a href="#i1012314">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r5c1-t386 r1c2-t386">
+<p>Determines whether or not the first of two <code>OracleString</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t386" headers="r1c1-t386">
+<p><a href="#i1012349">LessThan</a></p>
+</td>
+<td align="left" headers="r6c1-t386 r1c2-t386">
+<p>Determines whether or not the first of two <code>OracleString</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t386" headers="r1c1-t386">
+<p><a href="#i1012384">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r7c1-t386 r1c2-t386">
+<p>Determines whether or not the first of two <code>OracleString</code> values is less than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t386" headers="r1c1-t386">
+<p><a href="#i1012419">NotEquals</a></p>
+</td>
+<td align="left" headers="r8c1-t386 r1c2-t386">
+<p>Determines whether two <code>OracleString</code> values are not equal</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5088" name="sthref5088"></a>
+<p class="subhead1">OracleString Static Operators</p>
+<p>The <code>OracleString</code> static operators are listed in <a href="#g1309705">Table 14-77</a>.</p>
+<div class="tblruleformal"><a id="sthref5089" name="sthref5089"></a><a id="g1309705" name="g1309705"></a>
+<p class="titleintable">Table 14-77 OracleString Static Operators</p>
+<table class="RuleFormal" title="OracleString Static Operators " summary="Rows are static operators. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t387">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t387">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t387" headers="r1c1-t387">
+<p><a href="#i1012542">operator +</a></p>
+</td>
+<td align="left" headers="r2c1-t387 r1c2-t387">
+<p>Concatenates two <code>OracleString</code> values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t387" headers="r1c1-t387">
+<p><a href="#i1012575">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t387 r1c2-t387">
+<p>Determines if two <code>OracleString</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t387" headers="r1c1-t387">
+<p><a href="#i1012610">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t387 r1c2-t387">
+<p>Determines if the first of two <code>OracleString</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t387" headers="r1c1-t387">
+<p><a href="#i1012645">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t387 r1c2-t387">
+<p>Determines if the first of two <code>OracleString</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t387" headers="r1c1-t387">
+<p><a href="#i1012680">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t387 r1c2-t387">
+<p>Determines if the two <code>OracleString</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t387" headers="r1c1-t387">
+<p><a href="#i1012715">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t387 r1c2-t387">
+<p>Determines if the first of two <code>OracleString</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t387" headers="r1c1-t387">
+<p><a href="#i1012750">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t387 r1c2-t387">
+<p>Determines if two <code>OracleString</code> values are not equal</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5090" name="sthref5090"></a>
+<p class="subhead1">OracleString Type Conversions</p>
+<p>The <code>OracleString</code> type conversions are listed in <a href="#g1309733">Table 14-78</a>.</p>
+<div class="tblruleformal"><a id="sthref5091" name="sthref5091"></a><a id="g1309733" name="g1309733"></a>
+<p class="titleintable">Table 14-78 OracleString Type Conversions</p>
+<table class="RuleFormal" title="OracleString Type Conversions " summary="Rows are type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t388">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t388">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t388" headers="r1c1-t388">
+<p><a href="#i1012838">explicit operator string</a></p>
+</td>
+<td align="left" headers="r2c1-t388 r1c2-t388">
+<p>Converts the supplied <code>OracleString</code> to a <code>string</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t388" headers="r1c1-t388">
+<p><a href="#i1012869">implicit operator OracleString</a></p>
+</td>
+<td align="left" headers="r3c1-t388 r1c2-t388">
+<p>Converts the supplied <code>string</code> to an <code>OracleString</code> instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5092" name="sthref5092"></a>
+<p class="subhead1">OracleString Properties</p>
+<p>The <code>OracleString</code> properties are listed in <a href="#g1309746">Table 14-79</a>.</p>
+<div class="tblruleformal"><a id="sthref5093" name="sthref5093"></a><a id="g1309746" name="g1309746"></a>
+<p class="titleintable">Table 14-79 OracleString Properties</p>
+<table class="RuleFormal" title="OracleString Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t389">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t389">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t389" headers="r1c1-t389">
+<p><a href="#i1012965">IsCaseIgnored</a></p>
+</td>
+<td align="left" headers="r2c1-t389 r1c2-t389">
+<p>Indicates whether or not case should be ignored when performing string comparison</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t389" headers="r1c1-t389">
+<p><a href="#i1013011">IsNull</a></p>
+</td>
+<td align="left" headers="r3c1-t389 r1c2-t389">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t389" headers="r1c1-t389">
+<p><a href="#i1013037">Item</a></p>
+</td>
+<td align="left" headers="r4c1-t389 r1c2-t389">
+<p>Obtains the particular character in an <code>OracleString</code> using an index.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t389" headers="r1c1-t389">
+<p><a href="#i1013065">Length</a></p>
+</td>
+<td align="left" headers="r5c1-t389 r1c2-t389">
+<p>Returns the length of the <code>OracleString</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5094" name="sthref5094"></a>
+<p class="subhead1">OracleString Methods</p>
+<p>The <code>OracleString</code> methods are listed in <a href="#g1309765">Table 14-80</a>.</p>
+<div class="tblruleformal"><a id="sthref5095" name="sthref5095"></a><a id="g1309765" name="g1309765"></a>
+<p class="titleintable">Table 14-80 OracleString Methods</p>
+<table class="RuleFormal" title="OracleString Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t390">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t390">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t390" headers="r1c1-t390">
+<p><a href="#i1013185">Clone</a></p>
+</td>
+<td align="left" headers="r2c1-t390 r1c2-t390">
+<p>Returns a copy of the current <code>OracleString</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t390" headers="r1c1-t390">
+<p><a href="#i1013218">CompareTo</a></p>
+</td>
+<td align="left" headers="r3c1-t390 r1c2-t390">
+<p>Compares the current <code>OracleString</code> instance to the supplied object, and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t390" headers="r1c1-t390">
+<p><a href="#i1013259">Equals</a></p>
+</td>
+<td align="left" headers="r4c1-t390 r1c2-t390">
+<p>Determines whether or not an object has the same string value as the current <code>OracleString</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t390" headers="r1c1-t390">
+<p><a href="#i1013292">GetHashCode</a></p>
+</td>
+<td align="left" headers="r5c1-t390 r1c2-t390">
+<p>Returns a hash code for the <code>OracleString</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t390" headers="r1c1-t390">
+<p><a href="#i1013319">GetNonUnicodeBytes</a></p>
+</td>
+<td align="left" headers="r6c1-t390 r1c2-t390">
+<p>Returns an array of bytes, containing the contents of the <code>OracleString</code>, in the client character set format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t390" headers="r1c1-t390">
+<p>GetType</p>
+</td>
+<td align="left" headers="r7c1-t390 r1c2-t390">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t390" headers="r1c1-t390">
+<p><a href="#i1013347">GetUnicodeBytes</a></p>
+</td>
+<td align="left" headers="r8c1-t390 r1c2-t390">
+<p>Returns an array of bytes, containing the contents of the <code>OracleString</code>, in Unicode format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t390" headers="r1c1-t390">
+<p><a href="#i1013375">ToString</a></p>
+</td>
+<td align="left" headers="r9c1-t390 r1c2-t390">
+<p>Converts the current <code>OracleString</code> instance to a <code>string</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011802" name="i1011802"></a>
+<hr />
+<h2 class="refsect2">OracleString Constructors<a id="sthref5096" name="sthref5096"></a></h2>
+<p>The <code>OracleString</code> constructors create new instances of the <code>OracleString</code> structure.</p>
+<a id="sthref5097" name="sthref5097"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1302159">OracleString(string)</a></p>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a string.</p>
+</li>
+<li>
+<p><a href="#i1011882">OracleString(string, bool)</a></p>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a string and specifies if case is ignored in comparison.</p>
+</li>
+<li>
+<p><a href="#i1011911">OracleString(byte [ ], bool)</a></p>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array and specifies if the supplied byte array is Unicode encoded.</p>
+</li>
+<li>
+<p><a href="#i1011942">OracleString(byte [ ], bool, bool)</a></p>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array and specifies the following: if the supplied byte array is Unicode encoded and if case is ignored in comparison.</p>
+</li>
+<li>
+<p><a href="#i1011975">OracleString(byte [ ], int, int, bool)</a></p>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array, and specifies the following: the starting index in the byte array, the number of bytes to copy from the byte array, and if the supplied byte array is Unicode encoded.</p>
+</li>
+<li>
+<p><a href="#i1012012">OracleString(byte [ ], int, int, bool, bool)</a></p>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array, and specifies the following: the starting index in the byte array, the number of bytes to copy from the byte array, if the supplied byte array is Unicode encoded, and if case is ignored in comparison.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1302159" name="i1302159"></a>
+<h3 class="refsect3">OracleString(string)</h3>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a string.</p>
+<a id="sthref5098" name="sthref5098"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleString(string <span class="italic">data</span>);
+</pre>
+<a id="sthref5099" name="sthref5099"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">data</span></code></p>
+<p>A string value.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011882" name="i1011882"></a>
+<h3 class="refsect3">OracleString(string, bool)</h3>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a string and specifies if case is ignored in comparison.</p>
+<a id="sthref5100" name="sthref5100"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleString(string <span class="italic">data</span>, bool <span class="italic">isCaseIgnored</span>);
+</pre>
+<a id="sthref5101" name="sthref5101"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">data</span></code></p>
+<p>A string value.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">isCaseIgnored</span></code></p>
+<p>Specifies if case is ignored in comparison. Specifies <code>true</code> if case is to be ignored; otherwise, specifies <code>false</code>.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011911" name="i1011911"></a>
+<h3 class="refsect3">OracleString(byte [ ], bool)</h3>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array and specifies if the supplied byte array is Unicode encoded.</p>
+<a id="sthref5102" name="sthref5102"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleString(byte[] <span class="italic">data</span>, bool <span class="italic">fUnicode</span>);
+</pre>
+<a id="sthref5103" name="sthref5103"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">data</span></code></p>
+<p>Byte array data for the new <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">fUnicode</span></code></p>
+<p>Specifies if the supplied <code>data</code> is Unicode encoded. Specifies <code>true</code> if Unicode encoded; otherwise, <code>false</code>.</p>
+</li>
+</ul>
+<a id="sthref5104" name="sthref5104"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">data</span></code> parameter is null.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011942" name="i1011942"></a>
+<h3 class="refsect3">OracleString(byte [ ], bool, bool)</h3>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array and specifies the following: if the supplied byte array is Unicode encoded and if case is ignored in comparison.</p>
+<a id="sthref5105" name="sthref5105"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleString(byte[] <span class="italic">data</span>, bool <span class="italic">fUnicode</span>, bool <span class="italic">isCaseIgnored</span>);
+</pre>
+<a id="sthref5106" name="sthref5106"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">data</span></code></p>
+<p>Byte array data for the new <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">fUnicode</span></code></p>
+<p>Specifies if the supplied <code>data</code> is Unicode encoded. Specifies <code>true</code> if Unicode encoded; otherwise, <code>false</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">isCaseIgnored</span></code></p>
+<p>Specifies if case is ignored in comparison. Specifies <code>true</code> if case is to be ignored; otherwise, specifies <code>false</code>.</p>
+</li>
+</ul>
+<a id="sthref5107" name="sthref5107"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">data</span></code> parameter is null.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1011975" name="i1011975"></a>
+<h3 class="refsect3">OracleString(byte [ ], int, int, bool)</h3>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array, and specifies the following: the starting index in the byte array, the number of bytes to copy from the byte array, and if the supplied byte array is Unicode encoded.</p>
+<a id="sthref5108" name="sthref5108"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleString(byte[] <span class="italic">data</span>, int <span class="italic">index</span>, int <span class="italic">count</span>, bool <span class="italic">fUnicode</span>);
+</pre>
+<a id="sthref5109" name="sthref5109"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">data</span></code></p>
+<p>Byte array data for the new <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">index</span></code></p>
+<p>The starting index to copy from <code><span class="codeinlineitalic">data</span></code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">count</span></code></p>
+<p>The number of bytes to copy.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">fUnicode</span></code></p>
+<p>Specifies if the supplied <code>data</code> is Unicode encoded. Specifies <code>true</code> if Unicode encoded; otherwise, <code>false</code>.</p>
+</li>
+</ul>
+<a id="sthref5110" name="sthref5110"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">data</span></code> parameter is null.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">count</span></code> parameter is less than zero.</p>
+<p><code>IndexOutOfRangeException</code> - The <code><span class="codeinlineitalic">index</span></code> parameter is greater than or equal to the length of <code><span class="codeinlineitalic">data</span></code> or less than zero.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012012" name="i1012012"></a>
+<h3 class="refsect3">OracleString(byte [ ], int, int, bool, bool)</h3>
+<p>This constructor creates a new instance of the <code>OracleString</code> structure and sets its value using a byte array, and specifies the following: the starting index in the byte array, the number of bytes to copy from the byte array, if the supplied byte array is Unicode encoded, and if case is ignored in comparison.</p>
+<a id="sthref5111" name="sthref5111"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleString(byte[] <span class="italic">data</span>, int <span class="italic">index</span>, int <span class="italic">count</span>, bool <span class="italic">fUnicode</span>,
+ bool <span class="italic">isCaseIgnored</span>);
+</pre>
+<a id="sthref5112" name="sthref5112"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">data</span></code></p>
+<p>Byte array data for the new <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">index</span></code></p>
+<p>The starting index to copy from <code><span class="codeinlineitalic">data</span></code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">count</span></code></p>
+<p>The number of bytes to copy.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">fUnicode</span></code></p>
+<p>Specifies if the supplied <code>data</code> is Unicode encoded. Specifies <code>true</code> if Unicode encoded; otherwise, <code>false</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">isCaseIgnored</span></code></p>
+<p>Specifies if case is ignored in comparison. Specifies <code>true</code> if case is to be ignored; otherwise, specifies <code>false</code>.</p>
+</li>
+</ul>
+<a id="sthref5113" name="sthref5113"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">data</span></code> parameter is null.</p>
+<p><code>ArgumentOutOfRangeException</code> - The <code><span class="codeinlineitalic">count</span></code> parameter is less than zero.</p>
+<p><code>IndexOutOfRangeException</code> - The <code><span class="codeinlineitalic">index</span></code> parameter is greater than or equal to the length of <code><span class="codeinlineitalic">data</span></code> or less than zero.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012052" name="i1012052"></a>
+<hr />
+<h2 class="refsect2">OracleString Static Fields<a id="sthref5114" name="sthref5114"></a></h2>
+<p>The <code>OracleString</code> static fields are listed in <a href="#g1309828">Table 14-81</a>.</p>
+<div class="tblruleformal"><a id="sthref5115" name="sthref5115"></a><a id="g1309828" name="g1309828"></a>
+<p class="titleintable">Table 14-81 OracleString Static Fields</p>
+<table class="RuleFormal" title="OracleString Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="10%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t399">Field</th>
+<th align="left" valign="bottom" id="r1c2-t399">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t399" headers="r1c1-t399">
+<p><a href="#i1012098">Null</a></p>
+</td>
+<td align="left" headers="r2c1-t399 r1c2-t399">
+<p>Represents a null value that can be assigned to an instance of the <code>OracleString</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012098" name="i1012098"></a>
+<h3 class="refsect3">Null</h3>
+<p>This static field represents a null value that can be assigned to an instance of the <code>OracleString</code> structure.</p>
+<a id="sthref5116" name="sthref5116"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleString Null;
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012122" name="i1012122"></a>
+<hr />
+<h2 class="refsect2">OracleString Static Methods<a id="sthref5117" name="sthref5117"></a></h2>
+<p>The <code>OracleString</code> static methods are listed in <a href="#g1309846">Table 14-82</a>.</p>
+<div class="tblruleformal"><a id="sthref5118" name="sthref5118"></a><a id="g1309846" name="g1309846"></a>
+<p class="titleintable">Table 14-82 OracleString Static Methods</p>
+<table class="RuleFormal" title="OracleString Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t402">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t402">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t402" headers="r1c1-t402">
+<p><a href="#i1012210">Concat</a></p>
+</td>
+<td align="left" headers="r2c1-t402 r1c2-t402">
+<p>Concatenates two <code>OracleString</code> instances and returns a new <code>OracleString</code> instance that represents the result</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t402" headers="r1c1-t402">
+<p><a href="#i1012243">Equals</a></p>
+</td>
+<td align="left" headers="r3c1-t402 r1c2-t402">
+<p>Determines if two <code>OracleString</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t402" headers="r1c1-t402">
+<p><a href="#i1012279">GreaterThan</a></p>
+</td>
+<td align="left" headers="r4c1-t402 r1c2-t402">
+<p>Determines whether or not the first of two <code>OracleString</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t402" headers="r1c1-t402">
+<p><a href="#i1012314">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r5c1-t402 r1c2-t402">
+<p>Determines whether or not the first of two <code>OracleString</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t402" headers="r1c1-t402">
+<p><a href="#i1012349">LessThan</a></p>
+</td>
+<td align="left" headers="r6c1-t402 r1c2-t402">
+<p>Determines whether or not the first of two <code>OracleString</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t402" headers="r1c1-t402">
+<p><a href="#i1012384">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r7c1-t402 r1c2-t402">
+<p>Determines whether or not the first of two <code>OracleString</code> values is less than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t402" headers="r1c1-t402">
+<p><a href="#i1012419">NotEquals</a></p>
+</td>
+<td align="left" headers="r8c1-t402 r1c2-t402">
+<p>Determines whether two <code>OracleString</code> values are not equal</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012210" name="i1012210"></a>
+<h3 class="refsect3">Concat</h3>
+<p>This static method concatenates two <code>OracleString</code> instances and returns a new <code>OracleString</code> instance that represents the result.</p>
+<a id="sthref5119" name="sthref5119"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleString Concat(OracleString <span class="italic">str1</span>, OracleString <span class="italic">str2</span>);
+</pre>
+<a id="sthref5120" name="sthref5120"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">str1</span></code></p>
+<p>The first <code>OracleString.</code></p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">str2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5121" name="sthref5121"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleString.</code></p>
+<a id="sthref5122" name="sthref5122"></a>
+<p class="subhead2">Remarks</p>
+<p>If either argument has a null value, the returned <code>OracleString</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012243" name="i1012243"></a>
+<h3 class="refsect3">Equals</h3>
+<p>Overloads <code>Object</code></p>
+<p>This static method determines whether or not the two <code>OracleString</code>s being compared are equal.</p>
+<a id="sthref5123" name="sthref5123"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool Equals(OracleString <span class="italic">str1</span>, OracleString <span class="italic">str2</span>);
+</pre>
+<a id="sthref5124" name="sthref5124"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">str1</span></code></p>
+<p>The first <code>OracleString.</code></p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">str2</span></code></p>
+<p>The second <code>OracleString.</code></p>
+</li>
+</ul>
+<a id="sthref5125" name="sthref5125"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the two <code>OracleString</code>s being compared are equal; returns <code>false</code> otherwise.</p>
+<a id="sthref5126" name="sthref5126"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012279" name="i1012279"></a>
+<h3 class="refsect3">GreaterThan</h3>
+<p>This static method determines whether or not the first of two <code>OracleString</code> values is greater than the second.</p>
+<a id="sthref5127" name="sthref5127"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThan(OracleString <span class="italic">str1</span>, OracleString <span class="italic">str2</span>);
+</pre>
+<a id="sthref5128" name="sthref5128"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">str1</span></code></p>
+<p>The first <code>OracleString.</code></p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">str2</span></code></p>
+<p>The second <code>OracleString.</code></p>
+</li>
+</ul>
+<a id="sthref5129" name="sthref5129"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleString</code>s is greater than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5130" name="sthref5130"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012314" name="i1012314"></a>
+<h3 class="refsect3">GreaterThanOrEqual</h3>
+<p>This static method determines whether or not the first of two <code>OracleString</code> values is greater than or equal to the second.</p>
+<a id="sthref5131" name="sthref5131"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThanOrEqual(OracleString <span class="italic">str1</span>, 
+    OracleString <span class="italic">str2</span>);
+</pre>
+<a id="sthref5132" name="sthref5132"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">str1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">str2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5133" name="sthref5133"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleString</code>s is greater than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5134" name="sthref5134"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012349" name="i1012349"></a>
+<h3 class="refsect3">LessThan</h3>
+<p>This static method determines whether or not the first of two <code>OracleString</code> values is less than the second.</p>
+<a id="sthref5135" name="sthref5135"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThan(OracleString <span class="italic">str1</span>, OracleString <span class="italic">str2</span>);
+</pre>
+<a id="sthref5136" name="sthref5136"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">str1</span></code></p>
+<p>The first <code>OracleString.</code></p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">str2</span></code></p>
+<p>The second <code>OracleString.</code></p>
+</li>
+</ul>
+<a id="sthref5137" name="sthref5137"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first is less than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5138" name="sthref5138"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012384" name="i1012384"></a>
+<h3 class="refsect3">LessThanOrEqual</h3>
+<p>This static method determines whether or not the first of two <code>OracleString</code> values is less than or equal to the second.</p>
+<a id="sthref5139" name="sthref5139"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThanOrEqual(OracleString <span class="italic">str1</span>, OracleString <span class="italic">str2</span>);
+</pre>
+<a id="sthref5140" name="sthref5140"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">str1</span></code></p>
+<p>The first <code>OracleString.</code></p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">str2</span></code></p>
+<p>The second <code>OracleString.</code></p>
+</li>
+</ul>
+<a id="sthref5141" name="sthref5141"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first is less than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5142" name="sthref5142"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012419" name="i1012419"></a>
+<h3 class="refsect3">NotEquals</h3>
+<p>This static method determines whether two <code>OracleString</code> values are not equal.</p>
+<a id="sthref5143" name="sthref5143"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool NotEquals(OracleString <span class="italic">str1</span>, OracleString <span class="italic">str2</span>);
+</pre>
+<a id="sthref5144" name="sthref5144"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">str1</span></code></p>
+<p>The first <code>OracleString.</code></p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">str2</span></code></p>
+<p>The second <code>OracleString.</code></p>
+</li>
+</ul>
+<a id="sthref5145" name="sthref5145"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the two <code>OracleString</code> instances are not equal; otherwise, returns <code>false</code>.</p>
+<a id="sthref5146" name="sthref5146"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012454" name="i1012454"></a>
+<hr />
+<h2 class="refsect2">OracleString Static Operators<a id="sthref5147" name="sthref5147"></a></h2>
+<p>The <code>OracleString</code> static operators are listed in <a href="#g1309906">Table 14-83</a>.</p>
+<div class="tblruleformal"><a id="sthref5148" name="sthref5148"></a><a id="g1309906" name="g1309906"></a>
+<p class="titleintable">Table 14-83 OracleString Static Operators</p>
+<table class="RuleFormal" title="OracleString Static Operators " summary="Rows are static operators. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t411">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t411">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t411" headers="r1c1-t411">
+<p><a href="#i1012542">operator +</a></p>
+</td>
+<td align="left" headers="r2c1-t411 r1c2-t411">
+<p>Concatenates two <code>OracleString</code> values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t411" headers="r1c1-t411">
+<p><a href="#i1012575">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t411 r1c2-t411">
+<p>Determines if two <code>OracleString</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t411" headers="r1c1-t411">
+<p><a href="#i1012610">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t411 r1c2-t411">
+<p>Determines if the first of two <code>OracleString</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t411" headers="r1c1-t411">
+<p><a href="#i1012645">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t411 r1c2-t411">
+<p>Determines if the first of two <code>OracleString</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t411" headers="r1c1-t411">
+<p><a href="#i1012680">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t411 r1c2-t411">
+<p>Determines if the two <code>OracleString</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t411" headers="r1c1-t411">
+<p><a href="#i1012715">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t411 r1c2-t411">
+<p>Determines if the first of two <code>OracleString</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t411" headers="r1c1-t411">
+<p><a href="#i1012750">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t411 r1c2-t411">
+<p>Determines if two <code>OracleString</code> values are not equal</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012542" name="i1012542"></a>
+<h3 class="refsect3">operator +</h3>
+<p>This static operator concatenates two <code>OracleString</code> values.</p>
+<a id="sthref5149" name="sthref5149"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleString operator + (OracleString <span class="italic">value1</span>, OracleString <span class="italic">value2</span>);
+</pre>
+<a id="sthref5150" name="sthref5150"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5151" name="sthref5151"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleString.</code></p>
+<a id="sthref5152" name="sthref5152"></a>
+<p class="subhead2">Remarks</p>
+<p>If either argument has a null value, the returned <code>OracleString</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012575" name="i1012575"></a>
+<h3 class="refsect3">operator ==</h3>
+<p>This static operator determines if two <code>OracleString</code> values are equal.</p>
+<a id="sthref5153" name="sthref5153"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator == (OracleString <span class="italic">value1</span>, OracleString <span class="italic">value2</span>);
+</pre>
+<a id="sthref5154" name="sthref5154"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5155" name="sthref5155"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleString</code> values are equal; otherwise, returns <code>false</code>.</p>
+<a id="sthref5156" name="sthref5156"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012610" name="i1012610"></a>
+<h3 class="refsect3">operator &gt;</h3>
+<p>This static operator determines if the first of two <code>OracleString</code> values is greater than the second.</p>
+<a id="sthref5157" name="sthref5157"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt; (OracleString <span class="italic">value1</span>, OracleString <span class="italic">value2</span>);
+</pre>
+<a id="sthref5158" name="sthref5158"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5159" name="sthref5159"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleString</code> values is greater than the second; otherwise returns <code>false</code>.</p>
+<a id="sthref5160" name="sthref5160"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012645" name="i1012645"></a>
+<h3 class="refsect3">operator &gt;=</h3>
+<p>This static operator determines if the first of two <code>OracleString</code> values is greater than or equal to the second.</p>
+<a id="sthref5161" name="sthref5161"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt;= (OracleString <span class="italic">value1</span>, OracleString <span class="italic">value2</span>);
+</pre>
+<a id="sthref5162" name="sthref5162"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5163" name="sthref5163"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleString</code> values is greater than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5164" name="sthref5164"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012680" name="i1012680"></a>
+<h3 class="refsect3">operator !=</h3>
+<p>This static operator determines if two <code>OracleString</code> values are not equal.</p>
+<a id="sthref5165" name="sthref5165"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator != (OracleString <span class="italic">value1</span>, OracleString <span class="italic">value2</span>);
+</pre>
+<a id="sthref5166" name="sthref5166"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5167" name="sthref5167"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleString</code> values are not equal; otherwise, returns <code>false</code>.</p>
+<a id="sthref5168" name="sthref5168"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012715" name="i1012715"></a>
+<h3 class="refsect3">operator &lt;</h3>
+<p>This static operator determines if the first of two <code>OracleString</code>s is less than the second.</p>
+<a id="sthref5169" name="sthref5169"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt; (OracleString <span class="italic">value1</span>, OracleString <span class="italic">value2</span>);
+</pre>
+<a id="sthref5170" name="sthref5170"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5171" name="sthref5171"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleString</code>s is less than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5172" name="sthref5172"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012750" name="i1012750"></a>
+<h3 class="refsect3">operator &lt;=</h3>
+<p>This static operator determines if the first of two <code>OracleString</code> values is less than or equal to the second.</p>
+<a id="sthref5173" name="sthref5173"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt;= (OracleString <span class="italic">value1</span>, OracleString <span class="italic">value1</span>);
+</pre>
+<a id="sthref5174" name="sthref5174"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleString</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5175" name="sthref5175"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleString</code> values is less than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5176" name="sthref5176"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012785" name="i1012785"></a>
+<hr />
+<h2 class="refsect2">OracleString Type Conversions<a id="sthref5177" name="sthref5177"></a></h2>
+<p>The <code>OracleString</code> type conversions are listed in <a href="#g1309966">Table 14-84</a>.</p>
+<div class="tblruleformal"><a id="sthref5178" name="sthref5178"></a><a id="g1309966" name="g1309966"></a>
+<p class="titleintable">Table 14-84 OracleString Type Conversions</p>
+<table class="RuleFormal" title="OracleString Type Conversions " summary="Rows are type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t420">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t420">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t420" headers="r1c1-t420">
+<p><a href="#i1012838">explicit operator string</a></p>
+</td>
+<td align="left" headers="r2c1-t420 r1c2-t420">
+<p>Converts the supplied <code>OracleString</code> to a <code>string</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t420" headers="r1c1-t420">
+<p><a href="#i1012869">implicit operator OracleString</a></p>
+</td>
+<td align="left" headers="r3c1-t420 r1c2-t420">
+<p>Converts the supplied <code>string</code> to an <code>OracleString</code> instance</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012838" name="i1012838"></a>
+<h3 class="refsect3">explicit operator string</h3>
+<p>This type conversion operator converts the supplied <code>OracleString</code> to a <code>string</code>.</p>
+<a id="sthref5179" name="sthref5179"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">//C#
+public static explicit operator string (OracleString <span class="italic">value1</span>);
+</pre>
+<a id="sthref5180" name="sthref5180"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The supplied <code>OracleString</code>.</p>
+</li>
+</ul>
+<a id="sthref5181" name="sthref5181"></a>
+<p class="subhead2">Return Value</p>
+<p><code>string</code></p>
+<a id="sthref5182" name="sthref5182"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The <code>OracleString</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012869" name="i1012869"></a>
+<h3 class="refsect3">implicit operator OracleString</h3>
+<p>This type conversion operator converts the supplied <code>string</code> to an <code>OracleString</code>.</p>
+<a id="sthref5183" name="sthref5183"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static implicit operator OracleString (string value1);
+</pre>
+<a id="sthref5184" name="sthref5184"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The supplied string.</p>
+</li>
+</ul>
+<a id="sthref5185" name="sthref5185"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleString.</code></p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012898" name="i1012898"></a>
+<hr />
+<h2 class="refsect2">OracleString Properties<a id="sthref5186" name="sthref5186"></a></h2>
+<p>The <code>OracleString</code> properties are listed in <a href="#g1309991">Table 14-85</a>.</p>
+<div class="tblruleformal"><a id="sthref5187" name="sthref5187"></a><a id="g1309991" name="g1309991"></a>
+<p class="titleintable">Table 14-85 OracleString Properties</p>
+<table class="RuleFormal" title="OracleString Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t424">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t424">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t424" headers="r1c1-t424">
+<p><a href="#i1012965">IsCaseIgnored</a></p>
+</td>
+<td align="left" headers="r2c1-t424 r1c2-t424">
+<p>Indicates whether or not case should be ignored when performing string comparison</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t424" headers="r1c1-t424">
+<p><a href="#i1013011">IsNull</a></p>
+</td>
+<td align="left" headers="r3c1-t424 r1c2-t424">
+<p>Indicates whether or not the current instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t424" headers="r1c1-t424">
+<p><a href="#i1013037">Item</a></p>
+</td>
+<td align="left" headers="r4c1-t424 r1c2-t424">
+<p>Obtains the particular character in an <code>OracleString</code> using an index.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t424" headers="r1c1-t424">
+<p><a href="#i1013065">Length</a></p>
+</td>
+<td align="left" headers="r5c1-t424 r1c2-t424">
+<p>Returns the length of the <code>OracleString</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1012965" name="i1012965"></a>
+<h3 class="refsect3">IsCaseIgnored</h3>
+<p>This property indicates whether or not case should be ignored when performing string comparison.</p>
+<a id="sthref5188" name="sthref5188"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">//C#
+public bool IsCaseIgnored {get;set;}
+</pre>
+<a id="sthref5189" name="sthref5189"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code> if string comparison must ignore case; otherwise <code>false</code>.</p>
+<a id="sthref5190" name="sthref5190"></a>
+<p class="subhead2">Remarks</p>
+<p>Default value is <code>true</code>.</p>
+<a id="sthref5191" name="sthref5191"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+ 
+class IsCaseIgnoredSample
+{
+  static void Main()
+  {
+    OracleString string1 = new OracleString("aAaAa");
+    OracleString string2 = new OracleString("AaAaA");
+ 
+    // Ignore case for comparisons
+    string1.IsCaseIgnored = true;
+    string2.IsCaseIgnored = true;
+ 
+    // Same; Prints 0
+    Console.WriteLine(string1.CompareTo(string2));
+ 
+    // Make comparisons case sensitive   
+    // Note that IsCaseIgnored must be set to false for both 
+    //   OracleStrings; otherwise an exception is thrown
+    string1.IsCaseIgnored = false;
+    string2.IsCaseIgnored = false;
+ 
+    // Different; Prints nonzero value
+    Console.WriteLine(string1.CompareTo(string2));
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013011" name="i1013011"></a>
+<h3 class="refsect3">IsNull</h3>
+<p>This property indicates whether or not the current instance contains a null value.</p>
+<a id="sthref5192" name="sthref5192"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsNull {get;}
+</pre>
+<a id="sthref5193" name="sthref5193"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code> if the current instance contains has a null value; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013037" name="i1013037"></a>
+<h3 class="refsect3">Item</h3>
+<p>This property obtains the particular character in an <code>OracleString</code> using an index.</p>
+<a id="sthref5194" name="sthref5194"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public char Item {get;}
+</pre>
+<a id="sthref5195" name="sthref5195"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>char</code> value.</p>
+<a id="sthref5196" name="sthref5196"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013065" name="i1013065"></a>
+<h3 class="refsect3">Length</h3>
+<p>This property returns the length of the <code>OracleString</code>.</p>
+<a id="sthref5197" name="sthref5197"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Length {get;}
+</pre>
+<a id="sthref5198" name="sthref5198"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>int</code> value.</p>
+<a id="sthref5199" name="sthref5199"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013093" name="i1013093"></a>
+<hr />
+<h2 class="refsect2">OracleString Methods<a id="sthref5200" name="sthref5200"></a></h2>
+<p>The <code>OracleString</code> methods are listed in <a href="#g1310030">Table 14-86</a>.</p>
+<div class="tblruleformal"><a id="sthref5201" name="sthref5201"></a><a id="g1310030" name="g1310030"></a>
+<p class="titleintable">Table 14-86 OracleString Methods</p>
+<table class="RuleFormal" title="OracleString Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t430">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t430">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t430" headers="r1c1-t430">
+<p><a href="#i1013185">Clone</a></p>
+</td>
+<td align="left" headers="r2c1-t430 r1c2-t430">
+<p>Returns a copy of the current <code>OracleString</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t430" headers="r1c1-t430">
+<p><a href="#i1013218">CompareTo</a></p>
+</td>
+<td align="left" headers="r3c1-t430 r1c2-t430">
+<p>Compares the current <code>OracleString</code> instance to the supplied object, and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t430" headers="r1c1-t430">
+<p><a href="#i1013259">Equals</a></p>
+</td>
+<td align="left" headers="r4c1-t430 r1c2-t430">
+<p>Determines whether or not an object has the same string value as the current <code>OracleString</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t430" headers="r1c1-t430">
+<p><a href="#i1013292">GetHashCode</a></p>
+</td>
+<td align="left" headers="r5c1-t430 r1c2-t430">
+<p>Returns a hash code for the <code>OracleString</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t430" headers="r1c1-t430">
+<p><a href="#i1013319">GetNonUnicodeBytes</a></p>
+</td>
+<td align="left" headers="r6c1-t430 r1c2-t430">
+<p>Returns an array of bytes, containing the contents of the <code>OracleString</code>, in the client character set format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t430" headers="r1c1-t430">
+<p>GetType</p>
+</td>
+<td align="left" headers="r7c1-t430 r1c2-t430">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t430" headers="r1c1-t430">
+<p><a href="#i1013347">GetUnicodeBytes</a></p>
+</td>
+<td align="left" headers="r8c1-t430 r1c2-t430">
+<p>Returns an array of bytes, containing the contents of the <code>OracleString</code>, in Unicode format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t430" headers="r1c1-t430">
+<p><a href="#i1013375">ToString</a></p>
+</td>
+<td align="left" headers="r9c1-t430 r1c2-t430">
+<p>Converts the current <code>OracleString</code> instance to a <code>string</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013185" name="i1013185"></a>
+<h3 class="refsect3">Clone</h3>
+<p>This method creates a copy of an <code>OracleString</code> instance.</p>
+<a id="sthref5202" name="sthref5202"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleString Clone();
+</pre>
+<a id="sthref5203" name="sthref5203"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleString</code> structure.</p>
+<a id="sthref5204" name="sthref5204"></a>
+<p class="subhead2">Remarks</p>
+<p>The cloned object has the same property values as that of the object being cloned.</p>
+<a id="sthref5205" name="sthref5205"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+ 
+class CloneSample
+{
+  static void Main()
+  {
+    OracleString str1 = new OracleString("aAaAa");
+    OracleString str2 = str1.Clone();
+ 
+    // The OracleStrings are same; Prints 0
+    Console.WriteLine(str1.CompareTo(str2));
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013218" name="i1013218"></a>
+<h3 class="refsect3">CompareTo</h3>
+<p>This method compares the current <code>OracleString</code> instance to the supplied object, and returns an integer that represents their relative values.</p>
+<a id="sthref5206" name="sthref5206"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int CompareTo(object obj);
+</pre>
+<a id="sthref5207" name="sthref5207"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The object being compared to the current instance.</p>
+</li>
+</ul>
+<a id="sthref5208" name="sthref5208"></a>
+<p class="subhead2">Return Value</p>
+<p>The method returns a number that is:</p>
+<ul>
+<li>
+<p>Less than zero: if the current <code>OracleString</code> value is less than <code><span class="codeinlineitalic">obj</span></code>.</p>
+</li>
+<li>
+<p>Zero: if the current <code>OracleString</code> value is equal to <code><span class="codeinlineitalic">obj</span></code>.</p>
+</li>
+<li>
+<p>Greater than zero: if the current <code>OracleString</code> value is greater than <code><span class="codeinlineitalic">obj</span></code>.</p>
+</li>
+</ul>
+<a id="sthref5209" name="sthref5209"></a>
+<p class="subhead2">Implements</p>
+<p><code>IComparable</code></p>
+<a id="sthref5210" name="sthref5210"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">obj</span></code> parameter is not of type <code>OracleString</code>.</p>
+<a id="sthref5211" name="sthref5211"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>The comparison must be between <code>OracleString</code>s. For example, comparing an <code>OracleString</code> instance with an <code>OracleBinary</code> instance is not allowed. When an <code>OracleString</code> is compared with a different type, an <code>ArgumentException</code> is thrown.</p>
+</li>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013259" name="i1013259"></a>
+<h3 class="refsect3">Equals</h3>
+<p>This method determines whether or not supplied object is an instance of <code>OracleString</code> and has the same values as the current <code>OracleString</code> instance.</p>
+<a id="sthref5212" name="sthref5212"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool Equals(object <span class="italic">obj</span>);
+</pre>
+<a id="sthref5213" name="sthref5213"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>An object being compared.</p>
+</li>
+</ul>
+<a id="sthref5214" name="sthref5214"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the supplied object is an instance of <code>OracleString</code> and has the same values as the current <code>OracleString</code> instance; otherwise, returns <code>false</code>.</p>
+<a id="sthref5215" name="sthref5215"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleString</code> that has a value is greater than an <code>OracleString</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleString</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013292" name="i1013292"></a>
+<h3 class="refsect3">GetHashCode</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method returns a hash code for the <code>OracleString</code> instance.</p>
+<a id="sthref5216" name="sthref5216"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int GetHashCode();
+</pre>
+<a id="sthref5217" name="sthref5217"></a>
+<p class="subhead2">Return Value</p>
+<p>A number that represents the hash code.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013319" name="i1013319"></a>
+<h3 class="refsect3">GetNonUnicodeBytes</h3>
+<p>This method returns an array of bytes, containing the contents of the <code>OracleString</code>, in the client character set format.</p>
+<a id="sthref5218" name="sthref5218"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public byte[] GetNonUnicodeBytes();
+</pre>
+<a id="sthref5219" name="sthref5219"></a>
+<p class="subhead2">Return Value</p>
+<p>A byte array that contains the contents of the <code>OracleString</code> in the client character set format.</p>
+<a id="sthref5220" name="sthref5220"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current instance has a null value, an <code>OracleNullValueException</code> is thrown.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013347" name="i1013347"></a>
+<h3 class="refsect3">GetUnicodeBytes</h3>
+<p>This method returns an array of bytes, containing the contents of the <code>OracleString</code> in Unicode format.</p>
+<a id="sthref5221" name="sthref5221"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public byte[] GetUnicodeBytes();
+</pre>
+<a id="sthref5222" name="sthref5222"></a>
+<p class="subhead2">Return Value</p>
+<p>A byte array that contains the contents of the <code>OracleString</code> in Unicode format.</p>
+<a id="sthref5223" name="sthref5223"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current instance has a null value, an <code>OracleNullValueException</code> is thrown.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1013375" name="i1013375"></a>
+<h3 class="refsect3">ToString</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method converts the current <code>OracleString</code> instance to a <code>string</code>.</p>
+<a id="sthref5224" name="sthref5224"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string ToString();
+</pre>
+<a id="sthref5225" name="sthref5225"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>string.</code></p>
+<a id="sthref5226" name="sthref5226"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current <code>OracleString</code> instance has a null value, the string contains "null<code>"</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1011356">OracleString Structure</a></p>
+</li>
+<li>
+<p><a href="#i1011446">OracleString Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleIntervalYMStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleTimeStampStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

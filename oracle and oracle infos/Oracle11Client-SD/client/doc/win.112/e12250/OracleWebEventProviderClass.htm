@@ -1,0 +1,925 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-17T21:18:54Z" />
+<meta name="doctitle" content="Oracle&reg; Providers for ASP.NET Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12250-01" />
+<meta name="docid" content="ASPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="OracleWebEventProvider.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OraclePersonalizationProvider.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12250.pdf" title="PDF version" type="application/pdf" />
+<title>OracleWebEventProvider Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Providers for ASP.NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12250-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleWebEventProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OraclePersonalizationProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12250.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="BABIFEJG" name="BABIFEJG"></a>
+<hr />
+<div class="refsect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="refsect1">OracleWebEventProvider Class<a id="sthref522" name="sthref522"></a></h1>
+<p>The <code>OracleWebEventProvider</code> class allows ASP.NET applications to store Web events in an Oracle database.</p>
+<a id="sthref523" name="sthref523"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.Configuration.Provider.ProviderBase</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;System.Web.Management.WebEventProvider</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Web.Management.BufferedWebEventProvider</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle.Web.Management.OracleWebEventProvider</code></p>
+<a id="sthref524" name="sthref524"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public class OracleWebEventProvider: BufferedWebEventProvider
+</pre>
+<a id="sthref525" name="sthref525"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance members are not guaranteed to be thread-safe.</p>
+<a id="sthref526" name="sthref526"></a>
+<p class="subhead2">Remarks</p>
+<p>This class allows ASP.NET applications to store Web event information in an Oracle database.</p>
+<a id="sthref527" name="sthref527"></a>
+<p class="subhead2">Example</p>
+<p>The following is a <code>web.config</code> example for an ASP.NET application that uses the <code>OracleWebEventProvider</code> class as the default provider. This configuration uses the connection string and default attribute values specified in the <code>machine.config</code> file.</p>
+<p>Applications must provide any required configuration entries for event mapping, buffer modes, and rules in the <code>web.config</code> file, because the <code>machine.config</code> file does not provide these configuration entries. The following <code>web.config</code> file provides an example:</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;?xml version="1.0"?&gt;
+&lt;configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0"&gt;
+  &lt;system.web&gt;
+    &lt;healthmonitoring enabled="true"/&gt;
+      &lt;bufferModes&gt;
+        &lt;add name="Notification"
+             maxBufferSize="1000"
+             maxFlushSize="200"
+             urgentFlushThreshold="500"
+             regularFlushInterval="00:00:6"
+             urgentFlushInterval="00:00:03"
+             maxBufferThreads="1"/&gt;
+      &lt;/bufferModes&gt;
+      &lt;eventMappings&gt;
+        &lt;add name="CustomEvent"
+             type="CustomEventSource.CustomEvent, CustomEventSource"/&gt;
+      &lt;/eventMappings&gt;
+      &lt;rules&gt;
+        &lt;add name="CustomRule"
+             eventName="CustomEvent"
+             provider="OracleWebEventProvider"
+             minInterval="00:00:00"/&gt;
+      &lt;/rules&gt;
+    &lt;/healthMonitoring&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</pre>
+<p>The following is a <code>web.config</code> example for an ASP.NET application that uses an <code>OracleWebEventProvider</code> class as the default provider, using customized settings for the connection string name and application name, and an application-specific connection string, along with other configurations as described in the previous example:</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;?xml version="1.0"?&gt;
+&lt;configuration xmlns=
+  "http://schemas.microsoft.com/.NetConfiguration/v2.0"&gt;
+  &lt;connectionStrings&gt;
+    &lt;add name="my_webevent_app_con_string" connectionString=
+      "User Id=scott;Password=tiger;Data Source=Oracle"/&gt;
+  &lt;/connectionStrings&gt;
+  &lt;system.web&gt;
+    &lt;!-- Enable and customize OracleWebEventProvider --&gt;
+    &lt;healthMonitoring enabled="true"&gt;
+      &lt;providers&gt;
+        &lt;add name="CustomOracleWebEventProvider"
+             type="Oracle.Web.Management.OracleWebEventProvider,
+                   Oracle.Web, Version=2.112.1.0, Culture=neutral,
+                   PublicKeyToken=89b483f429c47342"
+             connectionStringName="my_webevent_app_con_string"
+             bufferMode="CustomBufferMode"&gt;
+      &lt;/providers&gt;
+      &lt;bufferModes&gt;
+        &lt;add name="CustomBufferMode"
+             maxBufferSize="1000"
+             maxFlushSize="200"
+             urgentFlushThreshold="500"
+             regularFlushInterval="00:00:06"
+             urgentFlushInterval="00:00:03"
+             maxBufferThreads="1"/&gt;
+      &lt;/bufferModes&gt;
+      &lt;eventMappings&gt;
+        &lt;add name="CustomEvent"
+             type="CustomEventSource.CustomEvent, CustomEventSource"/&gt;
+      &lt;/eventMappings&gt;
+      &lt;rules&gt;
+        &lt;add name="CustomRule"
+             eventName="CustomEvent"
+             provider="CustomOracleWebEventProvider"
+             minInterval="00:00:00"/&gt;
+      &lt;/rules&gt;
+    &lt;/healthMonitoring&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</pre>
+<p>Note that the <code>applicationName</code> attribute should be set to a unique value for each ASP.NET application.</p>
+<a id="sthref528" name="sthref528"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.Web.Management</code></p>
+<p>Assembly: <code>Oracle.Web.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+<li>
+<p><a href="#BABIJDCG">OracleWebEventProvider Constructors</a></p>
+</li>
+<li>
+<p><a href="#BABGDHJC">OracleWebEventProvider Static Methods</a></p>
+</li>
+<li>
+<p><a href="#BABDCAEG">OracleWebEventProvider Public Properties</a></p>
+</li>
+<li>
+<p><a href="#BABFBAEC">OracleWebEventProvider Public Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="BABEIAHJ" name="BABEIAHJ"></a>
+<hr />
+<h2 class="refsect2">OracleWebEventProvider Members<a id="sthref529" name="sthref529"></a></h2>
+<p><code>OracleWebEventProvider</code> members are listed in the following tables.</p>
+<a id="sthref530" name="sthref530"></a>
+<p class="subhead1"><a id="sthref531" name="sthref531"></a>OracleWebEventProvider Constructors</p>
+<p>The <code>OracleWebEventProvider</code> constructor is listed in <a href="#BABCFCGG">Table 7-1</a>.</p>
+<div class="tblruleformal"><a id="sthref532" name="sthref532"></a><a id="BABCFCGG" name="BABCFCGG"></a>
+<p class="titleintable">Table 7-1 OracleWebEventProvider Constructor</p>
+<table class="RuleFormal" title="OracleWebEventProvider Constructor" summary="rows are constructors. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><a href="#BABIJDCG">OracleWebEventProvider Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>Instantiates a new instance of the <code>OracleWebEventProvider</code> class</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref533" name="sthref533"></a>
+<p class="subhead1"><a id="sthref534" name="sthref534"></a>OracleWebEventProvider Static Methods</p>
+<p><code>OracleWebEventProvider</code> static methods are listed in <a href="#CCHJAHAI">Table 7-2</a>.</p>
+<div class="tblruleformal"><a id="sthref535" name="sthref535"></a><a id="CCHJAHAI" name="CCHJAHAI"></a>
+<p class="titleintable">Table 7-2 OracleWebEventProvider Static Methods</p>
+<table class="RuleFormal" title="OracleWebEventProvider Static Methods" summary="rows are Static Methods. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Static Methods</th>
+<th align="left" valign="bottom" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><code>ReferenceEquals</code></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref536" name="sthref536"></a>
+<p class="subhead1"><a id="sthref537" name="sthref537"></a>OracleWebEventProvider Public Properties</p>
+<p><code>OracleWebEventProvider</code> public properties are listed in <a href="#CCHDBIGI">Table 7-3</a>.</p>
+<div class="tblruleformal"><a id="sthref538" name="sthref538"></a><a id="CCHDBIGI" name="CCHDBIGI"></a>
+<p class="titleintable">Table 7-3 OracleWebEventProvider Public Properties</p>
+<table class="RuleFormal" title="OracleWebEventProvider Public Properties" summary="rows are public properties. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><code>BufferMode</code></p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>Inherited from <code>System.Web.Management.BufferedWebEventProvider</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p><a href="#BABCFFII">CommandTimeout</a></p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p>Gets the number of seconds that the command is allowed to execute before it is terminated with an exception</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p><code>Description</code></p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p>Inherited from <code>System.Configuration.Provider.ProviderBase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t6" headers="r1c1-t6">
+<p><code>Name</code></p>
+</td>
+<td align="left" headers="r5c1-t6 r1c2-t6">
+<p>Inherited from <code>System.Configuration.Provider.ProviderBase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t6" headers="r1c1-t6">
+<p><code>UseBuffering</code></p>
+</td>
+<td align="left" headers="r6c1-t6 r1c2-t6">
+<p>Inherited from <code>System.Web.Management.BufferedWebEventProvider</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref539" name="sthref539"></a>
+<p class="subhead1">OracleWebEventProvider Public Methods</p>
+<p><code>OracleWebEventProvider</code> public methods are listed in <a href="#CCHEFJIH">Table 7-4</a>.</p>
+<div class="tblruleformal"><a id="sthref540" name="sthref540"></a><a id="CCHEFJIH" name="CCHEFJIH"></a>
+<p class="titleintable">Table 7-4 OracleWebEventProvider Public Methods</p>
+<table class="RuleFormal" title="OracleWebEventProvider Public Methods" summary="rows are public methods. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7">Public Method</th>
+<th align="left" valign="bottom" id="r1c2-t7">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p><a href="#BABFAIGA">Initialize</a></p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<p>Initializes the <code>OracleWebEventProvider</code> instance with the property values specified in the ASP.NET application configuration file</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p><a href="#BABBEEEH">ProcessEvent</a></p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p>Processes the event passed to it as an argument</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t7" headers="r1c1-t7">
+<p><a href="#BABFDJHI">ProcessEventFlush</a></p>
+</td>
+<td align="left" headers="r4c1-t7 r1c2-t7">
+<p>Flushes the information passed to it as an argument</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t7" headers="r1c1-t7">
+<p><a href="#BABFADAG">Shutdown</a></p>
+</td>
+<td align="left" headers="r5c1-t7 r1c2-t7">
+<p>Releases all resources</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t7" headers="r1c1-t7">
+<p><code>Flush</code></p>
+</td>
+<td align="left" headers="r6c1-t7 r1c2-t7">
+<p>Inherited from <code>System.BufferedWebEventProvider</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t7" headers="r1c1-t7">
+<p><code>Equals</code>(Overloaded)</p>
+</td>
+<td align="left" headers="r7c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t7" headers="r1c1-t7">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r8c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t7" headers="r1c1-t7">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r9c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t7" headers="r1c1-t7">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r10c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+</ul>
+</div>
+<a id="BABIJDCG" name="BABIJDCG"></a>
+<hr />
+<h2 class="refsect2">OracleWebEventProvider Constructors<a id="sthref541" name="sthref541"></a></h2>
+<p>This constructor creates an instance of the <code>OracleWebEventProvider</code> class.</p>
+<a id="sthref542" name="sthref542"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#BABICBDI">OracleWebEventProvider()</a></p>
+<p>This constructor creates an instance of the <code>OracleWebEventProvider</code> class.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABICBDI" name="BABICBDI"></a>
+<h3 class="refsect3">OracleWebEventProvider()</h3>
+<p>This constructor creates an instance of the <code>OracleWebEventProvider</code> class.</p>
+<a id="sthref543" name="sthref543"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleWebEventProvider();
+</pre>
+<a id="sthref544" name="sthref544"></a>
+<p class="subhead2">Remarks</p>
+<p>This constructor creates a new instance of the <code>OracleWebEventProvider</code> class.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABGDHJC" name="BABGDHJC"></a>
+<hr />
+<h2 class="refsect2">OracleWebEventProvider Static Methods<a id="sthref545" name="sthref545"></a></h2>
+<p>The <code>OracleWebEventProvider</code> static methods are listed in <a href="#BABBDFCA">Table 7-5</a>.</p>
+<div class="tblruleformal"><a id="sthref546" name="sthref546"></a><a id="BABBDFCA" name="BABBDFCA"></a>
+<p class="titleintable">Table 7-5 OracleWebEventProvider Static Methods</p>
+<table class="RuleFormal" title="OracleWebEventProvider Static Methods" summary="rows are Static Methods. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t11">Static Methods</th>
+<th align="left" valign="bottom" id="r1c2-t11">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t11" headers="r1c1-t11">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t11 r1c2-t11">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t11" headers="r1c1-t11">
+<p><code>ReferenceEquals</code></p>
+</td>
+<td align="left" headers="r3c1-t11 r1c2-t11">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABDCAEG" name="BABDCAEG"></a>
+<hr />
+<h2 class="refsect2">OracleWebEventProvider Public Properties<a id="sthref547" name="sthref547"></a></h2>
+<p>The <code>OracleWebEventProvider</code> public properties are listed in <a href="#BABGIEGA">Table 7-6</a>.</p>
+<div class="tblruleformal"><a id="sthref548" name="sthref548"></a><a id="BABGIEGA" name="BABGIEGA"></a>
+<p class="titleintable">Table 7-6 OracleWebEventProvider Public Properties</p>
+<table class="RuleFormal" title="OracleWebEventProvider Public Properties" summary="rows are public properties. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t13">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t13" headers="r1c1-t13">
+<p><code>BufferMode</code></p>
+</td>
+<td align="left" headers="r2c1-t13 r1c2-t13">
+<p>Inherited from <code>System.Web.Management.BufferedWebEventProvider</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t13" headers="r1c1-t13">
+<p><a href="#BABCFFII">CommandTimeout</a></p>
+</td>
+<td align="left" headers="r3c1-t13 r1c2-t13">
+<p>Gets the number of seconds that the command is allowed to execute before it is terminated with an exception</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t13" headers="r1c1-t13">
+<p><code>Description</code></p>
+</td>
+<td align="left" headers="r4c1-t13 r1c2-t13">
+<p>Inherited from <code>System.Configuration.Provider.ProviderBase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t13" headers="r1c1-t13">
+<p><code>Name</code></p>
+</td>
+<td align="left" headers="r5c1-t13 r1c2-t13">
+<p>Inherited from <code>System.Configuration.Provider.ProviderBase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t13" headers="r1c1-t13">
+<p><code>UseBuffering</code></p>
+</td>
+<td align="left" headers="r6c1-t13 r1c2-t13">
+<p>Inherited from <code>System.Web.Management.BufferedWebEventProvider</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABCFFII" name="BABCFFII"></a>
+<h3 class="refsect3">CommandTimeout</h3>
+<p>This property gets the number of seconds that the command is allowed to execute before it is terminated with an exception.</p>
+<a id="sthref549" name="sthref549"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int CommandTimeout {get;}
+ 
+</pre>
+<a id="sthref550" name="sthref550"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code>.</p>
+<a id="sthref551" name="sthref551"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a provider, ASP.NET developers can set an integer value for this property through the <code>web.config</code> file using the <code>commandTimeout</code> attribute.</p>
+<p>The default value is 30 seconds. The attribute name in the configuration file is case-sensitive.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABFBAEC" name="BABFBAEC"></a>
+<hr />
+<h2 class="refsect2">OracleWebEventProvider Public Methods<a id="sthref552" name="sthref552"></a></h2>
+<p>The <code>OracleWebEventProvider</code> public methods are listed in <a href="#BABJIJGD">Table 7-7</a>.</p>
+<div class="tblruleformal"><a id="sthref553" name="sthref553"></a><a id="BABJIJGD" name="BABJIJGD"></a>
+<p class="titleintable">Table 7-7 OracleWebEventProvider Public Methods</p>
+<table class="RuleFormal" title="OracleWebEventProvider Public Methods" summary="rows are public methods. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t16">Public Method</th>
+<th align="left" valign="bottom" id="r1c2-t16">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t16" headers="r1c1-t16">
+<p><a href="#BABFAIGA">Initialize</a></p>
+</td>
+<td align="left" headers="r2c1-t16 r1c2-t16">
+<p>Initializes the <code>OracleWebEventProvider</code> instance with the property values specified in the ASP.NET application configuration file</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t16" headers="r1c1-t16">
+<p><a href="#BABBEEEH">ProcessEvent</a></p>
+</td>
+<td align="left" headers="r3c1-t16 r1c2-t16">
+<p>Processes the event passed to it as an argument</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t16" headers="r1c1-t16">
+<p><a href="#BABFDJHI">ProcessEventFlush</a></p>
+</td>
+<td align="left" headers="r4c1-t16 r1c2-t16">
+<p>Flushes the information passed to it as an argument</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t16" headers="r1c1-t16">
+<p><a href="#BABFADAG">Shutdown</a></p>
+</td>
+<td align="left" headers="r5c1-t16 r1c2-t16">
+<p>Releases all resources</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t16" headers="r1c1-t16">
+<p><code>Flush</code></p>
+</td>
+<td align="left" headers="r6c1-t16 r1c2-t16">
+<p>Inherited from <code>System.BufferedWebEventProvider</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t16" headers="r1c1-t16">
+<p><code>Equals</code>(Overloaded)</p>
+</td>
+<td align="left" headers="r7c1-t16 r1c2-t16">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t16" headers="r1c1-t16">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r8c1-t16 r1c2-t16">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t16" headers="r1c1-t16">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r9c1-t16 r1c2-t16">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t16" headers="r1c1-t16">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r10c1-t16 r1c2-t16">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABFAIGA" name="BABFAIGA"></a>
+<h3 class="refsect3">Initialize</h3>
+<p>This method initializes the <code>OracleWebEventProvider</code> instance with the property values specified in the ASP.NET application configuration file (<code>web.config</code>).</p>
+<a id="sthref554" name="sthref554"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void Initialize(string <span class="italic">name</span>, NameValueCollection <span class="italic">config</span>);
+</pre>
+<a id="sthref555" name="sthref555"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">name</span></code></p>
+<p>The name of the <code>OracleWebEventProvider</code> instance to initialize.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">config</span></code></p>
+<p>A <code>Systems.Collections.Specialized.NameValueCollection</code> object that contains the names and values of configuration options for the <code>OracleWebEventProvider</code>.</p>
+</li>
+</ul>
+<a id="sthref556" name="sthref556"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>InvalidOperationException</code> - If the <code>OracleWebEventProvider</code> instance is already initialized.</p>
+<p><code>ProviderException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code>connectionStringName</code> attribute in the configuration file is null or empty.</p>
+</li>
+<li>
+<p>The connection string corresponding to value of the <code>connectionStringName</code> attribute is null or empty.</p>
+</li>
+<li>
+<p>An unrecognized attribute is found in the configuration file.</p>
+</li>
+<li>
+<p>Another error occurs during initialization of the provider.</p>
+</li>
+</ul>
+<a id="sthref557" name="sthref557"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>Initialize</code> method is not intended to be called directly by the application.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABBEEEH" name="BABBEEEH"></a>
+<h3 class="refsect3">ProcessEvent</h3>
+<p>This method processes the event passed to it as an argument.</p>
+<a id="sthref558" name="sthref558"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void ProcessEvent(WebBaseEvent <span class="italic">eventRaised</span>);
+</pre>
+<a id="sthref559" name="sthref559"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">eventRaised</span></code></p>
+<p>The <code>WebBaseEvent</code> object to be processed.</p>
+</li>
+</ul>
+<a id="sthref560" name="sthref560"></a>
+<p class="subhead2">Remarks</p>
+<p>This method is called by ASP.NET applications to start event processing. If buffering is enabled, then the event is added to the buffer of events, otherwise, the event information is directly written into Oracle Database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABFDJHI" name="BABFDJHI"></a>
+<h3 class="refsect3">ProcessEventFlush</h3>
+<p>This method flushes the information passed to it as an argument.</p>
+<a id="sthref561" name="sthref561"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void ProcessEventFlush(WebEventBufferFlushInfo <span class="italic">flushEvent</span>);
+</pre>
+<a id="sthref562" name="sthref562"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">flushEvent</span></code></p>
+<p>The <code>WebEventBufferFlushInfo</code> object that contains a collection of buffered Web events.</p>
+</li>
+</ul>
+<a id="sthref563" name="sthref563"></a>
+<p class="subhead2">Remarks</p>
+<p>This method is called by ASP.NET applications to flush all events into Oracle Database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABFADAG" name="BABFADAG"></a>
+<h3 class="refsect3">Shutdown</h3>
+<p>This method releases all resources.</p>
+<a id="sthref564" name="sthref564"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void Shutdown();
+</pre>
+<a id="sthref565" name="sthref565"></a>
+<p class="subhead2">Remarks</p>
+<p>This method is called by ASP.NET applications when the provider is unloaded. All the buffered events are first flushed into Oracle Database before the provider proceeds with shutdown.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABIFEJG">OracleWebEventProvider Class</a></p>
+</li>
+<li>
+<p><a href="#BABEIAHJ">OracleWebEventProvider Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleWebEventProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OraclePersonalizationProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2007, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

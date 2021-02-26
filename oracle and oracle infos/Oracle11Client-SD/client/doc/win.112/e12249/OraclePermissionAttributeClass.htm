@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:17Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OraclePermissionClass.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleRowUpdatedEventArgsClass.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OraclePermissionAttribute Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OraclePermissionClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleRowUpdatedEventArgsClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CHDDJCGH" name="CHDDJCGH"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1">OraclePermissio<a id="sthref2066" name="sthref2066"></a>nAttribute Class</h1>
+<p>An <code>OraclePermissionAttribute</code> object enables ODP.NET to enforce declarative security and helps ensure that a user has a security level adequate for accessing data.</p>
+<a id="sthref2067" name="sthref2067"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>&nbsp;&nbsp;System.Object</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;System.Attribute</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Security.Permissions.SecurityAttribute</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Security.Permissions.CodeAccessSecurityAttribute</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Data.Common.DBDataPermissionAttribute</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle.DataAccess.Client.OraclePermissionAttribute</code></p>
+<a id="sthref2068" name="sthref2068"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// ADO.NET 2.0:C#
+[Serializable, AttributeUsage(AttributeTargets.Method |
+AttributeTargets.Constructor | AttributeTargets.Class | AttributeTargets.Struct |
+AttributeTargets.Assembly, AllowMultiple = true, Inherited = false)] 
+public sealed class OraclePermissionAttribute: DBDataPermissionAttribute
+</pre>
+<a id="sthref2069" name="sthref2069"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref2070" name="sthref2070"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Client</code></p>
+<p>Assembly: <code>Oracle.DataAccess</code></p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDIIHC">OraclePermissionAttribute Members</a></p>
+</li>
+<li>
+<p><a href="#CHDGBHCD">OraclePermissionAttribute Constructor</a></p>
+</li>
+<li>
+<p><a href="#CHDGGHFE">OraclePermissionAttribute Static Methods</a></p>
+</li>
+<li>
+<p><a href="#CHDBJHAC">OraclePermissionAttribute Public Properties</a></p>
+</li>
+<li>
+<p><a href="#CHDGDGDI">OraclePermissionAttribute Public Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDIIHC" name="CHDDIIHC"></a>
+<hr />
+<h2 class="refsect2">OraclePermissionAttrib<a id="sthref2071" name="sthref2071"></a>ute Members</h2>
+<p><code>OraclePermissionAttribute</code> members are listed in the following tables.</p>
+<a id="sthref2072" name="sthref2072"></a>
+<p class="subhead1">OraclePermissionAttribute Constructor</p>
+<p>The <code>OraclePermissionAttribute</code> constructor is listed in <a href="#CHDBFIAE">Table 5-94</a>.</p>
+<div class="tblruleformal"><a id="sthref2073" name="sthref2073"></a><a id="CHDBFIAE" name="CHDBFIAE"></a>
+<p class="titleintable">Table 5-94 OraclePermission Constructor</p>
+<table class="RuleFormal" title="OraclePermission Constructor" summary="Rows are constructors, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t451">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t451">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t451" headers="r1c1-t451">
+<p><a href="#CHDGBHCD">OraclePermissionAttribute Constructor</a></p>
+</td>
+<td align="left" headers="r2c1-t451 r1c2-t451">
+<p>Instantiates a new instance of the <code>OraclePermissionAttribute</code> class.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref2074" name="sthref2074"></a>
+<p class="subhead1">OraclePermissionAttribute Static Methods</p>
+<p>The <code>OraclePermissionAttribute</code> static methods are listed in <a href="#CHDFIDBA">Table 5-95</a>.</p>
+<div class="tblruleformal"><a id="sthref2075" name="sthref2075"></a><a id="CHDFIDBA" name="CHDFIDBA"></a>
+<p class="titleintable">Table 5-95 OraclePermissionAttribute Static Methods</p>
+<table class="RuleFormal" title="OraclePermissionAttribute Static Methods" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t452">Static Methods</th>
+<th align="left" valign="bottom" id="r1c2-t452">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t452" headers="r1c1-t452">
+<p><code>GetCustomAttribute</code></p>
+</td>
+<td align="left" headers="r2c1-t452 r1c2-t452">
+<p>Inherited from <code>System.Attribute</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t452" headers="r1c1-t452">
+<p><code>GetCustomAttributes</code></p>
+</td>
+<td align="left" headers="r3c1-t452 r1c2-t452">
+<p>Inherited from <code>System.Attribute</code>(Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t452" headers="r1c1-t452">
+<p><code>IsDefined</code></p>
+</td>
+<td align="left" headers="r4c1-t452 r1c2-t452">
+<p>Inherited from <code>System.Attribute</code>(Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t452" headers="r1c1-t452">
+<p><code>ReferenceEquals</code></p>
+</td>
+<td align="left" headers="r5c1-t452 r1c2-t452">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref2076" name="sthref2076"></a>
+<p class="subhead1">OraclePermissionAttribute Public Properties</p>
+<p>The <code>OraclePermissionAttribute</code> public properties are listed in <a href="#CHDHBIAE">Table 5-96</a>.</p>
+<div class="tblruleformal"><a id="sthref2077" name="sthref2077"></a><a id="CHDHBIAE" name="CHDHBIAE"></a>
+<p class="titleintable">Table 5-96 OraclePermissionAttribute Public Properties</p>
+<table class="RuleFormal" title="OraclePermissionAttribute Public Properties" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t453">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t453">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t453" headers="r1c1-t453">
+<p><code>Action</code></p>
+</td>
+<td align="left" headers="r2c1-t453 r1c2-t453">
+<p>Inherited from <code>SecurityAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t453" headers="r1c1-t453">
+<p><code>AllowBlankPassword</code></p>
+</td>
+<td align="left" headers="r3c1-t453 r1c2-t453">
+<p>Inherited from <code>DBDataPermissionAttribute</code>.</p>
+<p><code>OraclePermissionAttribute</code> ignores this property. Any value set for this property, for an <code>OraclePermissionAttribute</code> object, is ignored.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t453" headers="r1c1-t453">
+<p><code>ConnectionString</code></p>
+</td>
+<td align="left" headers="r4c1-t453 r1c2-t453">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t453" headers="r1c1-t453">
+<p><code>KeyRestrictionBehavior</code></p>
+</td>
+<td align="left" headers="r5c1-t453 r1c2-t453">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t453" headers="r1c1-t453">
+<p><code>KeyRestrictions</code></p>
+</td>
+<td align="left" headers="r6c1-t453 r1c2-t453">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t453" headers="r1c1-t453">
+<p><code>TypeId</code></p>
+</td>
+<td align="left" headers="r7c1-t453 r1c2-t453">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t453" headers="r1c1-t453">
+<p><code>Unrestricted</code></p>
+</td>
+<td align="left" headers="r8c1-t453 r1c2-t453">
+<p>Inherited from <code>SecurityAttribute</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref2078" name="sthref2078"></a>
+<p class="subhead1">OraclePermissionAttribute Public Methods</p>
+<p>The <code>OraclePermissionAttribute</code> public methods are listed in <a href="#CHDIDACH">Table 5-97</a>.</p>
+<div class="tblruleformal"><a id="sthref2079" name="sthref2079"></a><a id="CHDIDACH" name="CHDIDACH"></a>
+<p class="titleintable">Table 5-97 OraclePermissionAttribute Public Methods</p>
+<table class="RuleFormal" title="OraclePermissionAttribute Public Methods" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="47%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t454">Public Methods</th>
+<th align="left" valign="bottom" id="r1c2-t454">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t454" headers="r1c1-t454">
+<p><a href="#CHDBHGEA">CreatePermission</a></p>
+</td>
+<td align="left" headers="r2c1-t454 r1c2-t454">
+<p>Returns a new <code>OraclePermissionAttribute</code> object that is configured based on the attributes set</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t454" headers="r1c1-t454">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r3c1-t454 r1c2-t454">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t454" headers="r1c1-t454">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r4c1-t454 r1c2-t454">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t454" headers="r1c1-t454">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r5c1-t454 r1c2-t454">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t454" headers="r1c1-t454">
+<p><code>IsDefaultAttribute</code></p>
+</td>
+<td align="left" headers="r6c1-t454 r1c2-t454">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t454" headers="r1c1-t454">
+<p><code>Match</code></p>
+</td>
+<td align="left" headers="r7c1-t454 r1c2-t454">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t454" headers="r1c1-t454">
+<p><code>ShouldSerializeConnectionString</code></p>
+</td>
+<td align="left" headers="r8c1-t454 r1c2-t454">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t454" headers="r1c1-t454">
+<p><code>ShouldSerializeKeyRestrictions</code></p>
+</td>
+<td align="left" headers="r9c1-t454 r1c2-t454">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t454" headers="r1c1-t454">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r10c1-t454 r1c2-t454">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJCGH">OraclePermissionAttribute Class</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGBHCD" name="CHDGBHCD"></a>
+<hr />
+<h2 class="refsect2"><a id="sthref2080" name="sthref2080"></a><a id="sthref2081" name="sthref2081"></a>OraclePermissionAttribute Constructor</h2>
+<p>The <code>OraclePermissionAttribute</code> constructor instantiates new instances of the <code>OraclePermissionAttribute</code> class.</p>
+<a id="sthref2082" name="sthref2082"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OraclePermissionAttribute (SecurityAction <span class="italic">action</span>);
+</pre>
+<a id="sthref2083" name="sthref2083"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">action</span></code></p>
+<p>A <code>System.Security.Permissions.SecurityAction</code> value representing an action that can be performed using declarative security.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJCGH">OraclePermissionAttribute Class</a></p>
+</li>
+<li>
+<p><a href="#CHDDIIHC">OraclePermissionAttribute Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGGHFE" name="CHDGGHFE"></a>
+<hr />
+<h2 class="refsect2">OraclePermissionAttribute Static<a id="sthref2084" name="sthref2084"></a> Methods</h2>
+<p>The <code>OraclePermissionAttribute</code> static methods are listed in <a href="#CHDIECGH">Table 5-98</a>.</p>
+<div class="tblruleformal"><a id="sthref2085" name="sthref2085"></a><a id="CHDIECGH" name="CHDIECGH"></a>
+<p class="titleintable">Table 5-98 OraclePermissionAttribute Static Methods</p>
+<table class="RuleFormal" title="OraclePermissionAttribute Static Methods" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t457">Static Methods</th>
+<th align="left" valign="bottom" id="r1c2-t457">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t457" headers="r1c1-t457">
+<p><code>GetCustomAttribute</code></p>
+</td>
+<td align="left" headers="r2c1-t457 r1c2-t457">
+<p>Inherited from <code>System.Attribute</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t457" headers="r1c1-t457">
+<p><code>GetCustomAttributes</code></p>
+</td>
+<td align="left" headers="r3c1-t457 r1c2-t457">
+<p>Inherited from <code>System.Attribute</code>(Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t457" headers="r1c1-t457">
+<p><code>IsDefined</code></p>
+</td>
+<td align="left" headers="r4c1-t457 r1c2-t457">
+<p>Inherited from <code>System.Attribute</code>(Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t457" headers="r1c1-t457">
+<p><code>ReferenceEquals</code></p>
+</td>
+<td align="left" headers="r5c1-t457 r1c2-t457">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJCGH">OraclePermissionAttribute Class</a></p>
+</li>
+<li>
+<p><a href="#CHDDIIHC">OraclePermissionAttribute Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBJHAC" name="CHDBJHAC"></a>
+<hr />
+<h2 class="refsect2">OraclePermissio<a id="sthref2086" name="sthref2086"></a>nAttribute Public Properties</h2>
+<p>The <code>OraclePermissionAttribute</code> public properties are listed in <a href="#CHDBAFJE">Table 5-99</a>.</p>
+<div class="tblruleformal"><a id="sthref2087" name="sthref2087"></a><a id="CHDBAFJE" name="CHDBAFJE"></a>
+<p class="titleintable">Table 5-99 OraclePermissionAttribute Public Properties</p>
+<table class="RuleFormal" title="OraclePermissionAttribute Public Properties" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t459">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t459">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t459" headers="r1c1-t459">
+<p><code>Action</code></p>
+</td>
+<td align="left" headers="r2c1-t459 r1c2-t459">
+<p>Inherited from <code>SecurityAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t459" headers="r1c1-t459">
+<p><code>AllowBlankPassword</code></p>
+</td>
+<td align="left" headers="r3c1-t459 r1c2-t459">
+<p>Inherited from <code>DBDataPermissionAttribute</code>.</p>
+<p><code>OraclePermissionAttribute</code> ignores this property. Any value set for this property, for an <code>OraclePermissionAttribute</code> object, is ignored.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t459" headers="r1c1-t459">
+<p><code>ConnectionString</code></p>
+</td>
+<td align="left" headers="r4c1-t459 r1c2-t459">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t459" headers="r1c1-t459">
+<p><code>KeyRestrictionBehavior</code></p>
+</td>
+<td align="left" headers="r5c1-t459 r1c2-t459">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t459" headers="r1c1-t459">
+<p><code>KeyRestrictions</code></p>
+</td>
+<td align="left" headers="r6c1-t459 r1c2-t459">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t459" headers="r1c1-t459">
+<p><code>TypeId</code></p>
+</td>
+<td align="left" headers="r7c1-t459 r1c2-t459">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t459" headers="r1c1-t459">
+<p><code>Unrestricted</code></p>
+</td>
+<td align="left" headers="r8c1-t459 r1c2-t459">
+<p>Inherited from <code>SecurityAttribute</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJCGH">OraclePermissionAttribute Class</a></p>
+</li>
+<li>
+<p><a href="#CHDDIIHC">OraclePermissionAttribute Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGDGDI" name="CHDGDGDI"></a>
+<hr />
+<h2 class="refsect2">OraclePermissionAttribute Publ<a id="sthref2088" name="sthref2088"></a>ic Methods</h2>
+<p>The <code>OraclePermissionAttribute</code> public methods are listed in <a href="#CHDBBHEH">Table 5-100</a>.</p>
+<div class="tblruleformal"><a id="sthref2089" name="sthref2089"></a><a id="CHDBBHEH" name="CHDBBHEH"></a>
+<p class="titleintable">Table 5-100 OraclePermissionAttribute Public Methods</p>
+<table class="RuleFormal" title="OraclePermissionAttribute Public Methods" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="47%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t461">Public Methods</th>
+<th align="left" valign="bottom" id="r1c2-t461">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t461" headers="r1c1-t461">
+<p><a href="#CHDBHGEA">CreatePermission</a></p>
+</td>
+<td align="left" headers="r2c1-t461 r1c2-t461">
+<p>Returns a new <code>OraclePermissionAttribute</code> object that is configured based on the attributes set</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t461" headers="r1c1-t461">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r3c1-t461 r1c2-t461">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t461" headers="r1c1-t461">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r4c1-t461 r1c2-t461">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t461" headers="r1c1-t461">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r5c1-t461 r1c2-t461">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t461" headers="r1c1-t461">
+<p><code>IsDefaultAttribute</code></p>
+</td>
+<td align="left" headers="r6c1-t461 r1c2-t461">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t461" headers="r1c1-t461">
+<p><code>Match</code></p>
+</td>
+<td align="left" headers="r7c1-t461 r1c2-t461">
+<p>Inherited from <code>System.Attribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t461" headers="r1c1-t461">
+<p><code>ShouldSerializeConnectionString</code></p>
+</td>
+<td align="left" headers="r8c1-t461 r1c2-t461">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t461" headers="r1c1-t461">
+<p><code>ShouldSerializeKeyRestrictions</code></p>
+</td>
+<td align="left" headers="r9c1-t461 r1c2-t461">
+<p>Inherited from <code>DBDataPermissionAttribute</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t461" headers="r1c1-t461">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r10c1-t461 r1c2-t461">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJCGH">OraclePermissionAttribute Class</a></p>
+</li>
+<li>
+<p><a href="#CHDDIIHC">OraclePermissionAttribute Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBHGEA" name="CHDBHGEA"></a>
+<h3 class="refsect3">CreatePermission</h3>
+<p>This method returns a new <code>OraclePermissionAttribute</code> object that is configured based on the attributes set.</p>
+<a id="sthref2090" name="sthref2090"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override IPermission CreatePermission();
+</pre>
+<a id="sthref2091" name="sthref2091"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OraclePermission</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJCGH">OraclePermissionAttribute Class</a></p>
+</li>
+<li>
+<p><a href="#CHDDIIHC">OraclePermissionAttribute Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OraclePermissionClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleRowUpdatedEventArgsClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

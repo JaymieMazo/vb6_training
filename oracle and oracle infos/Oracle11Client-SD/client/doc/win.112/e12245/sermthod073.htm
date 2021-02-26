@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-21T17:54:54Z" />
+<meta name="doctitle" content="Oracle&reg; Objects for OLE Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12245-01" />
+<meta name="docid" content="OOFOL" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="sermthod072.htm" title="Previous" type="text/html" />
+<link rel="Next" href="sermthod074.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12245.pdf" title="PDF version" type="application/pdf" />
+<title>Describe Method</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Objects for OLE Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12245-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="sermthod072.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="sermthod074.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12245.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CIHFGBFA" name="CIHFGBFA"></a><a id="OOFOL523" name="OOFOL523"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1">Describe Method</h1>
+<a id="sthref1109" name="sthref1109"></a>
+<p class="titleinrefsubsect">Applies To</p>
+<p><a href="serobjch010.htm#BABGDAJI">OraDatabase Object</a></p>
+<a id="sthref1110" name="sthref1110"></a>
+<p class="titleinrefsubsect">Description</p>
+<p>Describes a schema object. This method returns an instance of the <code>OraMetaData</code> interface.</p>
+<a id="sthref1111" name="sthref1111"></a>
+<p class="titleinrefsubsect">Usage</p>
+<pre xml:space="preserve" class="oac_no_warn">OraMetaDataObj = OraDatabase.Describe(<span class="italic">SchemaObjectName</span>)
+</pre>
+<a id="sthref1112" name="sthref1112"></a>
+<p class="titleinrefsubsect">Arguments</p>
+<p>The arguments for the method are:</p>
+<div class="inftblinformal">
+<table class="Informal" title="Describe method parameter list" summary="rows are arguments, column 1 is name, column 2 description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="32%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t101">Arguments</th>
+<th align="left" valign="bottom" id="r1c2-t101">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t101" headers="r1c1-t101">[<code>in</code>] <code><span class="codeinlineitalic">SchemaObjectName</span></code></td>
+<td align="left" headers="r2c1-t101 r1c2-t101">A <code>String</code> representing the name of the schema object to be described.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<a id="sthref1113" name="sthref1113"></a>
+<p class="titleinrefsubsect">Remarks</p>
+<p>The following schema object types can be described:</p>
+<ul>
+<li>
+<p><code>Tables</code></p>
+</li>
+<li>
+<p><code>Views</code></p>
+</li>
+<li>
+<p><code>Procedures</code></p>
+</li>
+<li>
+<p><code>Functions</code></p>
+</li>
+<li>
+<p><code>Packages</code></p>
+</li>
+<li>
+<p><code>Sequences</code></p>
+</li>
+<li>
+<p><code>Collections</code> (<code>VARRAY</code>s or nested tables)</p>
+</li>
+<li>
+<p><code>Types</code></p>
+</li>
+</ul>
+<p>Describing any other schema object (for example, a column) or an invalid schema object name raises an error. You should navigate to schema objects not listed here, rather than describing them directly.</p>
+<p>This method takes the name of a schema object, such as <code>emp</code>, and returns a COM Automation object (<code>OraMetaData</code>). The <code>OraMetaData</code> object provides methods for dynamically navigating and accessing all the attributes (<code>OraMDAttribute</code> collection) of a schema object described.</p>
+<a id="sthref1114" name="sthref1114"></a>
+<p class="titleinrefsubsect">Examples</p>
+<a id="OOFOL524" name="OOFOL524"></a>
+<p class="subhead2">Simple Describe Example</p>
+<p>The following Visual Basic code illustrates a how to use the <code>Describe</code> method to retrieve and display several attributes of the <code>emp</code> table.</p>
+<pre xml:space="preserve" class="oac_no_warn">Set emp = OraDatabase.Describe("emp") 
+ 
+'Display the name of the Tablespace 
+MsgBox emp!tablespace 
+'Display name and data type of each column in the emp table. 
+Set empColumns = emp!ColumnList 
+Set ColumnList = empColumns.Value 
+ 
+for i = 0 to ColumnList.Count - 1 
+  Set Column = ColumnList(i).Value 
+  MsgBox "Column: " &amp; Column!Name &amp; " Data Type: " &amp; Column!Data Type 
+Next i 
+</pre>
+<a id="OOFOL525" name="OOFOL525"></a><a id="CIHEAACJ" name="CIHEAACJ"></a>
+<p class="subhead2">Describing a Table Example</p>
+<p>Before running the following example, make sure that you have the necessary datatypes and tables in the database. See <a href="appendix.htm#CHDDBBFE">"Schema Objects Used in OraMetaData Examples"</a>.</p>
+<pre xml:space="preserve" class="oac_no_warn">Dim OraSession As OraSession 
+Dim OraDatabase As OraDatabase 
+Dim OraDynaset As OraDynaset 
+Dim OraMetaData As OraMetaData 
+Dim OraMDAttribute As OraMDAttribute 
+Dim ColumnList As OraMetaData 
+Dim Column As OraMetaData 
+ 
+'Create the OraSession Object. 
+Set OraSession = CreateObject("OracleInProcServer.XOraSession") 
+ 
+'Create the OraDatabase Object by opening a connection to Oracle. 
+Set OraDatabase = OraSession.OpenDatabase("ExampleDB", "scott/tiger", 0&amp;) 
+ 
+'Use Describe to retrieve the metadata object 
+Set OraMetaData = OraDatabase.Describe("EMP") 
+ 
+'Display the type of the metadata 
+MsgBox TypeofMetaData &amp; OraMetaData.Type 
+ 
+'Display the count of attributes belonging to the table 
+MsgBox NumberOfAttributes &amp; OraMetaData.Count 
+ 
+'Attribute can be accessed using the explicit OraMetaData property: Attribute  
+'The index can be an integer or the attribute name 
+Set OraMDAttribute = OraMetaData.Attribute(0) 
+MsgBox "ObjectID: " &amp; OraMDAttribute.Value 
+ 
+'Since Attribute is the default property of OraMetaData, an attribute can
+' be accessed as follows. Here, we use attribute name as an index 
+Set OraMDAttribute = OraMetaData("ObjectID") 
+MsgBox "Name: " &amp; OraMDAttribute.Name 
+MsgBox "Value: " &amp; OraMDAttribute.Value 
+ 
+'Value is the default property of OraMDAttribute, the following shows 
+'the Value of property "IsClustered" for the table 
+MsgBox "Is Clustered: " &amp; OraMetaData!IsClustered 
+MsgBox "Is Partitioned: " &amp; OraMetaData!IsPartitioned 
+ 
+'Retrieve the Column List 
+Set OraMDAttribute = OraMetaData!ColumnList 
+ 
+' Use IsMDObject property to check whether an attribute's value is an OraMetaData
+If (OraMDAttribute.IsMDObject()) Then 
+       Set ColumnList = OraMDAttribute.Value 
+      'Display the name and data type of each column 
+       For I = 0 To ColumnList.Count - 1 
+        Set Column = ColumnList(I).Value 
+ 
+' Each column is again an OraMetaData 
+    MsgBox "Column: " &amp; Column!Name &amp; " data type: " &amp; Column!Data Type 
+  Next I 
+End If 
+</pre>
+<a id="OOFOL526" name="OOFOL526"></a><a id="CIHFHEHC" name="CIHFHEHC"></a>
+<p class="subhead2">Example: Describing a User-Defined Type</p>
+<p>Before running the following example, make sure that you have the necessary datatypes and tables in the database. See <a href="appendix.htm#CHDDBBFE">"Schema Objects Used in OraMetaData Examples"</a>.</p>
+<pre xml:space="preserve" class="oac_no_warn">Dim OraSession As OraSession 
+Dim OraDatabase As OraDatabase 
+Dim OraDynaset As OraDynaset 
+Dim OraMetaData As OraMetaData 
+Dim OraMDAttribute As OraMDAttribute 
+Dim attrList As OraMetaData 
+Dim attr As OraMetaData 
+ 
+'Create the OraSession Object. 
+Set OraSession = CreateObject("OracleInProcServer.XOraSession") 
+ 
+'Create the OraDatabase Object by opening a connection to Oracle. 
+Set OraDatabase = OraSession.OpenDatabase("ExampleDB", "scott/tiger",0&amp;) 
+Set OraMetaData = OraDatabase.Describe("ORAMD_ADDRESS") 
+NumAttributes = OraMetaData!NumAttributes 
+NumMethods = OraMetaData!NumMethods 
+MsgBox "The Address type has " &amp; NumAttributes &amp; " attributes" 
+MsgBox "Address Object has " &amp; NumMethods &amp; " methods" 
+ 
+'Retrieve the attribute list of this type object 
+Set attrList = OraMetaData!Attributes.Value 
+ 
+'Display the name and data type of each attribute 
+For I = 0 To attrList.Count - 1 
+  Set attr = attrList(I).Value 
+  ' each attr is actually an OraMetaData 
+  MsgBox "Attribute Name: " &amp; attr!Name 
+  MsgBox "Attribute Type: " &amp; attr!TypeName 
+ 
+Next I 
+</pre>
+<a id="OOFOL527" name="OOFOL527"></a><a id="CIHCAFAF" name="CIHCAFAF"></a>
+<p class="subhead2">Example: Describing Unknown Schema Objects</p>
+<p>Before running the following example, make sure that you have the necessary datatypes and tables in the database. See <a href="appendix.htm#CHDDBBFE">"Schema Objects Used in OraMetaData Examples"</a>.</p>
+<pre xml:space="preserve" class="oac_no_warn">Sub RecursiveDescribe(name$, xMD As OraMetaData) 
+ 
+Dim xMDAttr As OraMDAttribute 
+For I = 0 To xMD.Count - 1 
+    Set xMDAttr = xMD.Attribute(I) 
+ 
+    ' If an attribute can be described further, describe it, 
+    ' otherwise display its attribute name &amp; value 
+    If (xMDAttr.IsMDObject) Then 
+        RecursiveDescribe xMDAttr.name, xMDAttr.Value 
+    Else 
+        MsgBox name &amp; "-&gt;" &amp; xMDAttr.name &amp; " = " &amp; xMDAttr.Value 
+  End If 
+Next I 
+
+End Sub 
+Sub Main() 
+ 
+'This example displays all the attributes of any schema object given 
+Dim OraSession As OraSession 
+Dim OraDatabase As OraDatabase 
+Dim OraDynaset As OraDynaset 
+Dim xMD As OraMetaData 
+Dim x As String 
+ 
+'Create the OraSession Object. 
+Set OraSession = CreateObject("OracleInProcServer.XOraSession") 
+ 
+'Create the OraDatabase Object by opening a connection to Oracle. 
+Set OraDatabase = OraSession.OpenDatabase("ExampleDB", "scott/tiger", 0&amp;) 
+ 
+' x is any database object, here the EMP table is used as an example 
+x = "EMP" 
+Set xMD = OraDatabase.Describe(x) 
+MsgBox x &amp; " is of the type " &amp; xMD.Type 
+RecursiveDescribe x, xMD 
+
+End Sub 
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serobjch016.htm#BABFCGEJ">OraMetaData Object</a></p>
+</li>
+<li>
+<p><a href="serobjch015.htm#BABEDGEE">OraMDAttribute Object</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="sermthod072.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="sermthod074.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1994, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

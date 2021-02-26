@@ -1,0 +1,2339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-21T17:54:47Z" />
+<meta name="doctitle" content="Oracle&reg; Objects for OLE Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12245-01" />
+<meta name="docid" content="OOFOL" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="advfeat.htm" title="Previous" type="text/html" />
+<link rel="Next" href="quicktour.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12245.pdf" title="PDF version" type="application/pdf" />
+<title>Tuning and Troubleshooting</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Objects for OLE Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12245-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="advfeat.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="quicktour.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12245.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CIHCBJCA" name="CIHCBJCA"></a><a id="OOFOL0005" name="OOFOL0005"></a>
+<h1 class="chapter"><span class="secnum">5</span> Tuning and Troubleshooting</h1>
+<p>This chapter provides information about tuning, troubleshooting, and error handing in Oracle Objects for OLE (OO4O).</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#BGBEHGEF">Tips and Techniques for Performance Tuning</a></p>
+</li>
+<li>
+<p><a href="#BGBDIDAB">Oracle Objects for OLE Error Handling</a></p>
+</li>
+<li>
+<p><a href="#BGBFHDIC">Troubleshooting</a></p>
+</li>
+</ul>
+<a id="BGBEHGEF" name="BGBEHGEF"></a><a id="OOFOL244" name="OOFOL244"></a>
+<div class="sect1">
+<h2 class="sect1">Tips and Techniques for Performance Tuning</h2>
+<p>The following topics are intended to help tune the performance of applications that use Oracle Objects for OLE.</p>
+<p>This section contains these topics:</p>
+<ul>
+<li>
+<p><a href="#BACBEDBC">Early Binding of OO4O Objects</a></p>
+</li>
+<li>
+<p><a href="#BACIBIGD">Tuning and Customization</a></p>
+</li>
+<li>
+<p><a href="#BACCIIDI">Avoiding Multiple Object Reference</a></p>
+</li>
+<li>
+<p><a href="#BACDIGBD">Parameter Bindings</a></p>
+</li>
+<li>
+<p><a href="#BACCFIDD">Array Processing</a></p>
+</li>
+<li>
+<p><a href="#BACDIJAE">Using Read-Only, Forward-Only Dynaset</a></p>
+</li>
+<li>
+<p><a href="#BACJAJBA">Using the PL/SQL Bulk Collection Feature</a></p>
+</li>
+<li>
+<p><a href="#BACIIGGB">Migration from LONG RAW to LOB or BFILE</a></p>
+</li>
+<li>
+<p><a href="#BACIJGJJ">Using Connection Pooling</a></p>
+</li>
+</ul>
+<a id="BACBEDBC" name="BACBEDBC"></a><a id="OOFOL245" name="OOFOL245"></a>
+<div class="sect2">
+<h3 class="sect2">Early Binding of OO4O Objects<a id="sthref374" name="sthref374"></a><a id="sthref375" name="sthref375"></a></h3>
+<p>The early binding technique tightly typecasts OO4O objects to their native object types rather than the generic object type provided by Visual Basic. These objects are declared directly as OO4O objects, rather than as generic objects which are later reclassified as OO4O objects. Early binding improves performance by reducing frequent access to the OO4O type library. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">'Early binding of OO4O objects 
+Dim OraSession as OraSession 
+Dim OraDatabase as OraDatabase 
+Dim OraDynaset as OraDynaset 
+ 
+'Generic binding of OO4O objects 
+ 
+Dim OraSession as Object 
+Dim OraDatabase as Object 
+Dim OraDynaset as Object 
+</pre>
+<p>To use early binding of OO4O objects, the Oracle In-Process Server type library must be referenced in the Visual Basic projects.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="clients.htm#CIHBHJDF">"Using Oracle Objects for OLE Automation with Visual Basic"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BACIBIGD" name="BACIBIGD"></a><a id="OOFOL246" name="OOFOL246"></a>
+<div class="sect2">
+<h3 class="sect2">Tuning and Customization<a id="sthref376" name="sthref376"></a><a id="sthref377" name="sthref377"></a><a id="sthref378" name="sthref378"></a><a id="sthref379" name="sthref379"></a><a id="sthref380" name="sthref380"></a><a id="sthref381" name="sthref381"></a><a id="sthref382" name="sthref382"></a><a id="sthref383" name="sthref383"></a><a id="sthref384" name="sthref384"></a><a id="sthref385" name="sthref385"></a></h3>
+<p>Data access can be tuned and customized by altering the cache and fetch parameters of a dynaset. Setting the <code>FetchLimit</code> parameter to a higher value increases the number of rows that are fetched with each request, thus reducing the number of network trips to Oracle Database, and improving performance.</p>
+<p>The cost of increasing the size of the <code>FetchLimit</code> parameter is that it increases memory requirements on the client side, and causes more data to be swapped to and from the temporary cache file on disk. The proper <code>FetchLimit</code> value should be set according to the client computer configuration and the anticipated size of the query result.</p>
+<p>The <code>FetchLimit</code> value can be set in the following ways:</p>
+<ul>
+<li>
+<p>By using the <code>CreateCustomDynaset</code> method</p>
+</li>
+<li>
+<p>By modifying parameters of the OO4O entry in the Windows registry</p>
+</li>
+</ul>
+<p>For Windows, the registry key is <code>HKEY_LOCAL_MACHINE</code> and the subkey is <code>software\oracle\</code><code><span class="codeinlineitalic">KEY_</span></code><code><span class="codeinlineitalic">HOMENAME</span></code><code>\oo4o</code>, where <code><span class="codeinlineitalic">HOMENAME</span></code> is the appropriate Oracle home. The OO4O installation creates the following section in the registry:</p>
+<pre xml:space="preserve" class="oac_no_warn">"FetchLimit" = 100
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serprop047.htm#CEGBDIEE">FetchLimit Property</a></p>
+</li>
+<li>
+<p><a href="sermthod054.htm#CIHFHBEI">CreateDynaset Method</a></p>
+</li>
+<li>
+<p><a href="serobjch011.htm#BABJBBAI">OraDynaset Object</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACCIIDI" name="BACCIIDI"></a><a id="OOFOL247" name="OOFOL247"></a>
+<div class="sect2">
+<h3 class="sect2">Avoiding Multiple Object Reference<a id="sthref386" name="sthref386"></a><a id="sthref387" name="sthref387"></a><a id="sthref388" name="sthref388"></a><a id="sthref389" name="sthref389"></a><a id="sthref390" name="sthref390"></a><a id="sthref391" name="sthref391"></a><a id="sthref392" name="sthref392"></a></h3>
+<p>Improper coding techniques with unnecessary object references can also affect performance. During dynaset object navigation, you should reduce the number of object references to the <code>OraFields</code> collections and <code>OraField</code> objects. The following is an inefficient code block:</p>
+<pre xml:space="preserve" class="oac_no_warn">'Create the OraDynaset Object 
+Set OraDynaset = OraDatabase.CreateDynaset("select * from emp", 0&amp;) 
+ 
+'Traverse until EOF is reached 
+Do Until OraDynaset.EOF 
+    msgbox OraDynaset.Fields("sal").value 
+OraDynaset.MoveNext 
+Loop 
+</pre>
+<p>The <code>OraDynaset</code>, <code>OraFields</code> collections, and <code>OraField</code> objects are referenced for each iteration. Although OO4O provides improvement in handling the field collections object, multiple references to the automation object goes though the underlying OLE/COM automation layer, which slows down the execution.</p>
+<p>The following example shows how to reference fields through a field object and not through the fields collection of the dynaset. Testing has determined that this small amount of extra code greatly improves performance.</p>
+<pre xml:space="preserve" class="oac_no_warn">Dim flds() As OraField 
+Dim i, fldcount As Integer 
+ 
+' Create the OraDynaset Object 
+Set OraDynaset = OraDatabase.CreateDynaset("select * from emp", 0&amp;) 
+' Get the field count, and output the names 
+fldcount = OraDynaset.Fields.Count 
+ReDim flds(0 To fldcount - 1) 
+ 
+For i = 0 To fldcount - 1 
+Set flds(i) = OraDynaset.Fields(i) 
+Next I 
+'Traverse until EOF is reached 
+ 
+Do Until OraDynaset.EOF 
+   msgbox Flds(5).Value 
+   msgbox Flds(6).Value 
+OraDynaset.MoveNext 
+Loop 
+</pre>
+<p>Any method or object that is referenced through more than one object is potentially inefficient, but the extra coding to avoid this is not always worth the time saved. The best place to start is with field references, because they are most likely to occur multiple times.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BACDIGBD" name="BACDIGBD"></a><a id="OOFOL248" name="OOFOL248"></a>
+<div class="sect2">
+<h3 class="sect2">Parameter Bindings<a id="sthref393" name="sthref393"></a><a id="sthref394" name="sthref394"></a><a id="sthref395" name="sthref395"></a><a id="sthref396" name="sthref396"></a><a id="sthref397" name="sthref397"></a><a id="sthref398" name="sthref398"></a><a id="sthref399" name="sthref399"></a><a id="sthref400" name="sthref400"></a><a id="sthref401" name="sthref401"></a><a id="sthref402" name="sthref402"></a><a id="sthref403" name="sthref403"></a></h3>
+<p>OO4O provides a way of enabling and disabling parameter object binding at the time it processes the SQL statement. This can be done through the <code>AutoBindDisable</code> and <code>AutoBindEnable</code> methods of the <code>OraParameter</code> object. If the SQL statement does not contain the parameter name, it is better to disable the <code>OraParameter</code> object because it avoids an unnecessary reference to the parameter object. This is most effective when the application is written primarily using PL/SQL procedures. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">Set OraDatabase = OraSession. OpenDatabase("Exampledb", "scott/tiger", 0&amp;) 
+ 
+'Add the job input parameter with initial value MANAGER. 
+OraDatabase.Parameters.Add "job", "MANAGER", 1 
+ 
+'Add the deptno input parameter with initial value 10. 
+OraDatabase.Parameters.Add "deptno", 10, 1 
+ 
+'Add the job input parameter with initial value MANAGER. 
+OraDatabase.Parameters.Add "EmpCur", 0, 1 
+OraDatabase.Parameters("Empcur").ServerType = ORATYPE_CURSOR 
+ 
+'Disable the job parameter for now. 
+OraDatabase.Parameters("job").AutoBindDisable 
+ 
+set OraSqlStmt = CreateSQL("Begin GetEmpData(:Empcur, :deptno) End;",0&amp;) 
+</pre>
+<p>Note how the <code>job</code> parameter object is not referenced while processing the PL/SQL statement.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="sermthod022.htm#CIHJHCCH">AutoBindDisable Method</a></p>
+</li>
+<li>
+<p><a href="sermthod023.htm#CIHGCCJA">AutoBindEnable Method</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACCFIDD" name="BACCFIDD"></a><a id="OOFOL249" name="OOFOL249"></a>
+<div class="sect2">
+<h3 class="sect2">Array Processing<a id="sthref404" name="sthref404"></a><a id="sthref405" name="sthref405"></a><a id="sthref406" name="sthref406"></a><a id="sthref407" name="sthref407"></a><a id="sthref408" name="sthref408"></a><a id="sthref409" name="sthref409"></a><a id="sthref410" name="sthref410"></a><a id="sthref411" name="sthref411"></a><a id="sthref412" name="sthref412"></a><a id="sthref413" name="sthref413"></a><a id="sthref414" name="sthref414"></a></h3>
+<p>OO4O supports an array interface to an Oracle database through the <code>OraParamArray</code> object. The array interface enables the transfer of bulk of data in single network trip. This is especially helpful while processing a PL/SQL or SQL statement through the <code>ExecuteSQL</code> or <code>CreateSQL</code> method. For example, in order to insert 100 rows into remote database without array processing, <code>ExecuteSQL</code> or <code>CreateSQL</code> must be called 100 times, which in turn makes 100 network trips. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">For I = 1 to 100 
+   OraParameter("EMPNO").Value = xxxx 
+   OraParameter("ENAME").Value = 'yyyy' 
+   OraParameter("DEPTNO").Value = zz 
+   OraDatabase.ExecuteSql("insert into emp values (:EMPNO,:ENAME,:DEPTNO)"); 
+Next I 
+</pre>
+<p>The following example makes use of arrays and makes only one network trip.</p>
+<pre xml:space="preserve" class="oac_no_warn">'ENAMEARR,:EMPNOARR,:DEPTNOARR are parameter arrays 
+ 
+For I = 1 to 100 
+   OraParameter("EMPNOARR").Put_Value xxxx, I 
+   OraParameter("ENAMEARR").Put_Value 'yyyy' ,I 
+   OraParameter("DEPTNOARR").Put_Value zz, I 
+Next I 
+ 
+'Now call the ExecuteSQL only once 
+OraDatabase.ExecuteSql("insert into emp values(:EMPNOARR," &amp; _
+              ":ENAMEARR, :DEPTNOARR)"); 
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="serobjch019.htm#BABIDCFI">OraParamArray Object</a> for more information on using arrays</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACDIJAE" name="BACDIJAE"></a><a id="OOFOL250" name="OOFOL250"></a>
+<div class="sect2">
+<h3 class="sect2">Using Read-Only, Forward-Only Dynaset<a id="sthref415" name="sthref415"></a><a id="sthref416" name="sthref416"></a><a id="sthref417" name="sthref417"></a><a id="sthref418" name="sthref418"></a><a id="sthref419" name="sthref419"></a><a id="sthref420" name="sthref420"></a><a id="sthref421" name="sthref421"></a><a id="sthref422" name="sthref422"></a><a id="sthref423" name="sthref423"></a></h3>
+<p>If your application does not make any updates to the dynaset, then you can create a read-only dynaset with the <code>ORADYN_READONLY</code> (<code>H4</code>) option. With this option, performance improvement can be gained by eliminating the overhead of parsing SQL statements locally and reducing network trips for SQL statement execution.</p>
+<p>If your application does not need a scrollable dynaset, then you can create a forward-only dynaset with the <code>ORADYN_NOCACHE</code> (<code>H8</code>) option. With this option, performance improvement can be gained by eliminating the overhead of creating a local cache file and the overhead of reading/writing data from that file.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BACJAJBA" name="BACJAJBA"></a><a id="OOFOL251" name="OOFOL251"></a>
+<div class="sect2">
+<h3 class="sect2">Using the PL/SQL Bulk Collection Feature<a id="sthref424" name="sthref424"></a><a id="sthref425" name="sthref425"></a><a id="sthref426" name="sthref426"></a><a id="sthref427" name="sthref427"></a><a id="sthref428" name="sthref428"></a><a id="sthref429" name="sthref429"></a><a id="sthref430" name="sthref430"></a><a id="sthref431" name="sthref431"></a><a id="sthref432" name="sthref432"></a><a id="sthref433" name="sthref433"></a><a id="sthref434" name="sthref434"></a></h3>
+<p>The PL/SQL bulk collection feature enables the selecting of bulk data in a single network trip using PL/SQL anonymous blocks. The OO4O <code>OraDynaset</code> object selects arrays of data during SQL statement execution. This involves overhead such as performing more network round-trips, creating more cache files and internal objects. If you do not want to use a dynaset due to its overhead, then this feature is useful for selecting arrays of data. The data to be selected can be bound either as an <code>OraParamArray</code> object or as an <code>OraCollection</code> object.</p>
+<p>The following example illustrates PL/SQL bulk collection features using the <code>OraCollection</code> interface. It shows how arrays of <code>enames</code> are selected with one network round-trip and less overload.</p>
+<pre xml:space="preserve" class="oac_no_warn">Set OraDatabase = OraSession.OpenDatabase("<span class="italic">Exampledb</span>", "scott/tiger", 0&amp;) 
+ 
+'create a VARRAY type ENAMELIST in the database 
+OraDatabase.ExecuteSQL ("create type ENAMELIST as VARRAY(50) OF VARCHAR2(20)")
+ 
+'create a parameter for ENAMELIST VARRAY 
+OraDatabase.Parameters.Add "ENAMES", Null, ORAPARM_OUTPUT, 247,"ENAMELIST"  
+
+'execute the statement to select all the enames from ename column of emp table
+OraDatabase.ExecuteSQL ("BEGIN select ENAME bulk collect into" &amp; _ 
+                ":ENAMES from emp; END;") 
+ 
+'here OraParameter object returns EnameList OraCollection 
+Set EnameList = OraDatabase.Parameters("ENAMES").Value 
+ 
+'display all the selected enames 
+FOR I = 1 to EnameList.Size 
+   msgbox Enamelist(I) 
+NEXT I 
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="serobjch011.htm#BABJBBAI">OraDynaset Object</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BACIIGGB" name="BACIIGGB"></a><a id="OOFOL252" name="OOFOL252"></a>
+<div class="sect2">
+<h3 class="sect2">Migration from LONG RAW to LOB or BFILE<a id="sthref435" name="sthref435"></a><a id="sthref436" name="sthref436"></a><a id="sthref437" name="sthref437"></a><a id="sthref438" name="sthref438"></a><a id="sthref439" name="sthref439"></a><a id="sthref440" name="sthref440"></a><a id="sthref441" name="sthref441"></a><a id="sthref442" name="sthref442"></a><a id="sthref443" name="sthref443"></a><a id="sthref444" name="sthref444"></a><a id="sthref445" name="sthref445"></a><a id="sthref446" name="sthref446"></a></h3>
+<p>Oracle8<span class="italic">i</span> introduced the following new types described in <a href="advfeat.htm#BGBCIACB">"Using Large Objects (LOBs)"</a>:</p>
+<ul>
+<li>
+<p><code>BLOB</code></p>
+</li>
+<li>
+<p><code>CLOB</code></p>
+</li>
+<li>
+<p><code>BFILE</code></p>
+</li>
+</ul>
+<p>The design of these types allows OO4O to access them much faster than using <code>LONG</code> or <code>LONG</code> <code>RAW</code> types. For this reason, convert existing <code>LONG</code> <code>RAW</code> code to <code>BLOB</code>, <code>CLOB</code>, and <code>BFILE</code>, and only use LOBs and <code>BFILEs</code> for new applications. The OraLOB object should be used to access LOB and <code>BFILE</code> types, rather than these <code>LONG</code> <code>RAW</code> chunking methods, which are provided for backward compatibility only. Note that OraLOB offers maximum control.</p>
+<p>LOB data types differ from <code>LONG</code> and <code>LONG</code> <code>RAW</code> data types in several ways:</p>
+<ul>
+<li>
+<p>A table can contain multiple LOB columns, but can contain only one <code>LONG</code> column.</p>
+</li>
+<li>
+<p>A table containing one or more LOB columns can be partitioned, but a table containing a <code>LONG</code> column cannot be partitioned.</p>
+</li>
+<li>
+<p>The maximum size of a LOB is 4 gigabytes, but the maximum size of a <code>LONG</code> is 2 gigabytes.</p>
+</li>
+<li>
+<p>LOBs support random access to data, but <code>LONG</code>s data types support only sequential access.</p>
+</li>
+<li>
+<p>LOB data types (except <code>NCLOB</code>) can be attributes of a user-defined object type, but <code>LONG</code> data types cannot.</p>
+</li>
+<li>
+<p>LOB client-side buffering is used to optimize multiple small writes.</p>
+</li>
+<li>
+<p>LOB data can be stored in operating system files outside of database tablespaces (<code>BFILE</code> types).</p>
+</li>
+</ul>
+<p>To make migration easier, the following methods can be used with <code>BLOB</code>, <code>CLOB</code>, and <code>BFILE</code> types:</p>
+<ul>
+<li>
+<p><a href="sermthod013.htm#CIHHICBF">AppendChunk Method</a></p>
+</li>
+<li>
+<p><a href="sermthod014.htm#CIHBDAFF">AppendChunkByte Method</a></p>
+</li>
+<li>
+<p><a href="sermthod095.htm#CIHGIFFD">GetChunk Method</a></p>
+</li>
+<li>
+<p><a href="sermthod096.htm#CIHFICEE">GetChunkByte Method</a></p>
+</li>
+<li>
+<p><a href="sermthod097.htm#CIHCEGBC">GetChunkByteEx Method</a></p>
+</li>
+<li>
+<p><a href="sermthod147.htm#CIHEABJF">ReadChunk Method</a></p>
+</li>
+</ul>
+<p>For older applications using the <code>LONG</code> <code>RAW</code> chunking methods, migration should not require a lot of changes to the code. The primary code changes involve the requirement that null <code>BLOB</code> and <code>CLOB</code> types be updated with empty before being used.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BACIJGJJ" name="BACIJGJJ"></a><a id="OOFOL253" name="OOFOL253"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using Connection Pooling<a id="sthref447" name="sthref447"></a><a id="sthref448" name="sthref448"></a><a id="sthref449" name="sthref449"></a></h3>
+<p>The connection pool in OO4O is a pool of <code>OraDatabase</code> objects. An OO4O connection pool is a group of (possibly) already connected <code>OraDatabase</code> objects. For applications that require constant connections and disconnections to the database, such as ASP Web applications, using a connection pool results in enhanced performance.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="basfeat.htm#BGBGECFJ">"Using the Connection Pool Management Facility"</a></div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBDIDAB" name="BGBDIDAB"></a><a id="OOFOL254" name="OOFOL254"></a>
+<div class="sect1">
+<h2 class="sect1">Oracle Objects for OLE Error Handling<a id="sthref450" name="sthref450"></a></h2>
+<p>OO4O errors are grouped in the following categories:</p>
+<ul>
+<li>
+<p><a href="#BACFAAFI">OLE Automation Errors</a></p>
+</li>
+<li>
+<p><a href="#BACCEHAD">Nonblocking Errors</a></p>
+</li>
+<li>
+<p><a href="#BACBACHH">Find Method Parser Errors</a></p>
+</li>
+<li>
+<p><a href="#BACIBGDE">Find Method Run-Time Errors</a></p>
+</li>
+<li>
+<p><a href="#BACBFIID">OraObject Instance Errors</a></p>
+</li>
+<li>
+<p><a href="#BACBJIGE">LOB Errors</a></p>
+</li>
+<li>
+<p><a href="#BACBFBFC">Oracle Streams Advanced Queuing Errors</a></p>
+</li>
+<li>
+<p><a href="#BACFFIHJ">OraCollection Errors</a></p>
+</li>
+<li>
+<p><a href="#BACEEHHG">OraNumber Errors</a></p>
+</li>
+<li>
+<p><a href="#BACBJDHF">Oracle Errors</a></p>
+</li>
+<li>
+<p><a href="#BACFHFAI">Oracle Data Control Errors</a></p>
+</li>
+</ul>
+<a id="BACFAAFI" name="BACFAAFI"></a><a id="OOFOL255" name="OOFOL255"></a>
+<div class="sect2">
+<h3 class="sect2">OLE Automation Errors<a id="sthref451" name="sthref451"></a><a id="sthref452" name="sthref452"></a><a id="sthref453" name="sthref453"></a><a id="sthref454" name="sthref454"></a><a id="sthref455" name="sthref455"></a></h3>
+<p>The programmatic interface of the OO4O automation server is the OO4O In-Process Automation server. Errors that occur during execution of methods are frequently reported as an OLE Automation Error (<code>ERR = 440</code>, <code>ERROR$="OLE Automation Error"</code>).</p>
+<p>When an error occurs, check the <code>LastServerErr</code> property of the <code>OraSession</code> and <code>OraDatabase</code> objects to determine whether an Oracle database error has occurred. If the <code>LastServerErr</code> is not zero, then an error has been raised by the OO4O automation server.</p>
+<p>To find OO4O automation server errors, scan the string returned by the <code>ERROR$</code> function for the string <code>"OIP-NNNN"</code> where <code>NNNN</code> is an error number included in the <a href="#CIHEIFGB">Table 5-1</a>.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+These values are included in the <code>oraconst.txt</code> file in the <code><span class="codeinlineitalic">ORACLE_BASE\\ORACLE_HOME</span></code><code>\oo4o</code> directory.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro.htm#BGBCIFEJ">"Oracle Objects for OLE In-Process Automation Server"</a></p>
+</li>
+<li>
+<p><a href="serprop072.htm#CHDCIFIF">LastServerErr Property</a></p>
+</li>
+<li>
+<p><a href="serobjch023.htm#BABFCBJH">OraSession Object</a></p>
+</li>
+<li>
+<p><a href="serobjch010.htm#BABGDAJI">OraDatabase Object</a></p>
+</li>
+</ul>
+</div>
+<p><a href="#CIHEIFGB">Table 5-1</a> lists the Oracle OLE automation errors.</p>
+<div class="tblformal"><a id="OOFOL256" name="OOFOL256"></a><a id="sthref456" name="sthref456"></a><a id="CIHEIFGB" name="CIHEIFGB"></a>
+<p class="titleintable">Table 5-1 Oracle OLE Automation Errors</p>
+<table class="Formal" title="Oracle OLE Automation Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="14%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t10">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t10">Value</th>
+<th align="left" valign="bottom" id="r1c3-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t10" headers="r1c1-t10">
+<p><code>OERROR_ADVISEULINK</code></p>
+</td>
+<td align="left" headers="r2c1-t10 r1c2-t10">
+<p><code>4096</code></p>
+</td>
+<td align="left" headers="r2c1-t10 r1c3-t10">
+<p>Internal error: Invalid advisory connection.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t10" headers="r1c1-t10">
+<p><code>OERROR_POSITION</code></p>
+</td>
+<td align="left" headers="r3c1-t10 r1c2-t10">
+<p><code>4098</code></p>
+</td>
+<td align="left" headers="r3c1-t10 r1c3-t10">
+<p>An attempt was made to retrieve a field value from an empty dynaset.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOFIELDNAME</code></p>
+</td>
+<td align="left" headers="r4c1-t10 r1c2-t10">
+<p><code>4099</code></p>
+</td>
+<td align="left" headers="r4c1-t10 r1c3-t10">
+<p>An invalid field name was specified.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOFIELDINDEX</code></p>
+</td>
+<td align="left" headers="r5c1-t10 r1c2-t10">
+<p><code>4100</code></p>
+</td>
+<td align="left" headers="r5c1-t10 r1c3-t10">
+<p>An invalid field index was specified. The range of indexes is <code>0</code> to <code>FieldCount-1</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t10" headers="r1c1-t10">
+<p><code>OERROR_TRANSIP</code></p>
+</td>
+<td align="left" headers="r6c1-t10 r1c2-t10">
+<p><code>4101</code></p>
+</td>
+<td align="left" headers="r6c1-t10 r1c3-t10">
+<p>A <code>BeginTrans</code> operation was specified while a transaction was already in progress.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t10" headers="r1c1-t10">
+<p><code>OERROR_TRANSNIPC</code></p>
+</td>
+<td align="left" headers="r7c1-t10 r1c2-t10">
+<p><code>4104</code></p>
+</td>
+<td align="left" headers="r7c1-t10 r1c3-t10">
+<p>A <code>CommitTrans</code> operation was specified without first executing a <code>BeginTrans</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t10" headers="r1c1-t10">
+<p><code>OERROR_TRANSNIPR</code></p>
+</td>
+<td align="left" headers="r8c1-t10 r1c2-t10">
+<p><code>4105</code></p>
+</td>
+<td align="left" headers="r8c1-t10 r1c3-t10">
+<p>A <code>Rollback</code> operation was specified without first executing a <code>BeginTrans</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NODSET</code></p>
+</td>
+<td align="left" headers="r9c1-t10 r1c2-t10">
+<p><code>4106</code></p>
+</td>
+<td align="left" headers="r9c1-t10 r1c3-t10">
+<p>Internal error: System attempted to remove a nonexistent dynaset.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t10" headers="r1c1-t10">
+<p><code>OERROR_INVROWNUM</code></p>
+</td>
+<td align="left" headers="r10c1-t10 r1c2-t10">
+<p><code>4108</code></p>
+</td>
+<td align="left" headers="r10c1-t10 r1c3-t10">
+<p>An attempt was made to reference an invalid row. This happens when <code>EOF</code> or <code>BOF</code> is <code>True</code>, or when the current row was deleted and no record movement occurred.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t10" headers="r1c1-t10">
+<p><code>OERROR_TEMPFILE</code></p>
+</td>
+<td align="left" headers="r11c1-t10 r1c2-t10">
+<p><code>4109</code></p>
+</td>
+<td align="left" headers="r11c1-t10 r1c3-t10">
+<p>An error occurred while trying to create a temporary file for data caching.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t10" headers="r1c1-t10">
+<p><code>OERROR_DUPSESSION</code></p>
+</td>
+<td align="left" headers="r12c1-t10 r1c2-t10">
+<p><code>4110</code></p>
+</td>
+<td align="left" headers="r12c1-t10 r1c3-t10">
+<p>An attempt was made to create a named session that already exists, using the <code>CreateSession</code> or <code>CreateNamedSession</code> method.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOSESSION</code></p>
+</td>
+<td align="left" headers="r13c1-t10 r1c2-t10">
+<p><code>4111</code></p>
+</td>
+<td align="left" headers="r13c1-t10 r1c3-t10">
+<p>Internal error: System attempted to remove a nonexistent session.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOOBJECTN</code></p>
+</td>
+<td align="left" headers="r14c1-t10 r1c2-t10">
+<p><code>4112</code></p>
+</td>
+<td align="left" headers="r14c1-t10 r1c3-t10">
+<p>An attempt was made to reference a named object of a collection (other than the fields collection) that does not exist.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t10" headers="r1c1-t10">
+<p><code>OERROR_DUPCONN</code></p>
+</td>
+<td align="left" headers="r15c1-t10 r1c2-t10">
+<p><code>4113</code></p>
+</td>
+<td align="left" headers="r15c1-t10 r1c3-t10">
+<p>Internal error: Duplicate connection name.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOCONN</code></p>
+</td>
+<td align="left" headers="r16c1-t10 r1c2-t10">
+<p><code>4114</code></p>
+</td>
+<td align="left" headers="r16c1-t10 r1c3-t10">
+<p>Internal error: System attempted to remove a nonexistent connection.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t10" headers="r1c1-t10">
+<p><code>OERROR_BFINDEX</code></p>
+</td>
+<td align="left" headers="r17c1-t10 r1c2-t10">
+<p><code>4115</code></p>
+</td>
+<td align="left" headers="r17c1-t10 r1c3-t10">
+<p>An invalid field index was specified. The range of indexes is <code>0</code> to <code>Count</code> <code>-1</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t10" headers="r1c1-t10">
+<p><code>OERROR_CURNREADY</code></p>
+</td>
+<td align="left" headers="r18c1-t10 r1c2-t10">
+<p><code>4116</code></p>
+</td>
+<td align="left" headers="r18c1-t10 r1c3-t10">
+<p>Internal error: System attempted to move to a row but the dynaset does not support this operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOUPDATES</code></p>
+</td>
+<td align="left" headers="r19c1-t10 r1c2-t10">
+<p><code>4117</code></p>
+</td>
+<td align="left" headers="r19c1-t10 r1c3-t10">
+<p>An attempt was made to change the data of a nonupdatable dynaset.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOTEDITING</code></p>
+</td>
+<td align="left" headers="r20c1-t10 r1c2-t10">
+<p><code>4118</code></p>
+</td>
+<td align="left" headers="r20c1-t10 r1c3-t10">
+<p>An attempt was made to change the value of a field without first executing the <code>Edit</code> method.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t10" headers="r1c1-t10">
+<p><code>OERROR_DATACHANGE</code></p>
+</td>
+<td align="left" headers="r21c1-t10 r1c2-t10">
+<p><code>4119</code></p>
+</td>
+<td align="left" headers="r21c1-t10 r1c3-t10">
+<p>An attempt was made to edit data in the local cache, but the data on Oracle Database was changed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOBUFMEM</code></p>
+</td>
+<td align="left" headers="r22c1-t10 r1c2-t10">
+<p><code>4120</code></p>
+</td>
+<td align="left" headers="r22c1-t10 r1c3-t10">
+<p>Out of memory for data binding buffers.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t10" headers="r1c1-t10">
+<p><code>OERROR_INVBKMRK</code></p>
+</td>
+<td align="left" headers="r23c1-t10 r1c2-t10">
+<p><code>4121</code></p>
+</td>
+<td align="left" headers="r23c1-t10 r1c3-t10">
+<p>An invalid bookmark was specified.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t10" headers="r1c1-t10">
+<p><code>OERROR_BNDVNOEN</code></p>
+</td>
+<td align="left" headers="r24c1-t10 r1c2-t10">
+<p><code>4122</code></p>
+</td>
+<td align="left" headers="r24c1-t10 r1c3-t10">
+<p>Internal error: Bind variable was not enabled.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t10" headers="r1c1-t10">
+<p><code>OERROR_DUPPARAM</code></p>
+</td>
+<td align="left" headers="r25c1-t10 r1c2-t10">
+<p><code>4123</code></p>
+</td>
+<td align="left" headers="r25c1-t10 r1c3-t10">
+<p>An attempt was made to create a named parameter using the <code>Add</code> method, but that name already exists.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r26c1-t10" headers="r1c1-t10">
+<p><code>OERROR_INVARGVAL</code></p>
+</td>
+<td align="left" headers="r26c1-t10 r1c2-t10">
+<p><code>4124</code></p>
+</td>
+<td align="left" headers="r26c1-t10 r1c3-t10">
+<p>An invalid offset or length parameter was passed to the <code>GetChunk</code> method, or an internal error occurred using the <code>AppendChunk</code> method.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r27c1-t10" headers="r1c1-t10">
+<p><code>OERROR_INVFLDTYPE</code></p>
+</td>
+<td align="left" headers="r27c1-t10 r1c2-t10">
+<p><code>4125</code></p>
+</td>
+<td align="left" headers="r27c1-t10 r1c3-t10">
+<p>An attempt was made to use the <code>GetChunk</code> or <code>AppendChunk</code> method on a field that was not either <code>Long</code> or <code>Long</code> <code>Raw</code> type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r28c1-t10" headers="r1c1-t10">
+<p><code>OERROR_INVARG</code></p>
+</td>
+<td align="left" headers="r28c1-t10 r1c2-t10">
+<p><code>4126</code></p>
+</td>
+<td align="left" headers="r28c1-t10 r1c3-t10">
+<p>An invalid argument value was entered.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r29c1-t10" headers="r1c1-t10">
+<p><code>OERROR_TRANSFORUP</code></p>
+</td>
+<td align="left" headers="r29c1-t10 r1c2-t10">
+<p><code>4127</code></p>
+</td>
+<td align="left" headers="r29c1-t10 r1c3-t10">
+<p>A <code>SELECT ... FOR UPDATE operation</code> was specified without first executing the <code>BeginTrans</code> operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r30c1-t10" headers="r1c1-t10">
+<p><code>OERROR_NOTUPFORUP</code></p>
+</td>
+<td align="left" headers="r30c1-t10 r1c2-t10">
+<p><code>4128</code></p>
+</td>
+<td align="left" headers="r30c1-t10 r1c3-t10">
+<p>A <code>SELECT ... FOR UPDATE</code> operation was specified, but the query is nonupdatable.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r31c1-t10" headers="r1c1-t10">
+<p><code>OERROR_TRANSLOCK</code></p>
+</td>
+<td align="left" headers="r31c1-t10 r1c2-t10">
+<p><code>4129</code></p>
+</td>
+<td align="left" headers="r31c1-t10 r1c3-t10">
+<p>A <code>Commit</code> or <code>Rollback</code> was executed while a <code>SELECT ... FOR UPDATE</code> operation was in progress.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r32c1-t10" headers="r1c1-t10">
+<p><code>OERROR_CACHEPARM</code></p>
+</td>
+<td align="left" headers="r32c1-t10 r1c2-t10">
+<p><code>4130</code></p>
+</td>
+<td align="left" headers="r32c1-t10 r1c3-t10">
+<p>An invalid cache parameter was specified. Note that the maximum value for the <code>CacheBlocks</code> parameter is <code>127</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r33c1-t10" headers="r1c1-t10">
+<p><code>OERROR_FLDRQROWID</code></p>
+</td>
+<td align="left" headers="r33c1-t10 r1c2-t10">
+<p><code>4131</code></p>
+</td>
+<td align="left" headers="r33c1-t10 r1c3-t10">
+<p>An attempt was made to reference a field that requires a <code>ROWID</code> (<code>Long</code> or <code>Long</code> <code>Raw</code>), but the <code>ROWID</code> value was not available.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r34c1-t10" headers="r1c1-t10">
+<p><code>OERROR_OUTOFMEMORY</code></p>
+</td>
+<td align="left" headers="r34c1-t10 r1c2-t10">
+<p><code>4132</code></p>
+</td>
+<td align="left" headers="r34c1-t10 r1c3-t10">
+<p>Internal Error: Out of memory.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r35c1-t10" headers="r1c1-t10">
+<p><code>OERROR_MAXSIZE</code></p>
+</td>
+<td align="left" headers="r35c1-t10 r1c2-t10">
+<p><code>4135</code></p>
+</td>
+<td align="left" headers="r35c1-t10 r1c3-t10">
+<p>Element size specified in the <code>AddTable</code> method exceeds the maximum size allowed for that variable type. See <a href="sermthod010.htm#CIHCDEJH">"AddTable Method"</a> for more details.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r36c1-t10" headers="r1c1-t10">
+<p><code>OERROR_INVDIMENSION</code></p>
+</td>
+<td align="left" headers="r36c1-t10 r1c2-t10">
+<p><code>4136</code></p>
+</td>
+<td align="left" headers="r36c1-t10 r1c3-t10">
+<p>Dimension specified in the <code>AddTable</code> method is invalid (that is, negative). See <a href="sermthod010.htm#CIHCDEJH">"AddTable Method"</a> for more details.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r37c1-t10" headers="r1c1-t10">
+<p><code>OERROR_ARRAYSIZ</code></p>
+</td>
+<td align="left" headers="r37c1-t10 r1c2-t10">
+<p><code>4138</code></p>
+</td>
+<td align="left" headers="r37c1-t10 r1c3-t10">
+<p>Dimensions of array parameters used in the <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code> statements are not equal.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r38c1-t10" headers="r1c1-t10">
+<p><code>OERROR_ARRAYFAILP</code></p>
+</td>
+<td align="left" headers="r38c1-t10 r1c2-t10">
+<p><code>4139</code></p>
+</td>
+<td align="left" headers="r38c1-t10 r1c3-t10">
+<p>Error processing arrays. For details see the <code>oo4oerr.log</code> in the Windows directory.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r39c1-t10" headers="r1c1-t10">
+<p><code>OE_CLIPFAIL</code></p>
+</td>
+<td align="left" headers="r39c1-t10 r1c2-t10">
+<p><code>4141</code></p>
+</td>
+<td align="left" headers="r39c1-t10 r1c3-t10">
+<p>Internal error: Clipboard could not be opened or closed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r40c1-t10" headers="r1c1-t10">
+<p><code>OE_NOSOURCE</code></p>
+</td>
+<td align="left" headers="r40c1-t10 r1c2-t10">
+<p><code>4143</code></p>
+</td>
+<td align="left" headers="r40c1-t10 r1c3-t10">
+<p>No source string was provided for the <code>UpdateResource</code> method.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r41c1-t10" headers="r1c1-t10">
+<p><code>OE_INVSOURCE</code></p>
+</td>
+<td align="left" headers="r41c1-t10 r1c2-t10">
+<p><code>4144</code></p>
+</td>
+<td align="left" headers="r41c1-t10 r1c3-t10">
+<p>Invalid source type was provided for <code>UpdateSource</code> method.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r42c1-t10" headers="r1c1-t10">
+<p><code>OE_PLSQLDYN</code></p>
+</td>
+<td align="left" headers="r42c1-t10 r1c2-t10">
+<p><code>4145</code></p>
+</td>
+<td align="left" headers="r42c1-t10 r1c3-t10">
+<p>An attempt was made to set SQL property for dynaset created from PL/SQL cursor.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r43c1-t10" headers="r1c1-t10">
+<p><code>OERROR_CREATEPOOL</code></p>
+</td>
+<td align="left" headers="r43c1-t10 r1c2-t10">
+<p><code>4147</code></p>
+</td>
+<td align="left" headers="r43c1-t10 r1c3-t10">
+<p>Database pool already exists for this session.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r44c1-t10" headers="r1c1-t10">
+<p><code>OERROR_GETDB</code></p>
+</td>
+<td align="left" headers="r44c1-t10 r1c2-t10">
+<p><code>4148</code></p>
+</td>
+<td align="left" headers="r44c1-t10 r1c3-t10">
+<p>Unable to obtain a free database object from the pool.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r45c1-t10" headers="r1c1-t10">
+<p><code>OE_INVINPUTTYP</code></p>
+</td>
+<td align="left" headers="r45c1-t10 r1c2-t10">
+<p><code>4149</code></p>
+</td>
+<td align="left" headers="r45c1-t10 r1c3-t10">
+<p>Input type is not compatible with the field or parameter type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r46c1-t10" headers="r1c1-t10">
+<p><code>OE_NOEDITONCLONE</code></p>
+</td>
+<td align="left" headers="r46c1-t10 r1c2-t10">
+<p><code>4150</code></p>
+</td>
+<td align="left" headers="r46c1-t10 r1c3-t10">
+<p>An attempt was made to edit a cloned object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r47c1-t10" headers="r1c1-t10">
+<p><code>OE_BNDCHGTYPERR</code></p>
+</td>
+<td align="left" headers="r47c1-t10 r1c2-t10">
+<p><code>4152</code></p>
+</td>
+<td align="left" headers="r47c1-t10 r1c3-t10">
+<p>An attempt was made to change the type of a parameter array or an array of extended type.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BACCEHAD" name="BACCEHAD"></a><a id="OOFOL257" name="OOFOL257"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Nonblocking Errors<a id="sthref457" name="sthref457"></a><a id="sthref458" name="sthref458"></a><a id="sthref459" name="sthref459"></a><a id="sthref460" name="sthref460"></a></h3>
+<p><a href="#CIHHHAFI">Table 5-2</a> lists the nonblocking errors.</p>
+<div class="tblformal"><a id="OOFOL258" name="OOFOL258"></a><a id="sthref461" name="sthref461"></a><a id="CIHHHAFI" name="CIHHHAFI"></a>
+<p class="titleintable">Table 5-2 Nonblocking Errors</p>
+<table class="Formal" title="Nonblocking Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="18%" />
+<col width="39%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t11">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t11">Value</th>
+<th align="left" valign="bottom" id="r1c3-t11">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t11" headers="r1c1-t11">
+<p><code>OERROR_NONBLKINPROGRESS</code></p>
+</td>
+<td align="left" headers="r2c1-t11 r1c2-t11">
+<p><code>4153</code></p>
+</td>
+<td align="left" headers="r2c1-t11 r1c3-t11">
+<p>Nonblocking operation in progress.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t11" headers="r1c1-t11">
+<p><code>OERROR_NONONBLKINPROGRESS</code></p>
+</td>
+<td align="left" headers="r3c1-t11 r1c2-t11">
+<p><code>4154</code></p>
+</td>
+<td align="left" headers="r3c1-t11 r1c3-t11">
+<p>Operation is valid only when nonblocking operation is in progress.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BACBACHH" name="BACBACHH"></a><a id="OOFOL259" name="OOFOL259"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Find Method Parser Errors<a id="sthref462" name="sthref462"></a><a id="sthref463" name="sthref463"></a><a id="sthref464" name="sthref464"></a><a id="sthref465" name="sthref465"></a><a id="sthref466" name="sthref466"></a></h3>
+<p><code>Find</code> method parser errors occur when the parser cannot evaluate the expression in the <code>Find</code> method. These errors specify the part of the expression that caused the error.</p>
+<p><a href="#CIHDIJCB">Table 5-3</a> lists the <code>Find</code> method parser errors.</p>
+<div class="tblformal"><a id="OOFOL260" name="OOFOL260"></a><a id="sthref467" name="sthref467"></a><a id="CIHDIJCB" name="CIHDIJCB"></a>
+<p class="titleintable">Table 5-3 Find Method Parser Errors</p>
+<table class="Formal" title="Find Method Parser Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="14%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t12">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t12">Value</th>
+<th align="left" valign="bottom" id="r1c3-t12">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t12" headers="r1c1-t12">
+<p><code>OERROR_STACK_OVER</code></p>
+</td>
+<td align="left" headers="r2c1-t12 r1c2-t12">
+<p><code>4496</code></p>
+</td>
+<td align="left" headers="r2c1-t12 r1c3-t12">
+<p>Stack overflow.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t12" headers="r1c1-t12">
+<p><code>OERROR_SYNTAX</code></p>
+</td>
+<td align="left" headers="r3c1-t12 r1c2-t12">
+<p><code>4497</code></p>
+</td>
+<td align="left" headers="r3c1-t12 r1c3-t12">
+<p>Syntax error.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t12" headers="r1c1-t12">
+<p><code>OERROR_MISPLACED_PAREN</code></p>
+</td>
+<td align="left" headers="r4c1-t12 r1c2-t12">
+<p><code>4498</code></p>
+</td>
+<td align="left" headers="r4c1-t12 r1c3-t12">
+<p>Misplaced parenthesis.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t12" headers="r1c1-t12">
+<p><code>OERROR_MISPLACED_QUOTE</code></p>
+</td>
+<td align="left" headers="r5c1-t12 r1c2-t12">
+<p><code>4499</code></p>
+</td>
+<td align="left" headers="r5c1-t12 r1c3-t12">
+<p>Misplaced quotation marks.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t12" headers="r1c1-t12">
+<p><code>OERROR_MISSING PAREN</code></p>
+</td>
+<td align="left" headers="r6c1-t12 r1c2-t12">
+<p><code>4500</code></p>
+</td>
+<td align="left" headers="r6c1-t12 r1c3-t12">
+<p>Warning: Missing closing parenthesis.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t12" headers="r1c1-t12">
+<p><code>OERROR_EXPECTED_PAREN</code></p>
+</td>
+<td align="left" headers="r7c1-t12 r1c2-t12">
+<p><code>4501</code></p>
+</td>
+<td align="left" headers="r7c1-t12 r1c3-t12">
+<p>Open parenthesis expected.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t12" headers="r1c1-t12">
+<p><code>OERROR_PARSER_UNKNOWN</code></p>
+</td>
+<td align="left" headers="r8c1-t12 r1c2-t12">
+<p><code>4502</code></p>
+</td>
+<td align="left" headers="r8c1-t12 r1c3-t12">
+<p>Unknown parser error condition.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t12" headers="r1c1-t12">
+<p><code>OERROR_INVALID_FUNCTION</code></p>
+</td>
+<td align="left" headers="r9c1-t12 r1c2-t12">
+<p><code>4503</code></p>
+</td>
+<td align="left" headers="r9c1-t12 r1c3-t12">
+<p>Syntax not supported.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t12" headers="r1c1-t12">
+<p><code>OERROR_INVALID_COLUMN</code></p>
+</td>
+<td align="left" headers="r10c1-t12 r1c2-t12">
+<p><code>4504</code></p>
+</td>
+<td align="left" headers="r10c1-t12 r1c3-t12">
+<p>Invalid column name.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t12" headers="r1c1-t12">
+<p><code>OERROR_MAX_TOKEN</code></p>
+</td>
+<td align="left" headers="r11c1-t12 r1c2-t12">
+<p><code>4505</code></p>
+</td>
+<td align="left" headers="r11c1-t12 r1c3-t12">
+<p>Maximum size exceeded in token.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t12" headers="r1c1-t12">
+<p><code>OERROR_PARSER_DATA_TYPE</code></p>
+</td>
+<td align="left" headers="r12c1-t12 r1c2-t12">
+<p><code>4506</code></p>
+</td>
+<td align="left" headers="r12c1-t12 r1c3-t12">
+<p>Unsupported data type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t12" headers="r1c1-t12">
+<p><code>OERROR_UNEXPECTED_TOKEN</code></p>
+</td>
+<td align="left" headers="r13c1-t12 r1c2-t12">
+<p><code>4507</code></p>
+</td>
+<td align="left" headers="r13c1-t12 r1c3-t12">
+<p>Unexpected token found.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t12" headers="r1c1-t12">
+<p><code>OERROR_END_OF_CLAUSE</code></p>
+</td>
+<td align="left" headers="r14c1-t12 r1c2-t12">
+<p>4508</p>
+</td>
+<td align="left" headers="r14c1-t12 r1c3-t12">
+<p>Unexpected end of clause.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BACIBGDE" name="BACIBGDE"></a><a id="OOFOL261" name="OOFOL261"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Find Method Run-Time Errors</h3>
+<p><code>Find</code> method run-time errors occur when the system cannot evaluate a find expression. Such errors are rare. When one occurs, the parser could have generated incorrect code.</p>
+<p><a href="#CIHIBEIB">Table 5-4</a> lists the <code>Find</code> method run-time errors.</p>
+<div class="tblformal"><a id="OOFOL262" name="OOFOL262"></a><a id="sthref468" name="sthref468"></a><a id="CIHIBEIB" name="CIHIBEIB"></a>
+<p class="titleintable">Table 5-4 Find Method Run-Time Errors</p>
+<table class="Formal" title="Find Method Run-Time Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="37%" />
+<col width="10%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t13">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t13">Value</th>
+<th align="left" valign="bottom" id="r1c3-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t13" headers="r1c1-t13">
+<p><code>OERROR_INVALID_INSTR</code></p>
+</td>
+<td align="left" headers="r2c1-t13 r1c2-t13">
+<p><code>4516</code></p>
+</td>
+<td align="left" headers="r2c1-t13 r1c3-t13">
+<p>Internal error: Invalid instruction.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t13" headers="r1c1-t13">
+<p><code>OERROR_STACK_ERROR</code></p>
+</td>
+<td align="left" headers="r3c1-t13 r1c2-t13">
+<p><code>4517</code></p>
+</td>
+<td align="left" headers="r3c1-t13 r1c3-t13">
+<p>Internal error: Stack overflow or underflow.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t13" headers="r1c1-t13">
+<p><code>OERROR_CONVERT_TYPES</code></p>
+</td>
+<td align="left" headers="r4c1-t13 r1c2-t13">
+<p><code>4518</code></p>
+</td>
+<td align="left" headers="r4c1-t13 r1c3-t13">
+<p>Invalid type conversion.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t13" headers="r1c1-t13">
+<p><code>OERROR_RUNTIME_DATA_TYPE</code></p>
+</td>
+<td align="left" headers="r5c1-t13 r1c2-t13">
+<p><code>4519</code></p>
+</td>
+<td align="left" headers="r5c1-t13 r1c3-t13">
+<p>Invalid data type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t13" headers="r1c1-t13">
+<p><code>OERROR_INVALID_SQL_ARG</code></p>
+</td>
+<td align="left" headers="r6c1-t13 r1c2-t13">
+<p><code>4520</code></p>
+</td>
+<td align="left" headers="r6c1-t13 r1c3-t13">
+<p>SQL function missing an argument.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t13" headers="r1c1-t13">
+<p><code>OERROR_INVALID_COMPARE</code></p>
+</td>
+<td align="left" headers="r7c1-t13 r1c2-t13">
+<p><code>4521</code></p>
+</td>
+<td align="left" headers="r7c1-t13 r1c3-t13">
+<p>Invalid comparison.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t13" headers="r1c1-t13">
+<p><code>OERROR_SELECT_DUAL</code></p>
+</td>
+<td align="left" headers="r8c1-t13 r1c2-t13">
+<p><code>4522</code></p>
+</td>
+<td align="left" headers="r8c1-t13 r1c3-t13">
+<p><code>SELECT</code> from dual failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t13" headers="r1c1-t13">
+<p><code>OERROR_DUAL_DATATYPE</code></p>
+</td>
+<td align="left" headers="r9c1-t13 r1c2-t13">
+<p><code>4523</code></p>
+</td>
+<td align="left" headers="r9c1-t13 r1c3-t13">
+<p>Invalid data type in <code>SELECT</code> from dual.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t13" headers="r1c1-t13">
+<p><code>OER_OPER</code></p>
+</td>
+<td align="left" headers="r10c1-t13 r1c2-t13">
+<p><code>4524</code></p>
+</td>
+<td align="left" headers="r10c1-t13 r1c3-t13">
+<p>Invalid use of operator.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BACBFIID" name="BACBFIID"></a><a id="OOFOL263" name="OOFOL263"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">OraObject Instance Errors<a id="sthref469" name="sthref469"></a><a id="sthref470" name="sthref470"></a><a id="sthref471" name="sthref471"></a><a id="sthref472" name="sthref472"></a><a id="sthref473" name="sthref473"></a></h3>
+<p><a href="#CIHGFIDA">Table 5-5</a> lists the <code>OraObject</code> instance errors.</p>
+<div class="tblformal"><a id="OOFOL264" name="OOFOL264"></a><a id="sthref474" name="sthref474"></a><a id="CIHGFIDA" name="CIHGFIDA"></a>
+<p class="titleintable">Table 5-5 OraObject Instance Errors</p>
+<table class="Formal" title="OraObject Instance Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="15%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t14">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t14">Value</th>
+<th align="left" valign="bottom" id="r1c3-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t14" headers="r1c1-t14">
+<p><code>OERROR_NOOBJECT</code></p>
+</td>
+<td align="left" headers="r2c1-t14 r1c2-t14">
+<p><code>4796</code></p>
+</td>
+<td align="left" headers="r2c1-t14 r1c3-t14">
+<p>Creating an <code>OraObject</code> object instance in the client-side object cache failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t14" headers="r1c1-t14">
+<p><code>OERROR_BINDERR</code></p>
+</td>
+<td align="left" headers="r3c1-t14 r1c2-t14">
+<p><code>4797</code></p>
+</td>
+<td align="left" headers="r3c1-t14 r1c3-t14">
+<p>Binding an <code>OraObject</code> object instance to a SQL statement failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t14" headers="r1c1-t14">
+<p><code>OERROR_NOATTRNAME</code></p>
+</td>
+<td align="left" headers="r4c1-t14 r1c2-t14">
+<p><code>4798</code></p>
+</td>
+<td align="left" headers="r4c1-t14 r1c3-t14">
+<p>Getting the attribute name of an <code>OraObject</code> object instance failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t14" headers="r1c1-t14">
+<p><code>OERROR_NOATTRINDEX</code></p>
+</td>
+<td align="left" headers="r5c1-t14 r1c2-t14">
+<p><code>4799</code></p>
+</td>
+<td align="left" headers="r5c1-t14 r1c3-t14">
+<p>Getting the attribute index of an <code>OraObject</code> object instance failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t14" headers="r1c1-t14">
+<p><code>OERROR_INVINPOBJECT</code></p>
+</td>
+<td align="left" headers="r6c1-t14 r1c2-t14">
+<p><code>4801</code></p>
+</td>
+<td align="left" headers="r6c1-t14 r1c3-t14">
+<p>Invalid input object type for the binding operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t14" headers="r1c1-t14">
+<p><code>OERROR_BAD_INDICATOR</code></p>
+</td>
+<td align="left" headers="r7c1-t14 r1c2-t14">
+<p><code>4802</code></p>
+</td>
+<td align="left" headers="r7c1-t14 r1c3-t14">
+<p>Fetched <code>OraObject</code> instance has an invalid indicator structure.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t14" headers="r1c1-t14">
+<p><code>OERROR_OBJINSTNULL</code></p>
+</td>
+<td align="left" headers="r8c1-t14 r1c2-t14">
+<p><code>4803</code></p>
+</td>
+<td align="left" headers="r8c1-t14 r1c3-t14">
+<p>Operation on the <code>NULL</code> <code>OraObject</code> instance failed. See the <a href="serprop067.htm#CEGIDFJE">"IsNull (OraObject) Property"</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t14" headers="r1c1-t14">
+<p><code>OERROR_REFNULL</code></p>
+</td>
+<td align="left" headers="r9c1-t14 r1c2-t14">
+<p><code>4804</code></p>
+</td>
+<td align="left" headers="r9c1-t14 r1c3-t14">
+<p><code>Pin</code> operation on the <code>NULL</code> <code>Ref</code> value failed. See the <a href="serprop069.htm#CEGCJGEG">"IsRefNull (OraRef) Property"</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serprop067.htm#CEGIDFJE">IsNull (OraObject) Property</a></p>
+</li>
+<li>
+<p><a href="serprop069.htm#CEGCJGEG">IsRefNull (OraRef) Property</a></p>
+</li>
+<li>
+<p><a href="serobjch018.htm#BABEFFEJ">OraObject Object</a></p>
+</li>
+<li>
+<p><a href="serobjch021.htm#BABJHICF">OraRef Object</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACBJIGE" name="BACBJIGE"></a><a id="OOFOL265" name="OOFOL265"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">LOB Errors<a id="sthref475" name="sthref475"></a><a id="sthref476" name="sthref476"></a><a id="sthref477" name="sthref477"></a><a id="sthref478" name="sthref478"></a></h3>
+<p><a href="#CIHHDIHF">Table 5-6</a> lists the LOB errors.</p>
+<div class="tblformal"><a id="OOFOL266" name="OOFOL266"></a><a id="sthref479" name="sthref479"></a><a id="CIHHDIHF" name="CIHHDIHF"></a>
+<p class="titleintable">Table 5-6 LOB Errors</p>
+<table class="Formal" title="LOB Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="11%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t16">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t16">Value</th>
+<th align="left" valign="bottom" id="r1c3-t16">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t16" headers="r1c1-t16">
+<p><code>OERROR_INVSEEKPARAMS</code></p>
+</td>
+<td align="left" headers="r2c1-t16 r1c2-t16">
+<p><code>4897</code></p>
+</td>
+<td align="left" headers="r2c1-t16 r1c3-t16">
+<p>Invalid seek value is specified for the LOB read/write operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t16" headers="r1c1-t16">
+<p><code>OERROR_LOBREAD</code></p>
+</td>
+<td align="left" headers="r3c1-t16 r1c2-t16">
+<p><code>4898</code></p>
+</td>
+<td align="left" headers="r3c1-t16 r1c3-t16">
+<p><code>Read</code> operation failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t16" headers="r1c1-t16">
+<p><code>OERROR_LOBWRITE</code></p>
+</td>
+<td align="left" headers="r4c1-t16 r1c2-t16">
+<p><code>4899</code></p>
+</td>
+<td align="left" headers="r4c1-t16 r1c3-t16">
+<p><code>Write</code> operation failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t16" headers="r1c1-t16">
+<p><code>OEL_INVCLOBBUF</code></p>
+</td>
+<td align="left" headers="r5c1-t16 r1c2-t16">
+<p><code>4900</code></p>
+</td>
+<td align="left" headers="r5c1-t16 r1c3-t16">
+<p>Input buffer type for <code>CLOB</code> write operation is not string.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t16" headers="r1c1-t16">
+<p><code>OEL_INVBLOBBUF</code></p>
+</td>
+<td align="left" headers="r6c1-t16 r1c2-t16">
+<p><code>4901</code></p>
+</td>
+<td align="left" headers="r6c1-t16 r1c3-t16">
+<p>Input buffer type for <code>BLOB</code> write operation is not byte.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t16" headers="r1c1-t16">
+<p><code>OERROR_INVLOBLEN</code></p>
+</td>
+<td align="left" headers="r7c1-t16 r1c2-t16">
+<p><code>4902</code></p>
+</td>
+<td align="left" headers="r7c1-t16 r1c3-t16">
+<p>Invalid buffer length for the LOB write operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t16" headers="r1c1-t16">
+<p><code>OERROR_NOEDIT</code></p>
+</td>
+<td align="left" headers="r8c1-t16 r1c2-t16">
+<p><code>4903</code></p>
+</td>
+<td align="left" headers="r8c1-t16 r1c3-t16">
+<p><code>Write</code>, <code>Trim</code>, <code>Append</code>, <code>Copy</code> operations are not allowed in this mode.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t16" headers="r1c1-t16">
+<p><code>OERROR_INVINPUTLOB</code></p>
+</td>
+<td align="left" headers="r9c1-t16 r1c2-t16">
+<p><code>4904</code></p>
+</td>
+<td align="left" headers="r9c1-t16 r1c3-t16">
+<p>Invalid input LOB for the bind operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t16" headers="r1c1-t16">
+<p><code>OERROR_NOEDITONCLONE</code></p>
+</td>
+<td align="left" headers="r10c1-t16 r1c2-t16">
+<p><code>4905</code></p>
+</td>
+<td align="left" headers="r10c1-t16 r1c3-t16">
+<p><code>Write</code>, <code>Trim</code>, <code>Append</code>, <code>Copy</code> operations are not allowed for a cloned LOB object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t16" headers="r1c1-t16">
+<p><code>OERROR_LOBFILEOPEN</code></p>
+</td>
+<td align="left" headers="r11c1-t16 r1c2-t16">
+<p><code>4906</code></p>
+</td>
+<td align="left" headers="r11c1-t16 r1c3-t16">
+<p>Specified file could not be opened during a LOB operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t16" headers="r1c1-t16">
+<p><code>OERROR_LOBFILEIOERR</code></p>
+</td>
+<td align="left" headers="r12c1-t16 r1c2-t16">
+<p><code>4907</code></p>
+</td>
+<td align="left" headers="r12c1-t16 r1c3-t16">
+<p>File <code>Read</code> or <code>Write</code> operation failed during a LOB operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t16" headers="r1c1-t16">
+<p><code>OERROR_LOBNULL</code></p>
+</td>
+<td align="left" headers="r13c1-t16 r1c2-t16">
+<p><code>4908</code></p>
+</td>
+<td align="left" headers="r13c1-t16 r1c3-t16">
+<p>Operation on <code>NULL</code> LOB failed. See <a href="serprop066.htm#CEGCAGEI">"IsNull (OraLOB/BFILE) Property"</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serobjch006.htm#BABHEIGC">OraBLOB, OraCLOB Objects</a></p>
+</li>
+<li>
+<p><a href="serprop066.htm#CEGCAGEI">IsNull (OraLOB/BFILE) Property</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACBFBFC" name="BACBFBFC"></a><a id="OOFOL267" name="OOFOL267"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Streams Advanced Queuing Errors<a id="sthref480" name="sthref480"></a><a id="sthref481" name="sthref481"></a></h3>
+<p><a href="#CIHECBAD">Table 5-7</a> lists the Oracle Streams Advanced Queuing errors.</p>
+<div class="tblformal"><a id="OOFOL268" name="OOFOL268"></a><a id="sthref482" name="sthref482"></a><a id="CIHECBAD" name="CIHECBAD"></a>
+<p class="titleintable">Table 5-7 Oracle Streams Advanced Queuing Errors</p>
+<table class="Formal" title="Oracle Streams Advanced Queuing Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="38%" />
+<col width="12%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t18">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t18">Value</th>
+<th align="left" valign="bottom" id="r1c3-t18">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t18" headers="r1c1-t18">
+<p><code>OERROR_AQCREATEERR</code></p>
+</td>
+<td align="left" headers="r2c1-t18 r1c2-t18">
+<p><code>4996</code></p>
+</td>
+<td align="left" headers="r2c1-t18 r1c3-t18">
+<p>Error creating the <code>OraAQ</code> Object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t18" headers="r1c1-t18">
+<p><code>OERROR_MSGCREATEERR</code></p>
+</td>
+<td align="left" headers="r3c1-t18 r1c2-t18">
+<p><code>4997</code></p>
+</td>
+<td align="left" headers="r3c1-t18 r1c3-t18">
+<p>Error creating the <code>AQMsg</code> object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t18" headers="r1c1-t18">
+<p><code>OERROR_PAYLOADCREATEERR</code></p>
+</td>
+<td align="left" headers="r4c1-t18 r1c2-t18">
+<p><code>4998</code></p>
+</td>
+<td align="left" headers="r4c1-t18 r1c3-t18">
+<p>Error creating the payload object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t18" headers="r1c1-t18">
+<p><code>OERROR_MAXAGENTS</code></p>
+</td>
+<td align="left" headers="r5c1-t18 r1c2-t18">
+<p><code>4999</code></p>
+</td>
+<td align="left" headers="r5c1-t18 r1c3-t18">
+<p>Maximum number of subscribers exceeded.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t18" headers="r1c1-t18">
+<p><code>OERROR_AGENTCREATEERR</code></p>
+</td>
+<td align="left" headers="r6c1-t18 r1c2-t18">
+<p><code>5000</code></p>
+</td>
+<td align="left" headers="r6c1-t18 r1c3-t18">
+<p>Error creating the <code>AQAgent</code> object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="serobjch001.htm#BABHFDJF">OraAQ Object</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BACFFIHJ" name="BACFFIHJ"></a><a id="OOFOL269" name="OOFOL269"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">OraCollection Errors<a id="sthref483" name="sthref483"></a><a id="sthref484" name="sthref484"></a><a id="sthref485" name="sthref485"></a><a id="sthref486" name="sthref486"></a></h3>
+<p><a href="#CIHECBEC">Table 5-8</a> lists the <code>OraCollection</code> errors.</p>
+<div class="tblformal"><a id="OOFOL270" name="OOFOL270"></a><a id="sthref487" name="sthref487"></a><a id="CIHECBEC" name="CIHECBEC"></a>
+<p class="titleintable">Table 5-8 OraCollection Errors</p>
+<table class="Formal" title="OraCollection Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="41%" />
+<col width="11%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t20">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t20">Value</th>
+<th align="left" valign="bottom" id="r1c3-t20">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t20" headers="r1c1-t20">
+<p><code>OERROR_COLLINSTNULL</code></p>
+</td>
+<td align="left" headers="r2c1-t20 r1c2-t20">
+<p><code>5196</code></p>
+</td>
+<td align="left" headers="r2c1-t20 r1c3-t20">
+<p>Operation on <code>NULL</code> <code>OraCollection</code> failed. See <a href="serprop065.htm#CEGHHJIF">"IsNull (OraCollection) Property"</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t20" headers="r1c1-t20">
+<p><code>OERROR_NOELEMENT</code></p>
+</td>
+<td align="left" headers="r3c1-t20 r1c2-t20">
+<p><code>5197</code></p>
+</td>
+<td align="left" headers="r3c1-t20 r1c3-t20">
+<p>Element does not exist for the given index.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t20" headers="r1c1-t20">
+<p><code>OERROR_INVINDEX</code></p>
+</td>
+<td align="left" headers="r4c1-t20 r1c2-t20">
+<p><code>5198</code></p>
+</td>
+<td align="left" headers="r4c1-t20 r1c3-t20">
+<p>Invalid collection index is specified.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t20" headers="r1c1-t20">
+<p><code>OERROR_NODELETE</code></p>
+</td>
+<td align="left" headers="r5c1-t20 r1c2-t20">
+<p><code>5199</code></p>
+</td>
+<td align="left" headers="r5c1-t20 r1c3-t20">
+<p>Delete operation is not supported for the <code>VARRAY</code> collection type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t20" headers="r1c1-t20">
+<p><code>OERROR_SAFEARRINVELEM</code></p>
+</td>
+<td align="left" headers="r6c1-t20 r1c2-t20">
+<p><code>5200</code></p>
+</td>
+<td align="left" headers="r6c1-t20 r1c3-t20">
+<p>Variant <code>SafeArray</code> cannot be created from the collection having nonscalar element types.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serobjch008.htm#BABGFAAA">OraCollection Object</a></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><a href="serprop065.htm#CEGHHJIF">IsNull (OraCollection) Property</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACEEHHG" name="BACEEHHG"></a><a id="OOFOL271" name="OOFOL271"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">OraNumber Errors<a id="sthref488" name="sthref488"></a><a id="sthref489" name="sthref489"></a></h3>
+<p><a href="#CIHCEACG">Table 5-9</a> lists the <code>OraNumber</code> errors.</p>
+<div class="tblformal"><a id="OOFOL272" name="OOFOL272"></a><a id="sthref490" name="sthref490"></a><a id="CIHCEACG" name="CIHCEACG"></a>
+<p class="titleintable">Table 5-9 OraNumber Errors</p>
+<table class="Formal" title="OraNumber Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="10%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t22">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t22">Value</th>
+<th align="left" valign="bottom" id="r1c3-t22">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t22" headers="r1c1-t22">
+<p><code>OERROR_NULLNUMBER</code></p>
+</td>
+<td align="left" headers="r2c1-t22 r1c2-t22">
+<p><code>5296</code></p>
+</td>
+<td align="left" headers="r2c1-t22 r1c3-t22">
+<p>Operation on <code>NULL</code> <code>OraNumber</code> object failed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="serobjch017.htm#BABBJHCJ">OraNumber Object</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BACBJDHF" name="BACBJDHF"></a><a id="OOFOL273" name="OOFOL273"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Errors<a id="sthref491" name="sthref491"></a><a id="sthref492" name="sthref492"></a><a id="sthref493" name="sthref493"></a><a id="sthref494" name="sthref494"></a><a id="sthref495" name="sthref495"></a><a id="sthref496" name="sthref496"></a></h3>
+<p>The most recent Oracle error text is available from the <code>LastServerErr</code> and <code>LastServerErrText</code> properties of the <code>OraSession</code> or <code>OraDatabase</code> objects.</p>
+<ul>
+<li>
+<p><code>OraSession</code> object</p>
+<p>The <code>LastServerErr</code> and <code>LastServerErrText</code> properties of the <code>OraSession</code> object return all errors related to connections, such as errors on the <code>OpenDatabase</code> method.</p>
+</li>
+<li>
+<p><code>OraDatabase object</code></p>
+<p>The <code>LastServerErr</code> and <code>LastServerErrText</code> properties of the <code>OraDatabase</code> object return all errors related to an Oracle cursor, such as errors on the <code>CreateDynaset</code>, <code>CreateSQL</code>, and <code>ExecuteSQL</code> methods.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serprop072.htm#CHDCIFIF">LastServerErr Property</a></p>
+</li>
+<li>
+<p><a href="serprop074.htm#CHDIBDGF">LastServerErrText Property</a></p>
+</li>
+<li>
+<p><a href="serobjch023.htm#BABFCBJH">OraSession Object</a></p>
+</li>
+<li>
+<p><a href="serobjch010.htm#BABGDAJI">OraDatabase Object</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACFHFAI" name="BACFHFAI"></a><a id="OOFOL274" name="OOFOL274"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Data Control Errors<a id="sthref497" name="sthref497"></a><a id="sthref498" name="sthref498"></a><a id="sthref499" name="sthref499"></a><a id="sthref500" name="sthref500"></a></h3>
+<p>Oracle Data Control errors are specific to the Oracle data control. During the visual access of the data control, the OO4O automation server-specific errors are reported as OLE automation server errors with the error code of <code>ODCERR_AUTOMATION</code>. Specific Oracle Data Control error codes are retrieved from the <code>DataErr</code> parameter of the <code>Error()</code> event.</p>
+<p><a href="#CIHEJDJG">Table 5-10</a> lists the Oracle Data Control errors.</p>
+<div class="tblformal"><a id="OOFOL275" name="OOFOL275"></a><a id="sthref501" name="sthref501"></a><a id="CIHEJDJG" name="CIHEJDJG"></a>
+<p class="titleintable">Table 5-10 Oracle Data Control Errors</p>
+<table class="Formal" title="Oracle Data Control Errors" summary="rows are constants. first column constant name, second value, third description" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="11%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t25">Constant</th>
+<th align="left" valign="bottom" id="r1c2-t25">Value</th>
+<th align="left" valign="bottom" id="r1c3-t25">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_INITOIP</code></p>
+</td>
+<td align="left" headers="r2c1-t25 r1c2-t25">
+<p><code>28000</code></p>
+</td>
+<td align="left" headers="r2c1-t25 r1c3-t25">
+<p>Initialization of Oracle In-Process Server failed. Check the registry for the correct location of Oracle In-Process Server.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_OLEQE</code></p>
+</td>
+<td align="left" headers="r3c1-t25 r1c2-t25">
+<p><code>28001</code></p>
+</td>
+<td align="left" headers="r3c1-t25 r1c3-t25">
+<p>Internal error. Querying In-Process Server interface failed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_AUTOMATION</code></p>
+</td>
+<td align="left" headers="r4c1-t25 r1c2-t25">
+<p><code>28003</code></p>
+</td>
+<td align="left" headers="r4c1-t25 r1c3-t25">
+<p>Oracle In-Process Server error occurred.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_NODYNASET</code></p>
+</td>
+<td align="left" headers="r5c1-t25 r1c2-t25">
+<p><code>28007</code></p>
+</td>
+<td align="left" headers="r5c1-t25 r1c3-t25">
+<p>Attempted to access Oracle Data Control before initialization.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_FIELDINDEX</code></p>
+</td>
+<td align="left" headers="r6c1-t25 r1c2-t25">
+<p><code>28009</code></p>
+</td>
+<td align="left" headers="r6c1-t25 r1c3-t25">
+<p>Bound controls trying to access with invalid field index.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_FIELDNAME</code></p>
+</td>
+<td align="left" headers="r7c1-t25 r1c2-t25">
+<p><code>28013</code></p>
+</td>
+<td align="left" headers="r7c1-t25 r1c3-t25">
+<p>Bound controls tried to access with an invalid field name.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_MEMORY</code></p>
+</td>
+<td align="left" headers="r8c1-t25 r1c2-t25">
+<p><code>28014</code></p>
+</td>
+<td align="left" headers="r8c1-t25 r1c3-t25">
+<p>Internal error. Failed to allocate memory for the requested bindings from the bound control.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_BMKTYPE</code></p>
+</td>
+<td align="left" headers="r9c1-t25 r1c2-t25">
+<p><code>28015</code></p>
+</td>
+<td align="left" headers="r9c1-t25 r1c3-t25">
+<p>Oracle Data Control does not support the requested bookmark type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_CONVERSION</code></p>
+</td>
+<td align="left" headers="r10c1-t25 r1c2-t25">
+<p><code>28016</code></p>
+</td>
+<td align="left" headers="r10c1-t25 r1c3-t25">
+<p>Oracle Data Control cannot convert the field value to the requested type.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_SETSESSION</code></p>
+</td>
+<td align="left" headers="r11c1-t25 r1c2-t25">
+<p><code>28017</code></p>
+</td>
+<td align="left" headers="r11c1-t25 r1c3-t25">
+<p>Setting the session property is not allowed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_SETDATABASE</code></p>
+</td>
+<td align="left" headers="r12c1-t25 r1c2-t25">
+<p><code>28018</code></p>
+</td>
+<td align="left" headers="r12c1-t25 r1c3-t25">
+<p>Setting the database property is not allowed.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_BLOBUPDATE</code></p>
+</td>
+<td align="left" headers="r13c1-t25 r1c2-t25">
+<p><code>28019</code></p>
+</td>
+<td align="left" headers="r13c1-t25 r1c3-t25">
+<p>Oracle Data Control does not update picture or raw data directly from the bound control. Use <code>AppendChunk()</code> method.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_DYN_NOCACHE</code></p>
+</td>
+<td align="left" headers="r14c1-t25 r1c2-t25">
+<p><code>28020</code></p>
+</td>
+<td align="left" headers="r14c1-t25 r1c3-t25">
+<p><code>Recordset</code> property cannot be set to a dynaset created with the <code>ORADYN_NOCACHE</code> option (bound control connected to data control often requires bidirectional navigation).</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t25" headers="r1c1-t25">
+<p><code>ODCERR_DYN_NOMOVEFIRST</code></p>
+</td>
+<td align="left" headers="r15c1-t25 r1c2-t25">
+<p><code>28021</code></p>
+</td>
+<td align="left" headers="r15c1-t25 r1c3-t25">
+<p><code>Recordset</code> property cannot be set to a dynaset created with the <code>ORADYN_NOMOVEFIRST</code> option.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="sermthod013.htm#CIHHICBF">AppendChunk Method</a></div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBFHDIC" name="BGBFHDIC"></a><a id="OOFOL276" name="OOFOL276"></a>
+<div class="sect1">
+<h2 class="sect1">Troubleshooting<a id="sthref502" name="sthref502"></a><a id="sthref503" name="sthref503"></a></h2>
+<p>This topic describes common errors related to the following:</p>
+<ul>
+<li>
+<p><a href="#BACCHCFG">OLE Initialization or OLE Automation Errors</a></p>
+</li>
+<li>
+<p><a href="#BACBHEJE">Oracle Network Errors</a></p>
+</li>
+<li>
+<p><a href="#BACEHGJJ">Access Violations</a></p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink ERRMG" href="http://www.oracle.com/pls/db102/lookup?id=ERRMG"><span class="italic">Oracle Database Error Messages</span></a> for additional information about errors</div>
+<a id="BACCHCFG" name="BACCHCFG"></a><a id="OOFOL277" name="OOFOL277"></a>
+<div class="sect2">
+<h3 class="sect2">OLE Initialization or OLE Automation Errors<a id="sthref504" name="sthref504"></a><a id="sthref505" name="sthref505"></a><a id="sthref506" name="sthref506"></a><a id="sthref507" name="sthref507"></a></h3>
+<p>The most frequent cause of OLE initialization and automation errors is missing or incorrectly installed software. Ensure correct installation of the software specified. Then make sure that you have specified method and property names correctly and that you have declared all Oracle objects as type object.</p>
+<p><a href="#CIHIEJIG">Table 5-11</a> lists the causes and solutions for OLE errors.</p>
+<div class="tblformal"><a id="OOFOL278" name="OOFOL278"></a><a id="sthref508" name="sthref508"></a><a id="CIHIEJIG" name="CIHIEJIG"></a>
+<p class="titleintable">Table 5-11 Causes and Solutions for OLE Errors</p>
+<table class="Formal" title="Causes and Solutions for OLE Errors" summary="rows are causes and solutions. column 1 is possible cause, column 2 is possible soutions" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t28">Possible Cause</th>
+<th align="left" valign="bottom" id="r1c2-t28">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t28" headers="r1c1-t28">
+<p>Your system does not contain the Microsoft OLE Automation or run-time, files or these files are out of date.</p>
+</td>
+<td align="left" headers="r2c1-t28 r1c2-t28">
+<p>Make sure you have the latest versions of files such as the following installed.</p>
+<ul>
+<li>
+<p><code>mfc42.dll</code></p>
+</li>
+<li>
+<p><code>oleaut32.dll</code></p>
+</li>
+<li>
+<p><code>ole32.dll</code></p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t28" headers="r1c1-t28">
+<p>The Oracle Objects for OLE object information was not registered in the Windows registration database.</p>
+</td>
+<td align="left" headers="r3c1-t28 r1c2-t28">
+<p>Either reinstall Oracle Objects for OLE or run the <code>regedt32.exe</code> file to register information. See <a href="intro.htm#BGBDDACA">"Oracle Objects for OLE Redistributable Files"</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t28" headers="r1c1-t28">
+<p>Your system does not contain the Oracle Required Support Files:</p>
+<ul>
+<li>
+<p><code>oraclient*.dll</code></p>
+</li>
+<li>
+<p><code>orageneric*.dll</code></p>
+</li>
+<li>
+<p><code>oracommon*.dll</code></p>
+</li>
+<li>
+<p><code>oracore*.dll</code></p>
+</li>
+<li>
+<p><code>oranls*.dll</code></p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r4c1-t28 r1c2-t28">
+<p>Check the OO4O readme.htm file to see what version of the Oracle Database client is required and install it.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t28" headers="r1c1-t28">
+<p>Your system does not contain the Oracle networking product or its files are not on the PATH.</p>
+</td>
+<td align="left" headers="r5c1-t28 r1c2-t28">
+<p>Install an Oracle networking product, or add to your PATH an environment variable that indicates the directory containing these files.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t28" headers="r1c1-t28">
+<p>You misspelled a method or property name.</p>
+</td>
+<td align="left" headers="r6c1-t28 r1c2-t28">
+<p>Check <span class="italic">Oracle Objects for OLE Developer's Guide</span> (this guide) to determine the correct spelling.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t28" headers="r1c1-t28">
+<p>You referenced a method or property from the wrong object.</p>
+</td>
+<td align="left" headers="r7c1-t28 r1c2-t28">
+<p>Check <span class="italic">Oracle Objects for OLE Developer's Guide</span> (this guide) to determine the correct object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t28" headers="r1c1-t28">
+<p>Your system does not contain the <code>oraansi</code><code><span class="codeinlineitalic">VER</span></code><code>.dll</code> file.</p>
+</td>
+<td align="left" headers="r8c1-t28 r1c2-t28">
+<p>Reinstall Oracle Objects for OLE or add to your <code>PATH</code> environment variable the directory in which these files are located.</p>
+<p>Note: <code><span class="codeinlineitalic">VER</span></code> refers to the version.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="intro.htm#BGBDDACA">"Oracle Objects for OLE Redistributable Files"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BACBHEJE" name="BACBHEJE"></a><a id="OOFOL279" name="OOFOL279"></a>
+<div class="sect2">
+<h3 class="sect2">Oracle Network Errors<a id="sthref509" name="sthref509"></a><a id="sthref510" name="sthref510"></a><a id="sthref511" name="sthref511"></a><a id="sthref512" name="sthref512"></a></h3>
+<p>The most frequent cause of Oracle network errors is incorrectly specified connection information. The connection information for Oracle Objects for OLE is specified differently than when using Open Database Connectivity (ODBC). Please verify that you specified connection information correctly, and then make sure your network connection is working properly before using Oracle Objects for OLE. The appropriate Oracle network documentation contains information about testing your connection and about any Oracle networking error that you may receive.</p>
+<p><a href="#CIHIHEBF">Table 5-12</a> lists the Oracle network errors.</p>
+<div class="tblformal"><a id="OOFOL280" name="OOFOL280"></a><a id="sthref513" name="sthref513"></a><a id="CIHIHEBF" name="CIHIHEBF"></a>
+<p class="titleintable">Table 5-12 Oracle Networking Errors</p>
+<table class="Formal" title="Oracle Networking Errors" summary="rows are causes and solutions. column 1 is possible cause, column 2 is possible soutions" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="38%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t30">Possible Cause</th>
+<th align="left" valign="bottom" id="r1c2-t30">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t30" headers="r1c1-t30">
+<p>Incorrect <code>Connect</code> property or argument to the <code>OpenDatabase</code> method.</p>
+</td>
+<td align="left" headers="r2c1-t30 r1c2-t30">
+<p>See the topics on the <code>Connect</code> property or the <code>OpenDatabase</code> method for examples.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t30" headers="r1c1-t30">
+<p>Incorrect <code>DatabaseName</code> property or argument to the <code>OpenDatabase</code> method.</p>
+</td>
+<td align="left" headers="r3c1-t30 r1c2-t30">
+<p>See the topics on the <code>DatabaseName</code> property or the <code>OpenDatabase</code> method for examples.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t30" headers="r1c1-t30">
+<p>Your system does not contain the Oracle networking product.</p>
+</td>
+<td align="left" headers="r4c1-t30 r1c2-t30">
+<p>Install Oracle networking software.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serprop015.htm#CHDDABFG">Connect Property</a></p>
+</li>
+<li>
+<p><a href="serprop026.htm#CHDGGGJG">DatabaseName Property</a></p>
+</li>
+<li>
+<p><a href="sermthod141.htm#CIHCBJHD">OpenDatabase Method</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="BACEHGJJ" name="BACEHGJJ"></a><a id="OOFOL281" name="OOFOL281"></a>
+<div class="sect2">
+<h3 class="sect2">Access Violations<a id="sthref514" name="sthref514"></a><a id="sthref515" name="sthref515"></a><a id="sthref516" name="sthref516"></a><a id="sthref517" name="sthref517"></a></h3>
+<p>The most frequent cause of access violations is installing Oracle Objects for OLE while other applications are running that require the OO4O automation server, Oracle Required Support Files, or OLE. To avoid this, install Oracle Objects for OLE immediately after starting Windows and before running any other application.</p>
+<p><a href="#CIHFFAAA">Table 5-13</a> lists the access violations.</p>
+<div class="tblformal"><a id="OOFOL282" name="OOFOL282"></a><a id="sthref518" name="sthref518"></a><a id="CIHFFAAA" name="CIHFFAAA"></a>
+<p class="titleintable">Table 5-13 Access Violations</p>
+<table class="Formal" title="Access Violations" summary="rows are causes and solutions. column 1 is possible cause, column 2 is possible soutions" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t32">Possible Cause</th>
+<th align="left" valign="bottom" id="r1c2-t32">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t32" headers="r1c1-t32">
+<p>Duplicate Oracle Objects for OLE files exist in <code>SYSTEM</code> directories or along the <code>PATH</code>.</p>
+</td>
+<td align="left" headers="r2c1-t32 r1c2-t32">
+<p>Remove any duplicate files. The files oip<code><span class="codeinlineitalic">VER</span></code><code>.dll</code> and oip<code><span class="codeinlineitalic">VER</span></code><code>.tlb</code> should only be located in the <code><span class="codeinlineitalic">ORACLE_BASE\\ORACLE_HOME</span></code><code>\bin</code> directory.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t32" headers="r1c1-t32">
+<p>Duplicate Oracle Required Support Files DLLs exist in the <code>SYSTEM</code> directories or along the <code>PATH</code>.</p>
+</td>
+<td align="left" headers="r3c1-t32 r1c2-t32">
+<p>Remove any duplicate files. Typically, the Oracle Required Support Files DLLs are located in the <code><span class="codeinlineitalic">ORACLE_BASE\\ORACLE_HOME</span></code> <code>\bin</code> directory:</p>
+<ul>
+<li>
+<p><code>oraclient*.dll</code></p>
+</li>
+<li>
+<p><code>orageneric*.dll</code></p>
+</li>
+<li>
+<p><code>oracommon*.dll</code></p>
+</li>
+<li>
+<p><code>oracore*.dll</code></p>
+</li>
+<li>
+<p><code>oranls*.dll</code></p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t32" headers="r1c1-t32">
+<p>Duplicate OLE DLLs exist in the <code>SYSTEM</code> directories or along the <code>PATH</code>.</p>
+</td>
+<td align="left" headers="r4c1-t32 r1c2-t32">
+<p>Remove any duplicate files. The OLE DLLs (listed in the OO4O File Locations section) should only be located in <code>\system</code> directories.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="intro.htm#CIHCEGAF">"Oracle Objects for OLE File Locations"</a></div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="advfeat.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="quicktour.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1994, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

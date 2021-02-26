@@ -1,0 +1,3 @@
+http://hrdinfoonline/
+
+http://hrdinfoonline:8080/hrdwebportal/

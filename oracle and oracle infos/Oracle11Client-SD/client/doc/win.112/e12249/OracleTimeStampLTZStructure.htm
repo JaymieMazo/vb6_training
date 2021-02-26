@@ -1,0 +1,4339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:39Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleTimeStampStructure.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleTimeStampTZStructure.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleTimeStampLTZ Structure</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleTimeStampStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleTimeStampTZStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="i1017022" name="i1017022"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1"><a name="ODPNT0003" id="ODPNT0003"></a><a id="sthref5500" name="sthref5500"></a>OracleTimeStampLTZ Structure</h1>
+<p>The <code>OracleTimeStampLTZ</code> structure represents the Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> data type to be stored in or retrieved from a database. Each <code>OracleTimeStampLTZ</code> stores the following information: year, month, day, hour, minute, second, and nanosecond.</p>
+<a id="sthref5501" name="sthref5501"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.ValueType</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;Oracle.DataAccess.Types.OracleTimeStampLTZ</code></p>
+<a id="sthref5502" name="sthref5502"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// ADO.NET 2.0: C#
+public struct OracleTimeStampLTZ : IComparable, INullable, IXmlSerializable
+</pre>
+<a id="sthref5503" name="sthref5503"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref5504" name="sthref5504"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+using Oracle.DataAccess.Client;
+ 
+class OracleTimeStampLTZSample
+{
+  static void Main()
+  {
+    // Illustrates usage of OracleTimeStampLTZ
+    // Display Local Time Zone Name
+    Console.WriteLine("Local Time Zone Name = " +
+      OracleTimeStampLTZ.GetLocalTimeZoneName());
+    OracleTimeStampLTZ tsLocal1 = OracleTimeStampLTZ.GetSysDate();
+    OracleTimeStampLTZ tsLocal2 = DateTime.Now;
+    
+    // Calculate the difference between tsLocal1 and tsLocal2
+    OracleIntervalDS idsDiff = tsLocal2.GetDaysBetween(tsLocal1);
+    
+    // Calculate the difference using AddNanoseconds()
+    int nanoDiff = 0;
+    while (tsLocal2 &gt; tsLocal1)
+    {
+      nanoDiff += 10;
+      tsLocal1 = tsLocal1.AddNanoseconds(10);
+    }
+    Console.WriteLine("idsDiff.Nanoseconds = " + idsDiff.Nanoseconds);
+    Console.WriteLine("nanoDiff = " + nanoDiff);
+  }
+}
+</pre>
+<a id="sthref5505" name="sthref5505"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Types</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+<li>
+<p><a href="#i1017646">OracleTimeStampLTZ Constructors</a></p>
+</li>
+<li>
+<p><a href="#i1017992">OracleTimeStampLTZ Static Fields</a></p>
+</li>
+<li>
+<p><a href="#i1018128">OracleTimeStampLTZ Static Methods</a></p>
+</li>
+<li>
+<p><a href="#i1018635">OracleTimeStampLTZ Static Operators</a></p>
+</li>
+<li>
+<p><a href="#i1019212">OracleTimeStampLTZ Static Type Conversions</a></p>
+</li>
+<li>
+<p><a href="#i1019567">OracleTimeStampLTZ Properties</a></p>
+</li>
+<li>
+<p><a href="#i1019989">OracleTimeStampLTZ Methods</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017104" name="i1017104"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Members<a id="sthref5506" name="sthref5506"></a></h2>
+<p><code>OracleTimeStampLTZ</code> members are listed in the following tables:</p>
+<a id="sthref5507" name="sthref5507"></a>
+<p class="subhead1">OracleTimeStampLTZ Constructors</p>
+<p><code>OracleTimeStampLTZ</code> constructors are listed in <a href="#g1310815">Table 14-100</a></p>
+<div class="tblruleformal"><a id="sthref5508" name="sthref5508"></a><a id="g1310815" name="g1310815"></a>
+<p class="titleintable">Table 14-100 OracleTimeStampLTZConstructors</p>
+<table class="RuleFormal" title="OracleTimeStampLTZConstructors" summary="Rows are constructors. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t531">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t531">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t531" headers="r1c1-t531">
+<p><a href="#i1017646">OracleTimeStampLTZ Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t531 r1c2-t531">
+<p>Instantiates a new instance of <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5509" name="sthref5509"></a>
+<p class="subhead1">OracleTimeStampLTZ Static Fields</p>
+<p>The <code>OracleTimeStampLTZ</code> static fields are listed in <a href="#g1310825">Table 14-101</a>.</p>
+<div class="tblruleformal"><a id="sthref5510" name="sthref5510"></a><a id="g1310825" name="g1310825"></a>
+<p class="titleintable">Table 14-101 OracleTimeStampLTZ Static Fields</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t532">Field</th>
+<th align="left" valign="bottom" id="r1c2-t532">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t532" headers="r1c1-t532">
+<p><a href="#i1018052">MaxValue</a></p>
+</td>
+<td align="left" headers="r2c1-t532 r1c2-t532">
+<p>Represents the maximum valid date for an <code>OracleTimeStampLTZ</code> structure, which is December 31, 9999 23:59:59.999999999</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t532" headers="r1c1-t532">
+<p><a href="#i1301488">MinValue</a></p>
+</td>
+<td align="left" headers="r3c1-t532 r1c2-t532">
+<p>Represents the minimum valid date for an <code>OracleTimeStampLTZ</code> structure, which is January 1, -4712 0:0:0</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t532" headers="r1c1-t532">
+<p><a href="#i1018104">Null</a></p>
+</td>
+<td align="left" headers="r4c1-t532 r1c2-t532">
+<p>Represents a null value that can be assigned to an instance of the <code>OracleTimeStampLTZ</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5511" name="sthref5511"></a>
+<p class="subhead1">OracleTimeStampLTZ Static Methods</p>
+<p>The <code>OracleTimeStampLTZ</code> static methods are listed in <a href="#g1310841">Table 14-102</a>.</p>
+<div class="tblruleformal"><a id="sthref5512" name="sthref5512"></a><a id="g1310841" name="g1310841"></a>
+<p class="titleintable">Table 14-102 OracleTimeStampLTZ Static Methods</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t533">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t533">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t533" headers="r1c1-t533">
+<p><a href="#i1018244">Equals</a></p>
+</td>
+<td align="left" headers="r2c1-t533 r1c2-t533">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t533" headers="r1c1-t533">
+<p><a href="#i1018279">GetLocalTimeZoneName</a></p>
+</td>
+<td align="left" headers="r3c1-t533 r1c2-t533">
+<p>Gets the client's local time zone name</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t533" headers="r1c1-t533">
+<p><a href="#i1018305">GetLocalTimeZoneOffset</a></p>
+</td>
+<td align="left" headers="r4c1-t533 r1c2-t533">
+<p>Gets the client's local time zone offset relative to UTC</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t533" headers="r1c1-t533">
+<p><a href="#i1018331">GetSysDate</a></p>
+</td>
+<td align="left" headers="r5c1-t533 r1c2-t533">
+<p>Gets an <code>OracleTimeStampLTZ</code> structure that represents the current date and time</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t533" headers="r1c1-t533">
+<p><a href="#i1018357">GreaterThan</a></p>
+</td>
+<td align="left" headers="r6c1-t533 r1c2-t533">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t533" headers="r1c1-t533">
+<p><a href="#i1018392">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r7c1-t533 r1c2-t533">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t533" headers="r1c1-t533">
+<p><a href="#i1018427">LessThan</a></p>
+</td>
+<td align="left" headers="r8c1-t533 r1c2-t533">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t533" headers="r1c1-t533">
+<p><a href="#i1018462">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r9c1-t533 r1c2-t533">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t533" headers="r1c1-t533">
+<p><a href="#i1018497">NotEquals</a></p>
+</td>
+<td align="left" headers="r10c1-t533 r1c2-t533">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t533" headers="r1c1-t533">
+<p><a href="#i1018532">Parse</a></p>
+</td>
+<td align="left" headers="r11c1-t533 r1c2-t533">
+<p>Gets an <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using the supplied string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t533" headers="r1c1-t533">
+<p><a href="#i1018598">SetPrecision</a></p>
+</td>
+<td align="left" headers="r12c1-t533 r1c2-t533">
+<p>Returns a new instance of an <code>OracleTimeStampLTZ</code> with the specified fractional second precision</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5513" name="sthref5513"></a>
+<p class="subhead1">OracleTimeStampLTZ Static Operators</p>
+<p>The <code>OracleTimeStampLTZ</code> static operators are listed in <a href="#g1310881">Table 14-103</a>.</p>
+<div class="tblruleformal"><a id="sthref5514" name="sthref5514"></a><a id="g1310881" name="g1310881"></a>
+<p class="titleintable">Table 14-103 OracleTimeStampLTZ Static Operators</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Operators " summary="Rows are static operators. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t534">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t534">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t534" headers="r1c1-t534">
+<p><a href="#i1018730">operator+</a></p>
+</td>
+<td align="left" headers="r2c1-t534 r1c2-t534">
+<p>Adds the supplied instance value to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t534" headers="r1c1-t534">
+<p><a href="#i1018866">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t534 r1c2-t534">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t534" headers="r1c1-t534">
+<p><a href="#i1018901">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t534 r1c2-t534">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t534" headers="r1c1-t534">
+<p><a href="#i1018936">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t534 r1c2-t534">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t534" headers="r1c1-t534">
+<p><a href="#i1018971">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t534 r1c2-t534">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t534" headers="r1c1-t534">
+<p><a href="#i1019006">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t534 r1c2-t534">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t534" headers="r1c1-t534">
+<p><a href="#i1019041">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t534 r1c2-t534">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t534" headers="r1c1-t534">
+<p><a href="#CJADCCGB">operator -</a></p>
+</td>
+<td align="left" headers="r9c1-t534 r1c2-t534">
+<p>Subtracts the supplied instance value from the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5515" name="sthref5515"></a>
+<p class="subhead1">OracleTimeStampLTZ Static Type Conversions</p>
+<p>The <code>OracleTimeStampLTZ</code> static type conversions are listed in <a href="#g1310912">Table 14-104</a>.</p>
+<div class="tblruleformal"><a id="sthref5516" name="sthref5516"></a><a id="g1310912" name="g1310912"></a>
+<p class="titleintable">Table 14-104 OracleTimeStampLTZ Static Type Conversions</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Type Conversions " summary="Rows are static type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t535">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t535">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t535" headers="r1c1-t535">
+<p><a href="#CJAJGEDH">explicit operator OracleTimeStampLTZ</a></p>
+</td>
+<td align="left" headers="r2c1-t535 r1c2-t535">
+<p>Converts an instance value to an <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t535" headers="r1c1-t535">
+<p><a href="#CJAIGGAJ">implicit operator OracleTimeStampLTZ</a></p>
+</td>
+<td align="left" headers="r3c1-t535 r1c2-t535">
+<p>Converts an instance value to an <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t535" headers="r1c1-t535">
+<p><a href="#i1019534">explicit operator DateTime</a></p>
+</td>
+<td align="left" headers="r4c1-t535 r1c2-t535">
+<p>Converts an <code>OracleTimeStampLTZ</code> value to a <code>DateTime</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5517" name="sthref5517"></a>
+<p class="subhead1">OracleTimeStampLTZ Properties</p>
+<p>The <code>OracleTimeStampLTZ</code> properties are listed in <a href="#g1310928">Table 14-105</a>.</p>
+<div class="tblruleformal"><a id="sthref5518" name="sthref5518"></a><a id="g1310928" name="g1310928"></a>
+<p class="titleintable">Table 14-105 OracleTimeStampLTZ Properties</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t536">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t536">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t536" headers="r1c1-t536">
+<p><a href="#i1019683">BinData</a></p>
+</td>
+<td align="left" headers="r2c1-t536 r1c2-t536">
+<p>Returns an array of bytes that represents an <code>Oracle TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> in Oracle internal format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t536" headers="r1c1-t536">
+<p><a href="#i1019711">Day</a></p>
+</td>
+<td align="left" headers="r3c1-t536 r1c2-t536">
+<p>Specifies the <code>day</code> component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t536" headers="r1c1-t536">
+<p><a href="#i1019739">IsNull</a></p>
+</td>
+<td align="left" headers="r4c1-t536 r1c2-t536">
+<p>Indicates whether or not the <code>OracleTimeStampLTZ</code> instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t536" headers="r1c1-t536">
+<p><a href="#i1019765">Hour</a></p>
+</td>
+<td align="left" headers="r5c1-t536 r1c2-t536">
+<p>Specifies the hour component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t536" headers="r1c1-t536">
+<p><a href="#i1019793">Millisecond</a></p>
+</td>
+<td align="left" headers="r6c1-t536 r1c2-t536">
+<p>Specifies the millisecond component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t536" headers="r1c1-t536">
+<p><a href="#i1019821">Minute</a></p>
+</td>
+<td align="left" headers="r7c1-t536 r1c2-t536">
+<p>Specifies the minute component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t536" headers="r1c1-t536">
+<p><a href="#i1019849">Month</a></p>
+</td>
+<td align="left" headers="r8c1-t536 r1c2-t536">
+<p>Specifies the month component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t536" headers="r1c1-t536">
+<p><a href="#i1019877">Nanosecond</a></p>
+</td>
+<td align="left" headers="r9c1-t536 r1c2-t536">
+<p>Specifies the nanosecond component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t536" headers="r1c1-t536">
+<p><a href="#i1019905">Second</a></p>
+</td>
+<td align="left" headers="r10c1-t536 r1c2-t536">
+<p>Specifies the second component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t536" headers="r1c1-t536">
+<p><a href="#i1019933">Value</a></p>
+</td>
+<td align="left" headers="r11c1-t536 r1c2-t536">
+<p>Specifies the date and time that is stored in the <code>OracleTimeStampLTZ</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t536" headers="r1c1-t536">
+<p><a href="#i1019961">Year</a></p>
+</td>
+<td align="left" headers="r12c1-t536 r1c2-t536">
+<p>Specifies the year component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref5519" name="sthref5519"></a>
+<p class="subhead1">OracleTimeStampLTZ Methods</p>
+<p>The <code>OracleTimeStampLTZ</code> methods are listed in <a href="#g1310968">Table 14-106</a>.</p>
+<div class="tblruleformal"><a id="sthref5520" name="sthref5520"></a><a id="g1310968" name="g1310968"></a>
+<p class="titleintable">Table 14-106 OracleTimeStampLTZ Methods</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t537">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t537">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t537" headers="r1c1-t537">
+<p><a href="#i1020158">AddDays</a></p>
+</td>
+<td align="left" headers="r2c1-t537 r1c2-t537">
+<p>Adds the supplied number of days to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t537" headers="r1c1-t537">
+<p><a href="#i1020190">AddHours</a></p>
+</td>
+<td align="left" headers="r3c1-t537 r1c2-t537">
+<p>Adds the supplied number of hours to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t537" headers="r1c1-t537">
+<p><a href="#i1020222">AddMilliseconds</a></p>
+</td>
+<td align="left" headers="r4c1-t537 r1c2-t537">
+<p>Adds the supplied number of milliseconds to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t537" headers="r1c1-t537">
+<p><a href="#i1020254">AddMinutes</a></p>
+</td>
+<td align="left" headers="r5c1-t537 r1c2-t537">
+<p>Adds the supplied number of minutes to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t537" headers="r1c1-t537">
+<p><a href="#i1020286">AddMonths</a></p>
+</td>
+<td align="left" headers="r6c1-t537 r1c2-t537">
+<p>Adds the supplied number of months to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t537" headers="r1c1-t537">
+<p><a href="#i1020318">AddNanoseconds</a></p>
+</td>
+<td align="left" headers="r7c1-t537 r1c2-t537">
+<p>Adds the supplied number of nanoseconds to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t537" headers="r1c1-t537">
+<p><a href="#i1020349">AddSeconds</a></p>
+</td>
+<td align="left" headers="r8c1-t537 r1c2-t537">
+<p>Adds the supplied number of seconds to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t537" headers="r1c1-t537">
+<p><a href="#i1020381">AddYears</a></p>
+</td>
+<td align="left" headers="r9c1-t537 r1c2-t537">
+<p>Adds the supplied number of years to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t537" headers="r1c1-t537">
+<p><a href="#i1020413">CompareTo</a></p>
+</td>
+<td align="left" headers="r10c1-t537 r1c2-t537">
+<p>Compares the current <code>OracleTimeStampLTZ</code> instance to an object and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t537" headers="r1c1-t537">
+<p><a href="#i1020454">Equals</a></p>
+</td>
+<td align="left" headers="r11c1-t537 r1c2-t537">
+<p>Determines whether or not an object has the same date and time as the current <code>OracleTimeStampLTZ</code> instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t537" headers="r1c1-t537">
+<p><a href="#i1020488">GetHashCode</a></p>
+</td>
+<td align="left" headers="r12c1-t537 r1c2-t537">
+<p>Returns a hash code for the <code>OracleTimeStampLTZ</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t537" headers="r1c1-t537">
+<p><a href="#i1020515">GetDaysBetween</a></p>
+</td>
+<td align="left" headers="r13c1-t537 r1c2-t537">
+<p>Subtracts an <code>OracleTimeStampLTZ</code> from the current instance and returns an <code>OracleIntervalDS</code> that represents the difference</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t537" headers="r1c1-t537">
+<p><a href="#i1020546">GetYearsBetween</a></p>
+</td>
+<td align="left" headers="r14c1-t537 r1c2-t537">
+<p>Subtracts an <code>OracleTimeStampLTZ</code> from the current instance and returns an <code>OracleIntervalYM</code> that represents the difference</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t537" headers="r1c1-t537">
+<p>GetType</p>
+</td>
+<td align="left" headers="r15c1-t537 r1c2-t537">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t537" headers="r1c1-t537">
+<p><a href="#i1020577">ToOracleDate</a></p>
+</td>
+<td align="left" headers="r16c1-t537 r1c2-t537">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleDate</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t537" headers="r1c1-t537">
+<p><a href="#i1020606">ToOracleTimeStamp</a></p>
+</td>
+<td align="left" headers="r17c1-t537 r1c2-t537">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleTimeStamp</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t537" headers="r1c1-t537">
+<p><a href="#i1020634">ToOracleTimeStampTZ</a></p>
+</td>
+<td align="left" headers="r18c1-t537 r1c2-t537">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleTimeStampTZ</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t537" headers="r1c1-t537">
+<p><a href="#i1020676">ToString</a></p>
+</td>
+<td align="left" headers="r19c1-t537 r1c2-t537">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to a string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t537" headers="r1c1-t537">
+<p><a href="#i1020737">ToUniversalTime</a></p>
+</td>
+<td align="left" headers="r20c1-t537 r1c2-t537">
+<p>Converts the current local time to Coordinated Universal Time (UTC)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017646" name="i1017646"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Constructors<a id="sthref5521" name="sthref5521"></a></h2>
+<p>The <code>OracleTimeStampLTZ</code> constructors create new instances of the <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5522" name="sthref5522"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1017704">OracleTimeStampLTZ(DateTime)</a></p>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using the supplied <code>DateTime</code> value.</p>
+</li>
+<li>
+<p><a href="#i1017733">OracleTimeStampLTZ(string)</a></p>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using the supplied string.</p>
+</li>
+<li>
+<p><a href="#i1017803">OracleTimeStampLTZ(int, int, int)</a></p>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date using year, month, and day.</p>
+</li>
+<li>
+<p><a href="#i1017837">OracleTimeStampLTZ(int, int, int, int, int, int)</a></p>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using year, month, day, hour, minute, and second.</p>
+</li>
+<li>
+<p><a href="#i1017877">OracleTimeStampLTZ(int, int, int, int, int, int, double)</a></p>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using year, month, day, hour, minute, second, and millisecond.</p>
+</li>
+<li>
+<p><a href="#i1017920">OracleTimeStampLTZ(int, int, int, int, int, int, int)</a></p>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using year, month, day, hour, minute, second, and nanosecond.</p>
+</li>
+<li>
+<p><a href="#i1017962">OracleTimeStampLTZ(byte [ ])</a></p>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value to the provided byte array, which is in the internal Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> format.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017704" name="i1017704"></a>
+<h3 class="refsect3">OracleTimeStampLTZ(DateTime)</h3>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using the supplied <code>DateTime</code> value.</p>
+<a id="sthref5523" name="sthref5523"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ (DateTime dt);
+</pre>
+<a id="sthref5524" name="sthref5524"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">dt</span></code></p>
+<p>The supplied <code>DateTime</code> value.</p>
+</li>
+</ul>
+<a id="sthref5525" name="sthref5525"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">dt</span></code> parameter cannot be used to construct a valid <code>OracleTimeStampLTZ</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017733" name="i1017733"></a>
+<h3 class="refsect3">OracleTimeStampLTZ(string)</h3>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using the supplied string.</p>
+<a id="sthref5526" name="sthref5526"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ(string tsStr);
+</pre>
+<a id="sthref5527" name="sthref5527"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">tsStr</span></code></p>
+<p>A string that represents an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code>.</p>
+</li>
+</ul>
+<a id="sthref5528" name="sthref5528"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">tsStr</span></code> is an invalid string representation of an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> or the supplied <code><span class="codeinlineitalic">tsStr</span></code> is not in the timestamp format specified by the <code>OracleGlobalization</code>.<code>TimeStampFormat</code> property of the thread, which represents the Oracle <code>NLS_TIMESTAMP_FORMAT</code> parameter.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">tsStr</span></code> value is null.</p>
+<a id="sthref5529" name="sthref5529"></a>
+<p class="subhead2">Remarks</p>
+<p>The names and abbreviations used for months and days are in the language specified by the <code>DateLanguage</code> and <code>Calendar</code> properties of the thread's <code>OracleGlobalization</code> object. If any of the thread's globalization properties are set to null or an empty string, the client computer's settings are used.</p>
+<a id="sthref5530" name="sthref5530"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
+ 
+class OracleTimeStampLTZSample
+{
+  static void Main()
+  {
+    // Set the nls_timestamp_format for the OracleTimeStampLTZ(string)
+    // constructor
+    OracleGlobalization info = OracleGlobalization.GetClientInfo();
+    info.TimeStampFormat = "DD-MON-YYYY HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+    
+    // construct OracleTimeStampLTZ from a string using the format
+    // specified.
+    OracleTimeStampLTZ ts = 
+      new OracleTimeStampLTZ("11-NOV-1999 11:02:33.444 AM");
+      
+    // Set the nls_timestamp_format for the ToString() method
+    info.TimeStampFormat = "YYYY-MON-DD HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+ 
+    // Prints "1999-NOV-11 11:02:33.444000000 AM"
+    Console.WriteLine(ts.ToString());     
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+<li>
+<p><a href="OracleGlobalizationClass.htm#i1008880">"OracleGlobalization Class"</a></p>
+</li>
+<li>
+<p><a href="featGlobal.htm#i1008260">"Globalization Support"</a></p>
+</li>
+<li>
+<p><span class="italic"><a class="olink SQLRF" href="http://www.oracle.com/pls/db102/lookup?id=SQLRF">Oracle Database SQL Reference</a></span> for further information on date format elements</p>
+</li>
+</ul>
+</div>
+<a id="i1017803" name="i1017803"></a>
+<h3 class="refsect3">OracleTimeStampLTZ(int, int, int)</h3>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date using year, month, and day.</p>
+<a id="sthref5531" name="sthref5531"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ(int <span class="italic">year</span>, int <span class="italic">month</span>, int <span class="italic">day</span>);
+</pre>
+<a id="sthref5532" name="sthref5532"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">year</span></code></p>
+<p>The year provided. Range of <code><span class="codeinlineitalic">year</span></code> is (-4712 to 9999).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">month</span></code></p>
+<p>The month provided. Range of <code><span class="codeinlineitalic">month</span></code> is (1 to 12).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">day</span></code></p>
+<p>The day provided. Range of <code><span class="codeinlineitalic">day</span></code> is (1 to 31).</p>
+</li>
+</ul>
+<a id="sthref5533" name="sthref5533"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleTimeStampLTZ</code> (that is, the day is out of range for the month).</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017837" name="i1017837"></a>
+<h3 class="refsect3">OracleTimeStampLTZ(int, int, int, int, int, int)</h3>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using year, month, day, hour, minute, and second.</p>
+<a id="sthref5534" name="sthref5534"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ (int <span class="italic">year</span>, int <span class="italic">month</span>, int <span class="italic">day</span>, int <span class="italic">hour</span>,
+  int <span class="italic">minute</span>, int <span class="italic">second</span>);
+</pre>
+<a id="sthref5535" name="sthref5535"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">year</span></code></p>
+<p>The year provided. Range of <code><span class="codeinlineitalic">year</span></code> is (-4712 to 9999).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">month</span></code></p>
+<p>The month provided. Range of <code><span class="codeinlineitalic">month</span></code> is (1 to 12).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">day</span></code></p>
+<p>The day provided. Range of <code><span class="codeinlineitalic">day</span></code> is (1 to 31).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">hour</span></code></p>
+<p>The hour provided. Range of <code><span class="codeinlineitalic">hour</span></code> is (0 to 23).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">minute</span></code></p>
+<p>The minute provided. Range of <code><span class="codeinlineitalic">minute</span></code> is (0 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">second</span></code></p>
+<p>The second provided. Range of <code><span class="codeinlineitalic">second</span></code> is (0 to 59).</p>
+</li>
+</ul>
+<a id="sthref5536" name="sthref5536"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleTimeStampLTZ</code> (that is, the day is out of range for the month).</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017877" name="i1017877"></a>
+<h3 class="refsect3">OracleTimeStampLTZ(int, int, int, int, int, int, double)</h3>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using year, month, day, hour, minute, second, and millisecond.</p>
+<a id="sthref5537" name="sthref5537"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ(int <span class="italic">year</span>, int <span class="italic">month</span>, int <span class="italic">day</span>, int <span class="italic">hour</span>, int <span class="italic">minute</span>, int <span class="italic">second</span>, double <span class="italic">millisecond</span>);
+</pre>
+<a id="sthref5538" name="sthref5538"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">year</span></code></p>
+<p>The year provided. Range of <code><span class="codeinlineitalic">year</span></code> is (-4712 to 9999).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">month</span></code></p>
+<p>The month provided. Range of <code><span class="codeinlineitalic">month</span></code> is (1 to 12).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">day</span></code></p>
+<p>The day provided. Range of <code><span class="codeinlineitalic">day</span></code> is (1 to 31).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">hour</span></code></p>
+<p>The hour provided. Range of <code><span class="codeinlineitalic">hour</span></code> is (0 to 23).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">minute</span></code></p>
+<p>The minute provided. Range of <code><span class="codeinlineitalic">minute</span></code> is (0 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">second</span></code></p>
+<p>The second provided. Range of <code><span class="codeinlineitalic">second</span></code> is (0 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">milliSeconds</span></code></p>
+<p>The milliseconds provided. Range of <code><span class="codeinlineitalic">millisecond</span></code> is (0 to 999.999999).</p>
+</li>
+</ul>
+<a id="sthref5539" name="sthref5539"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleTimeStampLTZ</code> (that is, the day is out of range for the month).</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017920" name="i1017920"></a>
+<h3 class="refsect3">OracleTimeStampLTZ(int, int, int, int, int, int, int)</h3>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using year, month, day, hour, minute, second, and nanosecond.</p>
+<a id="sthref5540" name="sthref5540"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ (int <span class="italic">year</span>, int <span class="italic">month</span>, int <span class="italic">day</span>, int <span class="italic">hour</span>, 
+  int <span class="italic">minute</span>, int <span class="italic">second</span>, int <span class="italic">nanosecond</span>); 
+</pre>
+<a id="sthref5541" name="sthref5541"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">year</span></code></p>
+<p>The year provided. Range of <code><span class="codeinlineitalic">year</span></code> is (-4712 to 9999).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">month</span></code></p>
+<p>The month provided. Range of <code><span class="codeinlineitalic">month</span></code> is (1 to 12).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">day</span></code></p>
+<p>The day provided. Range of <code><span class="codeinlineitalic">day</span></code> is (1 to 31).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">hour</span></code></p>
+<p>The hour provided. Range of <code><span class="codeinlineitalic">hour</span></code> is (0 to 23).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">minute</span></code></p>
+<p>The minute provided. Range of <code><span class="codeinlineitalic">minute</span></code> is (0 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">second</span></code></p>
+<p>The second provided. Range of <code><span class="codeinlineitalic">second</span></code> is (0 to 59).</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">nanosecond</span></code></p>
+<p>The nanosecond provided. Range of <code><span class="codeinlineitalic">nanosecond</span></code> is (0 to 999999999).</p>
+</li>
+</ul>
+<a id="sthref5542" name="sthref5542"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - The argument value for one or more of the parameters is out of the specified range.</p>
+<p><code>ArgumentException</code> - The argument values of the parameters cannot be used to construct a valid <code>OracleTimeStampLTZ</code> (that is, the day is out of range for the month).</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017962" name="i1017962"></a>
+<h3 class="refsect3">OracleTimeStampLTZ(byte [ ])</h3>
+<p>This constructor creates a new instance of the <code>OracleTimeStampLTZ</code> structure and sets its value to the provided byte array, which is in the internal Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> format.</p>
+<a id="sthref5543" name="sthref5543"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ (byte[] <span class="italic">bytes</span>);
+</pre>
+<a id="sthref5544" name="sthref5544"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">bytes</span></code></p>
+<p>A byte array that represents an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> in Oracle internal format.</p>
+</li>
+</ul>
+<a id="sthref5545" name="sthref5545"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - <code><span class="codeinlineitalic">bytes</span></code> is not in an internal Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> format or <code><span class="codeinlineitalic">bytes</span></code> is not a valid Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code>.</p>
+<p><code>ArgumentNullException</code> - <code><span class="codeinlineitalic">bytes</span></code> is null.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1017992" name="i1017992"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Static Fields<a id="sthref5546" name="sthref5546"></a></h2>
+<p>The <code>OracleTimeStampLTZ</code> static fields are listed in <a href="#g1311068">Table 14-107</a>.</p>
+<div class="tblruleformal"><a id="sthref5547" name="sthref5547"></a><a id="g1311068" name="g1311068"></a>
+<p class="titleintable">Table 14-107 OracleTimeStampLTZ Static Fields</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Fields " summary="Rows are static fields. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="21%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t547">Field</th>
+<th align="left" valign="bottom" id="r1c2-t547">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t547" headers="r1c1-t547">
+<p><a href="#i1018052">MaxValue</a></p>
+</td>
+<td align="left" headers="r2c1-t547 r1c2-t547">
+<p>Represents the maximum valid date for an <code>OracleTimeStampLTZ</code> structure, which is December 31, 9999 23:59:59.999999999</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t547" headers="r1c1-t547">
+<p><a href="#i1301488">MinValue</a></p>
+</td>
+<td align="left" headers="r3c1-t547 r1c2-t547">
+<p>Represents the minimum valid date for an <code>OracleTimeStampLTZ</code> structure, which is January 1, -4712 0:0:0</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t547" headers="r1c1-t547">
+<p><a href="#i1018104">Null</a></p>
+</td>
+<td align="left" headers="r4c1-t547 r1c2-t547">
+<p>Represents a null value that can be assigned to an instance of the <code>OracleTimeStampLTZ</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018052" name="i1018052"></a>
+<h3 class="refsect3">MaxValue</h3>
+<p>This static field represents the maximum valid date for an <code>OracleTimeStampLTZ</code> structure, which is December 31, 9999 23:59:59.999999999.</p>
+<a id="sthref5548" name="sthref5548"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleTimeStampLTZ MaxValue;
+</pre>
+<a id="sthref5549" name="sthref5549"></a>
+<p class="subhead2">Remarks</p>
+<p>This value is the maximum date and time in the client time zone.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1301488" name="i1301488"></a>
+<h3 class="refsect3">MinValue</h3>
+<p>This static field represents the minimum valid date for an <code>OracleTimeStampLTZ</code> structure, which is January 1, -4712 0:0:0.</p>
+<a id="sthref5550" name="sthref5550"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleTimeStampLTZ MinValue;
+</pre>
+<a id="sthref5551" name="sthref5551"></a>
+<p class="subhead2">Remarks</p>
+<p>This value is the minimum date and time in the client time zone.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018104" name="i1018104"></a>
+<h3 class="refsect3">Null</h3>
+<p>This static field represents a null value that can be assigned to an instance of the <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5552" name="sthref5552"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static readonly OracleTimeStampLTZ Null;
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018128" name="i1018128"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Static Methods<a id="sthref5553" name="sthref5553"></a></h2>
+<p>The <code>OracleTimeStampLTZ</code> static methods are listed in <a href="#g1311100">Table 14-108</a>.</p>
+<div class="tblruleformal"><a id="sthref5554" name="sthref5554"></a><a id="g1311100" name="g1311100"></a>
+<p class="titleintable">Table 14-108 OracleTimeStampLTZ Static Methods</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Methods " summary="Rows are static methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="34%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t552">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t552">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t552" headers="r1c1-t552">
+<p><a href="#i1018244">Equals</a></p>
+</td>
+<td align="left" headers="r2c1-t552 r1c2-t552">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are equal (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t552" headers="r1c1-t552">
+<p><a href="#i1018279">GetLocalTimeZoneName</a></p>
+</td>
+<td align="left" headers="r3c1-t552 r1c2-t552">
+<p>Gets the client's local time zone name</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t552" headers="r1c1-t552">
+<p><a href="#i1018305">GetLocalTimeZoneOffset</a></p>
+</td>
+<td align="left" headers="r4c1-t552 r1c2-t552">
+<p>Gets the client's local time zone offset relative to UTC</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t552" headers="r1c1-t552">
+<p><a href="#i1018331">GetSysDate</a></p>
+</td>
+<td align="left" headers="r5c1-t552 r1c2-t552">
+<p>Gets an <code>OracleTimeStampLTZ</code> structure that represents the current date and time</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t552" headers="r1c1-t552">
+<p><a href="#i1018357">GreaterThan</a></p>
+</td>
+<td align="left" headers="r6c1-t552 r1c2-t552">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t552" headers="r1c1-t552">
+<p><a href="#i1018392">GreaterThanOrEqual</a></p>
+</td>
+<td align="left" headers="r7c1-t552 r1c2-t552">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t552" headers="r1c1-t552">
+<p><a href="#i1018427">LessThan</a></p>
+</td>
+<td align="left" headers="r8c1-t552 r1c2-t552">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t552" headers="r1c1-t552">
+<p><a href="#i1018462">LessThanOrEqual</a></p>
+</td>
+<td align="left" headers="r9c1-t552 r1c2-t552">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t552" headers="r1c1-t552">
+<p><a href="#i1018497">NotEquals</a></p>
+</td>
+<td align="left" headers="r10c1-t552 r1c2-t552">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t552" headers="r1c1-t552">
+<p><a href="#i1018532">Parse</a></p>
+</td>
+<td align="left" headers="r11c1-t552 r1c2-t552">
+<p>Gets an <code>OracleTimeStampLTZ</code> structure and sets its value for date and time using the supplied string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t552" headers="r1c1-t552">
+<p><a href="#i1018598">SetPrecision</a></p>
+</td>
+<td align="left" headers="r12c1-t552 r1c2-t552">
+<p>Returns a new instance of an <code>OracleTimeStampLTZ</code> with the specified fractional second precision</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018244" name="i1018244"></a>
+<h3 class="refsect3">Equals</h3>
+<p>This static method determines if two <code>OracleTimeStampLTZ</code> values are equal.</p>
+<a id="sthref5555" name="sthref5555"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool Equals(OracleTimeStampLTZ <span class="italic">value1</span>, 
+  OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5556" name="sthref5556"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5557" name="sthref5557"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleTimeStampLTZ</code> values are equal. Returns <code>false</code> otherwise.</p>
+<a id="sthref5558" name="sthref5558"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018279" name="i1018279"></a>
+<h3 class="refsect3">GetLocalTimeZoneName</h3>
+<p>This static method gets the client's local time zone name.</p>
+<a id="sthref5559" name="sthref5559"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static string GetLocalTimeZoneName(); 
+</pre>
+<a id="sthref5560" name="sthref5560"></a>
+<p class="subhead2">Return Value</p>
+<p>A string containing the local time zone.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018305" name="i1018305"></a>
+<h3 class="refsect3">GetLocalTimeZoneOffset</h3>
+<p>This static method gets the client's local time zone offset relative to Coordinated Universal Time (UTC).</p>
+<a id="sthref5561" name="sthref5561"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static TimeSpan GetLocalTimeZoneOffset( );
+</pre>
+<a id="sthref5562" name="sthref5562"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>TimeSpan</code> structure containing the local time zone hours and time zone minutes.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018331" name="i1018331"></a>
+<h3 class="refsect3">GetSysDate</h3>
+<p>This static method gets an <code>OracleTimeStampLTZ</code> structure that represents the current date and time.</p>
+<a id="sthref5563" name="sthref5563"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleTimeStampLTZ GetSysDate();
+</pre>
+<a id="sthref5564" name="sthref5564"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code> structure that represents the current date and time.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018357" name="i1018357"></a>
+<h3 class="refsect3">GreaterThan</h3>
+<p>This static method determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than the second.</p>
+<a id="sthref5565" name="sthref5565"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThan(OracleTimeStampLTZ <span class="italic">value1</span>, 
+   OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5566" name="sthref5566"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5567" name="sthref5567"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleTimeStampLTZ</code> values is greater than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5568" name="sthref5568"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018392" name="i1018392"></a>
+<h3 class="refsect3">GreaterThanOrEqual</h3>
+<p>This static method determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than or equal to the second.</p>
+<a id="sthref5569" name="sthref5569"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool GreaterThanOrEqual(OracleTimeStampLTZ <span class="italic">value1</span>,
+  OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5570" name="sthref5570"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5571" name="sthref5571"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleTimeStampLTZ</code> values is greater than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5572" name="sthref5572"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018427" name="i1018427"></a>
+<h3 class="refsect3">LessThan</h3>
+<p>This static method determines if the first of two <code>OracleTimeStampLTZ</code> values is less than the second.</p>
+<a id="sthref5573" name="sthref5573"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThan(OracleTimeStampLTZ <span class="italic">value1</span>, 
+  OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5574" name="sthref5574"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5575" name="sthref5575"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleTimeStampLTZ</code> values is less than the second. Returns <code>false</code> otherwise.</p>
+<a id="sthref5576" name="sthref5576"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018462" name="i1018462"></a>
+<h3 class="refsect3">LessThanOrEqual</h3>
+<p>This static method determines if the first of two <code>OracleTimeStampLTZ</code> values is less than or equal to the second.</p>
+<a id="sthref5577" name="sthref5577"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool LessThanOrEqual(OracleTimeStampLTZ <span class="italic">value1</span>, 
+  OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5578" name="sthref5578"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5579" name="sthref5579"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first of two <code>OracleTimeStampLTZ</code> values is less than or equal to the second. Returns <code>false</code> otherwise.</p>
+<a id="sthref5580" name="sthref5580"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018497" name="i1018497"></a>
+<h3 class="refsect3">NotEquals</h3>
+<p>This static method determines if two <code>OracleTimeStampLTZ</code> values are not equal.</p>
+<a id="sthref5581" name="sthref5581"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool NotEquals(OracleTimeStampLTZ <span class="italic">value1</span>, 
+   OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5582" name="sthref5582"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5583" name="sthref5583"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleTimeStampLTZ</code> values are not equal. Returns <code>false</code> otherwise.</p>
+<a id="sthref5584" name="sthref5584"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018532" name="i1018532"></a>
+<h3 class="refsect3">Parse</h3>
+<p>This static method creates an <code>OracleTimeStampLTZ</code> structure and sets its value using the supplied string.</p>
+<a id="sthref5585" name="sthref5585"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleTimeStampLTZ Parse(string <span class="italic">tsStr</span>);
+</pre>
+<a id="sthref5586" name="sthref5586"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">tsStr</span></code></p>
+<p>A string that represents an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code>.</p>
+</li>
+</ul>
+<a id="sthref5587" name="sthref5587"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5588" name="sthref5588"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">tsStr</span></code> parameter is an invalid string representation of an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> or the <code><span class="codeinlineitalic">tsStr</span></code> is not in the timestamp format specified by the <code>OracleGlobalization</code>.<code>TimeStampFormat</code> property of the thread, which represents the Oracle <code>NLS_TIMESTAMP_FORMAT</code> parameter.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">tsStr</span></code> value is null.</p>
+<a id="sthref5589" name="sthref5589"></a>
+<p class="subhead2">Remarks</p>
+<p>The names and abbreviations used for months and days are in the language specified by the <code>DateLanguage</code> and <code>Calendar</code> properties of the thread's <code>OracleGlobalization</code> object. If any of the thread's globalization properties are set to null or an empty string, the client computer's settings are used.</p>
+<a id="sthref5590" name="sthref5590"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+using Oracle.DataAccess.Client;
+ 
+class ParseSample
+{
+  static void Main()
+  {
+    // Set the nls_timestamp_format for the Parse() method
+    OracleGlobalization info = OracleGlobalization.GetClientInfo();
+    info.TimeStampFormat = "DD-MON-YYYY HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+    
+    // construct OracleTimeStampLTZ from a string using the format specified.
+    OracleTimeStampLTZ ts = 
+      OracleTimeStampLTZ.Parse("11-NOV-1999 11:02:33.444 AM");
+      
+    // Set the nls_timestamp_format for the ToString() method
+    info.TimeStampFormat = "YYYY-MON-DD HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+ 
+    // Prints "1999-NOV-11 11:02:33.444000000 AM"
+    Console.WriteLine(ts.ToString());     
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+<li>
+<p><a href="OracleGlobalizationClass.htm#i1008880">"OracleGlobalization Class"</a></p>
+</li>
+<li>
+<p><a href="featGlobal.htm#i1008260">"Globalization Support"</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018598" name="i1018598"></a>
+<h3 class="refsect3">SetPrecision</h3>
+<p>This static method returns a new instance of an <code>OracleTimeStampLTZ</code> with the specified fractional second precision.</p>
+<a id="sthref5591" name="sthref5591"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static OracleTimeStampLTZ SetPrecision(OracleTimeStampLTZ <span class="italic">value1</span>,
+     int <span class="italic">fracSecPrecision</span>);
+</pre>
+<a id="sthref5592" name="sthref5592"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The provided <code>OracleTimeStampLTZ</code> object.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">fracSecPrecision</span></code></p>
+<p>The fractional second precision provided. Range of fractional second precision is (0 to 9).</p>
+</li>
+</ul>
+<a id="sthref5593" name="sthref5593"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code> structure with the specified fractional second precision</p>
+<a id="sthref5594" name="sthref5594"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentOutOfRangeException</code> - <code><span class="codeinlineitalic">fracSecPrecision</span></code> is out of the specified range.</p>
+<a id="sthref5595" name="sthref5595"></a>
+<p class="subhead2">Remarks</p>
+<p>The value specified in the supplied <code><span class="codeinlineitalic">fracSecPrecision</span></code> parameter is used to perform a rounding off operation on the supplied <code>OracleTimeStampLTZ</code> value. Depending on this value, <code>0</code> or more trailing zeros are displayed in the string returned by <code>ToString()</code>.</p>
+<a id="sthref5596" name="sthref5596"></a>
+<p class="subhead2">Example</p>
+<p>The <code>OracleTimeStampLTZ</code> with a value of "<code>December</code> <code>31,</code> <code>9999</code> <code>23:59:59.99</code>" results in the string "<code>December</code> <code>31,</code> <code>9999</code> <code>23:59:59.99000</code>" when <code>SetPrecision()</code> is called with the fractional second precision set to <code>5</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018635" name="i1018635"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Static Operators</h2>
+<p>The <code>OracleTimeStampLTZ</code> static<a id="sthref5597" name="sthref5597"></a> operators are listed in <a href="#g1311188">Table 14-109</a>.</p>
+<div class="tblruleformal"><a id="sthref5598" name="sthref5598"></a><a id="g1311188" name="g1311188"></a>
+<p class="titleintable">Table 14-109 OracleTimeStampLTZ Static Operators</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Operators " summary="Rows are static operators. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t565">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t565">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t565" headers="r1c1-t565">
+<p><a href="#i1018730">operator+</a></p>
+</td>
+<td align="left" headers="r2c1-t565 r1c2-t565">
+<p>Adds the supplied instance value to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t565" headers="r1c1-t565">
+<p><a href="#i1018866">operator ==</a></p>
+</td>
+<td align="left" headers="r3c1-t565 r1c2-t565">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t565" headers="r1c1-t565">
+<p><a href="#i1018901">operator &gt;</a></p>
+</td>
+<td align="left" headers="r4c1-t565 r1c2-t565">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t565" headers="r1c1-t565">
+<p><a href="#i1018936">operator &gt;=</a></p>
+</td>
+<td align="left" headers="r5c1-t565 r1c2-t565">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t565" headers="r1c1-t565">
+<p><a href="#i1018971">operator !=</a></p>
+</td>
+<td align="left" headers="r6c1-t565 r1c2-t565">
+<p>Determines if two <code>OracleTimeStampLTZ</code> values are not equal</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t565" headers="r1c1-t565">
+<p><a href="#i1019006">operator &lt;</a></p>
+</td>
+<td align="left" headers="r7c1-t565 r1c2-t565">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t565" headers="r1c1-t565">
+<p><a href="#i1019041">operator &lt;=</a></p>
+</td>
+<td align="left" headers="r8c1-t565 r1c2-t565">
+<p>Determines if the first of two <code>OracleTimeStampLTZ</code> values is less than or equal to the second</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t565" headers="r1c1-t565">
+<p><a href="#CJADCCGB">operator -</a></p>
+</td>
+<td align="left" headers="r9c1-t565 r1c2-t565">
+<p>Subtracts the supplied instance value from the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018730" name="i1018730"></a>
+<h3 class="refsect3">operator+</h3>
+<p><code>operator+</code> adds the supplied value to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5599" name="sthref5599"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1018767">operator + (OracleTimeStampLTZ, OracleIntervalDS)</a></p>
+<p>This static operator adds the supplied <code>OracleIntervalDS</code> to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1018800">operator + (OracleTimeStampLTZ, OracleIntervalYM)</a></p>
+<p>This static operator adds the supplied <code>OracleIntervalYM</code> to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1018833">operator + (OracleTimeStampLTZ, TimeSpan)</a></p>
+<p>This static operator adds the supplied <code>TimeSpan</code> to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018767" name="i1018767"></a>
+<h3 class="refsect3">operator + (OracleTimeStampLTZ, OracleIntervalDS)</h3>
+<p>This static operator adds the supplied <code>OracleIntervalDS</code> to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5600" name="sthref5600"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static operator +(OracleTimeStampLTZ <span class="italic">value1</span>,
+  OracleIntervalDS <span class="italic">value2</span>);
+</pre>
+<a id="sthref5601" name="sthref5601"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>An <code>OracleIntervalDS.</code></p>
+</li>
+</ul>
+<a id="sthref5602" name="sthref5602"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ.</code></p>
+<a id="sthref5603" name="sthref5603"></a>
+<p class="subhead2">Remarks</p>
+<p>If either parameter has a null value, the returned <code>OracleTimeStampLTZ</code> has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018800" name="i1018800"></a>
+<h3 class="refsect3">operator + (OracleTimeStampLTZ, OracleIntervalYM)</h3>
+<p>This static operator adds the supplied <code>OracleIntervalYM</code> to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5604" name="sthref5604"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static operator +(OracleTimeStampLTZ <span class="italic">value1</span>, 
+  OracleIntervalYM <span class="italic">value2</span>);
+</pre>
+<a id="sthref5605" name="sthref5605"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>An <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref5606" name="sthref5606"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5607" name="sthref5607"></a>
+<p class="subhead2">Remarks</p>
+<p>If either parameter has a null value, the returned <code>OracleTimeStampLTZ</code> has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018833" name="i1018833"></a>
+<h3 class="refsect3">operator + (OracleTimeStampLTZ, TimeSpan)</h3>
+<p>This static operator adds the supplied <code>TimeSpan</code> to the supplied <code>OracleTimeStampLTZ</code> and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5608" name="sthref5608"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static operator +(OracleTimeStampLTZ <span class="italic">value1</span>, TimeSpan <span class="italic">value2</span>);
+</pre>
+<a id="sthref5609" name="sthref5609"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>A <code>TimeSpan</code>.</p>
+</li>
+</ul>
+<a id="sthref5610" name="sthref5610"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ.</code></p>
+<a id="sthref5611" name="sthref5611"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code>OracleTimeStampLTZ</code> instance has a null value, the returned <code>OracleTimeStampLTZ</code> has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018866" name="i1018866"></a>
+<h3 class="refsect3">operator ==</h3>
+<p>This static operator determines if two <code>OracleTimeStampLTZ</code> values are equal.</p>
+<a id="sthref5612" name="sthref5612"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator == (OracleTimeStampLTZ <span class="italic">value1</span>, 
+  OracleTimeStampLTZ  <span class="italic">value2</span>);
+</pre>
+<a id="sthref5613" name="sthref5613"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5614" name="sthref5614"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if they are the same; otherwise, returns <code>false</code>.</p>
+<a id="sthref5615" name="sthref5615"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018901" name="i1018901"></a>
+<h3 class="refsect3">operator &gt;</h3>
+<p>This static operator determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than the second.</p>
+<a id="sthref5616" name="sthref5616"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt; (OracleTimeStampLTZ <span class="italic">value1</span>, 
+     OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5617" name="sthref5617"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5618" name="sthref5618"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first <code>OracleTimeStampLTZ</code> value is greater than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5619" name="sthref5619"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018936" name="i1018936"></a>
+<h3 class="refsect3">operator &gt;=</h3>
+<p>This static operator determines if the first of two <code>OracleTimeStampLTZ</code> values is greater than or equal to the second.</p>
+<a id="sthref5620" name="sthref5620"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &gt;= (OracleTimeStampLTZ <span class="italic">value1</span>, 
+    OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5621" name="sthref5621"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5622" name="sthref5622"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first <code>OracleTimeStampLTZ</code> is greater than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5623" name="sthref5623"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1018971" name="i1018971"></a>
+<h3 class="refsect3">operator !=</h3>
+<p>This static operator determines if two <code>OracleTimeStampLTZ</code> values are not equal.</p>
+<a id="sthref5624" name="sthref5624"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator != (OracleTimeStampLTZ <span class="italic">value1</span>, 
+    OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5625" name="sthref5625"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5626" name="sthref5626"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if two <code>OracleTimeStampLTZ</code> values are not equal; otherwise returns <code>false</code>.</p>
+<a id="sthref5627" name="sthref5627"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019006" name="i1019006"></a>
+<h3 class="refsect3">operator &lt;</h3>
+<p>This static operator determines if the first of two <code>OracleTimeStampLTZ</code> values is less than the second.</p>
+<a id="sthref5628" name="sthref5628"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt; (OracleTimeStampLTZ <span class="italic">value1</span>, 
+     OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5629" name="sthref5629"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5630" name="sthref5630"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first <code>OracleTimeStampLTZ</code> is less than the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5631" name="sthref5631"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019041" name="i1019041"></a>
+<h3 class="refsect3">operator &lt;=</h3>
+<p>This static operator determines if the first of two <code>OracleTimeStampLTZ</code> values is less than or equal to the second.</p>
+<a id="sthref5632" name="sthref5632"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static bool operator &lt;= (OracleTimeStampLTZ <span class="italic">value1</span>, 
+     OracleTimeStampLTZ <span class="italic">value2</span>);
+</pre>
+<a id="sthref5633" name="sthref5633"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The first <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>The second <code>OracleTimeStampLTZ</code>.</p>
+</li>
+</ul>
+<a id="sthref5634" name="sthref5634"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the first <code>OracleTimeStampLTZ</code> is less than or equal to the second; otherwise, returns <code>false</code>.</p>
+<a id="sthref5635" name="sthref5635"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CJADCCGB" name="CJADCCGB"></a>
+<h3 class="refsect3">operator -</h3>
+<p><code>operator-</code> subtracts the supplied value, from the supplied <code>OracleTimeStampLTZ</code> value, and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5636" name="sthref5636"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1019113">operator - (OracleTimeStampLTZ, OracleIntervalDS)</a></p>
+<p>This static operator subtracts the supplied <code>OracleIntervalDS</code> value, from the supplied <code>OracleTimeStampLTZ</code> value, and return a new <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1019146">operator - (OracleTimeStampLTZ, OracleIntervalYM)</a></p>
+<p>This static operator subtracts the supplied <code>OracleIntervalYM</code> value, from the supplied <code>OracleTimeStampLTZ</code> value, and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1019179">operator - (OracleTimeStampLTZ, TimeSpan)</a></p>
+<p>This static operator subtracts the supplied <code>TimeSpan</code> value, from the supplied <code>OracleTimeStampLTZ</code> value, and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019113" name="i1019113"></a>
+<h3 class="refsect3">operator - (OracleTimeStampLTZ, OracleIntervalDS)</h3>
+<p>This static operator subtracts the supplied <code>OracleIntervalDS</code> value, from the supplied <code>OracleTimeStampLTZ</code> value, and return a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5637" name="sthref5637"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static operator - (OracleTimeStampLTZ <span class="italic">value1</span>, 
+  OracleIntervalDS <span class="italic">value2</span>);
+</pre>
+<a id="sthref5638" name="sthref5638"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>An <code>OracleIntervalDS</code> instance.</p>
+</li>
+</ul>
+<a id="sthref5639" name="sthref5639"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5640" name="sthref5640"></a>
+<p class="subhead2">Remarks</p>
+<p>If either parameter has a null value, the returned <code>OracleTimeStampLTZ</code> has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019146" name="i1019146"></a>
+<h3 class="refsect3">operator - (OracleTimeStampLTZ, OracleIntervalYM)</h3>
+<p>This static operator subtracts the supplied <code>OracleIntervalYM</code> value, from the supplied <code>OracleTimeStampLTZ</code> value, and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5641" name="sthref5641"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static operator - (OracleTimeStampLTZ <span class="italic">value1</span>, 
+  OracleIntervalYM <span class="italic">value2</span>);
+</pre>
+<a id="sthref5642" name="sthref5642"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>An <code>OracleIntervalYM</code>.</p>
+</li>
+</ul>
+<a id="sthref5643" name="sthref5643"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5644" name="sthref5644"></a>
+<p class="subhead2">Remarks</p>
+<p>If either parameter has a null value, the returned <code>OracleTimeStampLTZ</code> has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019179" name="i1019179"></a>
+<h3 class="refsect3">operator - (OracleTimeStampLTZ, TimeSpan)</h3>
+<p>This static operator subtracts the supplied <code>TimeSpan</code> value, from the supplied <code>OracleTimeStampLTZ</code> value, and returns a new <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5645" name="sthref5645"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static operator -(OracleTimeStampLTZ <span class="italic">value1</span>, TimeSpan <span class="italic">value2</span>);
+</pre>
+<a id="sthref5646" name="sthref5646"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">value2</span></code></p>
+<p>A <code>TimeSpan</code>.</p>
+</li>
+</ul>
+<a id="sthref5647" name="sthref5647"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5648" name="sthref5648"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code>OracleTimeStampLTZ</code> instance has a null value, the returned <code>OracleTimeStampLTZ</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019212" name="i1019212"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Static Type Conversions<a id="sthref5649" name="sthref5649"></a></h2>
+<p>The <code>OracleTimeStampLTZ</code> static type conversions are listed in <a href="#g1311279">Table 14-110</a>.</p>
+<div class="tblruleformal"><a id="sthref5650" name="sthref5650"></a><a id="g1311279" name="g1311279"></a>
+<p class="titleintable">Table 14-110 OracleTimeStampLTZ Static Type Conversions</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Static Type Conversions " summary="Rows are static type conversions. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="44%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t581">Operator</th>
+<th align="left" valign="bottom" id="r1c2-t581">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t581" headers="r1c1-t581">
+<p><a href="#CJAJGEDH">explicit operator OracleTimeStampLTZ</a></p>
+</td>
+<td align="left" headers="r2c1-t581 r1c2-t581">
+<p>Converts an instance value to an <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t581" headers="r1c1-t581">
+<p><a href="#CJAIGGAJ">implicit operator OracleTimeStampLTZ</a></p>
+</td>
+<td align="left" headers="r3c1-t581 r1c2-t581">
+<p>Converts an instance value to an <code>OracleTimeStampLTZ</code> structure (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t581" headers="r1c1-t581">
+<p><a href="#i1019534">explicit operator DateTime</a></p>
+</td>
+<td align="left" headers="r4c1-t581 r1c2-t581">
+<p>Converts an <code>OracleTimeStampLTZ</code> value to a <code>DateTime</code> structure</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CJAJGEDH" name="CJAJGEDH"></a>
+<h3 class="refsect3">explicit operator OracleTimeStampLTZ</h3>
+<p><code>explicit operator OracleTimeStampLTZ</code> converts the supplied value to an <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5651" name="sthref5651"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1019309">explicit operator OracleTimeStampLTZ(OracleTimeStamp)</a></p>
+<p>This static type conversion operator converts an <code>OracleTimeStamp</code> value to an <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1019340">explicit operator OracleTimeStampLTZ(OracleTimeStampTZ)</a></p>
+<p>This static type conversion operator converts an <code>OracleTimeStampTZ</code> value to an <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1019371">explicit operator OracleTimeStampLTZ(string)</a></p>
+<p>This static type conversion operator converts the supplied string to an <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019309" name="i1019309"></a>
+<h3 class="refsect3">explicit operator OracleTimeStampLTZ(OracleTimeStamp)</h3>
+<p>This static type conversion operator converts an <code>OracleTimeStamp</code> value to an <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5652" name="sthref5652"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator OracleTimeStampLTZ (OracleTimeStamp <span class="italic">value1</span>);
+</pre>
+<a id="sthref5653" name="sthref5653"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStamp</code>.</p>
+</li>
+</ul>
+<a id="sthref5654" name="sthref5654"></a>
+<p class="subhead2">Return Value</p>
+<p>The <code>OracleTimeStampLTZ</code> structure contains the date and time of the <code>OracleTimeStampTZ</code> structure.</p>
+<a id="sthref5655" name="sthref5655"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code>OracleTimeStamp</code> structure has a null value, the returned <code>OracleTimeStampLTZ</code> structure also has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019340" name="i1019340"></a>
+<h3 class="refsect3">explicit operator OracleTimeStampLTZ(OracleTimeStampTZ)</h3>
+<p>This static type conversion operator converts an <code>OracleTimeStampTZ</code> value to an <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5656" name="sthref5656"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator OracleTimeStampLTZ 
+  (OracleTimeStampTZ <span class="italic">value1</span>);
+</pre>
+<a id="sthref5657" name="sthref5657"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampTZ</code> instance.</p>
+</li>
+</ul>
+<a id="sthref5658" name="sthref5658"></a>
+<p class="subhead2">Return Value</p>
+<p>The <code>OracleTimeStampLTZ</code> structure contains the date and time in the <code>OracleTimeStampTZ</code> structure (which is normalized to the client local time zone).</p>
+<a id="sthref5659" name="sthref5659"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code>OracleTimeStampTZ</code> structure has a null value, the returned <code>OracleTimeStampLTZ</code> structure also has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019371" name="i1019371"></a>
+<h3 class="refsect3">explicit operator OracleTimeStampLTZ(string)</h3>
+<p>This static type conversion operator converts the supplied string to an <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5660" name="sthref5660"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator OracleTimeStampLTZ (string <span class="italic">tsStr</span>);
+</pre>
+<a id="sthref5661" name="sthref5661"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">tsStr</span></code></p>
+<p>A string representation of an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code>.</p>
+</li>
+</ul>
+<a id="sthref5662" name="sthref5662"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5663" name="sthref5663"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The<code><span class="codeinlineitalic">tsStr</span></code> parameter is an invalid string representation of an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> or the <code><span class="codeinlineitalic">tsStr</span></code> is not in the timestamp format specified by the thread's <code>OracleGlobalization</code>.<code>TimeStampFormat</code> property, which represents the Oracle <code>NLS_TIMESTAMP_FORMAT</code> parameter.</p>
+<a id="sthref5664" name="sthref5664"></a>
+<p class="subhead2">Remarks</p>
+<p>The names and abbreviations used for months and days are in the language specified by the <code>DateLanguage</code> and <code>Calendar</code> properties of the thread's <code>OracleGlobalization</code> object. If any of the thread's globalization properties are set to null or an empty string, the client computer's settings are used.</p>
+<a id="sthref5665" name="sthref5665"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+using Oracle.DataAccess.Client;
+ 
+class OracleTimeStampLTZSample
+{
+  static void Main()
+  {
+    // Set the nls_timestamp_format for the OracleTimeStampLTZ(string)
+    // constructor
+    OracleGlobalization info = OracleGlobalization.GetClientInfo();
+    info.TimeStampFormat = "DD-MON-YYYY HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+    
+    // construct OracleTimeStampLTZ from a string using the format specified.
+    OracleTimeStampLTZ ts = 
+      new OracleTimeStampLTZ("11-NOV-1999 11:02:33.444 AM");
+    
+    // Set the nls_timestamp_format for the ToString() method
+    info.TimeStampFormat = "YYYY-MON-DD HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+ 
+    // Prints "1999-NOV-11 11:02:33.444000000 AM"
+    Console.WriteLine(ts.ToString()); 
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+<li>
+<p><a href="OracleGlobalizationClass.htm#i1008880">"OracleGlobalization Class"</a></p>
+</li>
+<li>
+<p><a href="featGlobal.htm#i1008260">"Globalization Support"</a></p>
+</li>
+<li>
+<p><span class="italic"><a class="olink SQLRF" href="http://www.oracle.com/pls/db102/lookup?id=SQLRF">Oracle Database SQL Reference</a></span> for further information on datetime format elements</p>
+</li>
+</ul>
+</div>
+<a id="CJAIGGAJ" name="CJAIGGAJ"></a>
+<h3 class="refsect3">implicit operator OracleTimeStampLTZ</h3>
+<p><code>implicit operator OracleTimeStampLTZ</code> converts the supplied structure to an <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5666" name="sthref5666"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#i1019474">implicit operator OracleTimeStampLTZ(OracleDate)</a></p>
+<p>This static type conversion operator converts an <code>OracleDate</code> value to an <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+<li>
+<p><a href="#i1019505">implicit operator OracleTimeStampLTZ(DateTime)</a></p>
+<p>This static type conversion operator converts a <code>DateTime</code> structure to an <code>OracleTimeStampLTZ</code> structure.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019474" name="i1019474"></a>
+<h3 class="refsect3">implicit operator OracleTimeStampLTZ(OracleDate)</h3>
+<p>This static type conversion operator converts an <code>OracleDate</code> value to an <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5667" name="sthref5667"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static implicit operator OracleTimeStampLTZ(OracleDate <span class="italic">value1</span>);
+</pre>
+<a id="sthref5668" name="sthref5668"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleDate</code>.</p>
+</li>
+</ul>
+<a id="sthref5669" name="sthref5669"></a>
+<p class="subhead2">Return Value</p>
+<p>The returned <code>OracleTimeStampLTZ</code> structure contains the date and time in the <code>OracleDate</code> structure.</p>
+<a id="sthref5670" name="sthref5670"></a>
+<p class="subhead2">Remarks</p>
+<p>If the <code>OracleDate</code> structure has a null value, the returned <code>OracleTimeStampLTZ</code> structure also has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019505" name="i1019505"></a>
+<h3 class="refsect3">implicit operator OracleTimeStampLTZ(DateTime)</h3>
+<p>This static type conversion operator converts a <code>DateTime</code> structure to an <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5671" name="sthref5671"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static implicit operator OracleTimeStampLTZ(DateTime <span class="italic">value1</span>);
+</pre>
+<a id="sthref5672" name="sthref5672"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>A <code>DateTime</code> structure.</p>
+</li>
+</ul>
+<a id="sthref5673" name="sthref5673"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code> structure.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019534" name="i1019534"></a>
+<h3 class="refsect3">explicit operator DateTime</h3>
+<p>This static type conversion operator converts an <code>OracleTimeStampLTZ</code> value to a <code>DateTime</code> structure.</p>
+<a id="sthref5674" name="sthref5674"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public static explicit operator DateTime(OracleTimeStampLTZ <span class="italic">value1</span>);
+</pre>
+<a id="sthref5675" name="sthref5675"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>An <code>OracleTimeStampLTZ</code> instance.</p>
+</li>
+</ul>
+<a id="sthref5676" name="sthref5676"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>DateTime</code> that contains the date and time in the current instance.</p>
+<a id="sthref5677" name="sthref5677"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The <code>OracleTimeStampLTZ</code> structure has a null value.</p>
+<a id="sthref5678" name="sthref5678"></a>
+<p class="subhead2">Remarks</p>
+<p>The precision of the <code>OracleTimeStampLTZ</code> value can be lost during the conversion.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019567" name="i1019567"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Properties<a id="sthref5679" name="sthref5679"></a></h2>
+<p>The <code>OracleTimeStampLTZ</code> properties are listed in <a href="#g1311331">Table 14-111</a>.</p>
+<div class="tblruleformal"><a id="sthref5680" name="sthref5680"></a><a id="g1311331" name="g1311331"></a>
+<p class="titleintable">Table 14-111 OracleTimeStampLTZ Properties</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t591">Properties</th>
+<th align="left" valign="bottom" id="r1c2-t591">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t591" headers="r1c1-t591">
+<p><a href="#i1019683">BinData</a></p>
+</td>
+<td align="left" headers="r2c1-t591 r1c2-t591">
+<p>Returns an array of bytes that represents an <code>Oracle TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> in Oracle internal format</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t591" headers="r1c1-t591">
+<p><a href="#i1019711">Day</a></p>
+</td>
+<td align="left" headers="r3c1-t591 r1c2-t591">
+<p>Specifies the <code>day</code> component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t591" headers="r1c1-t591">
+<p><a href="#i1019739">IsNull</a></p>
+</td>
+<td align="left" headers="r4c1-t591 r1c2-t591">
+<p>Indicates whether or not the <code>OracleTimeStampLTZ</code> instance has a null value</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t591" headers="r1c1-t591">
+<p><a href="#i1019765">Hour</a></p>
+</td>
+<td align="left" headers="r5c1-t591 r1c2-t591">
+<p>Specifies the hour component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t591" headers="r1c1-t591">
+<p><a href="#i1019793">Millisecond</a></p>
+</td>
+<td align="left" headers="r6c1-t591 r1c2-t591">
+<p>Specifies the millisecond component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t591" headers="r1c1-t591">
+<p><a href="#i1019821">Minute</a></p>
+</td>
+<td align="left" headers="r7c1-t591 r1c2-t591">
+<p>Specifies the minute component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t591" headers="r1c1-t591">
+<p><a href="#i1019849">Month</a></p>
+</td>
+<td align="left" headers="r8c1-t591 r1c2-t591">
+<p>Specifies the month component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t591" headers="r1c1-t591">
+<p><a href="#i1019877">Nanosecond</a></p>
+</td>
+<td align="left" headers="r9c1-t591 r1c2-t591">
+<p>Specifies the nanosecond component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t591" headers="r1c1-t591">
+<p><a href="#i1019905">Second</a></p>
+</td>
+<td align="left" headers="r10c1-t591 r1c2-t591">
+<p>Specifies the second component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t591" headers="r1c1-t591">
+<p><a href="#i1019933">Value</a></p>
+</td>
+<td align="left" headers="r11c1-t591 r1c2-t591">
+<p>Specifies the date and time that is stored in the <code>OracleTimeStampLTZ</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t591" headers="r1c1-t591">
+<p><a href="#i1019961">Year</a></p>
+</td>
+<td align="left" headers="r12c1-t591 r1c2-t591">
+<p>Specifies the year component of an <code>OracleTimeStampLTZ</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019683" name="i1019683"></a>
+<h3 class="refsect3">BinData</h3>
+<p>This property returns an array of bytes that represents an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> in Oracle internal format.</p>
+<a id="sthref5681" name="sthref5681"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public byte[] BinData {get;}
+</pre>
+<a id="sthref5682" name="sthref5682"></a>
+<p class="subhead2">Property Value</p>
+<p>A byte array that represents an Oracle <code>TIMESTAMP</code> <code>WITH</code> <code>LOCAL</code> <code>TIME</code> <code>ZONE</code> internal format.</p>
+<a id="sthref5683" name="sthref5683"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019711" name="i1019711"></a>
+<h3 class="refsect3">Day</h3>
+<p>This property specifies the day component of an <code>OracleTimeStampLTZ.</code></p>
+<a id="sthref5684" name="sthref5684"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Day{get;}
+</pre>
+<a id="sthref5685" name="sthref5685"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represents the day. Range of <code>Day</code> is (1 to 31).</p>
+<a id="sthref5686" name="sthref5686"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019739" name="i1019739"></a>
+<h3 class="refsect3">IsNull</h3>
+<p>This property indicates whether or not the current instance has a null value.</p>
+<a id="sthref5687" name="sthref5687"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public bool IsNull{get;}
+</pre>
+<a id="sthref5688" name="sthref5688"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code> if the current instance contains a null value; otherwise, returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019765" name="i1019765"></a>
+<h3 class="refsect3">Hour</h3>
+<p>This property specifies the hour component of an <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5689" name="sthref5689"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Hour{get;}
+</pre>
+<a id="sthref5690" name="sthref5690"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represents the hour. Range of <code>Hour</code> is (0 to 23).</p>
+<a id="sthref5691" name="sthref5691"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019793" name="i1019793"></a>
+<h3 class="refsect3">Millisecond</h3>
+<p>This property gets the millisecond component of an <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5692" name="sthref5692"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public double Millisecond{get;}
+</pre>
+<a id="sthref5693" name="sthref5693"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represents a millisecond. Range of <code>Millisecond</code> is (0 to 999.999999)</p>
+<a id="sthref5694" name="sthref5694"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019821" name="i1019821"></a>
+<h3 class="refsect3">Minute</h3>
+<p>This property gets the minute component of an <code>OracleTimeStampLTZ.</code></p>
+<a id="sthref5695" name="sthref5695"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Minute{get;}
+</pre>
+<a id="sthref5696" name="sthref5696"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represent a minute. Range of <code>Minute</code> is (0 to 59).</p>
+<a id="sthref5697" name="sthref5697"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019849" name="i1019849"></a>
+<h3 class="refsect3">Month</h3>
+<p>This property gets the month component of an <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5698" name="sthref5698"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Month{get;}
+</pre>
+<a id="sthref5699" name="sthref5699"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represents a month. Range of <code>Month</code> is (1 to 12).</p>
+<a id="sthref5700" name="sthref5700"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019877" name="i1019877"></a>
+<h3 class="refsect3">Nanosecond</h3>
+<p>This property gets the nanosecond component of an <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5701" name="sthref5701"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Nanosecond{get;}
+</pre>
+<a id="sthref5702" name="sthref5702"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represents a nanosecond. Range of <code>Nanosecond</code> is (0 to 999999999).</p>
+<a id="sthref5703" name="sthref5703"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019905" name="i1019905"></a>
+<h3 class="refsect3">Second</h3>
+<p>This property gets the second component of an <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5704" name="sthref5704"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Second{get;}
+</pre>
+<a id="sthref5705" name="sthref5705"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represents a second. Range of <code>Second</code> is (0 to 59).</p>
+<a id="sthref5706" name="sthref5706"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019933" name="i1019933"></a>
+<h3 class="refsect3">Value</h3>
+<p>This property specifies the date and time that is stored in the <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5707" name="sthref5707"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public DateTime Value{get;}
+</pre>
+<a id="sthref5708" name="sthref5708"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>DateTime</code>.</p>
+<a id="sthref5709" name="sthref5709"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019961" name="i1019961"></a>
+<h3 class="refsect3">Year</h3>
+<p>This property gets the year component of an <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5710" name="sthref5710"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Year{get;}
+</pre>
+<a id="sthref5711" name="sthref5711"></a>
+<p class="subhead2">Property Value</p>
+<p>A number that represents a year. The range of <code>Year</code> is (-4712 to 9999).</p>
+<a id="sthref5712" name="sthref5712"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1019989" name="i1019989"></a>
+<hr />
+<h2 class="refsect2">OracleTimeStampLTZ Methods<a id="sthref5713" name="sthref5713"></a></h2>
+<p>The <code>OracleTimeStampLTZ</code> methods are listed in <a href="#g1311419">Table 14-112</a>.</p>
+<div class="tblruleformal"><a id="sthref5714" name="sthref5714"></a><a id="g1311419" name="g1311419"></a>
+<p class="titleintable">Table 14-112 OracleTimeStampLTZ Methods</p>
+<table class="RuleFormal" title="OracleTimeStampLTZ Methods " summary="Rows are methods. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="34%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t604">Methods</th>
+<th align="left" valign="bottom" id="r1c2-t604">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t604" headers="r1c1-t604">
+<p><a href="#i1020158">AddDays</a></p>
+</td>
+<td align="left" headers="r2c1-t604 r1c2-t604">
+<p>Adds the supplied number of days to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t604" headers="r1c1-t604">
+<p><a href="#i1020190">AddHours</a></p>
+</td>
+<td align="left" headers="r3c1-t604 r1c2-t604">
+<p>Adds the supplied number of hours to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t604" headers="r1c1-t604">
+<p><a href="#i1020222">AddMilliseconds</a></p>
+</td>
+<td align="left" headers="r4c1-t604 r1c2-t604">
+<p>Adds the supplied number of milliseconds to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t604" headers="r1c1-t604">
+<p><a href="#i1020254">AddMinutes</a></p>
+</td>
+<td align="left" headers="r5c1-t604 r1c2-t604">
+<p>Adds the supplied number of minutes to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t604" headers="r1c1-t604">
+<p><a href="#i1020286">AddMonths</a></p>
+</td>
+<td align="left" headers="r6c1-t604 r1c2-t604">
+<p>Adds the supplied number of months to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t604" headers="r1c1-t604">
+<p><a href="#i1020318">AddNanoseconds</a></p>
+</td>
+<td align="left" headers="r7c1-t604 r1c2-t604">
+<p>Adds the supplied number of nanoseconds to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t604" headers="r1c1-t604">
+<p><a href="#i1020349">AddSeconds</a></p>
+</td>
+<td align="left" headers="r8c1-t604 r1c2-t604">
+<p>Adds the supplied number of seconds to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t604" headers="r1c1-t604">
+<p><a href="#i1020381">AddYears</a></p>
+</td>
+<td align="left" headers="r9c1-t604 r1c2-t604">
+<p>Adds the supplied number of years to the current instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t604" headers="r1c1-t604">
+<p><a href="#i1020413">CompareTo</a></p>
+</td>
+<td align="left" headers="r10c1-t604 r1c2-t604">
+<p>Compares the current <code>OracleTimeStampLTZ</code> instance to an object and returns an integer that represents their relative values</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t604" headers="r1c1-t604">
+<p><a href="#i1020454">Equals</a></p>
+</td>
+<td align="left" headers="r11c1-t604 r1c2-t604">
+<p>Determines whether or not an object has the same date and time as the current <code>OracleTimeStampLTZ</code> instance (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t604" headers="r1c1-t604">
+<p><a href="#i1020488">GetHashCode</a></p>
+</td>
+<td align="left" headers="r12c1-t604 r1c2-t604">
+<p>Returns a hash code for the <code>OracleTimeStampLTZ</code> instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t604" headers="r1c1-t604">
+<p><a href="#i1020515">GetDaysBetween</a></p>
+</td>
+<td align="left" headers="r13c1-t604 r1c2-t604">
+<p>Subtracts an <code>OracleTimeStampLTZ</code> from the current instance and returns an <code>OracleIntervalDS</code> that represents the difference</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t604" headers="r1c1-t604">
+<p><a href="#i1020546">GetYearsBetween</a></p>
+</td>
+<td align="left" headers="r14c1-t604 r1c2-t604">
+<p>Subtracts an <code>OracleTimeStampLTZ</code> from the current instance and returns an <code>OracleIntervalYM</code> that represents the difference</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t604" headers="r1c1-t604">
+<p>GetType</p>
+</td>
+<td align="left" headers="r15c1-t604 r1c2-t604">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t604" headers="r1c1-t604">
+<p><a href="#i1020577">ToOracleDate</a></p>
+</td>
+<td align="left" headers="r16c1-t604 r1c2-t604">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleDate</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t604" headers="r1c1-t604">
+<p><a href="#i1020606">ToOracleTimeStamp</a></p>
+</td>
+<td align="left" headers="r17c1-t604 r1c2-t604">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleTimeStamp</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t604" headers="r1c1-t604">
+<p><a href="#i1020634">ToOracleTimeStampTZ</a></p>
+</td>
+<td align="left" headers="r18c1-t604 r1c2-t604">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleTimeStampTZ</code> structure</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t604" headers="r1c1-t604">
+<p><a href="#i1020676">ToString</a></p>
+</td>
+<td align="left" headers="r19c1-t604 r1c2-t604">
+<p>Converts the current <code>OracleTimeStampLTZ</code> structure to a string</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t604" headers="r1c1-t604">
+<p><a href="#i1020737">ToUniversalTime</a></p>
+</td>
+<td align="left" headers="r20c1-t604 r1c2-t604">
+<p>Converts the current local time to Coordinated Universal Time (UTC)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020158" name="i1020158"></a>
+<h3 class="refsect3">AddDays</h3>
+<p>This method adds the supplied number of days to the current instance.</p>
+<a id="sthref5715" name="sthref5715"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddDays(double <span class="italic">days</span>);
+</pre>
+<a id="sthref5716" name="sthref5716"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">days</span></code></p>
+<p>The supplied number of days. Range is (-1,000,000,000 &lt; <code><span class="codeinlineitalic">days</span></code> &lt; 1,000,000,000)</p>
+</li>
+</ul>
+<a id="sthref5717" name="sthref5717"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5718" name="sthref5718"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<p><code>ArgumentOutofRangeException</code> - The argument value is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020190" name="i1020190"></a>
+<h3 class="refsect3">AddHours</h3>
+<p>This method adds the supplied number of hours to the current instance.</p>
+<a id="sthref5719" name="sthref5719"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddHours(double <span class="italic">hours</span>);
+</pre>
+<a id="sthref5720" name="sthref5720"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">hours</span></code></p>
+<p>The supplied number of hours. Range is (-24,000,000,000 &lt; <code><span class="codeinlineitalic">hours</span></code> &lt; 24,000,000,000).</p>
+</li>
+</ul>
+<a id="sthref5721" name="sthref5721"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5722" name="sthref5722"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<p><code>ArgumentOutofRangeException</code> - The argument value is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020222" name="i1020222"></a>
+<h3 class="refsect3">AddMilliseconds</h3>
+<p>This method adds the supplied number of milliseconds to the current instance.</p>
+<a id="sthref5723" name="sthref5723"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddMilliseconds(double <span class="italic">milliseconds</span>);
+</pre>
+<a id="sthref5724" name="sthref5724"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">milliseconds</span></code></p>
+<p>The supplied number of milliseconds. Range is (-8.64 * 1016&lt; <code>milliseconds</code> &lt; 8.64 * 1016).</p>
+</li>
+</ul>
+<a id="sthref5725" name="sthref5725"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5726" name="sthref5726"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<p><code>ArgumentOutofRangeException</code> - The argument value is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020254" name="i1020254"></a>
+<h3 class="refsect3">AddMinutes</h3>
+<p>This method adds the supplied number of minutes to the current instance.</p>
+<a id="sthref5727" name="sthref5727"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddMinutes(double <span class="italic">minutes</span>);
+</pre>
+<a id="sthref5728" name="sthref5728"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">minutes</span></code></p>
+<p>The supplied number of minutes. Range is (-1,440,000,000,000 &lt; <code><span class="codeinlineitalic">minutes</span></code> &lt; 1,440,000,000,000).</p>
+</li>
+</ul>
+<a id="sthref5729" name="sthref5729"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5730" name="sthref5730"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<p><code>ArgumentOutofRangeException</code> - The argument value is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020286" name="i1020286"></a>
+<h3 class="refsect3">AddMonths</h3>
+<p>This method adds the supplied number of months to the current instance.</p>
+<a id="sthref5731" name="sthref5731"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddMonths(long <span class="italic">months</span>);
+</pre>
+<a id="sthref5732" name="sthref5732"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">months</span></code></p>
+<p>The supplied number of months. Range is (-12,000,000,000 &lt; <code><span class="codeinlineitalic">months</span></code> &lt; 12,000,000,000).</p>
+</li>
+</ul>
+<a id="sthref5733" name="sthref5733"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5734" name="sthref5734"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<p><code>ArgumentOutofRangeException</code> - The argument value is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020318" name="i1020318"></a>
+<h3 class="refsect3">AddNanoseconds</h3>
+<p>This method adds the supplied number of nanoseconds to the current instance.</p>
+<a id="sthref5735" name="sthref5735"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddNanoseconds(long <span class="italic">nanoseconds</span>);
+</pre>
+<a id="sthref5736" name="sthref5736"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">nanoseconds</span></code></p>
+<p>The supplied number of nanoseconds.</p>
+</li>
+</ul>
+<a id="sthref5737" name="sthref5737"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5738" name="sthref5738"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020349" name="i1020349"></a>
+<h3 class="refsect3">AddSeconds</h3>
+<p>This method adds the supplied number of seconds to the current instance.</p>
+<a id="sthref5739" name="sthref5739"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddSeconds(double <span class="italic">seconds</span>);
+</pre>
+<a id="sthref5740" name="sthref5740"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">seconds</span></code></p>
+<p>The supplied number of seconds. Range is (-8.64 * 1013&lt; <code>seconds</code> &lt; 8.64 * 1013).</p>
+</li>
+</ul>
+<a id="sthref5741" name="sthref5741"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5742" name="sthref5742"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<p><code>ArgumentOutofRangeException</code> - The argument value is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020381" name="i1020381"></a>
+<h3 class="refsect3">AddYears</h3>
+<p>This method adds the supplied number of years to the current instance</p>
+<a id="sthref5743" name="sthref5743"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampLTZ AddYears(int <span class="italic">years</span>);
+</pre>
+<a id="sthref5744" name="sthref5744"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">years</span></code></p>
+<p>The supplied number of years. Range is (-999,999,999 &lt;= <code><span class="codeinlineitalic">years</span></code> &lt; = 999,999,999)</p>
+</li>
+</ul>
+<a id="sthref5745" name="sthref5745"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5746" name="sthref5746"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>OracleNullValueException</code> - The current instance has a null value.</p>
+<p><code>ArgumentOutofRangeException</code> - The argument value is out of the specified range.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020413" name="i1020413"></a>
+<h3 class="refsect3">CompareTo</h3>
+<p>This method compares the current <code>OracleTimeStampLTZ</code> instance to an object, and returns an integer that represents their relative values.</p>
+<a id="sthref5747" name="sthref5747"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int CompareTo(object <span class="italic">obj</span>);
+</pre>
+<a id="sthref5748" name="sthref5748"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The object being compared to the current <code>OracleTimeStampLTZ</code> instance.</p>
+</li>
+</ul>
+<a id="sthref5749" name="sthref5749"></a>
+<p class="subhead2">Return Value</p>
+<p>The method returns a number that is:</p>
+<ul>
+<li>
+<p>Less than zero: if the current <code>OracleTimeStampLTZ</code> instance value is less than that of <code><span class="codeinlineitalic">obj</span></code>.</p>
+</li>
+<li>
+<p>Zero: if the current <code>OracleTimeStampLTZ</code> instance and <code><span class="codeinlineitalic">obj</span></code> values are equal.</p>
+</li>
+<li>
+<p>Greater than zero: if the current <code>OracleTimeStampLTZ</code> instance value is greater than that of <code><span class="codeinlineitalic">obj</span></code>.</p>
+</li>
+</ul>
+<a id="sthref5750" name="sthref5750"></a>
+<p class="subhead2">Implements</p>
+<p><code>IComparable</code></p>
+<a id="sthref5751" name="sthref5751"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">obj</span></code> parameter is not of type <code>OracleTimeStampLTZ</code>.</p>
+<a id="sthref5752" name="sthref5752"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>The comparison must be between <code>OracleTimeStampLTZ</code>s. For example, comparing an <code>OracleTimeStampLTZ</code> instance with an <code>OracleBinary</code> instance is not allowed. When an <code>OracleTimeStampLTZ</code> is compared with a different type, an <code>ArgumentException</code> is thrown.</p>
+</li>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020454" name="i1020454"></a>
+<h3 class="refsect3">Equals</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method determines whether or not an object has the same date and time as the current <code>OracleTimeStampLTZ</code> instance.</p>
+<a id="sthref5753" name="sthref5753"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool Equals(object <span class="italic">obj</span>);
+</pre>
+<a id="sthref5754" name="sthref5754"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">obj</span></code></p>
+<p>The object being compared to the current <code>OracleTimeStampLTZ</code> instance.</p>
+</li>
+</ul>
+<a id="sthref5755" name="sthref5755"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the <code><span class="codeinlineitalic">obj</span></code> is of type <code>OracleTimeStampLTZ</code> and represents the same date and time; otherwise, returns <code>false</code>.</p>
+<a id="sthref5756" name="sthref5756"></a>
+<p class="subhead2">Remarks</p>
+<p>The following rules apply to the behavior of this method.</p>
+<ul>
+<li>
+<p>Any <code>OracleTimeStampLTZ</code> that has a value is greater than an <code>OracleTimeStampLTZ</code> that has a null value.</p>
+</li>
+<li>
+<p>Two <code>OracleTimeStampLTZ</code>s that contain a null value are equal.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020488" name="i1020488"></a>
+<h3 class="refsect3">GetHashCode</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method returns a hash code for the <code>OracleTimeStampLTZ</code> instance.</p>
+<a id="sthref5757" name="sthref5757"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int GetHashCode();
+</pre>
+<a id="sthref5758" name="sthref5758"></a>
+<p class="subhead2">Return Value</p>
+<p>A number that represents the hash code.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020515" name="i1020515"></a>
+<h3 class="refsect3">GetDaysBetween</h3>
+<p>This method subtracts an <code>OracleTimeStampLTZ</code> value from the current instance and returns an <code>OracleIntervalDS</code> that represents the difference.</p>
+<a id="sthref5759" name="sthref5759"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalDS GetDaysBetween(OracleTimeStampLTZ <span class="italic">value1</span>);
+</pre>
+<a id="sthref5760" name="sthref5760"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The <code>OracleTimeStampLTZ</code> value being subtracted.</p>
+</li>
+</ul>
+<a id="sthref5761" name="sthref5761"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalDS</code> that represents the interval between two <code>OracleTimeStampLTZ</code> values.</p>
+<a id="sthref5762" name="sthref5762"></a>
+<p class="subhead2">Remarks</p>
+<p>If either the current instance or the parameter has a null value, the returned <code>OracleIntervalDS</code> has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020546" name="i1020546"></a>
+<h3 class="refsect3">GetYearsBetween</h3>
+<p>This method subtracts an <code>OracleTimeStampLTZ</code> value from the current instance and returns an <code>OracleIntervalYM</code> that represents the time interval.</p>
+<a id="sthref5763" name="sthref5763"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleIntervalYM GetYearsBetween(OracleTimeStampLTZ <span class="italic">value1</span>);
+</pre>
+<a id="sthref5764" name="sthref5764"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">value1</span></code></p>
+<p>The <code>OracleTimeStampLTZ</code> value being subtracted.</p>
+</li>
+</ul>
+<a id="sthref5765" name="sthref5765"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleIntervalYM</code> that represents the interval between two <code>OracleTimeStampLTZ</code> values.</p>
+<a id="sthref5766" name="sthref5766"></a>
+<p class="subhead2">Remarks</p>
+<p>If either the current instance or the parameter has a null value, the returned <code>OracleIntervalYM</code> has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020577" name="i1020577"></a>
+<h3 class="refsect3">ToOracleDate</h3>
+<p>This method converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleDate</code> structure.</p>
+<a id="sthref5767" name="sthref5767"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleDate ToOracleDate();
+</pre>
+<a id="sthref5768" name="sthref5768"></a>
+<p class="subhead2">Return Value</p>
+<p>The returned <code>OracleDate</code> structure contains the date and time in the current instance.</p>
+<a id="sthref5769" name="sthref5769"></a>
+<p class="subhead2">Remarks</p>
+<p>The precision of the <code>OracleTimeStampLTZ</code> value can be lost during the conversion.</p>
+<p>If the current instance has a null value, the value of the returned <code>OracleDate</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020606" name="i1020606"></a>
+<h3 class="refsect3">ToOracleTimeStamp</h3>
+<p>This method converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleTimeStamp</code> structure.</p>
+<a id="sthref5770" name="sthref5770"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStamp ToOracleTimeStamp();
+</pre>
+<a id="sthref5771" name="sthref5771"></a>
+<p class="subhead2">Return Value</p>
+<p>The returned <code>OracleTimeStamp</code> contains the date and time in the current instance.</p>
+<a id="sthref5772" name="sthref5772"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current instance has a null value, the value of the returned <code>OracleTimeStamp</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020634" name="i1020634"></a>
+<h3 class="refsect3">ToOracleTimeStampTZ</h3>
+<p>This method converts the current <code>OracleTimeStampLTZ</code> structure to an <code>OracleTimeStampTZ</code> structure.</p>
+<a id="sthref5773" name="sthref5773"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampTZ ToOracleTimeStampTZ();
+</pre>
+<a id="sthref5774" name="sthref5774"></a>
+<p class="subhead2">Return Value</p>
+<p>The returned <code>OracleTimeStampTZ</code> contains the date and time of the current instance, with the time zone set to the <code>OracleGlobalization.TimeZone</code> from the thread.</p>
+<a id="sthref5775" name="sthref5775"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current instance has a null value, the value of the returned <code>OracleTimeStampTZ</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+<li>
+<p><a href="OracleGlobalizationClass.htm#i1008880">"OracleGlobalization Class"</a></p>
+</li>
+<li>
+<p><a href="featGlobal.htm#i1008260">"Globalization Support"</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020676" name="i1020676"></a>
+<h3 class="refsect3">ToString</h3>
+<p>Overrides <code>Object</code></p>
+<p>This method converts the current <code>OracleTimeStampLTZ</code> structure to a string.</p>
+<a id="sthref5776" name="sthref5776"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string ToString();
+</pre>
+<a id="sthref5777" name="sthref5777"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>string</code> that represents the same date and time as the current <code>OracleTimeStampLTZ</code> structure.</p>
+<a id="sthref5778" name="sthref5778"></a>
+<p class="subhead2">Remarks</p>
+<p>The returned value is a string representation of the <code>OracleTimeStampLTZ</code> in the format specified by the <code>OracleGlobalization</code>.<code>TimeStampFormat</code> property of the thread.</p>
+<p>The names and abbreviations used for months and days are in the language specified by the <code>DateLanguage</code> and <code>Calendar</code> properties of the thread's <code>OracleGlobalization</code> object. If any of the thread's globalization properties are set to null or an empty string, the client computer's settings are used.</p>
+<a id="sthref5779" name="sthref5779"></a>
+<p class="subhead2">Example</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+ 
+using System;
+using Oracle.DataAccess.Types;
+using Oracle.DataAccess.Client;
+ 
+class ToStringSample
+{
+  static void Main()
+  {
+    // Set the nls_timestamp_format for the OracleTimeStampLTZ(string)
+    // constructor
+    OracleGlobalization info = OracleGlobalization.GetClientInfo();
+    info.TimeStampFormat = "DD-MON-YYYY HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+    
+    // construct OracleTimeStampLTZ from a string using the format
+    // specified.
+    OracleTimeStampLTZ ts = 
+      new OracleTimeStampLTZ("11-NOV-1999 11:02:33.444 AM");
+      
+    // Set the nls_timestamp_format for the ToString() method
+    info.TimeStampFormat = "YYYY-MON-DD HH:MI:SS.FF AM";
+    OracleGlobalization.SetThreadInfo(info);
+ 
+    // Prints "1999-NOV-11 11:02:33.444000000 AM"
+    Console.WriteLine(ts.ToString());     
+  }
+}
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+<li>
+<p><a href="OracleGlobalizationClass.htm#i1008880">"OracleGlobalization Class"</a></p>
+</li>
+<li>
+<p><a href="featGlobal.htm#i1008260">"Globalization Support"</a></p>
+</li>
+</ul>
+</div>
+<a id="i1020737" name="i1020737"></a>
+<h3 class="refsect3">ToUniversalTime</h3>
+<p>This method converts the current local time to Coordinated Universal Time (UTC).</p>
+<a id="sthref5780" name="sthref5780"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleTimeStampTZ ToUniversalTime();
+</pre>
+<a id="sthref5781" name="sthref5781"></a>
+<p class="subhead2">Return Value</p>
+<p>An <code>OracleTimeStampTZ</code> structure.</p>
+<a id="sthref5782" name="sthref5782"></a>
+<p class="subhead2">Remarks</p>
+<p>If the current instance has a null value, the value of the returned <code>OracleTimeStampTZ</code> structure has a null value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#CEGBBCEH">"Oracle.DataAccess.Types Namespace"</a></p>
+</li>
+<li>
+<p><a href="#i1017022">OracleTimeStampLTZ Structure</a></p>
+</li>
+<li>
+<p><a href="#i1017104">OracleTimeStampLTZ Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleTimeStampStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleTimeStampTZStructure.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

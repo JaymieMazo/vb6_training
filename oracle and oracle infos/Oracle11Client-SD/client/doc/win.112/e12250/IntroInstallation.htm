@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-17T21:18:53Z" />
+<meta name="doctitle" content="Oracle&reg; Providers for ASP.NET Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12250-01" />
+<meta name="docid" content="ASPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="IntroSystemRequirements.htm" title="Previous" type="text/html" />
+<link rel="Next" href="IntroUpgrading.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12250.pdf" title="PDF version" type="application/pdf" />
+<title>Oracle Providers for ASP.NET Installation</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Providers for ASP.NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12250-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="IntroSystemRequirements.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="IntroUpgrading.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12250.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="BHCGAGGB" name="BHCGAGGB"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="sect1">Oracle Providers for ASP.NET Installation<a id="sthref17" name="sthref17"></a><a id="sthref18" name="sthref18"></a><a id="sthref19" name="sthref19"></a><a id="sthref20" name="sthref20"></a></h1>
+<p>Oracle Providers for ASP.NET is part of Oracle Data Access Components (ODAC), which can be downloaded from OTN. Beginning with ODAC 11.1.0.6.20, Oracle Providers for ASP.NET can be installed through XCopy or Oracle Universal Installer.</p>
+<ul>
+<li>
+<p>XCopy</p>
+<p>Administrators use XCopy to deploy Oracle Providers for ASP.NET to a large number of computers for production deployments. It has a small footprint and fine grain control during installation and setup.</p>
+</li>
+<li>
+<p>Oracle Universal Installer</p>
+<p>Developers or users use Oracle Universal Installer for automatic GUI installation. It includes documentation and code samples that are not part of XCopy deployment.</p>
+</li>
+</ul>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+This section describes installation using the Oracle Universal Installer. For the XCopy installation instructions and configuration, refer to the README file that is part of that installation.</div>
+<p>When Oracle Providers for ASP.NET are installed, Oracle Universal Installer automatically registers <code>Oracle.Web.dll</code> with the Global Assembly Cache (GAC).</p>
+<p>The Oracle Providers for ASP.NET installation creates entries in the <code>machine.config</code> file of the computer on which it is installed. These entries provide basic configuration information for the Oracle Membership, Profile, Role, Site Map, Web Parts Personalization, and Web Event Providers. The <code>machine.config</code> includes a blank connection string for <code>OraAspConString</code>, which a developer can configure to connect to an Oracle database with the Oracle Providers for ASP.NET schema.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="#BHCJFEAD">"ASP.NET Client Setup"</a> for more details</div>
+<p>Additionally, Oracle Providers for ASP.NET Dynamic Help is registered with Visual Studio, providing context-sensitive online help that is seamlessly integrated with the Visual Studio Dynamic Help. With Dynamic Help, the user can access Oracle Providers for ASP.NET documentation within Visual Studio by placing the cursor on an Oracle Providers for ASP.NET keyword and pressing the F1 function key.</p>
+<p>Once you have installed Oracle Providers for ASP.NET, two additional setup tasks are required, as follows:</p>
+<ul>
+<li>
+<p><a href="#BHCFFECE">Database Server Setup</a></p>
+</li>
+<li>
+<p><a href="#BHCJFEAD">ASP.NET Client Setup</a></p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1"><span class="bold">See Also</span>:</p>
+<a class="olink NTDBI" href="http://www.oracle.com/pls/db102/lookup?id=NTDBI"><span class="italic">Oracle Database Installation Guide for Windows</span></a> for installation instructions</div>
+<a id="BHCFFECE" name="BHCFFECE"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2">Database Server Setup<a id="sthref21" name="sthref21"></a><a id="sthref22" name="sthref22"></a><a id="sthref23" name="sthref23"></a><a id="sthref24" name="sthref24"></a></h2>
+<p>The following sections explain how to configure the providers:</p>
+<ul>
+<li>
+<p><a href="#BHCCBJII">Database Privileges for Setup</a></p>
+</li>
+<li>
+<p><a href="#BABDEHAJ">Configuring All Oracle Providers for ASP.NET</a></p>
+</li>
+<li>
+<p><a href="#BABFFDIE">Configuring Oracle Providers for ASP.NET Individually</a></p>
+</li>
+<li>
+<p><a href="#BHCCDCEA">General Setup Information</a></p>
+</li>
+</ul>
+<a id="BHCCBJII" name="BHCCBJII"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect3">Database Privileges for Setup</h3>
+<p>To set up the Oracle database, database administrators must grant the following database privileges to the Oracle Providers for ASP.NET schema. These privileges grant the schema privileges to create the tables, views, stored procedures, and other database objects the Oracle Providers for ASP.NET require. These scripts must be run against the database from which the ASP.NET providers will retrieve their stored state information. These SQL scripts can be run using SQL*Plus or within Oracle Developer Tools for Visual Studio.</p>
+<p>Oracle Providers for ASP.NET requires the following privileges during setup:</p>
+<ul>
+<li>
+<p>Change notification</p>
+</li>
+<li>
+<p>Create job</p>
+</li>
+<li>
+<p>Create procedure</p>
+</li>
+<li>
+<p>Create public synonym</p>
+</li>
+<li>
+<p>Create role</p>
+</li>
+<li>
+<p>Create session</p>
+</li>
+<li>
+<p>Create table</p>
+</li>
+<li>
+<p>Create view</p>
+</li>
+<li>
+<p>Drop public synonym</p>
+</li>
+<li>
+<p>Grant access to and allocate space in an Oracle tablespace</p>
+</li>
+</ul>
+<p>Not all database privileges are required for Oracle Providers for ASP.NET runtime operations. Database administrators may selectively grant and revoke privileges as required. For runtime operations, all providers require that the <code>CREATE</code> <code>SESSION</code> privilege be granted to the schema user. In addition, the Site Map and Cache Dependency providers require the <code>CHANGE</code> <code>NOTIFICATION</code> privilege during runtime. The remaining privileges can be granted to the schema user just for installation and deinstallation, then revoked for runtime operations.</p>
+<p>Errors that occur during the setup script execution may indicate that the user needs to be granted the above privileges. If this is the case, the database administrator must grant these privileges. The Oracle Session State Provider for ASP.NET requires the <code>CREATE JOB</code> privilege when Oracle Database 10<span class="italic">g</span> or later is the database.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABDEHAJ" name="BABDEHAJ"></a>
+<div class="sect3">
+<h3 class="sect3">Configuring All Oracle Providers for ASP.NET</h3>
+<p>To configure all providers in the database at once, run <code>InstallAllOracleASPNETProviders.sql</code>. This script is found in the <code><span class="codeinlineitalic">ORACLE_BASE\\ORACLE_HOME</span></code><code>\ASP.NET\sql</code> directory.</p>
+<p>To install Oracle Session State Provider with an Oracle Database 9<span class="italic">i</span> Release 2, developers must modify the <code>InstallAllOracleASPNETProviders.sql</code> script to call the appropriate install script for the provider as listed in <a href="#BABBAEEI">Table 1-2</a>. This script calls the configuration script for each provider one by one.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABFFDIE" name="BABFFDIE"></a>
+<div class="sect3">
+<h3 class="sect3">Configuring Oracle Providers for ASP.NET Individually</h3>
+<p>Applications may not require all Oracle Providers for ASP.NET. Providers can be set up individually. Except for the Oracle Session State Provider and Oracle Cache Dependency Provider, the following install script must be executed before any other install scripts: <code>InstallOracleASPNETCommon.sql</code>. Then, for each Oracle Provider for ASP.NET, a SQL script specific for that provider must be executed (in any order).</p>
+<p>These install scripts are found in the <code><span class="codeinlineitalic">ORACLE_BASE\\ORACLE_HOME</span></code><code>\ASP.NET\sql</code> directory.</p>
+<div class="tblformal"><a id="sthref25" name="sthref25"></a><a id="BABBAEEI" name="BABBAEEI"></a>
+<p class="titleintable">Table 1-2 ASP.NET Provider Install Scripts</p>
+<table class="Formal" title="ASP.NET Provider Install Scripts" summary="Rows aresproviders. First column is name, second column is install script" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="45%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t15">Provider</th>
+<th align="left" valign="bottom" id="r1c2-t15">Required Installation Script</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t15" headers="r1c1-t15">
+<p>Oracle Membership Provider</p>
+</td>
+<td align="left" headers="r2c1-t15 r1c2-t15">
+<p><code>InstallOracleMembership.sql</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t15" headers="r1c1-t15">
+<p>Oracle Personalization Provider</p>
+</td>
+<td align="left" headers="r3c1-t15 r1c2-t15">
+<p><code>InstallOraclePersonalization.sql</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t15" headers="r1c1-t15">
+<p>Oracle Profile Provider</p>
+</td>
+<td align="left" headers="r4c1-t15 r1c2-t15">
+<p><code>InstallOracleProfile.sql</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t15" headers="r1c1-t15">
+<p>Oracle Role Provider</p>
+</td>
+<td align="left" headers="r5c1-t15 r1c2-t15">
+<p><code>InstallOracleRoles.sql</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t15" headers="r1c1-t15">
+<p>Oracle Session State Provider</p>
+</td>
+<td align="left" headers="r6c1-t15 r1c2-t15">
+<p>For Oracle Database 10<span class="italic">g</span> Release 1 and later <code>InstallOracleSessionState.sql</code></p>
+<p>For Oracle Database 9<span class="italic">i</span> Release 2 <code>InstallOracleSessionState92.sql</code></p>
+<p>There are correspondingly named uninstall scripts for these install scripts.</p>
+<p>Note: This provider only requires the execution of the appropriate provider-specific <code>.sql</code> script as listed. It does not require the execution of <code>InstallOracleASPNETCommon.sql</code>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t15" headers="r1c1-t15">
+<p>Oracle Site Map Provider</p>
+</td>
+<td align="left" headers="r7c1-t15 r1c2-t15">
+<p><code>InstallOracleSiteMap.sql</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t15" headers="r1c1-t15">
+<p>Oracle Web Events Provider</p>
+</td>
+<td align="left" headers="r8c1-t15 r1c2-t15">
+<p><code>InstallOracleWebEvents.sql</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t15" headers="r1c1-t15">
+<p>Oracle Cache Dependency Provider</p>
+</td>
+<td align="left" headers="r9c1-t15 r1c2-t15">
+<p>No script execution needed</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BHCCDCEA" name="BHCCDCEA"></a>
+<div class="sect3">
+<h3 class="sect3">General Setup Information</h3>
+<p>When Oracle Providers for ASP.NET installation scripts run, they execute, in turn, corresponding <code>.plb</code> scripts that are located in the same directory. The <code>.plb</code> scripts create the stored procedures and functions that the providers use. The installation <code>.sql</code> scripts must execute where the .<code>plb</code> file can be accessed.</p>
+<p>Each provider also provides corresponding uninstall scripts to remove database objects that were created from the install scripts. These scripts are prefixed with the word <code>Uninstall</code>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BHCJFEAD" name="BHCJFEAD"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect2">ASP.NET Client Setup<a id="sthref26" name="sthref26"></a><a id="sthref27" name="sthref27"></a><a id="sthref28" name="sthref28"></a><a id="sthref29" name="sthref29"></a></h2>
+<p>Installation configures the <code>machine.config</code> file to enable Oracle Providers for ASP.NET systemwide.</p>
+<p>After installation, developers must provide the connection information to the database schema that stores and retrieves the ASP.NET state information. This step requires developers to supply the <code>User</code> <code>Id</code>, <code>Password</code>, <code>Data</code> <code>Source</code>, and other connection string information if necessary. In the <code>machine.config</code> file, developers can provide an entry similar to the example below.</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;connectionStrings&gt;
+&lt;add name="OraAspNetConString" connectionString="User Id=aspnet;Password=aspnet;Data Source=oracle; " /&gt;
+&lt;/connectionStrings&gt;
+ 
+</pre>
+<p>Optionally, developers can customize the properties of each ASP.NET provider from within the <code>&lt;system.web&gt;</code> section of the <code>machine.config</code>.</p>
+<p>While Oracle Universal Installer automatically configures the <code>machine.config</code>, developers can apply more fine grained application-level control over the Oracle Providers for ASP.NET by using the <code>web.config</code> file. This file overrides entries from the <code>machine.config</code> file, but only for the specific web application it is a part of. Developers can set up their <code>web.config</code> file with the same XML syntax as the <code>machine.config</code> file.</p>
+<p>Developers can use standard ASP.NET management tools to configure the Oracle Providers for ASP.NET. Specifically, developers can use the Internet Information Services management console. In the ASP.NET Configuration Settings of the console, developers can modify the Oracle provider settings. Alternatively, in a Web Site project in Visual Studio, the ASP.NET Configuration choice under the Website menu item allows developers to set these settings for their specific Web Site projects.</p>
+<p>A standard Oracle Providers for ASP.NET installation automatically sets up <code>machine</code>.<code>config</code> with default values, but administrators can modify the setup. Users can use the <code><span class="codeinlineitalic">ORACLE_BASE\\ORACLE_HOME</span></code><code>\ASP.NET\Bin\2.</code><code><span class="codeinlineitalic">x</span></code><code>\OraProvCfg</code> utility to configure the provider-specific entry in the <code>machine.config</code> file as follows:</p>
+<ul>
+<li>
+<p>To display the <code>OraProvCfg</code> utility help:</p>
+<pre xml:space="preserve" class="oac_no_warn">OraProvCfg -help 
+</pre></li>
+<li>
+<p>To add Oracle Providers for ASP.NET-specific entries to the <code>machine.config</code> file:</p>
+<pre xml:space="preserve" class="oac_no_warn">OraProvCfg  /action:config  /product:aspnet  /component:all
+             /frameworkversion:v2.0.50727
+             /providerpath:c:\Oracle\odp.net\bin\2.x\Oracle.Web.dll
+</pre>
+<p>Where Framework version and Provider path (especially) may need to change accordingly.</p>
+</li>
+<li>
+<p>To remove the Oracle Providers for ASP.NET-specific entries from the <code>machine.config</code> file:</p>
+<pre xml:space="preserve" class="oac_no_warn">OraProvCfg  /action:unconfig  /product:aspnet  /component:all
+            /frameworkversion:v2.0.50727
+</pre></li>
+</ul>
+<p>Where Framework version may need to change accordingly.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="IntroSystemRequirements.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="IntroUpgrading.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2007, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

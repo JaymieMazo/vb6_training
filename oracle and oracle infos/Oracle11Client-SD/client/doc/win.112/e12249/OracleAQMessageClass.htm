@@ -1,0 +1,1055 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-27T18:54:21Z" />
+<meta name="doctitle" content="Oracle&reg; Data Provider for .NET Developer's Guide 11g Release 2 (11.2)" />
+<meta name="partno" content="E12249-01" />
+<meta name="docid" content="ODPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="OracleAQEnqueueOptionsClass.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleAQMessageAvailableEventArgsClass.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12249.pdf" title="PDF version" type="application/pdf" />
+<title>OracleAQMessage Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Data Provider for .NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2)</b><br />
+Part Number E12249-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleAQEnqueueOptionsClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleAQMessageAvailableEventArgsClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12249.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CHDDJFGE" name="CHDDJFGE"></a>
+<hr />
+<div class="refsect1"><a id="Toc201568232" name="Toc201568232"></a>
+<h1 class="refsect1">OracleAQMess<a id="sthref3164" name="sthref3164"></a>age Class</h1>
+<p>An <code>OracleAQMessage</code> object represents a message to be enqueued and dequeued.</p>
+<a id="sthref3165" name="sthref3165"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;OracleAQMessage</code></p>
+<a id="sthref3166" name="sthref3166"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public sealed class OracleAQMessage
+</pre>
+<a id="sthref3167" name="sthref3167"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance methods do not guarantee thread safety.</p>
+<a id="sthref3168" name="sthref3168"></a>
+<p class="subhead2">Remarks</p>
+<p>An <code>OracleAQMessage</code> object consists of control information (metadata) and Payload (data). The control information is exposed by various properties on the <code>OracleAQMessage</code> object and is used by Oracle Streams Advanced Queuing to manage messages. The payload is the information stored in the queue.</p>
+<a id="sthref3169" name="sthref3169"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.DataAccess.Client</code></p>
+<p>Assembly: <code>Oracle.DataAccess.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+<li>
+<p><a href="#CHDBBHCI">OracleAQMessage Constructors</a></p>
+</li>
+<li>
+<p><a href="#CHDCJBAJ">OracleAQMessage Properties</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGHIAD" name="CHDGHIAD"></a>
+<hr />
+<h2 class="refsect2">OracleAQMessage Me<a id="sthref3170" name="sthref3170"></a>mbers</h2>
+<p><code>OracleAQMessage</code> members are listed in the following tables.</p>
+<a id="sthref3171" name="sthref3171"></a>
+<p class="subhead1">OracleAQMessage Constructor</p>
+<p><code>OracleAQMessage</code> constructors are listed in <a href="#CHDICDHB">Table 12-14</a>.</p>
+<div class="tblruleformal"><a id="sthref3172" name="sthref3172"></a><a id="CHDICDHB" name="CHDICDHB"></a>
+<p class="titleintable">Table 12-14 OracleAQMessage Constructors</p>
+<table class="RuleFormal" title="OracleAQMessage Constructors" summary="Rows are constructors, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t47">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t47">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t47" headers="r1c1-t47">
+<p><a href="#CHDBBHCI">OracleAQMessage Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t47 r1c2-t47">
+<p>Instantiates a new instance of the <code>OracleAQMessage</code> class (Overloaded).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref3173" name="sthref3173"></a>
+<p class="subhead1">OracleAQMessage Properties</p>
+<p><code>OracleAQMessage</code> properties are listed in <a href="#CHDDFDDG">Table 12-15</a>.</p>
+<div class="tblruleformal"><a id="sthref3174" name="sthref3174"></a><a id="CHDDFDDG" name="CHDDFDDG"></a>
+<p class="titleintable">Table 12-15 OracleAQMessage Properties</p>
+<table class="RuleFormal" title="OracleAQMessage Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="38%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t48">Property</th>
+<th align="left" valign="bottom" id="r1c2-t48">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t48" headers="r1c1-t48">
+<p><a href="#CHDCHBGC">Correlation</a></p>
+</td>
+<td align="left" headers="r2c1-t48 r1c2-t48">
+<p>Specifies an identification for the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t48" headers="r1c1-t48">
+<p><a href="#CHDDGHFD">Delay</a></p>
+</td>
+<td align="left" headers="r3c1-t48 r1c2-t48">
+<p>Specifies the duration, in seconds, after which an enqueued message is available for dequeuing.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t48" headers="r1c1-t48">
+<p><a href="#CHDCAGJG">DeliveryMode</a></p>
+</td>
+<td align="left" headers="r4c1-t48 r1c2-t48">
+<p>Specifies the delivery mode of the dequeued message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t48" headers="r1c1-t48">
+<p><a href="#CHDDJFCI">DequeueAttempts</a></p>
+</td>
+<td align="left" headers="r5c1-t48 r1c2-t48">
+<p>Returns the number of attempts that have been made to dequeue the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t48" headers="r1c1-t48">
+<p><a href="#CHDEGGFF">EnqueueTime</a></p>
+</td>
+<td align="left" headers="r6c1-t48 r1c2-t48">
+<p>Specifies the time when the message was enqueued.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t48" headers="r1c1-t48">
+<p><a href="#CHDHHACG">ExceptionQueue</a></p>
+</td>
+<td align="left" headers="r7c1-t48 r1c2-t48">
+<p>Specifies the name of the queue that the message should be moved to if it cannot be processed successfully.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t48" headers="r1c1-t48">
+<p><a href="#CHDIEEJA">Expiration</a></p>
+</td>
+<td align="left" headers="r8c1-t48 r1c2-t48">
+<p>Specifies the duration, in seconds, for which an enqueued message is available for dequeuing.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t48" headers="r1c1-t48">
+<p><a href="#CHDGECAF">MessageId</a></p>
+</td>
+<td align="left" headers="r9c1-t48 r1c2-t48">
+<p>Returns the message identifier.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t48" headers="r1c1-t48">
+<p><a href="#CHDBFIBE">OriginalMessageId</a></p>
+</td>
+<td align="left" headers="r10c1-t48 r1c2-t48">
+<p>Specifies the identifier of the message in the last queue that generated this message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t48" headers="r1c1-t48">
+<p><a href="#CHDCIFFG">Payload</a></p>
+</td>
+<td align="left" headers="r11c1-t48 r1c2-t48">
+<p>Specifies the payload of the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t48" headers="r1c1-t48">
+<p><a href="#CHDJEFHB">Priority</a></p>
+</td>
+<td align="left" headers="r12c1-t48 r1c2-t48">
+<p>Specifies the priority of the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t48" headers="r1c1-t48">
+<p><a href="#CHDIHJBA">Recipients</a></p>
+</td>
+<td align="left" headers="r13c1-t48 r1c2-t48">
+<p>Specifies the list of recipients that overrides the default queue subscribers.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t48" headers="r1c1-t48">
+<p><a href="#CHDIGFEA">SenderId</a></p>
+</td>
+<td align="left" headers="r14c1-t48 r1c2-t48">
+<p>Identifies the original sender of the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t48" headers="r1c1-t48">
+<p><a href="#CHDJGCBB">State</a></p>
+</td>
+<td align="left" headers="r15c1-t48 r1c2-t48">
+<p>Specifies the state of the message at the time of dequeue.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t48" headers="r1c1-t48">
+<p><a href="#CHDHDHEB">TransactionGroup</a></p>
+</td>
+<td align="left" headers="r16c1-t48 r1c2-t48">
+<p>Specifies the transaction group for the dequeued message.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBBHCI" name="CHDBBHCI"></a>
+<hr />
+<h2 class="refsect2">OracleAQMessage Construct<a id="sthref3175" name="sthref3175"></a>ors</h2>
+<p><code>OracleAQMessage</code> constructors create new instances of the <code>OracleAQMessage</code> class.</p>
+<a id="sthref3176" name="sthref3176"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#CHDIHICG">OracleAQMessage()</a></p>
+<p>This constructor instantiates the <code>OracleAQMessage</code> class.</p>
+</li>
+<li>
+<p><a href="#CHDDJGHJ">OracleAQMessage(Object)</a></p>
+<p>This constructor instantiates the <code>OracleAQMessage</code> class using the object provided as the payload.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDIHICG" name="CHDIHICG"></a>
+<h3 class="refsect3">OracleAQMessage()</h3>
+<p>This constructor instantiates the <code>OracleAQMessage</code> class.</p>
+<a id="sthref3177" name="sthref3177"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleAQMessage();
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDJGHJ" name="CHDDJGHJ"></a><a id="Toc201568234" name="Toc201568234"></a>
+<h3 class="refsect3">OracleAQMessage(Object)</h3>
+<p>This constructor instantiates the <code>OracleAQMessage</code> class using the <code>Object</code> provided as the <code><span class="codeinlineitalic">payload</span></code>.</p>
+<a id="sthref3178" name="sthref3178"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleAQMessage(Object <span class="italic">payload</span>);
+</pre>
+<a id="sthref3179" name="sthref3179"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">payload</span></code></p>
+<p>An <code>Object</code> specifying <code><span class="codeinlineitalic">payload</span></code>. It can be one of the following types:</p>
+<ul>
+<li>
+<p><code>byte[]</code></p>
+</li>
+<li>
+<p><code>IOracleCustomType</code></p>
+</li>
+<li>
+<p><code>OracleBinary</code></p>
+</li>
+<li>
+<p><code>OracleXmlType</code></p>
+</li>
+<li>
+<p><code>String</code></p>
+</li>
+<li>
+<p><code>XmlReader</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<a id="sthref3180" name="sthref3180"></a>
+<p class="subhead2"><span class="bold">Exceptions</span></p>
+<p><code>ArgumentException</code> - The specified <code><span class="codeinlineitalic">payload</span></code> value is of invalid type.</p>
+<a id="sthref3181" name="sthref3181"></a>
+<p class="subhead2">Remarks</p>
+<p>The ODP.NET AQ implementation currently does not support user defined types with LOB attributes. It also does not support other variants of user defined types such as <code>VARRAY</code> and nested tables, as Oracle Streams AQ does not support them inherently.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCJBAJ" name="CHDCJBAJ"></a>
+<hr />
+<h2 class="refsect2">OracleAQMessage Prop<a id="sthref3182" name="sthref3182"></a>erties</h2>
+<p><code>OracleAQMessage</code> properties are listed in <a href="#CHDEJJEE">Table 12-16</a>.</p>
+<div class="tblruleformal"><a id="sthref3183" name="sthref3183"></a><a id="CHDEJJEE" name="CHDEJJEE"></a>
+<p class="titleintable">Table 12-16 OracleAQMessage Properties</p>
+<table class="RuleFormal" title="OracleAQMessage Properties " summary="Rows are properties. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="38%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t53">Property</th>
+<th align="left" valign="bottom" id="r1c2-t53">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t53" headers="r1c1-t53">
+<p><a href="#CHDCHBGC">Correlation</a></p>
+</td>
+<td align="left" headers="r2c1-t53 r1c2-t53">
+<p>Specifies an identification for the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t53" headers="r1c1-t53">
+<p><a href="#CHDDGHFD">Delay</a></p>
+</td>
+<td align="left" headers="r3c1-t53 r1c2-t53">
+<p>Specifies the duration, in seconds, after which an enqueued message is available for dequeuing.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t53" headers="r1c1-t53">
+<p><a href="#CHDCAGJG">DeliveryMode</a></p>
+</td>
+<td align="left" headers="r4c1-t53 r1c2-t53">
+<p>Specifies the delivery mode of the dequeued message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t53" headers="r1c1-t53">
+<p><a href="#CHDDJFCI">DequeueAttempts</a></p>
+</td>
+<td align="left" headers="r5c1-t53 r1c2-t53">
+<p>Returns the number of attempts that have been made to dequeue the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t53" headers="r1c1-t53">
+<p><a href="#CHDEGGFF">EnqueueTime</a></p>
+</td>
+<td align="left" headers="r6c1-t53 r1c2-t53">
+<p>Specifies the time when the message was enqueued.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t53" headers="r1c1-t53">
+<p><a href="#CHDHHACG">ExceptionQueue</a></p>
+</td>
+<td align="left" headers="r7c1-t53 r1c2-t53">
+<p>Specifies the name of the queue that the message should be moved to if it cannot be processed successfully.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t53" headers="r1c1-t53">
+<p><a href="#CHDIEEJA">Expiration</a></p>
+</td>
+<td align="left" headers="r8c1-t53 r1c2-t53">
+<p>Specifies the duration, in seconds, for which an enqueued message is available for dequeuing.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t53" headers="r1c1-t53">
+<p><a href="#CHDGECAF">MessageId</a></p>
+</td>
+<td align="left" headers="r9c1-t53 r1c2-t53">
+<p>Returns the message identifier.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t53" headers="r1c1-t53">
+<p><a href="#CHDBFIBE">OriginalMessageId</a></p>
+</td>
+<td align="left" headers="r10c1-t53 r1c2-t53">
+<p>Specifies the identifier of the message in the last queue that generated this message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t53" headers="r1c1-t53">
+<p><a href="#CHDCIFFG">Payload</a></p>
+</td>
+<td align="left" headers="r11c1-t53 r1c2-t53">
+<p>Specifies the payload of the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t53" headers="r1c1-t53">
+<p><a href="#CHDJEFHB">Priority</a></p>
+</td>
+<td align="left" headers="r12c1-t53 r1c2-t53">
+<p>Specifies the priority of the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t53" headers="r1c1-t53">
+<p><a href="#CHDIHJBA">Recipients</a></p>
+</td>
+<td align="left" headers="r13c1-t53 r1c2-t53">
+<p>Specifies the list of recipients that overrides the default queue subscribers.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t53" headers="r1c1-t53">
+<p><a href="#CHDIGFEA">SenderId</a></p>
+</td>
+<td align="left" headers="r14c1-t53 r1c2-t53">
+<p>Identifies the original sender of the message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t53" headers="r1c1-t53">
+<p><a href="#CHDJGCBB">State</a></p>
+</td>
+<td align="left" headers="r15c1-t53 r1c2-t53">
+<p>Specifies the state of the message at the time of dequeue.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t53" headers="r1c1-t53">
+<p><a href="#CHDHDHEB">TransactionGroup</a></p>
+</td>
+<td align="left" headers="r16c1-t53 r1c2-t53">
+<p>Specifies the transaction group for the dequeued message.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCHBGC" name="CHDCHBGC"></a><a id="Toc201568238" name="Toc201568238"></a>
+<h3 class="refsect3">Correlation</h3>
+<p>This instance property specifies an identification for the message.</p>
+<a id="sthref3184" name="sthref3184"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public string Correlation {get;set;}
+</pre>
+<a id="sthref3185" name="sthref3185"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>string</code> that specifies the identification for the message.</p>
+<a id="sthref3186" name="sthref3186"></a>
+<p class="subhead2">Remarks</p>
+<p>The producer of a message can set this property at the time of enqueuing. The consumer can then use this identification to dequeue specific messages by setting the <code>Correlation</code> property of an <code>OracleAQDequeueOptions</code> object. For more information regarding dequeuing messages based on <code>Correlation</code>, refer to <a href="OracleAQDequeueOptionsClass.htm#CHDDECIB">"Correlation"</a> under the <code>OracleAQDequeueOptions</code> class.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+<li>
+<p><a href="OracleAQDequeueOptionsClass.htm#CHDDECIB">"Correlation"</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDGHFD" name="CHDDGHFD"></a><a id="Toc201568239" name="Toc201568239"></a>
+<h3 class="refsect3">Delay</h3>
+<p>This instance property specifies the duration, in seconds, after which an enqueued message is available for dequeuing.</p>
+<a id="sthref3187" name="sthref3187"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Delay {get;set;}
+</pre>
+<a id="sthref3188" name="sthref3188"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>integer</code> that indicates the number of seconds after which an enqueued message is available for dequeuing.</p>
+<a id="sthref3189" name="sthref3189"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The value specified is less than 0.</p>
+<a id="sthref3190" name="sthref3190"></a>
+<p class="subhead2">Remarks</p>
+<p>This property delays the immediate consumption of an enqueued message. The following are valid values for this property:</p>
+<ul>
+<li>
+<p>Positive integer - Indicates the delay in seconds.</p>
+</li>
+<li>
+<p>0 - indicates that the message is immediately available for dequeuing.</p>
+</li>
+</ul>
+<p>The default value is 0. The <code>Delay</code> property is not supported with buffered messaging.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCAGJG" name="CHDCAGJG"></a><a id="Toc201568247" name="Toc201568247"></a>
+<h3 class="refsect3">DeliveryMode</h3>
+<p>This instance property specifies the delivery mode of the dequeued message.</p>
+<a id="sthref3191" name="sthref3191"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleAQMessageDeliveryMode DeliveryMode {get;}
+</pre>
+<a id="sthref3192" name="sthref3192"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>OracleAQMessageDeliveryMode</code> enumerated value (<code>OracleAQMessageDeliveryMode.Persistent</code> or <code>OracleAQMessageDeliveryMode.Buffered</code>).</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDJFCI" name="CHDDJFCI"></a><a id="Toc201568237" name="Toc201568237"></a>
+<h3 class="refsect3">DequeueAttempts</h3>
+<p>This instance property returns the number of attempts that have been made to dequeue the message.</p>
+<a id="sthref3193" name="sthref3193"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int DequeueAttempts {get;}
+</pre>
+<a id="sthref3194" name="sthref3194"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>integer</code> that indicates the number of dequeue attempts.</p>
+<a id="sthref3195" name="sthref3195"></a>
+<p class="subhead2">Remarks</p>
+<p>This property is available in an <code>OracleAQMessage</code> after the message has been dequeued from a queue.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDEGGFF" name="CHDEGGFF"></a><a id="Toc201568245" name="Toc201568245"></a>
+<h3 class="refsect3">EnqueueTime</h3>
+<p>This instance property specifies the time when the message was enqueued.</p>
+<a id="sthref3196" name="sthref3196"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public DateTime EnqueueTime {get;}
+</pre>
+<a id="sthref3197" name="sthref3197"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>DateTime</code> object.</p>
+<a id="sthref3198" name="sthref3198"></a>
+<p class="subhead2">Remarks</p>
+<p>This property is available after the message is dequeued. It provides the enqueue time of a dequeued message.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDHHACG" name="CHDHHACG"></a><a id="Toc201568240" name="Toc201568240"></a>
+<h3 class="refsect3">ExceptionQueue</h3>
+<p>This instance property specifies the name of the queue that the message should be moved to if it cannot be processed successfully.</p>
+<a id="sthref3199" name="sthref3199"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public string ExceptionQueue {get;set;}
+</pre>
+<a id="sthref3200" name="sthref3200"></a>
+<p class="subhead2">Property Value</p>
+<p>The name of the queue that a message should be moved to if it cannot be processed successfully. The default value is <code>null</code>.</p>
+<a id="sthref3201" name="sthref3201"></a>
+<p class="subhead2">Remarks</p>
+<p>This property specifies the queue that a message should be moved to if the message has expired or if the number of unsuccessful dequeue attempts have exceeded the <code>max_retries</code> value for the queue.</p>
+<p>If this property is not set or the specified exception queue name does not exist, then the default exception queue associated with the queue table is used.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDIEEJA" name="CHDIEEJA"></a><a id="Toc201568241" name="Toc201568241"></a>
+<h3 class="refsect3">Expiration</h3>
+<p>This instance property specifies the duration, in seconds, for which an enqueued message is available for dequeuing.</p>
+<a id="sthref3202" name="sthref3202"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Expiration {get;set;}
+</pre>
+<a id="sthref3203" name="sthref3203"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>integer</code> that specifies the number of seconds an enqueued message is available for dequeuing.</p>
+<a id="sthref3204" name="sthref3204"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The value specified is less than -1.</p>
+<a id="sthref3205" name="sthref3205"></a>
+<p class="subhead2">Remarks</p>
+<p>The value specified is an offset from the value specified in the <code>Delay</code> property.</p>
+<p>The following are valid values for the property:</p>
+<ul>
+<li>
+<p>Positive integer - Indicates the expiration in seconds.</p>
+</li>
+<li>
+<p><code>-1</code> - Indicates that the message never expires.</p>
+</li>
+</ul>
+<p>The default value is <code>-1</code>. When a message expires, the message moves from the <code>READY</code> state to the <code>EXPIRED</code> state.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGECAF" name="CHDGECAF"></a><a id="Toc201568236" name="Toc201568236"></a>
+<h3 class="refsect3">MessageId</h3>
+<p>This instance property returns the message identifier.</p>
+<a id="sthref3206" name="sthref3206"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public byte[] MessageId {get;}
+</pre>
+<a id="sthref3207" name="sthref3207"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>byte[]</code> that specifies the message identifier.</p>
+<a id="sthref3208" name="sthref3208"></a>
+<p class="subhead2">Remarks</p>
+<p>This property is available after an enqueue or dequeue operation. Dequeued buffered messages have a <code>null</code> value for <code>MessageId</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBFIBE" name="CHDBFIBE"></a><a id="Toc201568249" name="Toc201568249"></a>
+<h3 class="refsect3">OriginalMessageId</h3>
+<p>This instance property specifies the identifier of the message in the last queue that generated this message.</p>
+<a id="sthref3209" name="sthref3209"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public byte[] OriginalMessageId {get;}
+</pre>
+<a id="sthref3210" name="sthref3210"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>byte[]</code> that specifies the original message identifier.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCIFFG" name="CHDCIFFG"></a><a id="Toc201568235" name="Toc201568235"></a>
+<h3 class="refsect3">Payload</h3>
+<p>This instance property specifies the payload of the message.</p>
+<a id="sthref3211" name="sthref3211"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public Object Payload {get;set;}
+</pre>
+<a id="sthref3212" name="sthref3212"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>Object</code> that specifies the payload of the message.</p>
+<a id="sthref3213" name="sthref3213"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The specified object is not one of the allowed types.</p>
+<a id="sthref3214" name="sthref3214"></a>
+<p class="subhead2">Remarks</p>
+<p>For a complete discussion of various payload types, refer to <a href="OracleAQQueueClass.htm#CHDDBFBB">"MessageType"</a> under the <code>OracleAQQueue</code> class.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+<li>
+<p><a href="OracleAQQueueClass.htm#CHDDBFBB">"MessageType"</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDJEFHB" name="CHDJEFHB"></a><a id="Toc201568242" name="Toc201568242"></a>
+<h3 class="refsect3">Priority</h3>
+<p>This instance property specifies the priority of the message.</p>
+<a id="sthref3215" name="sthref3215"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int Priority {get;set;}
+</pre>
+<a id="sthref3216" name="sthref3216"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>integer</code> that specifies the priority of the message.</p>
+<a id="sthref3217" name="sthref3217"></a>
+<p class="subhead2">Remarks</p>
+<p>The default value is 0. In order to take effect, this property must be set prior to enqueuing the message.</p>
+<p>Smaller values indicate higher priority for the message. Negative values may also be used.</p>
+<p>The priority of an enqueued message is useful for priority-based dequeuing.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDIHJBA" name="CHDIHJBA"></a><a id="Toc201568243" name="Toc201568243"></a>
+<h3 class="refsect3">Recipients</h3>
+<p>This instance property specifies the list of recipients that overrides the default queue subscribers.</p>
+<a id="sthref3218" name="sthref3218"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleAQAgent[] Recipients {get; set}
+</pre>
+<a id="sthref3219" name="sthref3219"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>OracleAQAgent[]</code>.</p>
+<a id="sthref3220" name="sthref3220"></a>
+<p class="subhead2">Remarks</p>
+<p>This recipient list is valid only for messages being enqueued to multiconsumer queues. The list of recipients is not returned with the message at the time of dequeuing.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDIGFEA" name="CHDIGFEA"></a><a id="Toc201568248" name="Toc201568248"></a>
+<h3 class="refsect3">SenderId</h3>
+<p>This instance property identifies the original sender of the message.</p>
+<a id="sthref3221" name="sthref3221"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleAQAgent SenderId {get; set}
+</pre>
+<a id="sthref3222" name="sthref3222"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>OracleAQAgent</code> object.</p>
+<a id="sthref3223" name="sthref3223"></a>
+<p class="subhead2">Remarks</p>
+<p>Sender identification is supported in all queue tables created with a database compatibility level of 8.1 or higher.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDJGCBB" name="CHDJGCBB"></a><a id="Toc201568246" name="Toc201568246"></a>
+<h3 class="refsect3">State</h3>
+<p>This instance property specifies the state of the message at the time of dequeue.</p>
+<a id="sthref3224" name="sthref3224"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleAQMessageState State {get;}
+</pre>
+<a id="sthref3225" name="sthref3225"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>OracleAQMessageState</code> enumerated value.</p>
+<a id="sthref3226" name="sthref3226"></a>
+<p class="subhead2">Remarks</p>
+<p>This property is available after the message is dequeued.</p>
+<p>The state of buffered messages dequeued by specifying <code>Correlation</code> under dequeue options is always <code>OracleAQMessageState.Ready</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDHDHEB" name="CHDHDHEB"></a><a id="Toc201568244" name="Toc201568244"></a>
+<h3 class="refsect3">TransactionGroup</h3>
+<p>This instance property specifies the transaction group for the dequeued message.</p>
+<a id="sthref3227" name="sthref3227"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public string TransactionGroup {get;}
+</pre>
+<a id="sthref3228" name="sthref3228"></a>
+<p class="subhead2">Property Value</p>
+<p>A <code>string</code> that specifies the transaction group.</p>
+<a id="sthref3229" name="sthref3229"></a>
+<p class="subhead2">Remarks</p>
+<p>This property is set only after the call to <code>DequeueArray</code>. This property is supported only when using Oracle Database 10<span class="italic">g</span> database or higher.</p>
+<p>Messages belonging to one queue can be grouped to form a set that can only be consumed by one user at a time. This requires that the queue be created in a queue table that is enabled for message grouping. All messages belonging to a group must be created in the same transaction. Also, all messages created in one transaction belong to the same group.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="intro003.htm#BHCJFIAJ">"Oracle.DataAccess.Client Namespace"</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGE">OracleAQMessage Class</a></p>
+</li>
+<li>
+<p><a href="#CHDGHIAD">OracleAQMessage Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleAQEnqueueOptionsClass.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleAQMessageAvailableEventArgsClass.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2002, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

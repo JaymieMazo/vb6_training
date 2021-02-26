@@ -1,0 +1,2609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-17T21:18:53Z" />
+<meta name="doctitle" content="Oracle&reg; Providers for ASP.NET Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12250-01" />
+<meta name="docid" content="ASPNT" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="OracleMembershipProvider.htm" title="Previous" type="text/html" />
+<link rel="Next" href="OracleRoleProvider.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12250.pdf" title="PDF version" type="application/pdf" />
+<title>OracleMembershipProvider Class</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Providers for ASP.NET Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12250-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleMembershipProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleRoleProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12250.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="BABEDCAI" name="BABEDCAI"></a>
+<hr />
+<div class="refsect1"><!-- infolevel="all" infotype="General" -->
+<h1 class="refsect1">OracleMembershipProvider Class<a id="sthref84" name="sthref84"></a></h1>
+<p>The <code>OracleMembershipProvider</code> class enables ASP.NET developers to store Web site user account information in an Oracle database.</p>
+<a id="sthref85" name="sthref85"></a>
+<p class="subhead2">Class Inheritance</p>
+<p><code>System.Object</code></p>
+<p><code>&nbsp;&nbsp;System.Configuration.Provider.ProviderBase</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;System.Web.Security.MembershipProvider</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Oracle.Web.Security.OracleMembershipProvider</code></p>
+<a id="sthref86" name="sthref86"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public class OracleMembershipProvider: MembershipProvider
+</pre>
+<a id="sthref87" name="sthref87"></a>
+<p class="subhead2">Thread Safety</p>
+<p>All public static methods are thread-safe, although instance members are not guaranteed to be thread-safe.</p>
+<a id="sthref88" name="sthref88"></a>
+<p class="subhead2">Remarks</p>
+<p>This class allows ASP.NET applications to store and manage user information in an Oracle database. Note that the term user in this chapter refers to an application or user, not a database user. Thus, the user information that this provider manages is application or user information, not database user information.</p>
+<a id="sthref89" name="sthref89"></a>
+<p class="subhead2">Example</p>
+<p>The following code example shows a <code>web.config</code> file for an ASP.NET application configured to use <code>OracleMembershipProvider</code> as the default provider. This configuration uses the connection string and default attribute values specified in the <code>machine.config</code> file.</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;?xml version="1.0"?&gt;
+&lt;configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0"&gt;
+  &lt;system.web&gt;
+    &lt;membership defaultProvider="OracleMembershipProvider"/&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</pre>
+<p>The following is a <code>web.config</code> example for an ASP.NET application that uses an <code>OracleMembershipProvider</code> with customized settings and an application-specific connection string:</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;?xml version="1.0"?&gt;
+&lt;configuration xmlns=
+  "http://schemas.microsoft.com/.NetConfiguration/v2.0"&gt;
+  &lt;connectionStrings&gt;
+    &lt;add name="my_membership_app_con_string" connectionString=
+      "User Id=scott;Password=tiger;Data Source=Oracle"/&gt;
+  &lt;/connectionStrings&gt;
+  &lt;system.web&gt;
+    &lt;!-- Enable and customize OracleMembershipProvider settings --&gt;
+    &lt;membership defaultProvider="MyOracleMembershipProvider"&gt;
+      &lt;providers&gt;
+        &lt;add name="MyOracleMembershipProvider"
+             type="Oracle.Web.Security.OracleMembershipProvider, 
+             Oracle.Web, Version=2.112.1.0, Culture=neutral, 
+             PublicKeyToken=89b483f429c47342"
+             connectionStringName="my_membership_app_con_string"
+             applicationName="my_membership_app"
+             enablePasswordRetrieval="false"
+             enablePasswordReset="true"
+             requiresQuestionAndAnswer="true"
+             requiresUniqueEmail="true"
+             passwordFormat="Hashed"
+             maxInvalidPasswordAttempts="4"
+             minRequiredPasswordLength="9"
+             passwordAttemptWindow="8"/&gt;
+      &lt;/providers&gt;
+    &lt;/membership&gt;
+  &lt;/system.web&gt;
+&lt;/configuration&gt;
+</pre>
+<p>Note that the <code>applicationName</code> attribute should be set to a unique value for each ASP.NET application.</p>
+<a id="sthref90" name="sthref90"></a>
+<p class="subhead2">Requirements</p>
+<p>Namespace: <code>Oracle.Web.Security</code></p>
+<p>Assembly: <code>Oracle.Web.dll</code></p>
+<p>Microsoft .NET Framework Version: 2.0 or later</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+<li>
+<p><a href="#CHDDAAAE">OracleMembershipProvider Constructors</a></p>
+</li>
+<li>
+<p><a href="#CHDEIHGF">OracleMembershipProvider Static Methods</a></p>
+</li>
+<li>
+<p><a href="#CHDGAAJA">OracleMembershipProvider Public Properties</a></p>
+</li>
+<li>
+<p><a href="#CHDHCDJJ">OracleMembershipProvider Public Methods</a></p>
+</li>
+<li>
+<p><a href="#CHDFJFAI">OracleMembershipProvider Public Events</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDJACCF" name="CHDJACCF"></a>
+<hr />
+<h2 class="refsect2">OracleMembershipProvider Members<a id="sthref91" name="sthref91"></a></h2>
+<p><code>OracleMembershipProvider</code> members are listed in the following tables.</p>
+<a id="sthref92" name="sthref92"></a>
+<p class="subhead2">OracleMembershipProvider Constructors</p>
+<p>The <code>OracleMembershipProvider</code> constructor is listed in <a href="#CHDFFBEH">Table 2-1</a>.</p>
+<div class="tblruleformal"><a id="sthref93" name="sthref93"></a><a id="CHDFFBEH" name="CHDFFBEH"></a>
+<p class="titleintable">Table 2-1 OracleMembershipProvider Constructor</p>
+<table class="RuleFormal" title="OracleMembershipProvider Constructor" summary="rows are constructors. column 1 is name. column 2 is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="39%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">Constructor</th>
+<th align="left" valign="bottom" id="r1c2-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><a href="#CHDDAAAE">OracleMembershipProvider Constructors</a></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>Instantiates a new instance of the <code>OracleMembershipProvider</code> class</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref94" name="sthref94"></a>
+<p class="subhead2">OracleMembershipProvider Static Methods</p>
+<p><code>OracleMembershipProvider</code> static methods are listed in <a href="#CHDGJDFC">Table 2-2</a>.</p>
+<div class="tblruleformal"><a id="sthref95" name="sthref95"></a><a id="CHDGJDFC" name="CHDGJDFC"></a>
+<p class="titleintable">Table 2-2 OracleMembershipProvider Static Methods</p>
+<table class="RuleFormal" title="OracleMembershipProvider Static Methods" summary="Rows are static methods, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Static Methods</th>
+<th align="left" valign="bottom" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><code>ReferenceEquals</code></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref96" name="sthref96"></a>
+<p class="subhead2">OracleMembershipProvider Public Properties</p>
+<p><code>OracleMembershipProvider</code> public properties are listed in <a href="#CHDCADGH">Table 2-3</a>.</p>
+<div class="tblruleformal"><a id="sthref97" name="sthref97"></a><a id="CHDCADGH" name="CHDCADGH"></a>
+<p class="titleintable">Table 2-3 OracleMembershipProvider Public Properties</p>
+<table class="RuleFormal" title="OracleMembershipProvider Public Properties" summary="Rows are public properties, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="48%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><a href="#CHDHIJHB">ApplicationName</a></p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>Gets or sets the name of the application that is used to group user information</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p><a href="#CHDDGDFJ">CommandTimeout</a></p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p>Gets the number of seconds that the command is allowed to execute before it is terminated with an exception</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p><code>Description</code></p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t6" headers="r1c1-t6">
+<p><a href="#CHDBAJAA">EnablePasswordReset</a></p>
+</td>
+<td align="left" headers="r5c1-t6 r1c2-t6">
+<p>Indicates whether or not the membership provider is configured to allow users to reset their passwords</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t6" headers="r1c1-t6">
+<p><a href="#CHDJGJAI">EnablePasswordRetrieval</a></p>
+</td>
+<td align="left" headers="r6c1-t6 r1c2-t6">
+<p>Indicates whether or not the membership provider is configured to allow users to retrieve their passwords</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t6" headers="r1c1-t6">
+<p><a href="#CHDBDACF">MaxInvalidPasswordAttempts</a></p>
+</td>
+<td align="left" headers="r7c1-t6 r1c2-t6">
+<p>Gets the number of invalid password or password-answer attempts allowed before the user is locked out</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t6" headers="r1c1-t6">
+<p><a href="#CHDEGGBA">MinRequiredNonAlphanumericCharacters</a></p>
+</td>
+<td align="left" headers="r8c1-t6 r1c2-t6">
+<p>Gets the minimum number of special characters that must be present in a valid password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t6" headers="r1c1-t6">
+<p><a href="#CHDBHHBI">MinRequiredPasswordLength</a></p>
+</td>
+<td align="left" headers="r9c1-t6 r1c2-t6">
+<p>Gets the minimum length required for a password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t6" headers="r1c1-t6">
+<p><code>Name</code></p>
+</td>
+<td align="left" headers="r10c1-t6 r1c2-t6">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t6" headers="r1c1-t6">
+<p><a href="#CHDJAABE">PasswordAttemptWindow</a></p>
+</td>
+<td align="left" headers="r11c1-t6 r1c2-t6">
+<p>Gets the number of minutes in which a maximum number of invalid password or password-answer attempts are allowed before the user is locked out</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t6" headers="r1c1-t6">
+<p><a href="#CHDEEJBF">PasswordFormat</a></p>
+</td>
+<td align="left" headers="r12c1-t6 r1c2-t6">
+<p>Gets a value indicating the format for storing passwords in the membership data source</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t6" headers="r1c1-t6">
+<p><a href="#CHDDGJAA">PasswordStrengthRegularExpression</a></p>
+</td>
+<td align="left" headers="r13c1-t6 r1c2-t6">
+<p>Gets the regular expression used to evaluate a password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t6" headers="r1c1-t6">
+<p><a href="#CHDFDJJJ">RequiresQuestionAndAnswer</a></p>
+</td>
+<td align="left" headers="r14c1-t6 r1c2-t6">
+<p>Gets a value indicating whether or not the membership provider is configured in such a way that it requires the user to answer a password question for password reset and retrieval</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t6" headers="r1c1-t6">
+<p><a href="#CHDGEDGH">RequiresUniqueEmail</a></p>
+</td>
+<td align="left" headers="r15c1-t6 r1c2-t6">
+<p>Gets a value indicating whether or not the membership provider is configured to require a unique e-mail address for each user name</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref98" name="sthref98"></a>
+<p class="subhead2">OracleMembershipProvider Public Methods</p>
+<p><code>OracleMembershipProvider</code> public methods are listed in <a href="#CHDJBHBH">Table 2-4</a>.</p>
+<div class="tblruleformal"><a id="sthref99" name="sthref99"></a><a id="CHDJBHBH" name="CHDJBHBH"></a>
+<p class="titleintable">Table 2-4 OracleMembershipProvider Public Methods</p>
+<table class="RuleFormal" title="OracleMembershipProvider Public Methods" summary="Rows are public methods, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7">Public Methods</th>
+<th align="left" valign="bottom" id="r1c2-t7">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p><a href="#CHDIAFJC">ChangePassword</a></p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<p>Updates the password for a user</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p><a href="#CHDGGJFD">ChangePasswordQuestionAndAnswer</a></p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p>Updates the password question and answer for a user</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t7" headers="r1c1-t7">
+<p><a href="#CHDFBJJE">CreateUser</a></p>
+</td>
+<td align="left" headers="r4c1-t7 r1c2-t7">
+<p>Adds a new user to the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t7" headers="r1c1-t7">
+<p><a href="#CHDDAJHA">DeleteUser</a></p>
+</td>
+<td align="left" headers="r5c1-t7 r1c2-t7">
+<p>Removes a user from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t7" headers="r1c1-t7">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r6c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t7" headers="r1c1-t7">
+<p><a href="#CHDGEBGA">FindUsersByEmail</a></p>
+</td>
+<td align="left" headers="r7c1-t7 r1c2-t7">
+<p>Returns a collection of users whose e-mail addresses match the specified e-mail address</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t7" headers="r1c1-t7">
+<p><a href="#CHDJIGFB">FindUsersByName</a></p>
+</td>
+<td align="left" headers="r8c1-t7 r1c2-t7">
+<p>Returns a collection of users that match the specified user name</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t7" headers="r1c1-t7">
+<p><a href="#CHDCBEGH">GeneratePassword</a></p>
+</td>
+<td align="left" headers="r9c1-t7 r1c2-t7">
+<p>Generates a random password that is at least 14 characters in length</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t7" headers="r1c1-t7">
+<p><a href="#CHDFEDGH">GetAllUsers</a></p>
+</td>
+<td align="left" headers="r10c1-t7 r1c2-t7">
+<p>Returns a collection of all the users in the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t7" headers="r1c1-t7">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r11c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t7" headers="r1c1-t7">
+<p><a href="#CHDBGFEI">GetNumberOfUsersOnline</a></p>
+</td>
+<td align="left" headers="r12c1-t7 r1c2-t7">
+<p>Returns the number of users that are currently accessing the application</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t7" headers="r1c1-t7">
+<p><a href="#CHDDJBFH">GetPassword</a></p>
+</td>
+<td align="left" headers="r13c1-t7 r1c2-t7">
+<p>Returns the password for the specified user name from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t7" headers="r1c1-t7">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r14c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t7" headers="r1c1-t7">
+<p><a href="#CHDBHHHD">GetUser</a></p>
+</td>
+<td align="left" headers="r15c1-t7 r1c2-t7">
+<p>Returns user information from the database based on the unique identifier for the user (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t7" headers="r1c1-t7">
+<p><a href="#CHDJAAAI">GetUserNameByEmail</a></p>
+</td>
+<td align="left" headers="r16c1-t7 r1c2-t7">
+<p>Returns the user name associated with the specified e-mail address</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t7" headers="r1c1-t7">
+<p><a href="#CHDFDBFC">Initialize</a></p>
+</td>
+<td align="left" headers="r17c1-t7 r1c2-t7">
+<p>Initializes the <code>OracleMembership</code> provider with the property values specified in the ASP.NET application configuration file (<code>web.config</code>)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t7" headers="r1c1-t7">
+<p><a href="#CHDBIGHJ">ResetPassword</a></p>
+</td>
+<td align="left" headers="r18c1-t7 r1c2-t7">
+<p>Resets a user's password and returns a new automatically generated password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t7" headers="r1c1-t7">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r19c1-t7 r1c2-t7">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t7" headers="r1c1-t7">
+<p><a href="#CHDCJGBI">UnlockUser</a></p>
+</td>
+<td align="left" headers="r20c1-t7 r1c2-t7">
+<p>Unlocks a user so that the user can be validated</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t7" headers="r1c1-t7">
+<p><a href="#CHDGGCBJ">UpdateUser</a></p>
+</td>
+<td align="left" headers="r21c1-t7 r1c2-t7">
+<p>Updates information about a user in the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t7" headers="r1c1-t7">
+<p><a href="#CHDCBADH">ValidateUser</a></p>
+</td>
+<td align="left" headers="r22c1-t7 r1c2-t7">
+<p>Validates the user</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref100" name="sthref100"></a>
+<p class="subhead2">OracleMembershipProvider Public Events</p>
+<p><code>OracleMembershipProvider</code> public event is listed in <a href="#CHDJAACJ">Table 2-5</a>.</p>
+<div class="tblruleformal"><a id="sthref101" name="sthref101"></a><a id="CHDJAACJ" name="CHDJAACJ"></a>
+<p class="titleintable">Table 2-5 OracleMembershipProvider Public Event</p>
+<table class="RuleFormal" title="OracleMembershipProvider Public Event" summary="Rows are public events, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t8">Public Event</th>
+<th align="left" valign="bottom" id="r1c2-t8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t8" headers="r1c1-t8">
+<p><code>ValidatingPassword</code></p>
+</td>
+<td align="left" headers="r2c1-t8 r1c2-t8">
+<p>Inherited from <code>System.Web.Security.MembershipProvider</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDAAAE" name="CHDDAAAE"></a>
+<hr />
+<h2 class="refsect2">OracleMembershipProvider Constructors<a id="sthref102" name="sthref102"></a></h2>
+<p>This constructor instantiates a new instance of the <code>OracleMembershipProvider</code> class.</p>
+<a id="sthref103" name="sthref103"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#BABHBDBD">OracleMembershipProvider()</a></p>
+<p>This constructor creates an instance of the <code>OracleMembershipProvider</code> class.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="BABHBDBD" name="BABHBDBD"></a>
+<h3 class="refsect3">OracleMembershipProvider()</h3>
+<p>This constructor instantiates a new instance of the <code>OracleMembershipProvider</code> class.</p>
+<a id="sthref104" name="sthref104"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public OracleMembershipProvider();
+</pre>
+<a id="sthref105" name="sthref105"></a>
+<p class="subhead2">Remarks</p>
+<p>ASP.NET calls the <code>OracleMembershipProvider</code> constructor to create an instance of the <code>OracleMembershipProvider</code> class, as specified in the configuration for the application. Initialization values for the <code>OracleMembershipProvider</code> object are passed through the <code>Initialize</code> method.</p>
+<p>This constructor is not intended to be used directly by the application.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDEIHGF" name="CHDEIHGF"></a>
+<hr />
+<h2 class="refsect2">OracleMembershipProvider Static Methods<a id="sthref106" name="sthref106"></a></h2>
+<p><code>OracleMembershipProvider</code> static methods are listed in <a href="#CHDIBBFC">Table 2-6</a>.</p>
+<div class="tblruleformal"><a id="sthref107" name="sthref107"></a><a id="CHDIBBFC" name="CHDIBBFC"></a>
+<p class="titleintable">Table 2-6 OracleMembershipProvider Static Methods</p>
+<table class="RuleFormal" title="OracleMembershipProvider Static Methods" summary="Rows are static methods, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t12">Static Methods</th>
+<th align="left" valign="bottom" id="r1c2-t12">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t12" headers="r1c1-t12">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r2c1-t12 r1c2-t12">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t12" headers="r1c1-t12">
+<p><code>ReferenceEquals</code></p>
+</td>
+<td align="left" headers="r3c1-t12 r1c2-t12">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGAAJA" name="CHDGAAJA"></a>
+<hr />
+<h2 class="refsect2">OracleMembershipProvider Public Properties<a id="sthref108" name="sthref108"></a></h2>
+<p><code>OracleMembershipProvider</code> public properties are listed in <a href="#CIABGHGA">Table 2-7</a>.</p>
+<div class="tblruleformal"><a id="sthref109" name="sthref109"></a><a id="CIABGHGA" name="CIABGHGA"></a>
+<p class="titleintable">Table 2-7 OracleMembershipProvider Public Properties</p>
+<table class="RuleFormal" title="OracleMembershipProvider Public Properties" summary="Rows are public properties, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="48%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t14">Public Properties</th>
+<th align="left" valign="bottom" id="r1c2-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t14" headers="r1c1-t14">
+<p><a href="#CHDHIJHB">ApplicationName</a></p>
+</td>
+<td align="left" headers="r2c1-t14 r1c2-t14">
+<p>Gets or sets the name of the application that is used to group user information</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t14" headers="r1c1-t14">
+<p><a href="#CHDDGDFJ">CommandTimeout</a></p>
+</td>
+<td align="left" headers="r3c1-t14 r1c2-t14">
+<p>Gets the number of seconds that the command is allowed to execute before it is terminated with an exception</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t14" headers="r1c1-t14">
+<p><code>Description</code></p>
+</td>
+<td align="left" headers="r4c1-t14 r1c2-t14">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t14" headers="r1c1-t14">
+<p><a href="#CHDBAJAA">EnablePasswordReset</a></p>
+</td>
+<td align="left" headers="r5c1-t14 r1c2-t14">
+<p>Indicates whether or not the membership provider is configured to allow users to reset their passwords</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t14" headers="r1c1-t14">
+<p><a href="#CHDJGJAI">EnablePasswordRetrieval</a></p>
+</td>
+<td align="left" headers="r6c1-t14 r1c2-t14">
+<p>Indicates whether or not the membership provider is configured to allow users to retrieve their passwords</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t14" headers="r1c1-t14">
+<p><a href="#CHDBDACF">MaxInvalidPasswordAttempts</a></p>
+</td>
+<td align="left" headers="r7c1-t14 r1c2-t14">
+<p>Gets the number of invalid password or password-answer attempts allowed before the user is locked out</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t14" headers="r1c1-t14">
+<p><a href="#CHDEGGBA">MinRequiredNonAlphanumericCharacters</a></p>
+</td>
+<td align="left" headers="r8c1-t14 r1c2-t14">
+<p>Gets the minimum number of special characters that must be present in a valid password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t14" headers="r1c1-t14">
+<p><a href="#CHDBHHBI">MinRequiredPasswordLength</a></p>
+</td>
+<td align="left" headers="r9c1-t14 r1c2-t14">
+<p>Gets the minimum length required for a password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t14" headers="r1c1-t14">
+<p><code>Name</code></p>
+</td>
+<td align="left" headers="r10c1-t14 r1c2-t14">
+<p>Inherited from <code>System.Configuration.Provider.Providerbase</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t14" headers="r1c1-t14">
+<p><a href="#CHDJAABE">PasswordAttemptWindow</a></p>
+</td>
+<td align="left" headers="r11c1-t14 r1c2-t14">
+<p>Gets the number of minutes in which a maximum number of invalid password or password-answer attempts are allowed before the user is locked out</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t14" headers="r1c1-t14">
+<p><a href="#CHDEEJBF">PasswordFormat</a></p>
+</td>
+<td align="left" headers="r12c1-t14 r1c2-t14">
+<p>Gets a value indicating the format for storing passwords in the membership data source</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t14" headers="r1c1-t14">
+<p><a href="#CHDDGJAA">PasswordStrengthRegularExpression</a></p>
+</td>
+<td align="left" headers="r13c1-t14 r1c2-t14">
+<p>Gets the regular expression used to evaluate a password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t14" headers="r1c1-t14">
+<p><a href="#CHDFDJJJ">RequiresQuestionAndAnswer</a></p>
+</td>
+<td align="left" headers="r14c1-t14 r1c2-t14">
+<p>Gets a value indicating whether or not the membership provider is configured in such a way that it requires the user to answer a password question for password reset and retrieval</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t14" headers="r1c1-t14">
+<p><a href="#CHDGEDGH">RequiresUniqueEmail</a></p>
+</td>
+<td align="left" headers="r15c1-t14 r1c2-t14">
+<p>Gets a value indicating whether or not the membership provider is configured to require a unique e-mail address for each user name</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDHIJHB" name="CHDHIJHB"></a>
+<h3 class="refsect3">ApplicationName</h3>
+<p>This property gets or sets the name of the application that is used to group user information.</p>
+<a id="sthref110" name="sthref110"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string ApplicationName{get; set;}
+</pre>
+<a id="sthref111" name="sthref111"></a>
+<p class="subhead2">Property Value</p>
+<p>The name of the application. If the <code>applicationName</code> attribute is not specified in the application configuration file, or if the value is an empty string, then this property is set to the application virtual path.</p>
+<a id="sthref112" name="sthref112"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The application name supplied is an empty string or a null reference.</p>
+<p><code>ProviderException</code> - The application name supplied exceeds 256 characters.</p>
+<a id="sthref113" name="sthref113"></a>
+<p class="subhead2">Remarks</p>
+<p>The string value of the <code>ApplicationName</code> property is used for organizing user information. Multiple ASP.NET applications can use the same database and create duplicate user names because user information is stored uniquely for each application name. This property can be set programmatically, or it can be set declaratively in the Web application configuration file using the <code>applicationName</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<p>The <code>ApplicationName</code> property is not thread-safe. It is recommended that the programming code not allow users to set the <code>ApplicationName</code> property in Web applications.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDGDFJ" name="CHDDGDFJ"></a>
+<h3 class="refsect3">CommandTimeout</h3>
+<p>This property gets the number of seconds that the command is allowed to execute before it is terminated with an exception.</p>
+<a id="sthref114" name="sthref114"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public int CommandTimeout {get;}
+ 
+</pre>
+<a id="sthref115" name="sthref115"></a>
+<p class="subhead2">Property Value</p>
+<p>An <code>int</code>.</p>
+<a id="sthref116" name="sthref116"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a provider, ASP.NET developers can set an integer value for this property through the <code>web.config</code> file using the <code>commandTimeout</code> attribute.</p>
+<p>The default value is 30 seconds. The attribute name in the configuration file is case-sensitive.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBAJAA" name="CHDBAJAA"></a>
+<h3 class="refsect3">EnablePasswordReset</h3>
+<p>This property indicates whether or not the membership provider is configured to allow users to reset their passwords.</p>
+<a id="sthref117" name="sthref117"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool EnablePasswordReset{get;}
+</pre>
+<a id="sthref118" name="sthref118"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code>, if the membership provider supports password reset; otherwise, it returns <code>false</code>. The default is <code>true</code>.</p>
+<a id="sthref119" name="sthref119"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize the <code>membership</code> provider, ASP.NET developers can specify a Boolean value for this property through the <code>web.config</code> file using the <code>enablePasswordReset</code> attribute. The value indicates whether or not users can use the <code>ResetPassword</code> method to overwrite their current password with a new, randomly generated password. The attribute name in the configuration file is case-sensitive.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDJGJAI" name="CHDJGJAI"></a>
+<h3 class="refsect3">EnablePasswordRetrieval</h3>
+<p>This property indicates whether or not the membership provider is configured to allow users to retrieve their passwords.</p>
+<a id="sthref120" name="sthref120"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool EnablePasswordRetrieval{get;}
+</pre>
+<a id="sthref121" name="sthref121"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code>, if the membership provider is configured to support password retrieval; otherwise, returns <code>false</code>. The default is <code>false</code>.</p>
+<a id="sthref122" name="sthref122"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can set a Boolean value for this property through the <code>web.config</code> file using the <code>enablePasswordRetrieval</code> attribute. The value indicates whether or not users can use the <code>GetPassword</code> method to retrieve their current password from the database. The attribute name in the configuration file is case-sensitive.</p>
+<p>If the custom membership provider supports hashed passwords, then the <code>GetPassword</code> method returns an exception if the <code>EnablePasswordRetrieval</code> property is set to <code>true</code> and the password format is set to <code>Hashed</code>. In other words, hashed passwords cannot be retrieved.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBDACF" name="CHDBDACF"></a>
+<h3 class="refsect3">MaxInvalidPasswordAttempts</h3>
+<p>This property gets the number of invalid password or password-answer attempts allowed before the user is locked out.</p>
+<a id="sthref123" name="sthref123"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int MaxInvalidPasswordAttempts{get;}
+</pre>
+<a id="sthref124" name="sthref124"></a>
+<p class="subhead2">Property Value</p>
+<p>The number of invalid password or password-answer attempts allowed before the user is locked out. The default number of attempts is 5.</p>
+<a id="sthref125" name="sthref125"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can set an integer value for this property through the <code>web.config</code> file using the <code>maxInvalidPasswordAttempts</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<p>The <code>MaxInvalidPasswordAttempts</code> property works in conjunction with the <code>PasswordAttemptWindow</code> property. If the number of invalid passwords or password question entries is greater than or equal to the <code>MaxInvalidPasswordAttempts</code> property value within the <code>PasswordAttemptWindow</code> property value (in minutes), then the user is locked out until the user is unlocked by the <code>UnlockUser</code> method. If a valid password or password answer is supplied before the <code>MaxInvalidPasswordAttempts</code> value is reached, then the counter that tracks the number of invalid attempts is reset to zero.</p>
+<p>Invalid passwords and password-answer attempts accumulate independently. For example, if the <code>MaxInvalidPasswordAttempts</code> property is set to 10, and 6 invalid password attempts are made followed by 3 invalid password-answer attempts, 4 more invalid password attempts or 7 more invalid password-answer attempts must be made within the <code>PasswordAttemptWindow</code> for the user to be locked out.</p>
+<p>If the <code>RequiresQuestionAndAnswer</code> property is set to <code>false</code>, invalid password-answer attempts are not tracked.</p>
+<p>Invalid password and password-answer attempts are tracked in the <code>ValidateUser</code>, <code>ChangePassword</code>, <code>ChangePasswordQuestionAndAnswer</code>, <code>GetPassword</code>, and <code>ResetPassword</code> methods.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDEGGBA" name="CHDEGGBA"></a>
+<h3 class="refsect3">MinRequiredNonAlphanumericCharacters</h3>
+<p>This property gets the minimum number of special characters that must be present in a valid password.</p>
+<a id="sthref126" name="sthref126"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int MinRequiredNonAlphanumericCharacters(get;}
+</pre>
+<a id="sthref127" name="sthref127"></a>
+<p class="subhead2">Property Value</p>
+<p>The minimum number of special characters that must be present in a valid password. The default value is 1.</p>
+<a id="sthref128" name="sthref128"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can set an integer value for this property through the <code>web.config</code> file using the <code>minRequiredNonalphanumericCharacters</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<p>The <code>MinRequiredNonAlphanumericCharacters</code> property returns the minimum number of special, nonalphabetic characters that must be entered to create a valid password for the <code>OracleMembershipProvider</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBHHBI" name="CHDBHHBI"></a>
+<h3 class="refsect3">MinRequiredPasswordLength</h3>
+<p>This property gets the minimum length required for a password.</p>
+<a id="sthref129" name="sthref129"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int MinRequiredPasswordLength{get;}
+</pre>
+<a id="sthref130" name="sthref130"></a>
+<p class="subhead2">Property Value</p>
+<p>The minimum length required for a password. The default value is 7.</p>
+<a id="sthref131" name="sthref131"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can set an integer value for this property through the <code>web.config</code> file using the <code>minRequiredPasswordLength</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<p>The <code>minRequiredPasswordLength</code> property gets the minimum number of characters that must be entered to create a valid password for the <code>OracleMembershipProvider</code> object.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDJAABE" name="CHDJAABE"></a>
+<h3 class="refsect3">PasswordAttemptWindow</h3>
+<p>This property gets the number of minutes in which a maximum number of invalid password or password-answer attempts are allowed before the user is locked out.</p>
+<a id="sthref132" name="sthref132"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int PasswordAttemptWindow{get;}
+</pre>
+<a id="sthref133" name="sthref133"></a>
+<p class="subhead2">Property Value</p>
+<p>The number of minutes in which a maximum number of invalid password or password-answer attempts are allowed before the user is locked out. The default value is 10.</p>
+<a id="sthref134" name="sthref134"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can set an integer value for this property through the <code>web.config</code> file using the <code>passwordAttemptWindow</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<p>The <code>PasswordAttemptWindow</code> property works in conjunction with the <code>MaxInvalidPasswordAttempts</code> property. If the number of invalid passwords or password question entries is greater than or equal to the <code>MaxInvalidPasswordAttempts</code> property value within the <code>PasswordAttemptWindow</code> property value (in minutes), then the user is locked out until the user is unlocked by the <code>UnlockUser</code> method. If a valid password or password answer is supplied before the <code>MaxInvalidPasswordAttempts</code> value is reached, then the counter that tracks the number of invalid attempts is reset to zero.</p>
+<p>Invalid password and password-answer attempts accumulate independently. For example, if the <code>MaxInvalidPasswordAttempts</code> property is set to 10, and 6 invalid password attempts are made followed by 3 invalid password-answer attempts, 4 more invalid password attempts or 7 more invalid password-answer attempts must be made within the <code>PasswordAttemptWindow</code> value for the user to be locked out.</p>
+<p>If the <code>RequiresQuestionAndAnswer</code> property is set to <code>false</code>, then invalid password-answer attempts are not tracked.</p>
+<p>Invalid password and password-answer attempts are tracked in the <code>ValidateUser</code>, <code>ChangePassword</code>, <code>ChangePasswordQuestionAndAnswer</code>, <code>GetPassword</code>, and <code>ResetPassword</code> methods.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDEEJBF" name="CHDEEJBF"></a>
+<h3 class="refsect3">PasswordFormat</h3>
+<p>This property gets a value indicating the format for storing passwords in the membership data source.</p>
+<a id="sthref135" name="sthref135"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override MembershipPasswordFormat PasswordFormat{get;}
+</pre>
+<a id="sthref136" name="sthref136"></a>
+<p class="subhead2">Property Value</p>
+<p>The format for storing passwords in the data source. The format can be any one of the <code>MembershipPasswordFormat</code> values, such as <code>Clear</code>, <code>Hashed</code>, or <code>Encrypted</code>. The default value is <code>Hashed</code>.</p>
+<a id="sthref137" name="sthref137"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can specify a <code>MembershipPasswordFormat</code> enumerated value for this property through the <code>web.config</code> file using the <code>passwordFormat</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<p>The <code>PasswordFormat</code> property indicates that passwords are stored in any one of the following formats: <code>Clear</code>, <code>Encrypted</code>, or <code>Hashed</code>. The format name is case-sensitive. For example, <code>Clear</code> is valid, but <code>clear</code> is invalid.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDGJAA" name="CHDDGJAA"></a>
+<h3 class="refsect3">PasswordStrengthRegularExpression</h3>
+<p>This property gets the regular expression used to evaluate a password.</p>
+<a id="sthref138" name="sthref138"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string PasswordStrengthRegularExpression{get;}
+</pre>
+<a id="sthref139" name="sthref139"></a>
+<p class="subhead2">Property Value</p>
+<p>The regular expression that is used to evaluate a password. The default is an empty string.</p>
+<a id="sthref140" name="sthref140"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can set a string value for this property through the <code>web.config</code> file using the <code>passwordStrengthRegularExpression</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<p>The <code>PasswordStrengthRegularExpression</code> property gets the regular expression as criteria to evaluate the password. If the password does not meet the criteria, it is not accepted by the membership provider.</p>
+<p>Consider the following example:</p>
+<pre xml:space="preserve" class="oac_no_warn">passwordStrengthRegularExpression="(?=.{7,})(?=(.*\d){1,})(?=(.*\W){1,})"
+</pre>
+<p>The code in the preceding example validates passwords against the following criteria:</p>
+<ul>
+<li>
+<p>Has at least 7 characters.</p>
+</li>
+<li>
+<p>Contains at least 1 digit.</p>
+</li>
+<li>
+<p>Contains at least 1 special (nonalphanumeric) character.</p>
+</li>
+</ul>
+<p>The minimum password length defined in <code>passwordStrengthRegularExpression</code> must be equal to or greater than the value of the <code>minRequiredPasswordLength</code> attribute.</p>
+<p>The minimum number of special (nonalphanumeric) characters defined in the <code>passwordStrengthRegularExpression</code> attribute must be equal to or greater than the value of the <code>minRequiredNonalphanumericCharacters</code> attribute.</p>
+<p>The <code>passwordStrengthRegularExpression</code> attribute is not used in automatically generated passwords from the <code>ResetPassword</code> method.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDFDJJJ" name="CHDFDJJJ"></a>
+<h3 class="refsect3">RequiresQuestionAndAnswer</h3>
+<p>This property gets a value indicating whether or not the membership provider is configured in such a way that it requires the user to answer a password question for password reset and retrieval.</p>
+<a id="sthref141" name="sthref141"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool RequiresQuestionAndAnswer{get;}
+</pre>
+<a id="sthref142" name="sthref142"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code>, if a password answer is required for password reset and retrieval; otherwise, returns <code>false</code>. The default value is <code>true</code>.</p>
+<a id="sthref143" name="sthref143"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can set a Boolean value for this property through the <code>web.config</code> file by using the <code>requiresQuestionAndAnswer</code> attribute. The value indicates whether users must supply a password answer in order to retrieve their password using the <code>GetPassword</code> method, or reset their password using the <code>ResetPassword</code> method. The attribute name in the configuration file is case-sensitive.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGEDGH" name="CHDGEDGH"></a>
+<h3 class="refsect3">RequiresUniqueEmail</h3>
+<p>This property gets a value indicating whether or not the membership provider is configured to require a unique e-mail address for each user name.</p>
+<a id="sthref144" name="sthref144"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool RequiresUniqueEmail{get;}
+</pre>
+<a id="sthref145" name="sthref145"></a>
+<p class="subhead2">Property Value</p>
+<p>Returns <code>true</code>, if the membership provider requires a unique e-mail address; otherwise, returns <code>false</code>. The default value is <code>false</code>.</p>
+<a id="sthref146" name="sthref146"></a>
+<p class="subhead2">Remarks</p>
+<p>To customize a membership provider, ASP.NET developers can specify a Boolean value for the <code>RequiresUniqueEmail</code> property through the <code>web.config</code> file using the <code>requiresUniqueEmail</code> attribute. The attribute name in the configuration file is case-sensitive.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDHCDJJ" name="CHDHCDJJ"></a>
+<hr />
+<h2 class="refsect2">OracleMembershipProvider Public Methods<a id="sthref147" name="sthref147"></a></h2>
+<p><code>OracleMembershipProvider</code> public methods are listed in <a href="#CHDGIBGB">Table 2-8</a>.</p>
+<div class="tblruleformal"><a id="sthref148" name="sthref148"></a><a id="CHDGIBGB" name="CHDGIBGB"></a>
+<p class="titleintable">Table 2-8 OracleMembershipProvider Public Methods</p>
+<table class="RuleFormal" title="OracleMembershipProvider Public Methods" summary="Rows are public methods, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t28">Public Methods</th>
+<th align="left" valign="bottom" id="r1c2-t28">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t28" headers="r1c1-t28">
+<p><a href="#CHDIAFJC">ChangePassword</a></p>
+</td>
+<td align="left" headers="r2c1-t28 r1c2-t28">
+<p>Updates the password for a user</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t28" headers="r1c1-t28">
+<p><a href="#CHDGGJFD">ChangePasswordQuestionAndAnswer</a></p>
+</td>
+<td align="left" headers="r3c1-t28 r1c2-t28">
+<p>Updates the password question and answer for a user</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t28" headers="r1c1-t28">
+<p><a href="#CHDFBJJE">CreateUser</a></p>
+</td>
+<td align="left" headers="r4c1-t28 r1c2-t28">
+<p>Adds a new user to the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t28" headers="r1c1-t28">
+<p><a href="#CHDDAJHA">DeleteUser</a></p>
+</td>
+<td align="left" headers="r5c1-t28 r1c2-t28">
+<p>Removes a user from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t28" headers="r1c1-t28">
+<p><code>Equals</code></p>
+</td>
+<td align="left" headers="r6c1-t28 r1c2-t28">
+<p>Inherited from <code>System.Object</code> (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t28" headers="r1c1-t28">
+<p><a href="#CHDGEBGA">FindUsersByEmail</a></p>
+</td>
+<td align="left" headers="r7c1-t28 r1c2-t28">
+<p>Returns a collection of users whose e-mail addresses match the specified e-mail address</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t28" headers="r1c1-t28">
+<p><a href="#CHDJIGFB">FindUsersByName</a></p>
+</td>
+<td align="left" headers="r8c1-t28 r1c2-t28">
+<p>Returns a collection of users that match the specified user name</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t28" headers="r1c1-t28">
+<p><a href="#CHDCBEGH">GeneratePassword</a></p>
+</td>
+<td align="left" headers="r9c1-t28 r1c2-t28">
+<p>Generates a random password that is at least 14 characters in length</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t28" headers="r1c1-t28">
+<p><a href="#CHDFEDGH">GetAllUsers</a></p>
+</td>
+<td align="left" headers="r10c1-t28 r1c2-t28">
+<p>Returns a collection of all the users in the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t28" headers="r1c1-t28">
+<p><code>GetHashCode</code></p>
+</td>
+<td align="left" headers="r11c1-t28 r1c2-t28">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t28" headers="r1c1-t28">
+<p><a href="#CHDBGFEI">GetNumberOfUsersOnline</a></p>
+</td>
+<td align="left" headers="r12c1-t28 r1c2-t28">
+<p>Returns the number of users that are currently accessing the application</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t28" headers="r1c1-t28">
+<p><a href="#CHDDJBFH">GetPassword</a></p>
+</td>
+<td align="left" headers="r13c1-t28 r1c2-t28">
+<p>Returns the password for the specified user name from the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t28" headers="r1c1-t28">
+<p><code>GetType</code></p>
+</td>
+<td align="left" headers="r14c1-t28 r1c2-t28">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t28" headers="r1c1-t28">
+<p><a href="#CHDBHHHD">GetUser</a></p>
+</td>
+<td align="left" headers="r15c1-t28 r1c2-t28">
+<p>Returns user information from the database based on the unique identifier for the user (Overloaded)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t28" headers="r1c1-t28">
+<p><a href="#CHDJAAAI">GetUserNameByEmail</a></p>
+</td>
+<td align="left" headers="r16c1-t28 r1c2-t28">
+<p>Returns the user name associated with the specified e-mail address</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t28" headers="r1c1-t28">
+<p><a href="#CHDFDBFC">Initialize</a></p>
+</td>
+<td align="left" headers="r17c1-t28 r1c2-t28">
+<p>Initializes the <code>OracleMembership</code> provider with the property values specified in the ASP.NET application configuration file (<code>web.config</code>)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t28" headers="r1c1-t28">
+<p><a href="#CHDBIGHJ">ResetPassword</a></p>
+</td>
+<td align="left" headers="r18c1-t28 r1c2-t28">
+<p>Resets a user's password and returns a new automatically generated password</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t28" headers="r1c1-t28">
+<p><code>ToString</code></p>
+</td>
+<td align="left" headers="r19c1-t28 r1c2-t28">
+<p>Inherited from <code>System.Object</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t28" headers="r1c1-t28">
+<p><a href="#CHDCJGBI">UnlockUser</a></p>
+</td>
+<td align="left" headers="r20c1-t28 r1c2-t28">
+<p>Unlocks a user so that the user can be validated</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t28" headers="r1c1-t28">
+<p><a href="#CHDGGCBJ">UpdateUser</a></p>
+</td>
+<td align="left" headers="r21c1-t28 r1c2-t28">
+<p>Updates information about a user in the database</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t28" headers="r1c1-t28">
+<p><a href="#CHDCBADH">ValidateUser</a></p>
+</td>
+<td align="left" headers="r22c1-t28 r1c2-t28">
+<p>Validates the user</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDIAFJC" name="CHDIAFJC"></a>
+<h3 class="refsect3">ChangePassword</h3>
+<p>This method updates the password for a user.</p>
+<a id="sthref149" name="sthref149"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool ChangePassword(string <span class="italic">userName</span>, string <span class="italic">oldPassword</span>, 
+  string <span class="italic">newPassword</span>);
+</pre>
+<a id="sthref150" name="sthref150"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The user to update the password for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">oldPassword</span></code></p>
+<p>The current password for the specified user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">newPassword</span></code></p>
+<p>The new password for the specified user.</p>
+</li>
+</ul>
+<a id="sthref151" name="sthref151"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the password was updated successfully; otherwise, returns <code>false</code>.</p>
+<a id="sthref152" name="sthref152"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">userName</span></code>, <code><span class="codeinlineitalic">oldPassword</span></code>, or <code><span class="codeinlineitalic">newPassword</span></code> parameter is null.</p>
+<p><code>System.Web.Security.MembershipPasswordException</code> - <code><span class="codeinlineitalic">userName</span></code> was not found in the membership database.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - An error occurred when setting the new password in the database.</p>
+<p><code>Exception</code> - An unhandled exception has occurred.</p>
+<p><code>ArgumentException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">userName</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">oldPassword</span></code> parameter is an empty string or is longer than 128 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">newPassword</span></code> parameter is an empty string, is longer than 128 characters (including the encoded version), is less than the value of the <code>MinRequiredPasswordLength</code> property, has a number of nonalphanumeric characters less than the value of <code>MinRequiredNonAlphanumericCharacters</code> property, or does not match the regular expression defined in the <code>PasswordStrengthRegularExpression</code> property.</p>
+</li>
+<li>
+<p>The change-password operation was canceled by a subscriber to the <code>ValidatingPassword</code> event, and the <code>FailureInformation</code> property was a null reference.</p>
+</li>
+</ul>
+<a id="sthref153" name="sthref153"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>ChangePassword</code> method returns <code>true</code> if the supplied user name and password are valid and the password was updated successfully; otherwise, it returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGGJFD" name="CHDGGJFD"></a>
+<h3 class="refsect3">ChangePasswordQuestionAndAnswer</h3>
+<p>This method updates the password question and answer for a user.</p>
+<a id="sthref154" name="sthref154"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool ChangePasswordQuestionAndAnswer(string <span class="italic">userName</span>, string
+   <span class="italic">password</span>, string <span class="italic">newPasswordQuestion</span>, string <span class="italic">newPasswordAnswer</span>);
+</pre>
+<a id="sthref155" name="sthref155"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The user that the password question and answer change for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">password</span></code></p>
+<p>The password for the specified user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">newPasswordQuestion</span></code></p>
+<p>The new password question for the specified user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">newPasswordAnswer</span></code></p>
+<p>The new password answer for the specified user.</p>
+</li>
+</ul>
+<a id="sthref156" name="sthref156"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code>, if the password question and answer were updated successfully; <code>false</code>, if otherwise.</p>
+<a id="sthref157" name="sthref157"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">userName</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">password</span></code> parameter is an empty string or is longer than 128 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">newPasswordQuestion</span></code> parameter is an empty string or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">newPasswordAnswer</span></code> parameter is an empty string or is longer than 128 characters (including the encoded version).</p>
+</li>
+</ul>
+<a id="sthref158" name="sthref158"></a>
+<p class="subhead2">Remarks</p>
+<p>If the user name and password supplied are valid and the password question and answer were updated successfully, then this method returns true. Otherwise, it returns <code>false</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDFBJJE" name="CHDFBJJE"></a>
+<h3 class="refsect3">CreateUser</h3>
+<p>This method adds a new user to the database.</p>
+<a id="sthref159" name="sthref159"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override MembershipUser CreateUser(string <span class="italic">userName</span>, string <span class="italic">password</span>,
+   string <span class="italic">emailAddress</span>, string <span class="italic">passwordQuestion</span>, string <span class="italic">passwordAnswer</span>, bool
+   <span class="italic">isApproved</span>, Object <span class="italic">providerUserKey</span>, out MembershipCreateStatus <span class="italic">status</span>);
+</pre>
+<a id="sthref160" name="sthref160"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The user name for the new user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">password</span></code></p>
+<p>The password for the new user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">emailAddress</span></code></p>
+<p>The email address for the new user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">passwordQuestion</span></code></p>
+<p>The password question for the new user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">passwordAnswer</span></code></p>
+<p>The password answer for the new user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">isApproved</span></code></p>
+<p>A Boolean value that indicates whether or not the new user is approved to be validated.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">providerUserKey</span></code></p>
+<p>The unique identifier from the database for the new user.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">status</span></code></p>
+<p>A <code>MembershipCreateStatus</code> enumeration value indicating whether or not the user was created successfully.</p>
+</li>
+</ul>
+<a id="sthref161" name="sthref161"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>MembershipUser</code> object populated with the information for the newly created user.</p>
+<a id="sthref162" name="sthref162"></a>
+<p class="subhead2">Remarks</p>
+<p>This method returns a <code>MembershipUser</code> object populated with the information for the newly created user. The <code><span class="codeinlineitalic">status</span></code> parameter returns a <code>MembershipCreateStatus</code> value that indicates whether or not the user was successfully created. If the <code>CreateUser</code> method failed, a <code>MembershipCreateStatus</code> member indicates the cause of the failure.</p>
+<a id="sthref163" name="sthref163"></a>
+<p class="subhead2">MembershipCreateStatus Enumeration</p>
+<p>The <code>MembershipCreateStatus</code> enumeration values are listed in <a href="#CIAJJJFJ">Table 2-9</a>.</p>
+<div class="tblruleformal"><a id="sthref164" name="sthref164"></a><a id="CIAJJJFJ" name="CIAJJJFJ"></a>
+<p class="titleintable">Table 2-9 MembershipCreateStatus Enumeration Values</p>
+<table class="RuleFormal" title="MembershipCreateStatus Enumeration Values" summary="Rows are enumeration members. first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="38%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t32">Member Name</th>
+<th align="left" valign="bottom" id="r1c2-t32">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t32" headers="r1c1-t32">
+<p><code>DuplicateEmail</code></p>
+</td>
+<td align="left" headers="r2c1-t32 r1c2-t32">
+<p>The e-mail address for the application already exists in the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t32" headers="r1c1-t32">
+<p><code>DuplicateProviderUserKey</code></p>
+</td>
+<td align="left" headers="r3c1-t32 r1c2-t32">
+<p>The provider user key for the application already exists in the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t32" headers="r1c1-t32">
+<p><code>DuplicateUserName</code></p>
+</td>
+<td align="left" headers="r4c1-t32 r1c2-t32">
+<p>The user name for the application already exists in the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t32" headers="r1c1-t32">
+<p><code>InvalidAnswer</code></p>
+</td>
+<td align="left" headers="r5c1-t32 r1c2-t32">
+<p>The password answer is not formatted correctly.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t32" headers="r1c1-t32">
+<p><code>InvalidEmail</code></p>
+</td>
+<td align="left" headers="r6c1-t32 r1c2-t32">
+<p>The e-mail address is not formatted correctly.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t32" headers="r1c1-t32">
+<p><code>InvalidPassword</code></p>
+</td>
+<td align="left" headers="r7c1-t32 r1c2-t32">
+<p>The password is not formatted correctly.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t32" headers="r1c1-t32">
+<p><code>InvalidProviderUserKey</code></p>
+</td>
+<td align="left" headers="r8c1-t32 r1c2-t32">
+<p>The provider user key is of an invalid type or format.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t32" headers="r1c1-t32">
+<p><code>InvalidQuestion</code></p>
+</td>
+<td align="left" headers="r9c1-t32 r1c2-t32">
+<p>The password question is not formatted correctly.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t32" headers="r1c1-t32">
+<p><code>InvalidUserName</code></p>
+</td>
+<td align="left" headers="r10c1-t32 r1c2-t32">
+<p>The user name was not found in the database.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t32" headers="r1c1-t32">
+<p><code>ProviderError</code></p>
+</td>
+<td align="left" headers="r11c1-t32 r1c2-t32">
+<p>The provider returned an error that is not described by other <code>MembershipCreateStatus</code> enumeration values.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t32" headers="r1c1-t32">
+<p><code>Success</code></p>
+</td>
+<td align="left" headers="r12c1-t32 r1c2-t32">
+<p>The user was successfully created.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t32" headers="r1c1-t32">
+<p><code>UserRejected</code></p>
+</td>
+<td align="left" headers="r13c1-t32 r1c2-t32">
+<p>The user was not created, for a reason defined by the provider.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDAJHA" name="CHDDAJHA"></a>
+<h3 class="refsect3">DeleteUser</h3>
+<p>This method removes a user from the database.</p>
+<a id="sthref165" name="sthref165"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool DeleteUser(string <span class="italic">userName</span>, bool <span class="italic">deleteAllRelatedData</span>);
+</pre>
+<a id="sthref166" name="sthref166"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The name of the user to delete.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">deleteAllRelatedData</span></code></p>
+<p>A Boolean value that indicates whether or not all the data related to the user is to be removed from the database.</p>
+</li>
+</ul>
+<a id="sthref167" name="sthref167"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code>, if the user was successfully deleted; <code>false</code>, if otherwise or if the user does not exist in the database.</p>
+<a id="sthref168" name="sthref168"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is a null reference.</p>
+<a id="sthref169" name="sthref169"></a>
+<p class="subhead2">Remarks</p>
+<p>Leading and trailing spaces are trimmed from the <code><span class="codeinlineitalic">userName</span></code> parameter value. If <code><span class="codeinlineitalic">deleteAllRelatedData</span></code> is <code>true</code>, then all data related to the user in the database such as, data for roles, profiles, and personalization, are also deleted, even if the user does not exist in the Oracle membership database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGEBGA" name="CHDGEBGA"></a>
+<h3 class="refsect3">FindUsersByEmail</h3>
+<p>This method returns a collection of users whose e-mail addresses match the specified e-mail address.</p>
+<a id="sthref170" name="sthref170"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override MembershipUserCollection FindUsersByEmail(string <span class="italic">emailToMatch</span>,
+   int <span class="italic">pageIndex</span>, int <span class="italic">pageSize</span>, out int <span class="italic">totalRecords</span>);
+</pre>
+<a id="sthref171" name="sthref171"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">emailToMatch</span></code></p>
+<p>The email address to search for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">pageIndex</span></code></p>
+<p>The index of the page of results to return. The <code><span class="codeinlineitalic">PageIndex</span></code> is zero-based.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">pageSize</span></code></p>
+<p>The size of the page of results to return.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">totalRecords</span></code></p>
+<p>The total number of matched users.</p>
+</li>
+</ul>
+<a id="sthref172" name="sthref172"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns a <code>MembershipUserCollection</code> object that contains <code>MembershipUser</code> objects.</p>
+<a id="sthref173" name="sthref173"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">emailToMatch</span></code> parameter is an empty string or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">pageIndex</span></code> parameter is less than 0.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">pageSize</span></code> parameter is less than 1 or the page upper bound is larger than <code>Int32.MaxValue</code>.</p>
+</li>
+</ul>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">emailToMatch</span></code>, <code><span class="codeinlineitalic">pageIndex</span></code>, <code><span class="codeinlineitalic">pageSize</span></code>, or <code><span class="codeinlineitalic">totalRecords</span></code> parameter is null.</p>
+<a id="sthref174" name="sthref174"></a>
+<p class="subhead2">Remarks</p>
+<p>Leading and trailing spaces are trimmed from the <code><span class="codeinlineitalic">emailToMatch</span></code> parameter value. The results returned by the <code>FindUsersByEmail</code> method are constrained by the <code><span class="codeinlineitalic">pageIndex</span></code> and <code><span class="codeinlineitalic">pageSize</span></code> parameters. The <code><span class="codeinlineitalic">pageSize</span></code> parameter identifies the maximum number of <code>MembershipUser</code> objects to return in the <code>MembershipUserCollection</code> object. The <code><span class="codeinlineitalic">pageIndex</span></code> parameter identifies which page of results to return. Zero identifies the first page, as the value is zero-based. The <code><span class="codeinlineitalic">totalRecords</span></code> parameter is an out parameter for the total number of users that matched the <code><span class="codeinlineitalic">emailToMatch</span></code> value.</p>
+<p>The <code>OracleMembershipProvider</code> class supports extensive searching by accepting the percent character (%) as a wildcard.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDJIGFB" name="CHDJIGFB"></a>
+<h3 class="refsect3">FindUsersByName</h3>
+<p>This method returns a collection of users that match the specified user name.</p>
+<a id="sthref175" name="sthref175"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override MembershipUserCollection FindUsersByEmail(string <span class="italic">userNameToMatch</span>,
+  int <span class="italic">pageIndex</span>, int <span class="italic">pageSize</span>, out int <span class="italic">totalRecords</span>);
+</pre>
+<a id="sthref176" name="sthref176"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userNameToMatch</span></code></p>
+<p>The user name to search for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">pageIndex</span></code></p>
+<p>The zero-based index of the returned results page.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">pageSize</span></code></p>
+<p>The size of the returned results page.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">totalRecords</span></code></p>
+<p>The total number of matched users.</p>
+</li>
+</ul>
+<a id="sthref177" name="sthref177"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns a <code>MembershipUserCollection</code> object that contains <code>MembershipUser</code> objects.</p>
+<a id="sthref178" name="sthref178"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">userNameToMatch</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">pageIndex</span></code> parameter is less than 0.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">pageSize</span></code> parameter is less than 1 or the page upper bound is larger than <code>Int32.MaxValue</code>.</p>
+</li>
+</ul>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The page lower bound is (<code><span class="codeinlineitalic">pageIndex</span></code> * <code><span class="codeinlineitalic">pageSize</span></code>) and the page upper bound is (<code><span class="codeinlineitalic">pageIndex</span></code> *<code><span class="codeinlineitalic">pageSize</span></code>) + (<code><span class="codeinlineitalic">pageSize</span></code> - 1).</div>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">userNameToMatch</span></code>, <code><span class="codeinlineitalic">pageIndex</span></code>, <code><span class="codeinlineitalic">pageSize</span></code>, or <code><span class="codeinlineitalic">totalRecords</span></code> parameter is null.</p>
+<a id="sthref179" name="sthref179"></a>
+<p class="subhead2">Remarks</p>
+<p>Leading and trailing spaces are trimmed from the <code><span class="codeinlineitalic">userNameToMatch</span></code> parameter value.</p>
+<p>The results returned by the <code>FindUsersByName</code> method are constrained by the <code><span class="codeinlineitalic">pageIndex</span></code> and <code><span class="codeinlineitalic">pageSize</span></code> parameters. The <code><span class="codeinlineitalic">pageSize</span></code> parameter identifies the maximum number of <code>MembershipUser</code> objects to return in the <code>MembershipUserCollection</code> object. The <code><span class="codeinlineitalic">pageIndex</span></code> parameter identifies which page of results to return. Zero identifies the first page, as the value is zero-based. The <code><span class="codeinlineitalic">totalRecords</span></code> parameter is an out parameter for the total number of users that matched the <code><span class="codeinlineitalic">userNameToMatch</span></code> value.</p>
+<p>The <code>OracleMembershipProvider</code> class supports extensive search by accepting the percent character (%) as a wildcard.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCBEGH" name="CHDCBEGH"></a>
+<h3 class="refsect3">GeneratePassword</h3>
+<p>This method generates a random password that is at least 14 characters in length.</p>
+<a id="sthref180" name="sthref180"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public virtual string GeneratePassword( );
+</pre>
+<a id="sthref181" name="sthref181"></a>
+<p class="subhead2">Return Value</p>
+<p>A random string for a password that is at least 14 characters in length.</p>
+<a id="sthref182" name="sthref182"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>OracleMembershipProvider</code> object calls the <code>GeneratePassword</code> method to get a randomly generated password that is at least 14 characters but less than 128 characters in length.</p>
+<p>The generated password contains only alphanumeric characters and the following punctuation marks: !@#$%^&amp;*()_-+=[{]};:&lt;&gt;|./?. No hidden or non-printable control characters are included in the generated password.</p>
+<p>If the value specified for <code>MinRequiredPasswordLength</code> property is greater than 14, then the length of the password returned by the <code>GeneratePassword</code> property is the value of the <code>MinRequiredPasswordLength</code> property. Otherwise, the length is 14 characters.</p>
+<p>The random password generated by the <code>GeneratePassword</code> method is not guaranteed to pass the regular expression in the <code>PasswordStrengthRegularExpression</code> property. However, the random password meets the criteria established by the <code>MinRequiredPasswordLength</code> and <code>MinRequiredNonAlphanumericCharacters</code> properties.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDFEDGH" name="CHDFEDGH"></a>
+<h3 class="refsect3">GetAllUsers</h3>
+<p>This method returns a collection of all the users in the database.</p>
+<a id="sthref183" name="sthref183"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override MembershipUserCollection GetAllUsers(int <span class="italic">pageIndex</span>, int <span class="italic">pageSize</span>,
+   out int <span class="italic">totalRecords</span>);
+</pre>
+<a id="sthref184" name="sthref184"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">pageIndex</span></code></p>
+<p>The zero-based index of the page of results to return.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">pageSize</span></code></p>
+<p>The size of the page of results to return.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">totalRecords</span></code></p>
+<p>The total number of users.</p>
+</li>
+</ul>
+<a id="sthref185" name="sthref185"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>MembershipUserCollection</code> object that contains <code>MembershipUser</code> objects.</p>
+<a id="sthref186" name="sthref186"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">pageIndex</span></code> parameter is less than 0, or the <code><span class="codeinlineitalic">pageSize</span></code> parameter is less than 1 or the page upper bound is larger than <code>Int32.MaxValue</code>.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The page lower bound is (<code><span class="codeinlineitalic">pageIndex</span></code> * <code><span class="codeinlineitalic">pageSize</span></code>) and the page upper bound is (<code><span class="codeinlineitalic">pageIndex</span></code> *<code><span class="codeinlineitalic">pageSize</span></code>) + (<code><span class="codeinlineitalic">pageSize</span></code> - 1).</div>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">pageIndex</span></code>, <code><span class="codeinlineitalic">pageSize</span></code>, or <code><span class="codeinlineitalic">totalRecords</span></code> parameter is null.</p>
+<a id="sthref187" name="sthref187"></a>
+<p class="subhead2">Remarks</p>
+<p>The results returned by the <code>GetAllUsers</code> method are constrained by the <code><span class="codeinlineitalic">pageIndex</span></code> and <code><span class="codeinlineitalic">pageSize</span></code> parameters. The <code><span class="codeinlineitalic">pageSize</span></code> parameter identifies the maximum number of <code>MembershipUser</code> objects to return in the <code>MembershipUserCollection</code> object. The <code><span class="codeinlineitalic">pageIndex</span></code> parameter identifies which page of results to return. Zero identifies the first page, as the value is zero-based. The <code><span class="codeinlineitalic">totalRecords</span></code> parameter is an out parameter for the total number of users for the configured <code>applicationName</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBGFEI" name="CHDBGFEI"></a>
+<h3 class="refsect3">GetNumberOfUsersOnline</h3>
+<p>This method returns the number of users that are currently accessing the application.</p>
+<a id="sthref188" name="sthref188"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override int GeNumberOfUsersOnline();
+</pre>
+<a id="sthref189" name="sthref189"></a>
+<p class="subhead2">Return Value</p>
+<p>An integer value indicating the total number of users currently accessing the application.</p>
+<a id="sthref190" name="sthref190"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>GetNumberOfUsersOnline</code> method returns the number of users of the current application whose last activity date and time is greater than the current date and time less the value (in minutes) of the <code>Membership.UserIsOnlineTimeWindow</code> property.</p>
+<p>The count includes only users that are associated with the configured <code>applicationName</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDDJBFH" name="CHDDJBFH"></a>
+<h3 class="refsect3">GetPassword</h3>
+<p>This method returns the password for the specified user name from the database.</p>
+<a id="sthref191" name="sthref191"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string GetPassword(string <span class="italic">userName</span>, string <span class="italic">passwordAnswer</span>);
+</pre>
+<a id="sthref192" name="sthref192"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The user to retrieve the password for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">passwordAnswer</span></code></p>
+<p>The password answer for the user.</p>
+</li>
+</ul>
+<a id="sthref193" name="sthref193"></a>
+<p class="subhead2">Return Value</p>
+<p>A password string for the specified user name.</p>
+<a id="sthref194" name="sthref194"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is null or the <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter is null when the <code><span class="codeinlineitalic">RequiresQuestionAndAnswer</span></code> property is <code>true</code>.</p>
+<p><code>System.Web.Security.MembershipPasswordException</code> - The <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter is invalid or the user identified by <code><span class="codeinlineitalic">userName</span></code> is being locked.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is not found in the membership database, or an error occurred when retrieving the password from the membership database.</p>
+<p><code>NotSupportedException</code> - <code>EnablePasswordRetrieval</code> property is set to false.</p>
+<p><code>ArgumentException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">userName</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter is an empty string and the <code>RequiresQuestionAndAnswer</code> property is <code>true</code>, or the <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter is longer than 128 characters (including the encoded version).</p>
+</li>
+</ul>
+<a id="sthref195" name="sthref195"></a>
+<p class="subhead2">Remarks</p>
+<p>Leading and trailing spaces are trimmed from the <code><span class="codeinlineitalic">userName</span></code> and <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter values.</p>
+<p>The <code>GetPassword</code> method requires that the <code>EnablePasswordRetrieval</code> property be set to <code>true</code>. However, if the <code>PasswordFormat</code> property is set to <code>Hashed</code>, then a <code>ProviderException</code> is thrown when the provider is initialized. In other words, the <code>GetPassword</code> method cannot retrieve <code>Hashed</code> passwords. By default, the <code>EnablePasswordRetrieval</code> property is set to <code>false</code>.</p>
+<p>If the <code>RequiresQuestionAndAnswer</code> property is set to <code>true</code> and an incorrect password answer is supplied to the <code>GetPassword</code> method, then the internal counter that tracks invalid password-answer attempts is incremented by one. This can result in the user being locked out and unable to log on until the lock status is cleared by a call to the <code>UnlockUser</code> method. If the correct password answer is supplied and the user is not currently locked out, then the internal counter that tracks invalid password-answer attempts is reset to zero.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBHHHD" name="CHDBHHHD"></a>
+<h3 class="refsect3">GetUser</h3>
+<p>This method returns user information from the database based on the unique identifier for the user.</p>
+<a id="sthref196" name="sthref196"></a>
+<p class="subhead2">Overload List:</p>
+<ul>
+<li>
+<p><a href="#CHDBEBDF">GetUser(Object, bool)</a></p>
+<p>This method returns user information from the database based on the supplied unique identifier.</p>
+</li>
+<li>
+<p><a href="#CHDCHBCC">GetUser(string, bool)</a></p>
+<p>This method returns user information from the database based on the supplied the user name.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBEBDF" name="CHDBEBDF"></a>
+<h3 class="refsect3">GetUser(Object, bool)</h3>
+<p>This method returns user information from the database based on the supplied unique identifier.</p>
+<a id="sthref197" name="sthref197"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override MembershipUser GetUser(Object <span class="italic">providerUserKey</span>, 
+   bool <span class="italic">userIsOnline</span>);
+</pre>
+<a id="sthref198" name="sthref198"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">providerUserKey</span></code></p>
+<p>The unique identifier of the user for whom information is being retrieved.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">userIsOnline</span></code></p>
+<p>A Boolean value that indicates whether or not the method updates the last-activity date/time stamp for the user. If the value is set to <code>true</code>, it is updated; otherwise, the method returns user information without updating the last-activity date/time stamp.</p>
+</li>
+</ul>
+<a id="sthref199" name="sthref199"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>MembershipUser</code> object populated with the specified user's information from the database.</p>
+<a id="sthref200" name="sthref200"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">providerUserKey</span></code> parameter is not of type <code>GUID</code>.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">providerUserKey</span></code> parameter is null.</p>
+<a id="sthref201" name="sthref201"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>GetUser</code> method provides an option to update the last-activity date/time stamp for the user.</p>
+<p>The <code>GetUser</code> method returns a <code>MembershipUser</code> object populated with information about the specified user. If the user name is not found in the database, then the <code>GetUser</code> method returns a null reference.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCHBCC" name="CHDCHBCC"></a>
+<h3 class="refsect3">GetUser(string, bool)</h3>
+<p>This method returns user information from the database based on the supplied user name.</p>
+<a id="sthref202" name="sthref202"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override MembershipUser GetUser(string <span class="italic">userName</span>, bool <span class="italic">userIsOnline</span>);
+</pre>
+<a id="sthref203" name="sthref203"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The name of the user to get information for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">userIsOnline</span></code></p>
+<p>A Boolean value that indicates whether or not the method updates the last-activity date/time stamp for the user. If the value is set to <code>true</code>, it is updated; otherwise, the method returns user information without updating the last-activity date/time stamp.</p>
+</li>
+</ul>
+<a id="sthref204" name="sthref204"></a>
+<p class="subhead2">Return Value</p>
+<p>A <code>MembershipUser</code> object populated with the specified user's information from the database.</p>
+<a id="sthref205" name="sthref205"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is null.</p>
+<a id="sthref206" name="sthref206"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>GetUser</code> method provides an option to update the last-activity date/time stamp for the user.</p>
+<p>The <code>GetUser</code> method returns a <code>MembershipUser</code> object populated with information about the specified user. If the user name is not found in the database, then the <code>GetUser</code> method returns a null reference.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDJAAAI" name="CHDJAAAI"></a>
+<h3 class="refsect3">GetUserNameByEmail</h3>
+<p>This method returns the user name associated with the specified e-mail address.</p>
+<a id="sthref207" name="sthref207"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string GetUserNameByEmail(string <span class="italic">emailAddress</span>);
+</pre>
+<a id="sthref208" name="sthref208"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">emailAddress</span></code></p>
+<p>The email address to search for.</p>
+</li>
+</ul>
+<a id="sthref209" name="sthref209"></a>
+<p class="subhead2">Return Value</p>
+<p>The user name associated with the specified e-mail address. If no match is found, then it returns a null reference.</p>
+<a id="sthref210" name="sthref210"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - E-mail address exceeds 256 characters.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - More than one user with the same e-mail address exists in the database and the <code>RequiresUniqueEmail</code> property is <code>true</code>.</p>
+<a id="sthref211" name="sthref211"></a>
+<p class="subhead2">Remarks</p>
+<p>If the value of the <code>RequiresUniqueEmail</code> property is <code>true</code>, then a unique e-mail address must be associated with each user name.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDFDBFC" name="CHDFDBFC"></a>
+<h3 class="refsect3">Initialize</h3>
+<p>This method initializes the <code>OracleMembership</code> provider with the property values specified in the ASP.NET application configuration file (<code>web.config</code>).</p>
+<a id="sthref212" name="sthref212"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void Initialize(string <span class="italic">name</span>, NameValueCollection <span class="italic">config</span>);
+</pre>
+<a id="sthref213" name="sthref213"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">name</span></code></p>
+<p>The name of the <code>OracleMembership</code> provider instance to initialize.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">config</span></code></p>
+<p>A collection of name/value pairs representing the provider-specific attributes specified in the configuration for this provider.</p>
+</li>
+</ul>
+<a id="sthref214" name="sthref214"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">config</span></code> parameter is a null value.</p>
+<p><code>InvalidOperationException</code> - An attempt is made to call the <code>Initialize</code> method on a provider after the provider has already been initialized.</p>
+<p><code>HttpException</code> - The current trust level is less than Low.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - One of the following is true in the application configuration file:</p>
+<ul>
+<li>
+<p>The <code>enablePasswordRetrieval</code>, <code>enablePasswordReset</code>, <code>requiresQuestionAndAnswer</code>, or <code>requiresUniqueEmail</code> attribute is set to a value other than a Boolean value.</p>
+</li>
+<li>
+<p>The <code>maxInvalidPasswordAttempts</code> or <code>passwordAttemptWindow</code> attribute is set to a value that is not a positive integer.</p>
+</li>
+<li>
+<p>The <code>minRequiredPasswordLength</code> attribute is set to a value that is not a positive integer, or the value is greater than 128.</p>
+</li>
+<li>
+<p>The <code>minRequiredNonalphanumericCharacters</code> attribute is set to a negative integer, or the value is greater than 128.</p>
+</li>
+<li>
+<p>The value for the <code>passwordStrengthRegularExpression</code> attribute is not a valid regular expression.</p>
+</li>
+<li>
+<p>The value for the <code>applicationName</code> attribute is greater than 256 characters.</p>
+</li>
+<li>
+<p>The value for <code>passwordFormat</code> attribute is an invalid <code>MembershipPasswordFormat</code> enumeration value.</p>
+</li>
+<li>
+<p>The <code>passwordFormat</code> attribute is set to <code>Hashed</code>, and the <code>enablePasswordRetrieval</code> attribute is set to <code>true</code>.</p>
+</li>
+<li>
+<p>The <code>passwordFormat</code> attribute is set to <code>Encrypted</code>, and the <code>machineKey</code> configuration element specifies <code>AutoGenerate</code> for the <code>decryptionKey</code> attribute.</p>
+</li>
+<li>
+<p>The <code>connectionStringName</code> attribute is empty or does not exist in the application configuration file.</p>
+</li>
+<li>
+<p>The value of the connection string for the <code>connectionStringName</code> attribute value is empty, or the specified <code>connectionStringName</code> does not exist in the application configuration file.</p>
+</li>
+<li>
+<p>The value for the <code>commandTimeout</code> attribute is set to a negative integer.</p>
+</li>
+<li>
+<p>The application configuration file for this <code>OracleMembershipProvider</code> instance contains an unrecognized attribute.</p>
+</li>
+</ul>
+<a id="sthref215" name="sthref215"></a>
+<p class="subhead2">Remarks</p>
+<p>The <code>Initialize</code> method is not intended to be called directly by the application.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDBIGHJ" name="CHDBIGHJ"></a>
+<h3 class="refsect3">ResetPassword</h3>
+<p>This method resets a user's password and returns a new automatically generated password.</p>
+<a id="sthref216" name="sthref216"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override string ResetPassword(string <span class="italic">userName</span>, string <span class="italic">passwordAnswer</span>);
+</pre>
+<a id="sthref217" name="sthref217"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The user to reset the password for.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">passwordAnswer</span></code></p>
+<p>The password answer for the specified user.</p>
+</li>
+</ul>
+<a id="sthref218" name="sthref218"></a>
+<p class="subhead2">Return Value</p>
+<p>The new password for the specified user.</p>
+<a id="sthref219" name="sthref219"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is a null reference, or the <code>passwordAnswer</code> parameter is null when the <code>RequiresQuestionAndAnswer</code> property is <code>true</code>.</p>
+<p><code>System.Web.Security.MembershipPasswordException</code> - The <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter is invalid or the user identified by the <code><span class="codeinlineitalic">userName</span></code> parameter is locked out.</p>
+<p><code>ArgumentException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code><span class="codeinlineitalic">userName</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter is an empty string and <code>RequiresQuestionAndAnswer</code> property is <code>true</code>, or the <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter is longer than 128 characters (including the encoded version).</p>
+</li>
+</ul>
+<p><code>System.Configuration.Provider.ProviderException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code> was not found in the membership database.</p>
+</li>
+<li>
+<p>The reset-password operation was canceled by a subscriber to the <code>ValidatingPassword</code> event and the <code>FailureInformation</code> property was a null reference.</p>
+</li>
+<li>
+<p>An error occurred when resetting the password in the membership database.</p>
+</li>
+</ul>
+<p><code>NotSupportedException</code> - The <code>EnablePasswordReset</code> property is set to <code>false</code>.</p>
+<p><code>Exception</code> - An unhandled exception occurred.</p>
+<a id="sthref220" name="sthref220"></a>
+<p class="subhead2">Remarks</p>
+<p>Leading and trailing spaces are trimmed from the <code><span class="codeinlineitalic">userName</span></code> and <code><span class="codeinlineitalic">passwordAnswer</span></code> parameter values.</p>
+<p>The <code>ResetPassword</code> method is most commonly used when the <code>PasswordFormat</code> property is set to <code>Hashed</code>. If a user forgets a password that is in hashed format, the password cannot be retrieved. However, the provider can reset the password to a new, automatically generated password if the user supplies the correct password answer. The <code>ResetPassword</code> method requires that the <code>EnablePasswordReset</code> property is set to <code>true</code>. If an incorrect password answer is supplied to the <code>ResetPassword</code> method, then the internal counter that tracks invalid password attempts is incremented by one. This can result in the user being locked out and unable to log on until the lock status is cleared by a call to the <code>UnlockUser</code> method. If the correct password answer is supplied and the user is not currently locked out, then the internal counter that tracks invalid password-answer attempts is reset to zero.</p>
+<p>The random password generated by the <code>ResetPassword</code> method is not guaranteed to pass the regular expression in the <code>PasswordStrengthRegularExpression</code> property. However, the random password will meet the criteria established by the <code>MinRequiredPasswordLength</code> and <code>MinRequiredNonAlphanumericCharacters</code> properties.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCJGBI" name="CHDCJGBI"></a>
+<h3 class="refsect3">UnlockUser</h3>
+<p>This method unlocks a user so that the user can be validated.</p>
+<a id="sthref221" name="sthref221"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool UnLockUser(string <span class="italic">userName</span>);
+</pre>
+<a id="sthref222" name="sthref222"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The name of the user to be unlocked.</p>
+</li>
+</ul>
+<a id="sthref223" name="sthref223"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code>, if the user was successfully unlocked; <code>false</code>, if otherwise.</p>
+<a id="sthref224" name="sthref224"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is an empty string, contains a comma, or is longer than 256 characters.</p>
+<p><code>ArgumentNullException</code> - The <code><span class="codeinlineitalic">userName</span></code> parameter is null.</p>
+<a id="sthref225" name="sthref225"></a>
+<p class="subhead2">Remarks</p>
+<p>Leading and trailing spaces are trimmed from the <code><span class="codeinlineitalic">userName</span></code> parameter value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDGGCBJ" name="CHDGGCBJ"></a>
+<h3 class="refsect3">UpdateUser</h3>
+<p>This method updates information about a user in the database.</p>
+<a id="sthref226" name="sthref226"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override void UpdateUser(MembershipUser <span class="italic">membershipUser</span>);
+</pre>
+<a id="sthref227" name="sthref227"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">membershipUser</span></code></p>
+<p>A <code>MembershipUser</code> object populated with user information.</p>
+</li>
+</ul>
+<a id="sthref228" name="sthref228"></a>
+<p class="subhead2">Exceptions</p>
+<p><code>ArgumentException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code>userName</code> property of <code><span class="codeinlineitalic">membershipUser</span></code> is an empty string, contains a comma, or is longer than 256 characters.</p>
+</li>
+<li>
+<p>The <code>email</code> property of <code><span class="codeinlineitalic">membership User</span></code> is an empty string and the <code>Requires Unique Em ail</code> property is set to <code>true</code>, or the <code>mail</code> property is longer than 256 characters.</p>
+</li>
+</ul>
+<p><code>Argument Null Exception</code> - The <code><span class="codeinlineitalic">membership User</span></code> parameter is null, or the <code>surname</code> or <code>mail</code> property of the <code><span class="codeinlineitalic">membership User</span></code> parameter is null.</p>
+<p><code>System.Configuration.Provider.ProviderException</code> - One of the following conditions exists:</p>
+<ul>
+<li>
+<p>The <code>surname</code> property of the <code><span class="codeinlineitalic">membership User</span></code> parameter is not found in the membership database.</p>
+</li>
+<li>
+<p>The <code>mail</code> property of the <code><span class="codeinlineitalic">membership User</span></code> parameter is equal to an existing e-mail address in the membership database, and the <code>Requires Unique Em ail</code> property is set to <code>true</code>.</p>
+</li>
+<li>
+<p>An error occurred when updating the user in the membership database.</p>
+</li>
+</ul>
+<a id="sthref229" name="sthref229"></a>
+<p class="subhead2">Remarks</p>
+<p>The specified user's <code>Mail</code>, <code>Comment</code>, <code>IsApproved</code>, <code>Last Login Date</code>, and <code>LastActivityDate</code> property values can be modified, and then updated by the <code>UpdateUser</code> method. However, the password for a user cannot. To update the password for a user, use the <code>ChangePassword</code> method of the <code>MembershipUser</code> class.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDCBADH" name="CHDCBADH"></a>
+<h3 class="refsect3">ValidateUser</h3>
+<p>This method validates the user.</p>
+<a id="sthref230" name="sthref230"></a>
+<p class="subhead2">Declaration</p>
+<pre xml:space="preserve" class="oac_no_warn">// C#
+public override bool ValidateUser(string <span class="italic">userName</span>, string <span class="italic">password</span>);
+</pre>
+<a id="sthref231" name="sthref231"></a>
+<p class="subhead2">Parameters</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">userName</span></code></p>
+<p>The name of the user to be validated.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">password</span></code></p>
+<p>The password for the specified user.</p>
+</li>
+</ul>
+<a id="sthref232" name="sthref232"></a>
+<p class="subhead2">Return Value</p>
+<p>Returns <code>true</code> if the specified user name and password are valid; returns <code>false</code> if they are not valid or the user does not exist in the database.</p>
+<a id="sthref233" name="sthref233"></a>
+<p class="subhead2">Remarks</p>
+<p>Leading and trailing spaces are trimmed from the <code><span class="codeinlineitalic">userName</span></code> and <code><span class="codeinlineitalic">password</span></code> parameter values.</p>
+<p>When a user is successfully validated, the last activity date and last sign-in date values are updated to the current date and time in the database.</p>
+<p>The <code>ValidateUser</code> method returns <code>false</code> on any user who was created with the <code><span class="codeinlineitalic">isApproved</span></code> parameter set to <code>false</code>.</p>
+<p>If an incorrect password is supplied to the <code>ValidateUser</code> method, then the internal counter that tracks invalid password attempts is incremented by one. This can result in the user being locked out and unable to log on until the lock status is cleared by a call to the <code>UnlockUser</code> method. If the correct password is supplied and the user is not currently locked out, then the internal counters that track invalid password and password-answer attempts are reset to zero.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+<a id="CHDFJFAI" name="CHDFJFAI"></a>
+<hr />
+<h2 class="refsect2">OracleMembershipProvider Public Events<a id="sthref234" name="sthref234"></a></h2>
+<p><code>OracleMembershipProvider</code> public event is listed in <a href="#CHDEBBJH">Table 2-10</a>.</p>
+<div class="tblruleformal"><a id="sthref235" name="sthref235"></a><a id="CHDEBBJH" name="CHDEBBJH"></a>
+<p class="titleintable">Table 2-10 OracleMembershipProvider Public Events</p>
+<table class="RuleFormal" title="OracleMembershipProvider Public Events" summary="Rows are public events, first column is name, second column is description" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t52">Public Event</th>
+<th align="left" valign="bottom" id="r1c2-t52">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t52" headers="r1c1-t52">
+<p><code>ValidatingPassword</code></p>
+</td>
+<td align="left" headers="r2c1-t52 r1c2-t52">
+<p>Inherited from <code>System.Web.Security.MembershipProvider</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="IntroAssemblyandClassList.htm#CHDCDAAE">"Oracle Providers for ASP.NET Assembly"</a></p>
+</li>
+<li>
+<p><a href="#BABEDCAI">OracleMembershipProvider Class</a></p>
+</li>
+<li>
+<p><a href="#CHDJACCF">OracleMembershipProvider Members</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="OracleMembershipProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="OracleRoleProvider.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2007, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

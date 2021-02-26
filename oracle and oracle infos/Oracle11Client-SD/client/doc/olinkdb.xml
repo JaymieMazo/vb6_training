@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE targetset SYSTEM "dcommon/dtds/targetdatabase.dtd" [
+<!ENTITY e10767 SYSTEM "appdev.112/e10767/target.db">
+<!ENTITY e10767 SYSTEM "appdev.112/e10767/target.db">
+<!ENTITY e10844 SYSTEM "install.112/e10844/target.db">
+<!ENTITY e10876 SYSTEM "install.112/e10876/target.db">
+<!ENTITY e10579 SYSTEM "owb.112/e10579/target.db">
+<!ENTITY e10585 SYSTEM "relnotes.112/e10585/target.db">
+<!ENTITY e10842 SYSTEM "relnotes.112/e10842/target.db">
+<!ENTITY e12243 SYSTEM "win.112/e12243/target.db">
+<!ENTITY e12245 SYSTEM "win.112/e12245/target.db">
+<!ENTITY e12247 SYSTEM "win.112/e12247/target.db">
+<!ENTITY e12248 SYSTEM "win.112/e12248/target.db">
+<!ENTITY e12249 SYSTEM "win.112/e12249/target.db">
+<!ENTITY e12250 SYSTEM "win.112/e12250/target.db">
+<!ENTITY e10844 SYSTEM "install.112/e10844/target.db">
+<!ENTITY e10876 SYSTEM "install.112/e10876/target.db">
+<!ENTITY e10579 SYSTEM "owb.112/e10579/target.db">
+<!ENTITY e10585 SYSTEM "relnotes.112/e10585/target.db">
+<!ENTITY e10842 SYSTEM "relnotes.112/e10842/target.db">
+]>
+<targetset>
+  <targetsetinfo>
+    Oracle® Database Documentation Media Library 11g Release 2 (11.2)
+  </targetsetinfo>
+  <sitemap>
+    <dir name=".">
+      <dir name="appdev.112">
+        <dir name="e10767">
+          <document targetdoc="TDPNG" baseuri="toc.htm">&e10767;</document>
+          <document targetdoc="TDPNG" baseuri="toc.htm">&e10767;</document>
+        </dir>
+      </dir>
+      <dir name="install.112">
+        <dir name="e10844">
+          <document targetdoc="NTCLI" baseuri="toc.htm">&e10844;</document>
+          <document targetdoc="NTCLI" baseuri="toc.htm">&e10844;</document>
+        </dir>
+        <dir name="e10876">
+          <document targetdoc="NTCQI" baseuri="toc.htm">&e10876;</document>
+          <document targetdoc="NTCQI" baseuri="toc.htm">&e10876;</document>
+        </dir>
+      </dir>
+      <dir name="owb.112">
+        <dir name="e10579">
+          <document targetdoc="WBINS" baseuri="toc.htm">&e10579;</document>
+          <document targetdoc="WBINS" baseuri="toc.htm">&e10579;</document>
+        </dir>
+      </dir>
+      <dir name="relnotes.112">
+        <dir name="e10585">
+          <document targetdoc="WBREL" baseuri="toc.htm">&e10585;</document>
+          <document targetdoc="WBREL" baseuri="toc.htm">&e10585;</document>
+        </dir>
+        <dir name="e10842">
+          <document targetdoc="NTDBN" baseuri="toc.htm">&e10842;</document>
+          <document targetdoc="NTDBN" baseuri="toc.htm">&e10842;</document>
+        </dir>
+      </dir>
+      <dir name="win.112">
+        <dir name="e12243">
+        </dir>
+        <dir name="e12245">
+        </dir>
+        <dir name="e12247">
+        </dir>
+        <dir name="e12248">
+        </dir>
+        <dir name="e12249">
+        </dir>
+        <dir name="e12250">
+        </dir>
+      </dir>
+    </dir>
+  </sitemap>
+</targetset>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-01-21T17:55:1Z" />
+<meta name="doctitle" content="Oracle&reg; Objects for OLE Developer's Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E12245-01" />
+<meta name="docid" content="OOFOL" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="serprop073.htm" title="Previous" type="text/html" />
+<link rel="Next" href="serprop075.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e12245.pdf" title="PDF version" type="application/pdf" />
+<title>LastServerErrText Property</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Objects for OLE Developer's Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E12245-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="serprop073.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="serprop075.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e12245.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CHDIBDGF" name="CHDIBDGF"></a><a id="OOFOL736" name="OOFOL736"></a>
+<hr />
+<div class="refsect1">
+<h1 class="refsect1">LastServerErrText Property</h1>
+<a id="sthref1990" name="sthref1990"></a>
+<p class="titleinrefsubsect">Applies To</p>
+<p><a href="serobjch010.htm#BABGDAJI">OraDatabase Object</a></p>
+<p><a href="serobjch023.htm#BABFCBJH">OraSession Object</a></p>
+<a id="sthref1991" name="sthref1991"></a>
+<p class="titleinrefsubsect">Description</p>
+<p>Returns the textual message associated with the current <code>LastServerErr</code> property of the specified object. Not available at design time and read-only at run time.</p>
+<a id="sthref1992" name="sthref1992"></a>
+<p class="titleinrefsubsect">Usage</p>
+<pre xml:space="preserve" class="oac_no_warn">error_text = orasession.LastServerErrText
+error_text = oradatabase.LastServerErrText
+</pre>
+<a id="sthref1993" name="sthref1993"></a>
+<p class="titleinrefsubsect">Data Type</p>
+<p><code>String</code></p>
+<a id="sthref1994" name="sthref1994"></a>
+<p class="titleinrefsubsect">Remarks</p>
+<p>The returned value indicates one of three possible states:</p>
+<ol>
+<li>
+<p>If <code>Null</code> is returned, an Oracle Call Interface (OCI) database function has not returned an error since the most recent <code>LastServerErrReset</code> property.</p>
+</li>
+<li>
+<p>If a non-<code>Null</code> value is returned, an OCI function has returned an error code; the returned string is the associated message.</p>
+</li>
+<li>
+<p>If the message is empty, then no additional information was available.</p>
+</li>
+</ol>
+<a id="sthref1995" name="sthref1995"></a>
+<p class="titleinrefsubsect">Examples</p>
+<p>This example demonstrates the use of the <code>CreateDynaset</code> method and the <code>LastServerErr</code> and <code>LastServerErrText</code> properties to determine whether an Oracle error has occurred and to display the error message. Copy and paste this code into the definition section of a form. Then, press <span class="bold">F5</span>.</p>
+<pre xml:space="preserve" class="oac_no_warn">Sub Form_Load ()
+ 
+ 'Declare variables as OLE Objects.
+ Dim OraSession As OraSession 
+ Dim OraDatabase As OraDatabase 
+ Dim OraDynaset As OraDynaset 
+ 
+ 'Create the OraSession Object.
+ Set OraSession = CreateObject("OracleInProcServer.XOraSession")
+ 
+ 'Set up an error handler.
+ On Error GoTo errhandler 
+ 
+ 'Create the OraDatabase Object by opening a connection to Oracle.
+ Set OraDatabase = OraSession.OpenDatabase("ExampleDb", "scott/tiger", 0&amp;)
+ 
+ 'Attempt to Create the OraDynaset Object.
+ 'Notice that the FROM keyword is missing from the SQL statement.
+ Set OraDynaset = OraDatabase.CreateDynaset("select * emp", 0&amp;)
+ 
+Exit Sub
+ 
+errhandler:
+ 
+ 'Check to see if an Oracle error has occurred.
+ If OraDatabase.LastServerErr &lt;&gt; 0 Then
+  MsgBox OraDatabase.LastServerErrText
+ Else 'Must be some non-Oracle error.
+  MsgBox "VB:" &amp; Err &amp; " " &amp; Error(Err)
+ End If
+ 
+ Exit Sub
+ 
+End Sub
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="serprop072.htm#CHDCIFIF">LastServerErr Property</a></p>
+</li>
+<li>
+<p><a href="sermthod123.htm#CIHIDGAA">LastServerErrReset Method</a></p>
+</li>
+<li>
+<p><a href="sermthod054.htm#CIHFHBEI">CreateDynaset Method</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="refsect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="serprop073.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="serprop075.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1994, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
