@@ -1,0 +1,84 @@
+Private Sub Command1_Click()
+    Dim xlapp As Excel.Application
+    
+    Set xlapp = CreateObject("Excel.Application")
+    Text1.Text = GetEdition(Str(xlapp.Version))
+End Sub
+
+Private Function GetEdition(strversion As String) As String
+    Select Case Val(strversion)
+    Case 10
+        GetEdition = "MS-Excel 2002"
+    Case 11
+        GetEdition = "MS-Excel 2003"
+    Case 12
+        GetEdition = "MS-Excel 2007"
+    Case 14
+        GetEdition = "MS-Excel 2010"
+    Case 15
+        GetEdition = "MS-Excel 2013"
+    End Select
+End Function
+
+Private Sub Command1_Click()
+Dim xlApp As Excel.Application
+
+Dim xlWB As Excel.Workbook
+Dim xlWS As Excel.WorkSheet
+    
+    Set xlApp = CreateObject("Excel.Application")
+    Text1.Text = GetEdition(Str(xlApp.Version))
+    
+    If GetEditon = "MS-Excel 2002" Then
+        Set xlApp = New Excel.Application
+        Set xlWB = xlApp.Workbooks.Add
+        Set xlWS = xlWB.Worksheets.Add
+    
+End Sub
+Private Function GetEdition(strversion As String) As String
+    Select Case Val(strversion)
+    Case 10
+        GetEdition = "MS-Excel 2002"
+    Case 11
+        GetEdition = "MS-Excel 2003"
+    Case 12
+        GetEdition = "MS-Excel 2007"
+    Case 14
+        GetEdition = "MS-Excel 2010"
+    Case 15
+        GetEdition = "MS-Excel 2013"
+    End Select
+End Function
+
+' add book work add spreadsheet
+
+Private Sub Command2_Click()
+'
+'    Dim xlApp As Excel.Application
+'    Dim xlWB As Excel.Workbook
+'    Dim xlWS As Excel.Worksheet
+'
+'    Set xlApp = New Excel.Application
+'    Set xlWB = xlApp.Workbooks.Add
+'    Set xlWS = xlWB.Worksheets.Add
+'
+'' This following lines will fill the cell (2,2) with the text "hello",
+'' and will fill the cell (1,3) with the text "World"
+'    xlWS.Cells(1, 64000).Value = "hello"
+'    xlWS.Cells(1, 3).Value = "World"
+'
+'' The following line saves the spreadsheet to "c:\mysheet.xls" file.
+'    xlWS.SaveAS "c:\Sample.xls"
+'    xlApp.Quit
+'
+'' Free memory
+'    Set xlWS = Nothing
+'    Set xlWB = Nothing
+'    Set xlApp = Nothing
+'
+End Sub
+
+ 
+ 
+
+

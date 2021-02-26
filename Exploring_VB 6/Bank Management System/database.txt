@@ -1,0 +1,8 @@
+Master
+-Employees 
+-User
+-Customer
+-Bank account type
+-Bank Branches
+-bank branches Manager
+-
