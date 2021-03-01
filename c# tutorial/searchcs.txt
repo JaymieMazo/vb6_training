@@ -1,0 +1,226 @@
+using System;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
+
+namespace ClassLibrary
+{
+	public class Class1
+	{
+		protected static SqlConnection strconnection;
+		string connectionString = ConfigurationSettings.AppSettings["RecordConnection"];
+
+		#region RetrieveData
+		public DataSet RetrieveData(string sql, string tableName)
+		{
+			DataSet ds = new DataSet();
+			try
+			{
+				using(SqlConnection connection = new SqlConnection(connectionString))
+				{
+					SqlCommand command = new SqlCommand(sql, connection);
+					command.CommandTimeout = 1000;
+
+					SqlDataAdapter adapter = new SqlDataAdapter(command);
+					adapter.Fill(ds, tableName);
+				}
+
+				if(ds.Tables[tableName].Rows.Count == 0)
+					return null;
+				return ds;
+			}
+			catch(Exception ex)
+			{
+				throw ex;
+			}
+		}
+		#endregion
+
+		#region SearchPoQTYMonitoring
+		public Cls_POQtyMonitoringView[] SearchPoQTYMonitoring(DateTime etdDateFrom, DateTime etdDateTo,string itemID,string supplierID)
+		{
+			
+			strconnection  = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["RecordConnection"].ToString());
+			strconnection.Open();	
+
+	
+
+			string whereClause = null;
+
+			if(etdDateFrom.Year != 0001)
+			{
+				whereClause += "ETDDate >='"+etdDateFrom.ToString("yyyy/MM/dd")+"' AND " ;
+			}
+
+			if(etdDateTo.Year != 0001)
+			{
+				whereClause += "ETDDate <='"+etdDateTo.ToString("yyyy/MM/dd")+"' AND " ;
+			}
+
+			if(itemID.ToString() != string.Empty)
+			{
+				whereClause += "ItemId ='"+itemID.ToString()+"' AND " ;
+			}
+
+			if(supplierID.ToString() != string.Empty)
+			{
+				whereClause += "SupplierID ='"+supplierID.ToString()+"' AND ";
+			}
+
+			if(whereClause != null)
+			{
+				whereClause = " WHERE "  +  whereClause.Substring(0, whereClause.Length -4);
+			}
+			
+			string sql =" Select POQtyMonitoringView.*, " +
+						" Isnull(OrderQty,0)-Isnull(QtyReceived,0) as OrderNotYetReceived " +
+						" From POQtyMonitoringView " +
+						whereClause +
+						"Order By ETDDate ";
+
+			SqlCommand command = new SqlCommand(sql,strconnection);
+			command.CommandTimeout = 10000;
+
+			DataTable table = new DataTable();
+
+			using(SqlDataAdapter adapter = new SqlDataAdapter(command))
+			{
+				adapter.Fill(table);
+
+			}
+
+			Cls_POQtyMonitoringView[] list = new Cls_POQtyMonitoringView[table.Rows.Count];
+
+			for(int i =0; i < table.Rows.Count; i++)
+			{
+				list[i] = new Cls_POQtyMonitoringView(table.Rows[i]);
+			}
+			return list;
+
+
+		}
+		#endregion
+
+		#region SearchItems
+		public ItemsInfo[] SearchItems(string itemID, string description)
+		{
+			
+			strconnection  = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["RecordConnection"].ToString());
+			strconnection.Open();
+	
+
+			string whereClause = null;
+
+			if(itemID.ToString() != string.Empty)
+			{
+				whereClause += "ItemId ='"+itemID.ToString()+"' AND " ;
+			}
+
+			if(description.ToString() != string.Empty)
+			{
+				whereClause += "Description like'"+description.ToString()+"%' AND ";
+			}
+
+			if(whereClause != null)
+			{
+				whereClause = " WHERE "  +  whereClause.Substring(0, whereClause.Length -4);
+			}
+			
+			string sql =" Select ItemID,Description,JapaneseDescription From Items " +
+				whereClause;
+
+
+			SqlCommand command = new SqlCommand(sql,strconnection);
+			command.CommandTimeout = 10000;
+
+			DataTable table = new DataTable();
+
+			using(SqlDataAdapter adapter = new SqlDataAdapter(command))
+			{
+				adapter.Fill(table);
+
+			}
+
+			ItemsInfo[] list = new ItemsInfo[table.Rows.Count];
+
+			for(int i =0; i < table.Rows.Count; i++)
+			{
+				list[i] = new ItemsInfo(table.Rows[i]);
+			}
+			return list;
+
+
+		}
+		#endregion
+
+		#region SearchSupplier
+		public SupplierInfo[] SearchSupplier(string supplierID,string supplierName)
+		{
+			
+			strconnection  = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["RecordConnection"].ToString());
+			strconnection.Open();
+
+			string whereClause = null;
+
+			if(supplierID.ToString() != string.Empty)
+			{
+				whereClause += "SupplierID ='"+supplierID.ToString()+"' AND " ;
+			}
+
+			if(supplierName.ToString() != string.Empty)
+			{
+				whereClause += "SupplierName like'"+supplierName.ToString()+"%' AND ";
+			}
+
+			if(whereClause != null)
+			{
+				whereClause = " WHERE "  +  whereClause.Substring(0, whereClause.Length -4);
+			}
+			
+			string sql =" Select SupplierID,SupplierName From Suppliers " +
+						whereClause;
+
+
+
+			SqlCommand command = new SqlCommand(sql,strconnection);
+			command.CommandTimeout = 10000;
+
+			DataTable table = new DataTable();
+
+			using(SqlDataAdapter adapter = new SqlDataAdapter(command))
+			{
+				adapter.Fill(table);
+
+			}
+
+			SupplierInfo[] list = new SupplierInfo[table.Rows.Count];
+
+			for(int i =0; i < table.Rows.Count; i++)
+			{
+				list[i] = new SupplierInfo(table.Rows[i]);
+			}
+			return list;
+
+
+		}
+		#endregion
+
+		
+
+		public string  ExecuteData (string sql)
+		{
+			strconnection  = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["RecordConnection"].ToString());
+			strconnection.Open();
+	
+	
+			SqlCommand command = new SqlCommand(sql,strconnection);
+			command.CommandTimeout = 10000;
+			command.ExecuteNonQuery();
+		
+			
+			return null;
+		}
+
+		
+	}
+}

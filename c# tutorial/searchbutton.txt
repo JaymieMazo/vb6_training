@@ -1,0 +1,60 @@
+buttons: 
+
+	#region Events
+		private void searchButton_Click(object sender, System.EventArgs e)
+		{
+			OnSearchItems();	
+		}
+
+		#region OnSearchItems
+		private void OnSearchItems()
+		{
+			if((this.itemIdText.Text.Trim() == string.Empty) && (this.descriptionText.Text.Trim()==string.Empty))
+			{
+				MessageBox.Show("Please set some search conditions.",Application.ProductName,
+					MessageBoxButtons.OK,MessageBoxIcon.Information);  
+				return;
+			}
+			
+			itemList.Items.Clear();
+			
+			string itemId = string.Empty;
+			string  description = string.Empty;
+			
+			if (this.itemIdText.Text != string.Empty)
+				itemId = this.itemIdText.Text.ToString();
+
+			if (this.descriptionText.Text != string.Empty)
+				description = this.descriptionText.Text;
+
+			ItemsInfo[] itemsInfoArray = null;
+		
+			
+			try 
+			{	
+				this.Cursor = Cursors.WaitCursor;
+					
+				itemsInfoArray = searchClass.SearchItems(itemId,description);				
+
+				if(itemsInfoArray != null)
+				{
+					foreach(ItemsInfo bec in itemsInfoArray)
+					{
+						ListViewItem item = new ListViewItem(bec.ItemID.ToString());
+						item.SubItems.Add(bec.Description.ToString());
+						item.SubItems.Add(bec.JapaneseDescription.ToString());
+						itemList.Items.Add(item);
+					}
+				}
+			}
+			catch(Exception err)
+			{
+				MessageBox.Show(err.Message,Application.ProductName,
+					MessageBoxButtons.OK,MessageBoxIcon.Information);  
+			}
+			finally
+			{
+				this.Cursor = Cursors.Default;
+			}
+		}
+		#endregion

@@ -1,0 +1,13 @@
+
+private void clearButton_Click(object sender, System.EventArgs e)
+{
+			OnClear();
+}
+
+private void OnClear()
+		{
+			this.itemList.Items.Clear();
+			this.itemIdText.Text = string.Empty;
+			this.descriptionText.Text = string.Empty; 
+		}
+OnClear();
